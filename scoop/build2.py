@@ -64,11 +64,8 @@ def sec_ari_fantasy():
     return (f"<div class='box2'><h3 style='margin:0 0 1px'>{f.get('title', 'Ari&#8217;s Fantasy Team')}</h3>"
             f"<ul class='small ff'>{li(f.get('items', []))}</ul></div>")
 def extra_html(e):
-    """One filler item. kind 'box' (default): title + short text (+ source). kind 'draw': prompt + empty frame."""
+    """One filler item: title + short text (+ source). No drawing activities (Jacob, 2026-10-10)."""
     src = f"<div class='cap' style='margin:1px 0 0'>{e['source']}</div>" if e.get('source') else ''
-    if e.get('kind') == 'draw':
-        return (f"<div class='box2'><h3 style='margin:0 0 1px'>{e.get('title', 'Draw It!')}</h3><p class='small' style='margin:0 0 3px'>{e.get('text', '')}</p>"
-                f"<div style='height:{int(e.get('height', 110))}px;border:1.5px dashed #8a8478;background:#fff'></div></div>")
     return f"<div class='box2'><h3 style='margin:0 0 1px'>{e['title']}</h3><p class='small' style='margin:0'>{e['text']}</p>{src}</div>"
 _extras = d.get('extras') or []
 _placed_extras = set()
