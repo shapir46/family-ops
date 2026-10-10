@@ -63,6 +63,21 @@ def sec_ari_fantasy():
     if not f: return ''
     return (f"<div class='box2'><h3 style='margin:0 0 1px'>{f.get('title', 'Ari&#8217;s Fantasy Team')}</h3>"
             f"<ul class='small ff'>{li(f.get('items', []))}</ul></div>")
+def extra_html(e):
+    """One filler item. kind 'box' (default): title + short text (+ source). kind 'draw': prompt + empty frame."""
+    src = f"<div class='cap' style='margin:1px 0 0'>{e['source']}</div>" if e.get('source') else ''
+    if e.get('kind') == 'draw':
+        return (f"<div class='box2'><h3 style='margin:0 0 1px'>{e.get('title', 'Draw It!')}</h3><p class='small' style='margin:0 0 3px'>{e.get('text', '')}</p>"
+                f"<div style='height:{int(e.get('height', 110))}px;border:1.5px dashed #8a8478;background:#fff'></div></div>")
+    return f"<div class='box2'><h3 style='margin:0 0 1px'>{e['title']}</h3><p class='small' style='margin:0'>{e['text']}</p>{src}</div>"
+_extras = d.get('extras') or []
+_placed_extras = set()
+def sec_extra(i):
+    if i >= len(_extras): return ''
+    _placed_extras.add(i)
+    return extra_html(_extras[i])
+def sec_extras():
+    return ''.join(extra_html(e) for i, e in enumerate(_extras) if i not in _placed_extras)
 def sec_news0():
     return '' if d.get('fantasy') or not d.get('news') else story(*d['news'][0])
 SECTIONS = {'schedule': sec_schedule, 'week': sec_week, 'school_notes': sec_school_notes, 'left_story': sec_left_story,
@@ -77,21 +92,29 @@ DEFAULT_LAYOUT = {'columns': [
 layout = d.get('layout') or DEFAULT_LAYOUT
 for c in layout['columns']:
     for name in c['sections']:
-        if name not in SECTIONS:
+        if name not in SECTIONS and not name.startswith('extra:') and name != 'extras':
             raise SystemExit(f"layout: unknown section '{name}' (known: {', '.join(SECTIONS)})")
 placed = [n for c in layout['columns'] for n in c['sections']]
 missing = [n for n in ('lead', 'word') if n not in placed]
 if missing:
     raise SystemExit(f"layout: required sections not placed: {missing}")
+def render_section(n):
+    if n.startswith('extra:'): return sec_extra(int(n.split(':', 1)[1]))
+    if n == 'extras': return sec_extras()
+    return SECTIONS[n]()
 def column(names):
     out, prev_boxed = [], True
     for n in names:
-        h = SECTIONS[n]()
+        h = render_section(n)
         if not h: continue
-        if out and not prev_boxed and n not in BOXED: out.append("<div class='rule'></div>")
-        out.append(h); prev_boxed = n in BOXED
+        if out and not prev_boxed and n not in BOXED and not n.startswith('extra'): out.append("<div class='rule'></div>")
+        out.append(h); prev_boxed = n in BOXED or n.startswith('extra') 
     return f"<div class='col'>{''.join(out)}</div>"
 grid = ' '.join(c['width'] for c in layout['columns'])
+# Explicit extra:N placements render first so a column holding 'extras' only gets the leftovers.
+for c in layout['columns']:
+    for n in c['sections']:
+        if n.startswith('extra:'): _placed_extras.add(int(n.split(':', 1)[1]))
 body_html = ''.join(column(c['sections']) for c in layout['columns'])
 
 # Top strip: weather, plus the lunch box only when there is lunch to show (none on weekend editions).
