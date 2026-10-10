@@ -14,7 +14,7 @@ Jacob forwards family and school email from his personal ProtonMail account (jac
 
 Because of this, do NOT apply a "last 24 hours" filter to new mail — read everything in Family-Digest. If a run ever fails, the mail simply waits there for tomorrow.
 
-**Family facts, child attribution, and the bus/SACC exclusion live in `data/family.md`. Read it first; it is part of these instructions.**
+**Family facts, child attribution, the bus/SACC exclusion, and the activity schedules in `data/schedules/` live in `data/family.md`. Read it (and the schedules it points to) first; they are part of these instructions.**
 
 
 **Jacob reads this digest on his phone.** Mobile readability governs every formatting decision below.

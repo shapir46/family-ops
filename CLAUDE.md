@@ -15,9 +15,10 @@ Jacob Shapiro's family automation. This is a **private** repo because it holds k
 | `data/bps-calendar-2026-27.md`, `data/tbe-religious-school-2026-27.md` | Static calendars (part of the instructions) |
 | `data/lunch-menus.md` | Monthly BPS lunch PDF URLs |
 | `data/schedules/` | Activity schedules Jacob supplies (e.g. Ari's MCE basketball) |
-| `scoop/` | Newspaper build kit (build2.py, art.py, hedcut.py, render.py, setup.sh, README.md, edition.json sample) |
-| `logs/` | riddle-log.md and scoop-content-log.md, appended by every run |
+| `scoop/` | Newspaper build kit (build2.py, art.py, render.py, setup.sh, edition.json sample). `scoop/README.md` holds Jacob's standing newspaper rules and overrides the skill. hedcut.py is retired. |
+| `logs/` | riddle-log.md and content-log.md, appended by every run |
 | `docs/original-routine-prompt-2026-10-10.md` | The Cowork routine prompt this repo was split from (secrets redacted). Reference only. |
+| `docs/cowork-export/` | Verbatim export of the Cowork project docs and family-related memory as of 2026-10-10, with `MANIFEST.sha256`. Reference only; edit the working copies instead. |
 
 ## Hard rules
 - **Mail and calendars only through the Microsoft 365 (Outlook) connector.** Never use Gmail, Google Calendar or any other mail connector, for reading or sending.

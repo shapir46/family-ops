@@ -1,6 +1,6 @@
 # Family Digest + Fairfax Daily Scoop: move to Claude Code
 
-Status: plan only. Nothing has changed yet. The current routine is still live and runs tomorrow at 6:30 AM ET.
+Status (2026-10-10): Phases 0 and 1 are done (repo built, files exported and verified, newspaper kit builds). The Cowork routine is still live and unchanged. Next: environment setup, then Phase 2 shadow runs.
 
 ## 1. What exists today (inventory)
 
@@ -75,15 +75,15 @@ WebFetch may reach some of these anyway, but printing will fail until print.jaco
 ## 3. Migration phases
 
 **Phase 0 — Export everything (no changes to the live system)**
-- [ ] Get every file under `claude/fairfax-scoop/` and the basketball schedule doc out of the Cowork project, byte-for-byte.
-- [ ] Export the project memory files relevant to family (and to the school packets, if that routine is in scope).
-- [ ] Save the exact current prompt (done, redacted) and the routine config (done).
+- [x] Get every file under `claude/fairfax-scoop/` and the basketball schedule doc out of the Cowork project, byte-for-byte.
+- [x] Export the project memory files relevant to family (and to the school packets, if that routine is in scope).
+- [x] Save the exact current prompt (done, redacted) and the routine config (done).
 
 **Phase 1 — Build the repo (verbatim port)**
-- [ ] Create the private repo and commit the kit and logs unchanged.
-- [ ] Split the prompt into CLAUDE.md, the two skills and `data/*` with no change in behavior. Diff the split against the original so no rule is dropped. Every one of the roughly 120 rules gets a home.
-- [ ] Have the prompt read `RELAY_TOKEN` and the ICS URL from the environment.
-- [ ] Replace Cowork-only tool names (`project_read`/`project_write`, `mcp__cowork__create_artifact`, `/mnt/user-data/outputs`) with repo paths and git commits.
+- [x] Create the private repo and commit the kit and logs unchanged.
+- [x] Split the prompt into CLAUDE.md, the two skills and `data/*` with no change in behavior. Diff the split against the original so no rule is dropped. Every one of the roughly 120 rules gets a home.
+- [x] Have the prompt read `RELAY_TOKEN` and the ICS URL from the environment.
+- [x] Replace Cowork-only tool names (`project_read`/`project_write`, `mcp__cowork__create_artifact`, `/mnt/user-data/outputs`) with repo paths and git commits.
 
 **Phase 2 — Shadow runs (2–3 days)**
 - [ ] Create a Claude Code routine at **6:00 AM** (before the live one) in **read-only shadow mode**:

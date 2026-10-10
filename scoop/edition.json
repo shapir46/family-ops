@@ -1,0 +1,101 @@
+{
+ "date": "Thursday, October 8, 2026",
+ "hi": "68",
+ "wx": "<b>Sunny.</b> High near 68. West wind 7\u201314 mph.",
+ "wx2": "Tonight: mostly clear, low 48. Fri: sunny, high 70. Rain likely Sunday morning. (NWS)",
+ "forecast": [
+  [
+   "Fri",
+   "70",
+   "\u2014",
+   "Sunny"
+  ],
+  [
+   "Sat",
+   "76",
+   "59",
+   "Sunny"
+  ],
+  [
+   "Sun",
+   "69",
+   "56",
+   "Rain likely"
+  ],
+  [
+   "Mon",
+   "74",
+   "54",
+   "Partly sunny"
+  ]
+ ],
+ "lunch": "Baked whole grain chicken drumstick with baked tater tots<br><span style=\"font-size:7.4pt;font-weight:400\">Bagel Day! Bagels are delivered to students in their classrooms every Thursday morning.</span>",
+ "lunch_src": "BPS elementary lunch menu",
+ "sched": [
+  "<b>All day</b> \u2014 Picture Day, Quarton",
+  "<b>4:30\u20135:00 pm</b> \u2014 Hebrew tutoring, Ari",
+  "<b>6:00\u20137:15 pm</b> \u2014 Soccer practice, Elle \u00b7 Pembroke Park"
+ ],
+ "sched_note": "From the Ari, Elle and Family calendars and PlayMetrics.",
+ "week": [
+  "<b>Fri</b> \u2014 Trunk or Treat 5:30 \u00b7 Elle's game 6:00",
+  "<b>Sat</b> \u2014 Lila ballet 9:30 \u00b7 Ari basketball 12:15 \u00b7 Leo soccer 2:00",
+  "<b>Sun</b> \u2014 Elle's game 8:00 \u00b7 Religious School 9:30 \u00b7 Ari flag football noon",
+  "<b>Mon</b> \u2014 Ari tennis 4:30 \u00b7 Elle dance 5:15",
+  "<b>Tue</b> \u2014 Half day, 11:50 dismissal \u00b7 Elle practice 6:00"
+ ],
+ "quarton": [
+  "Picture Day is today.",
+  "Leo's class party lotto closes tonight at 6 pm.",
+  "Ari's class opens its second sign-up slot at 7 pm.",
+  "Trunk or Treat is Friday, 5:30\u20136:30 pm.",
+  "Half day Tuesday: dismissal 11:50."
+ ],
+ "yday": [],
+ "lions": "The Lions lost 32\u201326 at Carolina on Sunday and are 2\u20132. Next: Sunday at Arizona, 4:25 pm, on FOX.",
+ "tonight": [
+  "<b>Red Wings:</b> No game. Fri vs. Seattle, Sat at Montreal, 7:00 pm.",
+  "<b>Tigers:</b> No game found.",
+  "<b>Lions &amp; Pistons:</b> No games. Lions play Sunday at Arizona."
+ ],
+ "hs": [
+  "<b>Seaholm FB</b> beat Southfield A&amp;T 49\u201334 (Oct. 2). Fri: vs. Harper Woods, 7:00.",
+  "<b>Groves FB</b> beat Oak Park 20\u201318 (Oct. 2). Fri: vs. Kettering, 4:00.",
+  "<b>Volleyball &amp; tennis:</b> results not posted."
+ ],
+ "head": "Zoo Boo Is Back at the Detroit Zoo: Merry, Not Scary",
+ "sub": "Trick-or-treat stations, a kids' DJ and a light-up dance floor open again this weekend",
+ "story": [
+  "Looking for a not-too-spooky night out? The Detroit Zoo's Zoo Boo has returned, and this weekend, Oct. 9 to 11, is the next chance to go. It also runs Oct. 16 to 18 and Oct. 23 to 25, from 3 to 8:30 p.m.",
+  "Until 6 p.m. the whole zoo is open. After that, the eastern part, from the main gates to Table 28, lights up as a Halloween area. Kids can trick-or-treat (some stops have allergy-friendly treats), dance on a light-up floor with a kids' DJ, and watch jugglers, aerialists and a talking pumpkin.",
+  "Advance tickets start at $21 at dzoo.org/zooboo, and everyone age 2 and older needs one. The zoo calls it \"merry, not scary.\""
+ ],
+ "head_src": "WXYZ 7 Detroit, \"Detroit Zoo announces Zoo Boo will return this October,\" Sept. 17, 2026.",
+ "news": [
+  [
+   "Legos Blast Off",
+   "\"Artemis Adventure with LEGO Bricks\" is a big LEGO show planned for this October at The Henry Ford in Dearborn, with large engineering-minded builds.",
+   "LittleGuide Detroit"
+  ],
+  [
+   "Erb Discovery Trails: Seven Acres to Explore",
+   "The Detroit Zoo's Erb Discovery Trails is a 7-acre area with new animal habitats, hands-on encounters and play areas in Royal Oak. It was planned to open in spring 2026.",
+   "LittleGuide Detroit"
+  ],
+  [
+   "A Fresh Start for Oak Woods Park",
+   "Oak Park's Oak Woods Park &amp; Playground is getting a $3.25 million makeover with new play spaces and upgrades, planned for this fall.",
+   "LittleGuide Detroit"
+  ]
+ ],
+ "word": [
+  "nocturnal",
+  "adjective",
+  "active at night instead of during the day",
+  "Bats are nocturnal animals."
+ ],
+ "riddle": "What has a neck but no head?",
+ "riddle_prev": "<b>Yesterday:</b> What can you catch but never throw? <i>A cold!</i>",
+ "joke": "Why did the giraffe get good grades? She was always on top of things! <i>(Ba-dum-chh!)</i>",
+ "foot": "The Fairfax Daily Scoop \u00b7 Printed at the Shapiro house \u00b7 Scores: Hockey-Reference, CBS Sports, MaxPreps \u00b7 Weather: National Weather Service \u00b7 News: WXYZ, LittleGuide Detroit \u00b7 Illustrations and comic are original"
+}
