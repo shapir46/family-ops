@@ -15,7 +15,7 @@ One-page Letter PDF newspaper. Files (in the family-ops repo): `scoop/` holds bu
   - To fix an overflow, shorten text, move a section to a roomier column or adjust the widths. Never shrink fonts or pad with empty spacing.
   - Every extra must be true, kid-friendly and new: log them in content-log.md and never repeat one.
 - **No riddle in any edition.** The Daily Joke stays. `riddle` and `riddle_prev` are gone.
-- **Sports sections have their own shade** (Jacob, 2026-10-10). The Sports Page and every kid-sports box (Ari's Fantasy Team, Spartans Hoop Scoop, MDA Kicks & Giggles) use one light green (`.sport` / `.sportpage` in build2.py), so sports stand apart from the beige non-sports boxes. Any new sports section gets the same shade; never use it for non-sports content.
+- **Only kids' sports are shaded** (Jacob, 2026-10-10). The kids' team boxes (Spartans Hoop Scoop, MDA Kicks & Giggles, and any future kid team box) use one light green (`.sport` in build2.py). The Detroit Sports Page and Ari's Fantasy Team have no color: the Sports Page is plain column text and the fantasy box is a white bordered box (`.plain`). Never use the green for anything but kids' teams.
 - **Word of the Day pops.** It renders as a large accent-colored word in its own bordered box (build2.py `sec_word`). Keep the word short and kid-friendly; the definition and example stay brief.
 - **Holidays.** If the day is a holiday, name it in the `banner` strip under the masthead (e.g. "Happy Halloween!", "Indigenous Peoples' Day", "Chanukah: 3 Candles").
   - Use `state.almanac[0].holidays`. On the Weekend Edition, also give Sunday's with a "Sun:" prefix, from `almanac[1]`.
