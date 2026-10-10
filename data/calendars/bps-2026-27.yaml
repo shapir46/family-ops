@@ -1,0 +1,39 @@
+# Birmingham Public Schools 2026-27, JK-8 student-affecting dates only.
+# Source: data/bps-calendar-2026-27.md (from the Family digest routine prompt, 2026-10-10).
+# kind: first_day | half_day | no_school | recess | resume | conferences | info | last_day
+# audience: all | jk8 | elementary | jk_k | middle   (mapped to kids by data/family.yaml; entries that map to no kid are skipped)
+name: BPS district calendar
+source_label: BPS district calendar
+entries:
+  - {date: 2026-08-31, kind: half_day, audience: all, label: "First day of school. Half day (AM) for all students."}
+  - {date: 2026-09-01, kind: half_day, audience: jk8, label: "JK-8 attend AM only (half day)."}
+  - {date: 2026-09-02, end: 2026-09-03, kind: half_day, audience: jk_k, label: "Half days for JK and kindergarten (assessments); full days for everyone else."}
+  - {date: 2026-09-04, kind: no_school, audience: all, label: "No school for students and staff (Labor Day Break)."}
+  - {date: 2026-09-07, kind: no_school, audience: all, label: "No school for students and staff (Labor Day)."}
+  - {date: 2026-10-13, kind: half_day, audience: all, label: "All schools half day (AM)."}
+  - {date: 2026-10-30, kind: half_day, audience: all, label: "All schools half day (AM)."}
+  - {date: 2026-11-03, kind: no_school, audience: all, label: "No school district-wide."}
+  - {date: 2026-11-11, kind: half_day, audience: jk8, label: "JK-8 attend AM only. Elementary and middle school conferences 1-7 PM."}
+  - {date: 2026-11-12, kind: half_day, audience: elementary, label: "Elementary attends AM only. Elementary conferences 1-7 PM; middle school conferences 4-7 PM."}
+  - {date: 2026-11-25, kind: no_school, audience: all, label: "No school district-wide."}
+  - {date: 2026-11-26, end: 2026-11-27, kind: recess, audience: all, label: "Thanksgiving Recess."}
+  - {date: 2026-12-23, end: 2027-01-01, kind: recess, audience: all, label: "Winter Recess."}
+  - {date: 2027-01-04, kind: resume, audience: all, label: "Classes resume."}
+  - {date: 2027-01-18, kind: no_school, audience: all, label: "No school for students and staff (MLK Day)."}
+  - {date: 2027-01-22, kind: half_day, audience: all, label: "All schools half day (AM). End of first semester."}
+  - {date: 2027-01-25, kind: info, audience: all, label: "Second semester begins."}
+  - {date: 2027-02-04, kind: half_day, audience: all, label: "All schools half day (AM)."}
+  - {date: 2027-02-15, end: 2027-02-19, kind: recess, audience: all, label: "Midwinter Recess."}
+  - {date: 2027-02-22, kind: resume, audience: all, label: "Classes resume."}
+  - {date: 2027-03-03, end: 2027-03-04, kind: conferences, audience: middle, label: "Middle school conferences 4-7 PM."}
+  - {date: 2027-03-17, kind: half_day, audience: elementary, label: "Elementary attends AM only."}
+  - {date: 2027-03-23, kind: conferences, audience: elementary, label: "Elementary conferences 5-7 PM."}
+  - {date: 2027-03-24, kind: half_day, audience: elementary, label: "Elementary attends AM only. Elementary conferences 1-7 PM."}
+  - {date: 2027-03-26, kind: no_school, audience: all, label: "No school for students and staff (Good Friday)."}
+  - {date: 2027-03-29, end: 2027-04-02, kind: recess, audience: all, label: "Spring Recess."}
+  - {date: 2027-04-05, kind: resume, audience: all, label: "Classes resume."}
+  - {date: 2027-04-09, kind: half_day, audience: all, label: "All schools half day (AM)."}
+  - {date: 2027-05-31, kind: no_school, audience: all, label: "No school for students and staff (Memorial Day)."}
+  - {date: 2027-06-10, kind: half_day, audience: elementary, label: "Elementary half day (AM)."}
+  - {date: 2027-06-11, kind: last_day, audience: all, half_day: true, label: "Last school day. All students attend AM only."}
+  - {date: 2027-06-14, kind: no_school, audience: all, label: "No school district-wide."}

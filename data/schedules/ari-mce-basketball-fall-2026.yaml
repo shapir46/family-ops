@@ -1,0 +1,19 @@
+# Machine-readable copy of ari-basketball-mce-schedule-fall-2026.md (keep both in sync).
+# Source: "MCE League Schedule F26" PDF supplied by Jacob, 2026-10-10. Team 16 Spartans, Boys College Division.
+name: MCE basketball (Spartans)
+source_label: MCE league schedule
+kids: [Ari]
+location: Berkshire Middle School, 21707 W 14 Mile Rd, Beverly Hills
+refresh: weekly   # recheck motorcityevolution.com / league email for changes
+events:
+  - {date: 2026-10-10, start: "12:15", kind: game, title: "Basketball game vs Tigers"}
+  - {date: 2026-10-17, start: "09:55", kind: game, title: "Basketball game vs Hoosiers"}
+  - {date: 2026-10-24, start: "12:00", kind: game, title: "Basketball game vs Duke"}
+  - {date: 2026-10-31, start: "12:15", kind: game, title: "Basketball game vs Grizzlies"}
+  - {date: 2026-11-07, start: "12:20", kind: practice, title: "Basketball practice (Spartans & Tigers)"}
+  - {date: 2026-11-07, start: "12:50", kind: game, title: "Basketball game vs Tigers", details: "Last day of the regular season."}
+  - {date: 2026-11-13, kind: game, tentative: true, title: "Basketball playoffs (if qualified)", details: "Evening playoff games and first-place practices; Ari's division likely plays Saturday. Times TBD."}
+  - {date: 2026-11-14, start: "09:00", end: "17:00", kind: game, tentative: true, title: "Basketball playoffs (if qualified)", details: "Times TBD."}
+  - {date: 2026-11-21, start: "09:00", end: "17:00", kind: game, tentative: true, title: "Basketball boys semis & finals (if qualified)", details: "Times TBD."}
+  - {date: 2026-11-16, kind: deadline, title: "MCE Winter League registration opens", details: "motorcityevolution.com"}
+  - {date: 2026-12-28, end_date: 2026-12-30, kind: event, tentative: true, title: "Holiday HOOPMANIA tournament (save the date)"}

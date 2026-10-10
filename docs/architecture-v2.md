@@ -2,6 +2,16 @@
 
 Status: proposal, 2026-10-10. Nothing here is built yet. v1 (the verbatim port) keeps running in shadow mode until v2 replaces it.
 
+## Decisions (Jacob, 2026-10-10)
+- **Printer is color.** The newspaper uses the kid color chips and colored timeline blocks fully, but every child also carries an initial so nothing depends on color alone.
+- **The dashboard is served from the Mac mini** (the machine behind print.jacobshapiro.net), not from a claude.ai artifact.
+  - The daily run POSTs the day's state to it, the same way it posts to the print relay.
+  - Done checkmarks are stored on the Mac mini, and the next run reads them back.
+  - Access goes behind a login Jacob controls (e.g. Cloudflare Access with Jacob's and Rebekah's emails). The family device gets its own credential.
+  - This repo holds the server code under `home-server/`; Jacob deploys it.
+- **Email is daily only.** Weekly, monthly and yearly work happens inside the daily run and surfaces only when it needs Jacob.
+- **Build order as planned.**
+
 ## Goals
 1. **One collection, many outputs.** Gather once a day into one structured file. The digest email, the newspaper and the dashboard all render from that file, so they never disagree.
 2. **Each source on its own cadence.** Mail and live calendars daily; league schedules weekly; lunch menus monthly; school-year calendars yearly.
@@ -20,7 +30,7 @@ v1 is one 50 KB prompt that does everything in the model's head: parsing ICS fee
                 └────────────────────────────────────────────┘  │
                 ┌──────────── scripts (mechanical) ──────────┐  ▼
   PlayMetrics ICS, league schedules, BPS + TBE calendars,    │ state/today.json ──► validate ──┬─► digest email (Outlook)
-  lunch menu, weather (NWS API), sports scores               │   (one schema)                 ├─► dashboard (artifact db)
+  lunch menu, weather (NWS API), sports scores               │   (one schema)                 ├─► dashboard (Mac mini)
                 └────────────────────────────────────────────┘                                └─► newspaper PDF ─► printer
 ```
 
@@ -94,23 +104,21 @@ Keeps the masthead, the three columns, the Artic & Big Bear comic and every stan
 - **Layout checks stay automatic.** The one-page check, the overflow check and a PNG review.
 
 ### 3. Live dashboard
-A private claude.ai artifact for Jacob and Rebekah, phone-first:
+Served from the Mac mini (see Decisions) for Jacob and Rebekah, phone-first:
 - Today (school status, timeline, lunch, weather)
 - Needs Action, with a **Done** checkbox shared between you
 - Next 10 days, filterable by child
 - FYI
 - "Updated 6:34 AM" and health status
 
-Data lives in the artifact's database. The daily run writes the day's rows, and the page reads them live. Nothing personal is baked into the page itself.
+The daily run POSTs `state.json` to the Mac mini, and the page renders from it. Done flags are written back to the Mac mini, and the next run reads them.
 
-**Family device (later):** a "wall mode" of the same page with large type, auto-refresh, no Done buttons, and landscape tablet layout. Options, decided when we get there:
-1. **A wall-mounted tablet** signed in to Claude, kiosk mode.
-2. **A page or image served from the Mac mini** that already runs the print relay. This works for e-ink frames and needs no login.
+**Family device (later):** a "wall mode" of the same page with large type, auto-refresh, no Done buttons, and landscape tablet layout. Because the dashboard already runs on the Mac mini, the device is either a tablet in kiosk mode or an e-ink frame that pulls a rendered image. Decided when we get there.
 
 ## Build order (each step shadow-tested before it replaces v1)
 1. **Schema + scripts for the mechanical sources:** ICS, static calendars as YAML, lunch parse, weather, validation, tests.
 2. **Digest rendered from state.** Compare against v1's shadow output for a few days.
-3. **Dashboard:** publish, share with Rebekah, and connect Done to Needs Action.
+3. **Dashboard:** server code in `home-server/`, Jacob deploys it on the Mac mini behind a login, and Done connects to Needs Action.
 4. **Newspaper v2:** design pass, new components, rendered from the same state.
 5. **Cutover:** disable the Cowork routine, go live, rotate the relay token.
 6. **Family device.**
