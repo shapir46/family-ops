@@ -20,7 +20,7 @@ class Event:
     end: Optional[str] = None
     end_date: Optional[str] = None # multi-day spans
     location: Optional[str] = None
-    kind: str = "event"            # event | school_status | religious_school | deadline | game | practice
+    kind: str = "event"            # event | school_status | sunday_school | deadline | game | practice
     details: Optional[str] = None
     sources: list[str] = field(default_factory=list)
     status: Optional[str] = None   # for school_status: half_day | no_school | recess | ...

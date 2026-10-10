@@ -8,7 +8,6 @@ from familyops import ROOT, calendars
 
 PROSE = {
     "bps-2026-27.yaml": ROOT / "data/bps-calendar-2026-27.md",
-    "tbe-rs-2026-27.yaml": ROOT / "data/tbe-religious-school-2026-27.md",
 }
 DAY = {"Mon": 0, "Tue": 1, "Wed": 2, "Thu": 3, "Fri": 4, "Sat": 5, "Sun": 6}
 
@@ -52,17 +51,7 @@ def test_recess_weekdays_only():
                                     "2026-12-29", "2026-12-30", "2026-12-31", "2027-01-01"]
 
 
-def test_religious_school_sunday_and_no_school_sunday():
-    s = calendars.tbe_events(date(2026, 10, 18), date(2026, 10, 18))
-    assert s[0].kind == "religious_school" and s[0].start == "09:30" and "Ruach" not in s[0].details
-    s = calendars.tbe_events(date(2026, 10, 25), date(2026, 10, 25))
-    assert "Ruach Singers" in s[0].details
-    n = calendars.tbe_events(date(2026, 11, 29), date(2026, 11, 29))
-    assert n[0].status == "no_religious_school"
-
-
-def test_shabbaton_splits_kids():
-    ev = calendars.tbe_events(date(2027, 4, 11), date(2027, 4, 11))
-    rs = [e for e in ev if e.kind == "religious_school"]
-    assert rs[0].kids == ["Elle"]
-    assert any(e.kids == ["Ari"] and "Shabbaton" in e.title for e in ev)
+def test_no_temple_beth_el_left():
+    from familyops import ROOT
+    assert not list((ROOT / "data/calendars").glob("tbe*"))
+    assert calendars.school_status(date(2026, 10, 11)) == []  # a Sunday: nothing from the old TBE calendar

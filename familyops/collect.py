@@ -35,6 +35,9 @@ def due(today: date) -> list[dict]:
     for name, s in reg.items():
         if s["cadence"] == "daily" or s["fetch"] == "script":
             continue  # scripted sources refresh themselves inside collect()
+        if s.get("pending"):
+            out.append({"source": name, "who": s["fetch"], "what": s["what"], "why": "not supplied yet"})
+            continue
         last = st.get(name)
         age = (today - date.fromisoformat(last)).days if last else None
         if s["cadence"] == "yearly":
@@ -71,7 +74,6 @@ def collect(today: date) -> dict:
     groups.append(run("playmetrics", lambda: playmetrics.events(today, end)))
     groups.append(run("schedules", lambda: schedules.events(today, end)))
     groups.append(run("district_calendar", lambda: calendars.bps_events(today, end)))
-    groups.append(run("religious_school", lambda: calendars.tbe_events(today, end)))
     events = merge([e for g in groups for e in g])
 
     lunch_today = run("lunch", lambda: lunch.for_day(today))

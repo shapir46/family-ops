@@ -1,6 +1,6 @@
 ---
 name: family-digest
-description: Build and send Jacob's daily Family Digest from the Outlook Family-Digest folder, six Outlook calendars, PlayMetrics, and the static BPS/TBE calendars; then file processed mail. Run daily (6:30 AM ET) or on request.
+description: Build and send Jacob's daily Family Digest from the Outlook Family-Digest folder, six Outlook calendars, PlayMetrics, and the static BPS district calendar; then file processed mail. Run daily (6:30 AM ET) or on request.
 ---
 
 Produce Jacob Shapiro's daily Family Digest from his Outlook "Family-Digest" folder plus the calendar sources below, email it to him, then file the processed mail away.
@@ -30,7 +30,7 @@ Because of this, do NOT apply a "last 24 hours" filter to new mail — read ever
 
 **Graph rate limiting.** The write tools are subject to per-user throttling and a run of consecutive `outlook_batch_modify_labels` calls can trip a 429. When that happens the error carries `retryAfterSeconds` — wait at least that long, then retry that one call. Do not treat a 429 as a send/file failure and do not skip the message.
 
-The PlayMetrics ICS feed, the lunch-menu PDF (and the BPS food-services menus page used to find it), and the static district and religious-school tables below are explicitly permitted and are NOT covered by that hard rule.
+The PlayMetrics ICS feed, the lunch-menu PDF (and the BPS food-services menus page used to find it), and the static district table below are explicitly permitted and are NOT covered by that hard rule.
 
 ## Step 1a — Gather new email
 Call `outlook_email_search` with `folderName: "Family-Digest"`, `limit: 25`, `order: "newest"`. Page with `cursor`/`offset` until the folder is exhausted. Take everything — no date filter.
@@ -98,8 +98,10 @@ PlayMetrics specifics:
 ## Step 2c — BPS district calendar (static reference)
 Read `data/bps-calendar-2026-27.md`. It is part of these instructions (do not fetch the district calendar). Pull any entry in the today-through-today+10 window.
 
-## Step 2c-ii — Temple Beth El Religious School calendar (static reference)
-Read `data/tbe-religious-school-2026-27.md`. It is part of these instructions, including its rendering rules. Pull any entry in the today-through-today+10 window.
+## Step 2c-ii — Sunday School: Temple Israel (Temple Beth El no longer applies)
+**The family moved from Temple Beth El to Temple Israel** (confirmed by Jacob 2026-10-10). Temple Beth El Religious School no longer applies. Drop every Temple Beth El Religious School item from the digest: its calendar, Sunday sessions, "No Religious School" lines, Ruach Singers, BETY, the Shabbaton, T'filah, and every TBE Religious School email, including ones carried forward from Processed. Do not mention Temple Beth El at all. The one exception is a message that needs action to close out the old enrollment, such as a refund, balance or withdrawal notice; it goes in 📋 FYI or ⚡ Needs Action like any other item.
+
+Temple Israel's Sunday School calendar has not been supplied yet; Jacob will provide it. Until then, Sunday School comes ONLY from live sources: Outlook calendar entries (e.g. "Temple Israel Sunday School" on the Family calendar) and Temple Israel emails. Name a child only when the source does; do not assume which kids attend. Never invent session times or no-school Sundays.
 
 ## Step 2d — Deduplicate across sources
 The same event will often appear two or three times. Before writing anything, merge duplicates.
@@ -110,9 +112,9 @@ The same event will often appear two or three times. Before writing anything, me
 - Elle's soccer will frequently land in the PlayMetrics feed, Elle's Outlook calendar, AND a Michigan Development Academy email. Show it once. Prefer the PlayMetrics version — it carries arrival time, uniform, and field, which the others usually lack.
 - School events often appear on the Family calendar AND in a Quarton newsletter. Show once.
 - A school newsletter and the district calendar describing the same half day are one item.
-- A Temple Beth El email, the Family calendar, and the Religious School table describing the same Sunday are one item — name all contributing sources.
+- A Temple Israel email and the Family calendar describing the same Sunday School session are one item — name both sources.
 - **An email action item deduped against a calendar entry that already settles it.** If a signup or booking deadline appears in mail but the relevant child calendar already shows the booked slot, the action is done — put the slot in 🗓️ Next 10 Days (or ☀️ Today) and keep it out of ⚡ Needs Action. Same for a form or waiver whose confirmation-of-receipt email is also in the folder — that action is closed, so it goes in 📋 FYI at most.
-- When merging, name every contributing source: <i>(PlayMetrics + MDA email)</i>, <i>(Outlook · Elle + PlayMetrics)</i>, <i>(BPS district calendar + Quarton School)</i>, <i>(TBE Religious School calendar + Outlook · Family)</i>.
+- When merging, name every contributing source: <i>(PlayMetrics + MDA email)</i>, <i>(Outlook · Elle + PlayMetrics)</i>, <i>(BPS district calendar + Quarton School)</i>, <i>(Temple Israel email + Outlook · Family)</i>.
 
 ## Step 2e — When sources are empty
 If no new mail arrived but carried-forward items or calendar events exist, still send the digest and add a one-line note that no new mail arrived. If there is no new mail, nothing carried forward, and no events from any calendar source, send a one-line email saying so and stop — and skip Step 6, since there is nothing to file. Do not fabricate content.
@@ -150,7 +152,7 @@ Four sections, in this order.
 ### ☀️ Today
 The top section — the at-a-glance for the day Jacob is reading it.
 
-- **School day status first.** If today is a no-school day, a half day, or a recess day per the BPS district calendar (Step 2c), that is the FIRST line of this section, bolded, even when nothing else is on. Example: "**No school today — Labor Day.**" or "**Half day today — AM only, dismissal 11:50.**" When a half day applies only to certain grades, say which child it affects and give the dismissal time — and say what the other kids are doing, so Jacob is not left guessing. Do not mention busing. This is the single most schedule-disrupting fact in the digest and must not be buried. During summer, before the first day of school, say so once and name the first day. On a Sunday, the Religious School status from Step 2c-ii plays the same role: lead with the Religious School bullet (or the "No Religious School today" line) when the date is inside the season.
+- **School day status first.** If today is a no-school day, a half day, or a recess day per the BPS district calendar (Step 2c), that is the FIRST line of this section, bolded, even when nothing else is on. Example: "**No school today — Labor Day.**" or "**Half day today — AM only, dismissal 11:50.**" When a half day applies only to certain grades, say which child it affects and give the dismissal time — and say what the other kids are doing, so Jacob is not left guessing. Do not mention busing. This is the single most schedule-disrupting fact in the digest and must not be buried. During summer, before the first day of school, say so once and name the first day. On a Sunday, a Temple Israel Sunday School session from Step 2c-ii's live sources leads the day the same way.
 - **Events today:** every family/school event on today's date, from all calendar sources and from dated email items. Bullet each one, leading with the bolded time, and name the child where the source identifies one. Note any overlap in one short clause. Routine daily dismissal times belong in the school-status line, not as their own bullets. If nothing is on, write a single line: "Nothing on the calendar today."
 - **Lunch menu:** today's school lunch menu, per the source below.
 
@@ -188,7 +190,7 @@ The final section. **Starts TOMORROW** — today is already covered in the ☀�
 1. Family/school events from all six Outlook calendars (Step 2), each attributed to its child where the calendar identifies one.
 2. Events from the PlayMetrics soccer feed (Step 2b), attributed to Elle.
 3. School-day changes from the BPS district calendar (Step 2c) — no-school days, half days, recesses, conference nights.
-4. Religious School Sundays and special notes from the Temple Beth El table (Step 2c-ii), attributed to Ari and Elle.
+4. Temple Israel Sunday School sessions from Outlook calendars and Temple Israel email (Step 2c-ii), with a child named only where the source names one.
 5. Dated items from new mail (Step 1a) and carried-forward mail (Step 1b) — including deadlines, not just events.
 
 All of it deduplicated per Step 2d.
@@ -207,8 +209,8 @@ All of it deduplicated per Step 2d.
 List rules:
 - One `<p><b>day</b></p>` heading per day, followed by one `<ul>` of that day's items.
 - Each item starts with the bolded time ("12:00–12:30 pm", "All day", or "Due" for a deadline), then an em dash, then what it is, which child if known, and where.
-- Source goes last, in italics and parentheses. For Outlook calendars name which one: "Outlook · Family", "Outlook · Elle", "Outlook · Lila", or plain "Outlook" for the default calendar. Other sources are "PlayMetrics", "BPS district calendar", "TBE Religious School calendar", or the originating sender. Merged items name all contributing sources.
-- No-school days, half days, and Religious School status lead their day's list, above timed events, since they reframe the whole day.
+- Source goes last, in italics and parentheses. For Outlook calendars name which one: "Outlook · Family", "Outlook · Elle", "Outlook · Lila", or plain "Outlook" for the default calendar. Other sources are "PlayMetrics", "BPS district calendar", or the originating sender. Merged items name all contributing sources.
+- No-school days, half days, and Sunday School sessions lead their day's list, above timed events, since they reframe the whole day.
 - Strict chronological order. Omit days with nothing on them.
 - **Verify every weekday/date pair against the real calendar before writing it.** A wrong weekday is the most damaging error this digest can make.
 - Keep this section link-free; the links live in ⚡ Needs Action.

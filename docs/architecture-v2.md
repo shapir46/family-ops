@@ -29,7 +29,7 @@ v1 is one 50 KB prompt that does everything in the model's head: parsing ICS fee
   Outlook cals ─┤ classify (event / action / FYI), write copy│──┐
                 └────────────────────────────────────────────┘  │
                 ┌──────────── scripts (mechanical) ──────────┐  ▼
-  PlayMetrics ICS, league schedules, BPS + TBE calendars,    │ state/today.json ──► validate ──┬─► digest email (Outlook)
+  PlayMetrics ICS, league schedules, BPS district calendar, Temple Israel calendar (pending),    │ state/today.json ──► validate ──┬─► digest email (Outlook)
   lunch menu, weather (NWS API), sports scores               │   (one schema)                 ├─► dashboard (Mac mini)
                 └────────────────────────────────────────────┘                                └─► newspaper PDF ─► printer
 ```
@@ -63,7 +63,7 @@ Claude owns only the fields that need judgment.
 | **Weekly (Sun)** | League schedules: MCE basketball (Ari), Snaptivities flag football (Ari), PlayMetrics full season | script / Claude for PDFs | `data/schedules/*.yaml` |
 | **Weekly (Sun)** | Week-ahead summary + health check (stale caches, unset variables, failed fetches) | script | — |
 | **Monthly (1st)** | BPS lunch menu PDF: find, parse once into a day→entrée table | script (Claude only if parsing fails) | `cache/lunch-YYYY-MM.json` |
-| **Yearly (Aug)** | BPS district calendar, TBE Religious School calendar, teachers/grades/classrooms, activity seasons | Jacob supplies, Claude structures | `data/calendars/*.yaml`, `data/family.yaml` |
+| **Yearly (Aug)** | BPS district calendar, Temple Israel Sunday School calendar, teachers/grades/classrooms, activity seasons | Jacob supplies, Claude structures | `data/calendars/*.yaml`, `data/family.yaml` |
 
 Static calendars move from prose into **YAML** (date, label, who it affects, kind). Scripts can then query them instead of the model re-reading 80 lines every morning. In August the run emails Jacob a "new school year" checklist naming exactly what to supply.
 

@@ -25,7 +25,7 @@ def test_labels():
 
 def test_conflict_uses_arrival_time():
     from familyops.model import conflicts
-    rs = {"date": "2026-10-18", "start": "09:30", "end": "12:00", "title": "Religious School", "kids": ["Ari", "Elle"], "kind": "religious_school"}
+    rs = {"date": "2026-10-18", "start": "09:30", "end": "12:00", "title": "Sunday School", "kids": ["Ari", "Elle"], "kind": "sunday_school"}
     game = {"date": "2026-10-18", "start": "12:00", "end": "13:00", "title": "Soccer game", "kids": ["Elle"],
             "kind": "game", "details": "arrive 11:30 am, black-black-black"}
     hoops = {"date": "2026-10-18", "start": "12:00", "end": "13:00", "title": "Hoops", "kids": ["Ari"], "kind": "game"}

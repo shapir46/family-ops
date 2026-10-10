@@ -10,5 +10,5 @@ sources:
   league_schedules:   {cadence: weekly,  fetch: claude,  max_age_days: 7,   what: "Re-check data/schedules/* against league sites and emails (MCE basketball, Snaptivities)"}
   lunch_menu:         {cadence: monthly, fetch: script,  max_age_days: 31,  what: "BPS elementary (Quarton) lunch PDF, parsed to cache/lunch-YYYY-MM.json"}
   district_calendar:  {cadence: yearly,  fetch: jacob,   max_age_days: 366, what: "BPS district calendar -> data/calendars/bps-YYYY-YY.yaml"}
-  religious_school:   {cadence: yearly,  fetch: jacob,   max_age_days: 366, what: "TBE Religious School calendar -> data/calendars/tbe-rs-YYYY-YY.yaml"}
+  sunday_school:      {cadence: yearly,  fetch: jacob,   max_age_days: 366, pending: true, what: "Temple Israel Sunday School calendar -> data/calendars/temple-israel-YYYY-YY.yaml (Jacob to supply; Temple Beth El dropped 2026-10-10)"}
   school_year_facts:  {cadence: yearly,  fetch: jacob,   max_age_days: 366, what: "Grades, teachers, rooms, programs -> data/family.yaml"}
