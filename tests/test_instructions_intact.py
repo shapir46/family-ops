@@ -9,13 +9,19 @@ REQUIRED = {
     "CLAUDE.md": ["## Hard rules", "## Shadow mode"],
     "data/family.md": ["Established child facts", "bus", "Child attribution"],
     "scoop/README.md": ["NEW STANDING RULES", "NEVER REPEAT", "edition.json fields"],
+    ".claude/skills/family-update/SKILL.md": ["## Steps", "data/"],
+    ".claude/skills/newspaper-design/SKILL.md": ["## Steps", "scoop/"],
+    ".claude/skills/digest-format/SKILL.md": ["## Steps", "check-email"],
+    ".claude/skills/dashboard-design/SKILL.md": ["## Steps", "state/"],
+    "data/CLAUDE.md": ["single source of truth"],
+    "docs/HOW-TO-UPDATE.md": ["/family-update", "/newspaper-design", "/digest-format", "/dashboard-design"],
 }
 
 
 def test_instruction_files_complete():
     for path, needles in REQUIRED.items():
         text = (ROOT / path).read_text()
-        assert len(text) > 1000 or path == "CLAUDE.md", f"{path} looks truncated ({len(text)} chars)"
+        assert len(text) > 300, f"{path} looks truncated ({len(text)} chars)"
         for n in needles:
             assert n in text, f"{path} is missing '{n}'"
 
