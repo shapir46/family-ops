@@ -6,6 +6,7 @@ sources:
   outlook_calendars:  {cadence: daily,   fetch: claude,  max_age_days: 1,   what: "Default, Family, Ari, Elle, Lila, Leo calendars, today..today+10"}
   playmetrics:        {cadence: daily,   fetch: script,  max_age_days: 1,   what: "Elle soccer ICS (env PLAYMETRICS_ICS_URL)"}
   almanac:            {cadence: yearly,  fetch: script,  max_age_days: 366, what: "Holidays (US rules + Hebcal Jewish holidays, cached per year) and Friday Shabbat sunset (Hebcal, NOAA fallback)"}
+  fantasy:            {cadence: daily,   fetch: script,  max_age_days: 1,   what: "Ari's ESPN fantasy league (data/family.yaml fantasy:; private leagues need env ESPN_S2 + ESPN_SWID)"}
   weather:            {cadence: daily,   fetch: script,  max_age_days: 1,   what: "NWS forecast, Birmingham MI"}
   sports:             {cadence: daily,   fetch: claude,  max_age_days: 1,   what: "Scores for the newspaper, confirmed in two sources"}
   league_schedules:   {cadence: weekly,  fetch: claude,  max_age_days: 7,   what: "Re-check data/schedules/* against league sites and emails (MCE basketball, Snaptivities)"}

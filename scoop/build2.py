@@ -58,17 +58,22 @@ def sec_sports():
     if d.get('tonight'): parts.append("<h3>" + d.get('tonight_title', 'Tonight in Detroit') + "</h3><ul class='small'>" + li(d['tonight']) + "</ul>")
     if d.get('hs'): parts.append("<h3>Seaholm &amp; Groves</h3><ul class='small'>" + li(d['hs']) + "</ul>")
     return ("<h2>Sports Page</h2>" + ''.join(parts)) if parts else ''
+def sec_ari_fantasy():
+    f = d.get('ari_fantasy')
+    if not f: return ''
+    return (f"<div class='box2'><h3 style='margin:0 0 1px'>{f.get('title', 'Ari&#8217;s Fantasy Team')}</h3>"
+            f"<ul class='small'>{li(f.get('items', []))}</ul></div>")
 def sec_news0():
     return '' if d.get('fantasy') or not d.get('news') else story(*d['news'][0])
 SECTIONS = {'schedule': sec_schedule, 'week': sec_week, 'school_notes': sec_school_notes, 'left_story': sec_left_story,
-            'lead': sec_lead, 'news1': sec_news1, 'word': sec_word, 'joke': sec_joke, 'sports': sec_sports, 'news0': sec_news0}
-BOXED = {'week', 'word', 'joke'}
+            'lead': sec_lead, 'news1': sec_news1, 'word': sec_word, 'joke': sec_joke, 'sports': sec_sports, 'ari_fantasy': sec_ari_fantasy, 'news0': sec_news0}
+BOXED = {'week', 'word', 'joke', 'ari_fantasy'}
 
 # Layout: flexible column count, widths and placement (README: readability first). Default = the approved 3-column page.
 DEFAULT_LAYOUT = {'columns': [
     {'width': '1.85in', 'sections': ['schedule', 'week', 'school_notes', 'left_story']},
     {'width': '3.95in', 'sections': ['lead', 'news1', 'word', 'joke']},
-    {'width': '2.1in', 'sections': ['sports', 'news0']}]}
+    {'width': '2.1in', 'sections': ['ari_fantasy', 'sports', 'news0']}]}
 layout = d.get('layout') or DEFAULT_LAYOUT
 for c in layout['columns']:
     for name in c['sections']:

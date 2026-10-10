@@ -1,0 +1,12 @@
+{"settings": {"name": "Sample Kids League"},
+ "status": {"currentMatchupPeriod": 6},
+ "scoringPeriodId": 6,
+ "teams": [
+  {"id": 3, "name": "Ari's Touchdown Tigers", "abbrev": "ATT", "playoffSeed": 2, "record": {"overall": {"wins": 4, "losses": 1, "ties": 0, "pointsFor": 612.4}}},
+  {"id": 5, "location": "Bloomfield", "nickname": "Blitz", "abbrev": "BB", "playoffSeed": 1, "record": {"overall": {"wins": 5, "losses": 0, "ties": 0, "pointsFor": 640.0}}},
+  {"id": 7, "name": "End Zone Eagles", "abbrev": "EZE", "playoffSeed": 3, "record": {"overall": {"wins": 2, "losses": 3, "ties": 0, "pointsFor": 540.2}}}
+ ],
+ "schedule": [
+  {"matchupPeriodId": 5, "home": {"teamId": 3, "totalPoints": 118.36}, "away": {"teamId": 7, "totalPoints": 97.1}, "winner": "HOME"},
+  {"matchupPeriodId": 6, "home": {"teamId": 5, "totalPoints": 44.2, "totalPointsLive": 61.8}, "away": {"teamId": 3, "totalPoints": 52.0, "totalPointsLive": 70.45}, "winner": "UNDECIDED"}
+ ]}

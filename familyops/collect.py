@@ -7,7 +7,7 @@ from datetime import date, datetime, timedelta, timezone
 
 import yaml
 
-from . import ROOT, almanac, calendars, family, lunch, playmetrics, schedules, weather
+from . import ROOT, almanac, calendars, family, fantasy, lunch, playmetrics, schedules, weather
 from .model import Event, conflicts, merge
 
 STATE_DIR = ROOT / "state"
@@ -68,7 +68,7 @@ def collect(today: date) -> dict:
         except Exception as e:  # noqa: BLE001 - every failure is reported, none is fatal
             meta["sources"][name] = {"ok": False, "error": f"{type(e).__name__}: {e}"}
             meta["warnings"].append(f"{name} failed: {e}")
-            return [] if name not in ("lunch", "weather", "almanac") else None
+            return [] if name not in ("lunch", "weather", "almanac", "fantasy") else None
 
     # Priority order matters for merge(): the richest source for an event goes first.
     groups.append(run("playmetrics", lambda: playmetrics.events(today, end)))
@@ -86,6 +86,7 @@ def collect(today: date) -> dict:
         except Exception:  # noqa: BLE001 - not posted yet is normal
             pass
     wx = run("weather", lambda: weather.get(today))
+    ff = run("fantasy", fantasy.get) if fantasy.config() else None
     alm = run("almanac", lambda: [almanac.day(today), almanac.day(today + timedelta(days=1))])
 
     return {
@@ -99,6 +100,7 @@ def collect(today: date) -> dict:
         "conflicts": conflicts([e.to_dict() for e in events]),
         "lunch": lunch_today,
         "weather": wx,
+        "fantasy": ff,    # Ari's ESPN league summary, or None (not configured / failed: print nothing)
         "almanac": alm,   # [today, tomorrow]: holidays, and Shabbat sunset on Fridays
         "due": due(today),
         "delivery": {"email": None, "dashboard": None, "print": None, "filed": None},
