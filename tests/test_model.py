@@ -21,3 +21,13 @@ def test_no_merge_different_kids_or_times():
 def test_labels():
     assert weekday_label("2026-10-13") == "Tue, Oct 13"
     assert fmt_time("18:05") == "6:05 pm" and fmt_time("00:30") == "12:30 am" and fmt_time(None) == "All day"
+
+
+def test_conflict_uses_arrival_time():
+    from familyops.model import conflicts
+    rs = {"date": "2026-10-18", "start": "09:30", "end": "12:00", "title": "Religious School", "kids": ["Ari", "Elle"], "kind": "religious_school"}
+    game = {"date": "2026-10-18", "start": "12:00", "end": "13:00", "title": "Soccer game", "kids": ["Elle"],
+            "kind": "game", "details": "arrive 11:30 am, black-black-black"}
+    hoops = {"date": "2026-10-18", "start": "12:00", "end": "13:00", "title": "Hoops", "kids": ["Ari"], "kind": "game"}
+    c = conflicts([rs, game, hoops])
+    assert [(x["kids"], x["b"]) for x in c] == [(["Elle"], "Soccer game")]  # Ari's 12:00 start doesn't overlap a 12:00 end

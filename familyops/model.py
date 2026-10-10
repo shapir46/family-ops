@@ -82,3 +82,40 @@ def merge(events: list[Event]) -> list[Event]:
             if not getattr(m, attr) and getattr(e, attr):
                 setattr(m, attr, getattr(e, attr))
     return sorted(out, key=lambda e: (e.date, e.start or "00:00", e.title))
+
+
+def _minutes(hhmm: str) -> int:
+    h, m = map(int, hhmm.split(":"))
+    return h * 60 + m
+
+
+def _arrive(e: dict) -> Optional[int]:
+    """'arrive 11:30 am' in details -> minutes; the child must be there by then."""
+    m = re.search(r"arrive (\d{1,2}):(\d{2})\s*(am|pm)", e.get("details") or "", re.I)
+    if not m:
+        return None
+    h = int(m.group(1)) % 12 + (12 if m.group(3).lower() == "pm" else 0)
+    return h * 60 + int(m.group(2))
+
+
+def conflicts(events: list[dict]) -> list[dict]:
+    """Same child, same day, overlapping times (arrival time counts as the start). Untimed events are ignored;
+    an event with no end is treated as 60 minutes."""
+    out = []
+    timed = [e for e in events if e.get("start") and e.get("kids") and e.get("kind") != "school_status"]
+    for i, a in enumerate(timed):
+        for b in timed[i + 1:]:
+            if a["date"] != b["date"]:
+                continue
+            shared = sorted(set(a["kids"]) & set(b["kids"]))
+            if not shared:
+                continue
+            spans = []
+            for e in (a, b):
+                s = min(_minutes(e["start"]), _arrive(e) or 10 ** 6)
+                end = _minutes(e["end"]) if e.get("end") else _minutes(e["start"]) + 60
+                spans.append((s, end))
+            if spans[0][0] < spans[1][1] and spans[1][0] < spans[0][1]:
+                out.append({"date": a["date"], "kids": shared, "a": a["title"], "b": b["title"],
+                            "a_time": a["start"], "b_time": b["start"]})
+    return out

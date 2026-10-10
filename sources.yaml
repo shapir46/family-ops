@@ -1,0 +1,14 @@
+# Every source the family pipeline reads, how often it changes, and who fetches it.
+# A daily run refreshes any source whose cache is older than max_age_days (stale-driven, so a missed
+# day or a failed fetch heals itself on the next run). State of each source lives in cache/sources.json.
+sources:
+  outlook_mail:       {cadence: daily,   fetch: claude,  max_age_days: 1,   what: "Outlook Family-Digest folder (new) + Processed (carried forward)"}
+  outlook_calendars:  {cadence: daily,   fetch: claude,  max_age_days: 1,   what: "Default, Family, Ari, Elle, Lila, Leo calendars, today..today+10"}
+  playmetrics:        {cadence: daily,   fetch: script,  max_age_days: 1,   what: "Elle soccer ICS (env PLAYMETRICS_ICS_URL)"}
+  weather:            {cadence: daily,   fetch: script,  max_age_days: 1,   what: "NWS forecast, Birmingham MI"}
+  sports:             {cadence: daily,   fetch: claude,  max_age_days: 1,   what: "Scores for the newspaper, confirmed in two sources"}
+  league_schedules:   {cadence: weekly,  fetch: claude,  max_age_days: 7,   what: "Re-check data/schedules/* against league sites and emails (MCE basketball, Snaptivities)"}
+  lunch_menu:         {cadence: monthly, fetch: script,  max_age_days: 31,  what: "BPS elementary (Quarton) lunch PDF, parsed to cache/lunch-YYYY-MM.json"}
+  district_calendar:  {cadence: yearly,  fetch: jacob,   max_age_days: 366, what: "BPS district calendar -> data/calendars/bps-YYYY-YY.yaml"}
+  religious_school:   {cadence: yearly,  fetch: jacob,   max_age_days: 366, what: "TBE Religious School calendar -> data/calendars/tbe-rs-YYYY-YY.yaml"}
+  school_year_facts:  {cadence: yearly,  fetch: jacob,   max_age_days: 366, what: "Grades, teachers, rooms, programs -> data/family.yaml"}

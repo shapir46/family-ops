@@ -115,6 +115,19 @@ The daily run POSTs `state.json` to the Mac mini, and the page renders from it. 
 
 **Family device (later):** a "wall mode" of the same page with large type, auto-refresh, no Done buttons, and landscape tablet layout. Because the dashboard already runs on the Mac mini, the device is either a tablet in kiosk mode or an e-ink frame that pulls a rendered image. Decided when we get there.
 
+## Progress
+- **Step 1 (foundation): done 2026-10-10.** Built so far:
+  - family, calendars and schedules as data
+  - ICS/PlayMetrics parser
+  - lunch finder and parser
+  - NWS weather
+  - merge/dedupe and same-child conflict detection
+  - pre-send validator and retention rules
+  - source registry with stale-driven cadence
+  - `collect` CLI
+  - 24 tests
+- **Next: step 2.** Render the digest email from `state.json` and shadow-compare it against v1.
+
 ## Build order (each step shadow-tested before it replaces v1)
 1. **Schema + scripts for the mechanical sources:** ICS, static calendars as YAML, lunch parse, weather, validation, tests.
 2. **Digest rendered from state.** Compare against v1's shadow output for a few days.

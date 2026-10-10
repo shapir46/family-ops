@@ -20,6 +20,25 @@ Jacob Shapiro's family automation. This is a **private** repo because it holds k
 | `docs/original-routine-prompt-2026-10-10.md` | The Cowork routine prompt this repo was split from (secrets redacted). Reference only. |
 | `docs/cowork-export/` | Verbatim export of the Cowork project docs and family-related memory as of 2026-10-10, with `MANIFEST.sha256`. Reference only; edit the working copies instead. |
 
+## v2 toolkit (in progress; see docs/architecture-v2.md)
+The `familyops/` package does the mechanical work, so the model doesn't have to:
+| Path | What |
+|---|---|
+| `sources.yaml` | Every source with its cadence (daily / weekly / monthly / yearly), who fetches it, and when it goes stale |
+| `data/family.yaml` | Kids' grades, colors, initials, audiences; GSRP half-day rule |
+| `data/calendars/*.yaml` | BPS and TBE calendars as data (tests prove they match the prose originals) |
+| `data/schedules/*.yaml` | League schedules as data (keep in sync with the `.md` copies) |
+| `data/lunch-menus.yaml` | Lunch PDF URLs per month; new months are found and added automatically |
+| `cache/` | Parsed lunch months, source check dates |
+| `state/YYYY-MM-DD.json` | The day's single record: events, actions, FYI, lunch, weather, conflicts, due checks, delivery flags |
+
+Commands (`python3 -m familyops ...`):
+- `collect [--date D]`: PlayMetrics, league schedules, district and Religious School calendars, lunch and weather go into the state file. Prints source health, warnings, and which weekly/yearly checks are due.
+- `add --events f.json [--actions f.json] [--fyi f.json]`: merges the Outlook calendar events and email items Claude gathered. Duplicates merge, and the scripted sources keep priority.
+- `check-email --html f.html --to a,b [--shadow]`: pre-send validation (weekday/date pairs, bus/SACC, credential URLs, secrets, recipients, allowed HTML). A non-zero exit means do not send.
+- `checked <source>`: record that a weekly/yearly source was re-checked.
+- Tests: `python3 -m pytest -q`. Run them before pushing any change to `familyops/` or `data/`.
+
 ## Hard rules
 - **Mail and calendars only through the Microsoft 365 (Outlook) connector.** Never use Gmail, Google Calendar or any other mail connector, for reading or sending.
 - **Secrets come from the environment, never the repo:** `RELAY_TOKEN` (print relay) and `PLAYMETRICS_ICS_URL` (Elle's soccer feed). Never echo, log, commit or put either into a digest, newspaper, artifact or commit message.
