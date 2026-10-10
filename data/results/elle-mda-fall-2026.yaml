@@ -1,0 +1,8 @@
+# Elle's MDA U9G Black game results, as Jacob reports them (use /family-update).
+# One entry per game: date, opponent, score (mda = Elle's team, opp = opponent), elle_goals.
+# Optional: notes (one short kid-friendly line), source. Leave a game out until its result is known.
+team: MDA U9G Black
+kid: Elle
+results: []
+# Example:
+#  - {date: 2026-10-11, opponent: Blackhawks, mda: 3, opp: 1, elle_goals: 1, notes: "Elle's goal came off a corner kick", source: "Jacob, 2026-10-11"}

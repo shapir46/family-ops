@@ -8,6 +8,7 @@ Everything the digest, newspaper and dashboard know about the family lives here,
 | `family.md` | Rules that need words: child attribution, the bus/SACC exclusion, what to drop |
 | `calendars/*.yaml` | Year calendars as data (`date`, optional `end`, `kind`, `audience`/`kids`, `label`). Prose originals (e.g. `bps-calendar-2026-27.md`) are kept only while a routine still reads prose. |
 | `schedules/*.yaml` | Activity and league schedules (`kids`, `location`, `events[]`). The `.md` twin, where present, is the human-readable copy; keep both in sync. |
+| `results/*.yaml` | Game results Jacob reports, e.g. `elle-mda-fall-2026.yaml`: date, opponent, score, Elle's goals. These feed the newspaper's MDA Kicks & Giggles box. |
 | `lunch-menus.yaml` | One BPS lunch PDF URL per month (added automatically) |
 
 ## Conventions
