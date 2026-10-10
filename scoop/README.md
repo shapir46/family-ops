@@ -23,9 +23,10 @@ One-page Letter PDF newspaper. Files (in the family-ops repo): `scoop/` holds bu
 
 ## MDA KICKS & GIGGLES (Jacob, Oct 10, 2026)
 - A box for Elle's soccer team, **MDA U9G Black** (`mda`). Copy it verbatim from `state.mda`, which `familyops/teams.py` computes, and never hand-write it. When `state.mda` is null, the box does not appear.
-- It shows:
-  - games and tournaments in the next 3 days: opponent, kickoff, arrival time, uniform, field;
-  - the last game: the score, from `data/results/elle-mda-*.yaml`, which Jacob supplies with `/family-update`. "Elle scored a goal!" appears only when she scored; zero goals is never mentioned. With no result yet: "Final score coming soon."
+- **Only two cards: the last game and the next game or tournament** (Jacob, 2026-10-10). Never list more upcoming games.
+  - Last game: the score, from `data/results/elle-mda-*.yaml`, which Jacob supplies with `/family-update`. "Elle scored a goal!" appears only when she scored; zero goals is never mentioned. With no result yet: "LAST GAME · SAT OCT 17 / MDA vs Opponent" and "Final score coming soon." (dropped after 8 days).
+  - Next: the next game (opponent, kickoff, arrival time, uniform, field) or tournament, whichever comes first.
+- Shown only when there was a game since the last paper or the next game/tournament is within 3 days; otherwise hidden.
 - **Format: like a pro sports schedule** (Jacob, 2026-10-10). Each entry is a card with four lines:
   - date and time in small caps ("SAT OCT 17 · 12:30 PM"; "FINAL · SUN OCT 11" for results);
   - the matchup "MDA vs Opponent" (results read "MDA 3, Blackhawks 1", winner in bold);
@@ -37,8 +38,9 @@ One-page Letter PDF newspaper. Files (in the family-ops repo): `scoop/` holds bu
 
 ## SPARTANS HOOP SCOOP (Jacob, Oct 10, 2026)
 - The same box for Ari's basketball team, the **Motor City Evolution (MCE) Spartans** (`spartans`). Copy it verbatim from `state.spartans`, which `familyops/teams.py` computes from `data/schedules/ari-mce-basketball-*.yaml`, and never hand-write it. When `state.spartans` is null, the box does not appear.
-- Same rules and format as MDA Kicks & Giggles: shown only when there was a game since the last paper or a game or tournament within the next 3 days; pro-schedule cards ("SAT OCT 17 · 9:55 AM / Spartans vs Hoosiers / Berkshire Middle School, Beverly Hills"); finals read "Spartans 24, Tigers 18", winner in bold.
-- Scores come from `data/results/ari-spartans-*.yaml` (Jacob, via `/family-update`). "Ari scored 6 points!" appears only when he scored; zero is never mentioned. With no result yet: "Final score coming soon."
+- Same rules and format as MDA Kicks & Giggles: only the last game and the next game or tournament; shown only when there was a game since the last paper or the next one is within 3 days; pro-schedule cards ("SAT OCT 17 · 9:55 AM / Spartans vs Hoosiers / Berkshire Middle School, Beverly Hills"); finals read "Spartans 24, Tigers 18", winner in bold.
+- **Scores are read automatically from MCE's results page**, https://www.motorcityevolution.com/league-results, where the previous weekend's scores are posted (Jacob, 2026-10-10). `familyops/mce.py` reads it every run. A game counts only under Ari's division heading ("College") with the same date and both team names as his schedule (the Rookie League also has a Spartans). Ari's points come from the recap only when it names "Ari Shapiro" with a number. Anything unclear is left out, never guessed.
+- Jacob can also send a score or Ari's points (`data/results/ari-spartans-*.yaml`, via `/family-update`); his entry wins over the page. "Ari scored 6 points!" appears only when he scored; zero is never mentioned. With no score yet: "Final score coming soon."
 - Playoff dates without a known opponent read "Spartans · Playoffs (if qualified)"; no time is printed while the league says "Times TBD".
 
 ## ARI'S FANTASY TEAM (Jacob, Oct 10, 2026)

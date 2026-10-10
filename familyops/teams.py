@@ -3,8 +3,10 @@
 - 'MDA Kicks & Giggles': Elle's soccer (MDA U9G Black). Games and tournaments come from the PlayMetrics feed.
 - 'Spartans Hoop Scoop': Ari's basketball (Motor City Evolution Spartans). Games come from data/schedules/ari-mce-basketball-*.yaml.
 
-Scores and the kid's goals/points come from data/results/<kid>-<team>-*.yaml, which Jacob supplies. A box is shown
-only when there was a game since the last paper or a game/tournament within the next 3 days. A zero stat is never printed.
+Each box shows only the LAST game (score, or "Final score coming soon.") and the NEXT game or tournament. Scores and
+the kid's goals/points come from data/results/<kid>-<team>-*.yaml, which Jacob supplies; Spartans scores are also read
+from the MCE league results page (familyops/mce.py), and Jacob's file wins. A box is shown only when there was a game
+since the last paper or the next game/tournament is within 3 days. A zero stat is never printed.
 """
 from __future__ import annotations
 
@@ -17,6 +19,7 @@ from . import ROOT
 from .model import Event, fmt_time
 
 LOOKAHEAD_DAYS = 3
+LOOKBACK_DAYS = 28   # how far back collect looks for each kid's last game
 
 
 @dataclass(frozen=True)
@@ -133,45 +136,59 @@ def _extra(team: Team, e: Event) -> str:
     return e.details
 
 
-def section(team: Team, today: date, events: list[Event], past_events: list[Event]) -> dict | None:
+RESULT_WAIT_DAYS = 8   # after this, a game with no posted score stops saying "coming soon"
+
+
+def section(team: Team, today: date, events: list[Event], past_events: list[Event],
+            posted: dict[str, dict] | None = None) -> dict | None:
     """{'title', 'items'} ready for edition.json, or None when the box should not appear.
-    Items read like a pro sports schedule: date · time, 'Team vs Opponent', location, extra line."""
-    res = results(team)
-    items = []
-    # 1. Last game(s): final score, and the kid's goals/points only when nonzero.
-    for d in recent_days(today):
-        for g in [e for e in past_events if e.date == d.isoformat() and _is_game(team, e) and _opponent(team, e)]:
-            opp = _opponent(team, g)
-            r = res.get(g.date)
-            if r:
-                us, them, opp = int(r[team.score_key]), int(r["opp"]), r.get("opponent", opp)
-                a = f"<b>{team.name} {us}</b>" if us > them else f"{team.name} {us}"
-                b = f"<b>{opp} {them}</b>" if them > us else f"{opp} {them}"
-                extra = ""
-                n = int(r.get(team.stat_key) or 0)
-                if n:
-                    extra = f"<b>{team.kid} scored {team.stat_one if n == 1 else team.stat_many.format(n=n)}!</b>"
-                if r.get("notes"):
-                    extra = (extra + " " + r["notes"]).strip()
-                items.append(_card(f"Final · {_day(g.date)}", f"{a}, {b}", place(g.location), extra))
-            else:
-                items.append(_card(_day(g.date), f"{team.name} vs {opp}", place(g.location), "Final score coming soon."))
-    # 2. Games and tournaments in the next 3 days.
-    horizon = (today + timedelta(days=LOOKAHEAD_DAYS)).isoformat()
-    upcoming = [e for e in events if today.isoformat() <= e.date <= horizon and (_is_game(team, e) or _is_tournament(team, e))]
+    Exactly two cards at most (Jacob, 2026-10-10): the LAST game and the NEXT game or tournament.
+    The box appears only when a game was played since the last paper or the next one is within 3 days.
+    `posted`: scores found online (MCE results page); Jacob's data/results file wins over them."""
+    res = {**(posted or {})}
+    for d, r in results(team).items():
+        res[d] = {**res.get(d, {}), **r}
+    t = today.isoformat()
+    past = sorted((e for e in past_events if e.date < t and _is_game(team, e) and _opponent(team, e)),
+                  key=lambda e: (e.date, e.start or ""))
+    last = past[-1] if past else None
     tourneys: dict[str, list[Event]] = {}
-    for e in upcoming:
+    nxt: list[tuple[str, str, str]] = []           # (date, start, card)
+    for e in events:
+        if e.date < t:
+            continue
         if _is_tournament(team, e):
             tourneys.setdefault(e.title, []).append(e)
-            continue
-        when = "Today" if e.date == today.isoformat() else _day(e.date)
-        if e.start and "TBD" not in (e.details or ""):
-            when += f" · {fmt_time(e.start)}"
-        items.append(_card(when, _matchup(team, e), place(e.location), _extra(team, e)))
+        elif _is_game(team, e):
+            when = "Today" if e.date == t else _day(e.date)
+            if e.start and "TBD" not in (e.details or ""):
+                when += f" · {fmt_time(e.start)}"
+            nxt.append((e.date, e.start or "", _card(when, _matchup(team, e), place(e.location), _extra(team, e))))
     for title, evs in tourneys.items():
-        first, last = evs[0].date, evs[-1].end_date or evs[-1].date
-        span = _day(first) if first == last else f"{_day(first)}–{_day(last)}"
-        items.append(_card(f"Tournament · {span}", _clean(title), place(evs[0].location)))
-    if not items:
+        first, last_day = evs[0].date, evs[-1].end_date or evs[-1].date
+        span = _day(first) if first == last_day else f"{_day(first)}–{_day(last_day)}"
+        nxt.append((first, "", _card(f"Tournament · {span}", _clean(title), place(evs[0].location))))
+    nxt.sort(key=lambda x: (x[0], x[1]))
+    recent = {d.isoformat() for d in recent_days(today)}
+    horizon = (today + timedelta(days=LOOKAHEAD_DAYS)).isoformat()
+    if not ((last and last.date in recent) or (nxt and nxt[0][0] <= horizon)):
         return None
+    items = []
+    if last:
+        opp, r = _opponent(team, last), res.get(last.date)
+        if r and team.score_key in r:
+            us, them, opp = int(r[team.score_key]), int(r["opp"]), r.get("opponent", opp)
+            a = f"<b>{team.name} {us}</b>" if us > them else f"{team.name} {us}"
+            b = f"<b>{opp} {them}</b>" if them > us else f"{opp} {them}"
+            n = int(r.get(team.stat_key) or 0)
+            extra = f"<b>{team.kid} scored {team.stat_one if n == 1 else team.stat_many.format(n=n)}!</b>" if n else ""
+            if r.get("notes"):
+                extra = (extra + " " + r["notes"]).strip()
+            items.append(_card(f"Final · {_day(last.date)}", f"{a}, {b}", place(last.location), extra))
+        else:
+            fresh = (today - date.fromisoformat(last.date)).days <= RESULT_WAIT_DAYS
+            items.append(_card(f"Last game · {_day(last.date)}", f"{team.name} vs {opp}", place(last.location),
+                               "Final score coming soon." if fresh else ""))
+    if nxt:
+        items.append(nxt[0][2])
     return {"title": team.title, "items": items}

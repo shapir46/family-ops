@@ -7,7 +7,7 @@ from datetime import date, datetime, timedelta, timezone
 
 import yaml
 
-from . import ROOT, almanac, calendars, family, fantasy, lunch, playmetrics, schedules, teams, weather
+from . import ROOT, almanac, calendars, family, fantasy, lunch, mce, playmetrics, schedules, teams, weather
 from .model import Event, conflicts, merge
 
 STATE_DIR = ROOT / "state"
@@ -68,15 +68,17 @@ def collect(today: date) -> dict:
         except Exception as e:  # noqa: BLE001 - every failure is reported, none is fatal
             meta["sources"][name] = {"ok": False, "error": f"{type(e).__name__}: {e}"}
             meta["warnings"].append(f"{name} failed: {e}")
-            return [] if name not in ("lunch", "weather", "almanac", "fantasy", "playmetrics_feed") else None
+            return [] if name not in ("lunch", "weather", "almanac", "fantasy", "playmetrics_feed", "mce_results") else None
 
     # Priority order matters for merge(): the richest source for an event goes first.
     pm_text = run("playmetrics_feed", playmetrics.fetch)
     pm_text = pm_text if isinstance(pm_text, str) else None
     groups.append(run("playmetrics", lambda: playmetrics.events(today, end, pm_text) if pm_text else []))
-    pm_past = run("playmetrics_past", lambda: playmetrics.events(today - timedelta(days=3), today - timedelta(days=1), pm_text)) if pm_text else []
+    back = today - timedelta(days=teams.LOOKBACK_DAYS)   # the team boxes show each kid's last game
+    pm_past = run("playmetrics_past", lambda: playmetrics.events(back, today - timedelta(days=1), pm_text)) if pm_text else []
     groups.append(run("schedules", lambda: schedules.events(today, end)))
-    sched_past = run("schedules_past", lambda: schedules.events(today - timedelta(days=3), today - timedelta(days=1)))
+    sched_past = run("schedules_past", lambda: schedules.events(back, today - timedelta(days=1)))
+    mce_scores = run("mce_results", lambda: mce.results_for(teams.SPARTANS, today))
     groups.append(run("district_calendar", lambda: calendars.bps_events(today, end)))
     events = merge([e for g in groups for e in g])
 
@@ -105,7 +107,7 @@ def collect(today: date) -> dict:
         "lunch": lunch_today,
         "weather": wx,
         "mda": teams.section(teams.MDA, today, events, pm_past),              # Elle's 'MDA Kicks & Giggles' box, or None (hide)
-        "spartans": teams.section(teams.SPARTANS, today, events, sched_past),  # Ari's 'Spartans Hoop Scoop' box, or None (hide)
+        "spartans": teams.section(teams.SPARTANS, today, events, sched_past, mce_scores or {}),  # Ari's 'Spartans Hoop Scoop' box, or None (hide)
         "fantasy": ff,    # Ari's ESPN league summary, or None (not configured / failed: print nothing)
         "almanac": alm,   # [today, tomorrow]: holidays, and Shabbat sunset on Fridays
         "due": due(today),
