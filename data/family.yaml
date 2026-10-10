@@ -45,6 +45,6 @@ kids:
     outlook_calendar: Lila
     activities: []
 # Ari's ESPN fantasy football team (Jacob, 2026-10-10). Ids come from the league URL:
-# fantasy.espn.com/football/team?leagueId=<league_id>&teamId=<team_id>. Pending until Jacob sends the link.
-fantasy: {owner: Ari, platform: espn, season: 2026, league_id: null, team_id: null}
+# fantasy.espn.com/football/team?leagueId=<league_id>&teamId=<team_id>.
+fantasy: {owner: Ari, platform: espn, season: 2026, league_id: 703970420, team_id: 8}   # from Jacob's link, 2026-10-10; league is private (needs public view or ESPN_S2/ESPN_SWID)
 family_color: "#475569"   # slate, for events with no specific child
