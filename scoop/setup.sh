@@ -6,4 +6,4 @@ for t in grenze-gotisch playfair-display libre-baskerville; do
   npm pack @fontsource/$t --silent >/dev/null 2>&1
   mkdir -p fontsource-$t && tar xzf fontsource-$t-*.tgz -C fontsource-$t
 done
-pip list 2>/dev/null | grep -qi playwright || pip install playwright --break-system-packages -q
+# Python packages (incl. playwright) come from the repo's .venv: run render.py with ../.venv/bin/python, or use ./fo python.

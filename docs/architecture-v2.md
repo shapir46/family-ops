@@ -126,6 +126,10 @@ The daily run POSTs `state.json` to the Mac mini, and the page renders from it. 
   - source registry with stale-driven cadence
   - `collect` CLI
   - 24 tests
+- **First shadow run, 2026-10-10 (manual), on Sonnet 5.5:**
+  - Took about 9 minutes and cost about $4.10, versus $6.49 for the Cowork run.
+  - Sent to Jacob only, passed `check-email`, built the newspaper without printing, filed nothing.
+  - Fixed afterwards: the routine's system python3 lacked pdfplumber, so there is now a repo venv via `scripts/bootstrap.sh`, the `./fo` wrapper and a SessionStart hook. The weekday checker misread ranges like "Fri–Sun, Oct 23–25"; that is fixed and tested.
 - **Next: step 2.** Render the digest email from `state.json` and shadow-compare it against v1.
 
 ## Build order (each step shadow-tested before it replaces v1)

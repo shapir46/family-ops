@@ -8,8 +8,16 @@ TODAY = date(2026, 10, 10)
 
 def test_weekday_pairs():
     assert V.weekday_pairs("Tue, Oct 13 and Sun, Oct 11", TODAY) == []
-    assert V.weekday_pairs("Wed, Oct 13", TODAY) == ["weekday mismatch: 'Wed, Oct 13' is really Tue, Oct 13"]
+    assert V.weekday_pairs("Wed, Oct 13", TODAY) == ["weekday mismatch: 'Wed, Oct 13' (Wed Oct 13) is really Tue, Oct 13"]
     assert V.weekday_pairs("Fri, Jan 1", date(2026, 12, 20)) == []  # resolves to 2027
+
+
+def test_weekday_ranges():
+    for ok in ["Fri–Sun, Oct 23–25", "Fri-Sun, Oct 23-25", "Mon–Wed, Dec 28–30", "Sat, Oct 24–Sun, Oct 25",
+               "Wed-Thu, Sep 2-3"]:
+        assert V.weekday_pairs(ok, TODAY) == [], ok
+    assert V.weekday_pairs("Fri–Sat, Oct 23–25", TODAY)  # end weekday wrong (Oct 25 is a Sunday)
+    assert V.weekday_pairs("Thu–Sun, Oct 23–25", TODAY)  # start weekday wrong
 
 
 def test_bus_sacc_but_bike_bus_ok():

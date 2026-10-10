@@ -1,0 +1,10 @@
+#!/bin/sh
+# family-ops CLI: ./fo collect | add | check-email | checked | lunch   (also: ./fo test, ./fo python ...)
+set -e
+cd "$(dirname "$0")"
+sh scripts/bootstrap.sh
+case "$1" in
+  test)   shift; exec .venv/bin/python -m pytest -q "$@" ;;
+  python) shift; exec .venv/bin/python "$@" ;;
+  *)      exec .venv/bin/python -m familyops "$@" ;;
+esac

@@ -4,3 +4,4 @@ out/
 fonts/
 __pycache__/
 .env
+.venv/

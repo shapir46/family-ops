@@ -21,7 +21,7 @@ Nothing may repeat from any earlier edition: not articles/stories, not photos/il
 1. Make a work dir and copy `scoop/` into it (`cp -r scoop/. <workdir>/`).
 2. `sh setup.sh` (installs fonts into ./fonts via npm; installs playwright if missing; Chromium is preinstalled — never run playwright install).
 3. Write edition.json (schema below).
-4. `FONTDIR=./fonts python3 build2.py && python3 render.py newspaper.pdf`
+4. `FONTDIR=./fonts $REPO/.venv/bin/python build2.py && $REPO/.venv/bin/python render.py newspaper.pdf` ($REPO = the family-ops checkout; `sh $REPO/scripts/bootstrap.sh` creates `.venv`).
 5. render.py prints one "content bottom / column bottom" pair per column. Every content value must be <= its column bottom (~830); aim for <= ~800 so nothing is clipped (check the PNG: the riddle/joke box and the last items must be fully visible). If a column overflows, shorten text (never shrink fonts). Run `pdfinfo newspaper.pdf | grep Pages` — must be 1. Look at a PNG (`pdftoppm -r 100 -png`) for clipping.
 
 ## edition.json fields

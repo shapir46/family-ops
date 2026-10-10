@@ -32,12 +32,13 @@ The `familyops/` package does the mechanical work, so the model doesn't have to:
 | `cache/` | Parsed lunch months, source check dates |
 | `state/YYYY-MM-DD.json` | The day's single record: events, actions, FYI, lunch, weather, conflicts, due checks, delivery flags |
 
-Commands (`python3 -m familyops ...`):
+Commands (`./fo ...` from the repo root). `./fo` uses the repo's own `.venv`, created by `scripts/bootstrap.sh`, which a SessionStart hook runs. Never use the system `python3` for this code: it can lack packages or ship a broken `cryptography`.
 - `collect [--date D]`: PlayMetrics, league schedules, district and Religious School calendars, lunch and weather go into the state file. Prints source health, warnings, and which weekly/yearly checks are due.
 - `add --events f.json [--actions f.json] [--fyi f.json]`: merges the Outlook calendar events and email items Claude gathered. Duplicates merge, and the scripted sources keep priority.
 - `check-email --html f.html --to a,b [--shadow]`: pre-send validation (weekday/date pairs, bus/SACC, credential URLs, secrets, recipients, allowed HTML). A non-zero exit means do not send.
 - `checked <source>`: record that a weekly/yearly source was re-checked.
-- Tests: `python3 -m pytest -q`. Run them before pushing any change to `familyops/` or `data/`.
+- Tests: `./fo test`. Run them before pushing any change to `familyops/` or `data/`.
+- Python for anything else, including the newspaper's build2.py and render.py: `.venv/bin/python` (or `./fo python ...`).
 
 ## Hard rules
 - **Mail and calendars only through the Microsoft 365 (Outlook) connector.** Never use Gmail, Google Calendar or any other mail connector, for reading or sending.

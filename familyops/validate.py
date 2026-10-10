@@ -11,7 +11,10 @@ REBEKAH = "rebekah.shapiro@gmail.com"
 
 MONTHS = {m: i for i, m in enumerate(["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct",
                                       "Nov", "Dec"], 1)}
-_PAIR = re.compile(r"\b(Mon|Tue|Wed|Thu|Fri|Sat|Sun)[a-z]*,?\s+(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]*\.?\s+(\d{1,2})\b")
+_WD = r"(Mon|Tue|Wed|Thu|Fri|Sat|Sun)[a-z]*"
+_MON = r"(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]*\.?"
+# "Tue, Oct 13", and ranges "Fri–Sun, Oct 23–25" (first weekday = start day, second = end day).
+_PAIR = re.compile(rf"\b(?:{_WD}\s*[-–—]\s*)?{_WD},?\s+{_MON}\s+(\d{{1,2}})(?:\s*[-–—]\s*(\d{{1,2}})\b)?")
 
 # Bus and SACC content never applies (data/family.md). "Bike Bus" is a bike ride and stays.
 _BUS = re.compile(r"\b(school bus|bus route|busing|bussing|busses|buses|stopfinder|no bus)\b", re.I)
@@ -25,22 +28,29 @@ ALLOWED_TAGS = {"h2", "h3", "p", "ul", "ol", "li", "a", "b", "strong", "i", "em"
 
 
 def weekday_pairs(text: str, today: date) -> list[str]:
-    """Every 'Tue, Oct 13' must be a real weekday/date in the year nearest `today`."""
+    """Every 'Tue, Oct 13' must be a real weekday/date in the year nearest `today`.
+    In a range like 'Fri–Sun, Oct 23–25' the first weekday is checked against the start day and the
+    second against the end day."""
     probs = []
     for m in _PAIR.finditer(text):
-        wd, mon, day = m.group(1), MONTHS[m.group(2)], int(m.group(3))
-        cands = []
-        for y in (today.year - 1, today.year, today.year + 1):
-            try:
-                cands.append(date(y, mon, day))
-            except ValueError:
-                pass
-        if not cands:
-            probs.append(f"impossible date: {m.group(0)}")
-            continue
-        d = min(cands, key=lambda c: abs((c - today).days))
-        if f"{d:%a}" != wd:
-            probs.append(f"weekday mismatch: '{m.group(0)}' is really {d:%a}, {d:%b} {d.day}")
+        wd_start, wd, mon_s, day_s, end_s = m.group(1), m.group(2), m.group(3), m.group(4), m.group(5)
+        mon = MONTHS[mon_s]
+        checks = [(wd_start or wd, int(day_s))]
+        if wd_start and end_s:
+            checks.append((wd, int(end_s)))
+        for want, day in checks:
+            cands = []
+            for y in (today.year - 1, today.year, today.year + 1):
+                try:
+                    cands.append(date(y, mon, day))
+                except ValueError:
+                    pass
+            if not cands:
+                probs.append(f"impossible date: {m.group(0)}")
+                continue
+            d = min(cands, key=lambda c: abs((c - today).days))
+            if f"{d:%a}" != want:
+                probs.append(f"weekday mismatch: '{m.group(0)}' ({want} {mon_s} {day}) is really {d:%a}, {d:%b} {d.day}")
     return probs
 
 
