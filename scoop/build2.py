@@ -57,11 +57,11 @@ def sec_sports():
     if d.get('fantasy'): parts.append("<h3>Fantasy Football: Top Performers</h3><ul class='small'>" + li(d['fantasy']) + "</ul>")
     if d.get('tonight'): parts.append("<h3>" + d.get('tonight_title', 'Tonight in Detroit') + "</h3><ul class='small'>" + li(d['tonight']) + "</ul>")
     if d.get('hs'): parts.append("<h3>Seaholm &amp; Groves</h3><ul class='small'>" + li(d['hs']) + "</ul>")
-    return ("<h2>Sports Page</h2>" + ''.join(parts)) if parts else ''
+    return ("<div class='sportpage'><h2>Sports Page</h2>" + ''.join(parts) + "</div>") if parts else ''
 def sec_ari_fantasy():
     f = d.get('ari_fantasy')
     if not f: return ''
-    return (f"<div class='box2'><h3 style='margin:0 0 1px'>{f.get('title', 'Ari&#8217;s Fantasy Team')}</h3>"
+    return (f"<div class='box2 sport'><h3 style='margin:0 0 1px'>{f.get('title', 'Ari&#8217;s Fantasy Team')}</h3>"
             f"<ul class='small ff'>{li(f.get('items', []))}</ul></div>")
 def extra_html(e):
     """One filler item: title + short text (+ source). No drawing activities (Jacob, 2026-10-10)."""
@@ -79,7 +79,7 @@ def team_box(key, default_title):
     """A kid's team box (mda, spartans), copied from state by the daily run: pro-schedule game cards (.gm-*)."""
     m = d.get(key)
     if not m or not m.get('items'): return ''
-    return (f"<div class='box2'><h3 style='margin:0 0 1px'>{m.get('title', default_title)}</h3>"
+    return (f"<div class='box2 sport'><h3 style='margin:0 0 1px'>{m.get('title', default_title)}</h3>"
             f"<ul class='small ff'>{li(m['items'])}</ul></div>")
 def sec_mda(): return team_box('mda', 'MDA Kicks &amp; Giggles')
 def sec_spartans(): return team_box('spartans', 'Spartans Hoop Scoop')
@@ -87,7 +87,7 @@ def sec_news0():
     return '' if d.get('fantasy') or not d.get('news') else story(*d['news'][0])
 SECTIONS = {'schedule': sec_schedule, 'week': sec_week, 'school_notes': sec_school_notes, 'left_story': sec_left_story,
             'lead': sec_lead, 'news1': sec_news1, 'word': sec_word, 'joke': sec_joke, 'sports': sec_sports, 'ari_fantasy': sec_ari_fantasy, 'mda': sec_mda, 'spartans': sec_spartans, 'news0': sec_news0}
-BOXED = {'week', 'word', 'joke', 'ari_fantasy', 'mda', 'spartans'}
+BOXED = {'week', 'word', 'joke', 'ari_fantasy', 'mda', 'spartans', 'sports'}
 
 # Layout: flexible column count, widths and placement (README: readability first). Default = the approved 3-column page.
 DEFAULT_LAYOUT = {'columns': [
@@ -165,7 +165,10 @@ p{{margin-bottom:3px;text-align:justify;hyphens:auto}}
 .banner{{text-align:center;font-family:PF,serif;font-weight:700;font-size:10.5pt;letter-spacing:.6px;padding:3px 4px;border-bottom:1px solid #161410;background:#f6ecd2}}
 .banner span+span::before{{content:"  ·  ";font-weight:400}}
 .ff li{{padding:2px 0;border-bottom:1px dotted #b9ad8c}} .ff li:last-child{{border-bottom:0}}
-.gm-when{{display:block;font-family:PF,serif;font-weight:700;font-size:6.9pt;text-transform:uppercase;letter-spacing:.8px;color:#7a2e1f}}
+/* Sports sections share one shade, distinct from the beige boxes (Jacob, 2026-10-10) */
+.sport,.sportpage{{background:#dcebd6}} .sport .ff li{{border-bottom-color:#8fae86}}
+.sportpage{{border:1px solid #161410;padding:3px 5px;margin-top:4px}} .sportpage h2{{margin-top:0}} .sportpage div[style*=dotted]{{border-bottom-color:#8fae86!important}}
+.gm-when{{display:block;font-family:PF,serif;font-weight:700;font-size:6.9pt;text-transform:uppercase;letter-spacing:.8px;color:#2f5d2a}}
 .gm-match{{display:block;font-family:PF,serif;font-weight:700;font-size:9.4pt;line-height:1.15}}
 .gm-loc{{display:block;font-style:italic;font-size:7.3pt}}
 .gm-extra{{display:block;font-size:7.3pt;color:#333}}
