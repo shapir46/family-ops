@@ -2,7 +2,9 @@
 
 Reads ESPN's league API (the JSON the ESPN Fantasy site itself uses). League and team ids live in
 data/family.yaml (fantasy:). A league that is "viewable to public" needs nothing else; a private league needs
-the ESPN_S2 and ESPN_SWID cookies in the environment (secrets: never in the repo or any output).
+the ESPN login cookies, either as an environment network secret (header `Cookie: espn_s2=...; SWID={...}` for
+lm-api-reads.fantasy.espn.com, never visible to sessions) or as env ESPN_S2 + ESPN_SWID. Secrets: never in the repo
+or any output.
 Unconfirmed = silent: on any failure the summary is omitted, never guessed.
 """
 from __future__ import annotations
@@ -30,7 +32,8 @@ def fetch(cfg: dict) -> dict:
                      params=[("view", v) for v in VIEWS], cookies=cookies, timeout=30,
                      headers={"User-Agent": "family-ops"})
     if r.status_code == 401:
-        raise PermissionError("ESPN league is private: make it viewable to public, or set ESPN_S2/ESPN_SWID")
+        raise PermissionError("ESPN league is private: make it viewable to public, or add the ESPN cookies "
+                              "(network secret 'Cookie' for lm-api-reads.fantasy.espn.com, or env ESPN_S2/ESPN_SWID)")
     r.raise_for_status()
     return r.json()
 
