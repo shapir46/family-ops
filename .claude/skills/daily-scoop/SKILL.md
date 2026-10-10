@@ -4,6 +4,8 @@ description: Build the one-page Fairfax Daily Scoop kids' newspaper for today an
 ---
 
 ## Step 7 — The Fairfax Daily Scoop (one-page printable newspaper), then print it
+**Publishing schedule (scoop/README.md):** Monday–Friday daily edition; **Saturday Weekend Edition** covering Saturday and Sunday; **Sunday: skip Step 7 entirely** (no build, no print, no log) and say so in one line of the run report. Use today's America/New_York weekday.
+
 Run this AFTER Step 6, even if an earlier step had a problem (a failed send or skipped Step 6 does not cancel the newspaper; just note it). It reuses the calendar and email data already gathered above — do not re-query Outlook. Every edition is a fresh one-page Letter PDF built from the build kit in `scoop/`.
 
 **7a — Get the kit.** Copy `scoop/` to a fresh working directory (e.g. `cp -r scoop /tmp/scoop-$(date +%F)` and work there, so the repo copy stays clean). It holds build2.py, art.py, render.py, setup.sh, edition.json (a sample — use it only as the schema and style example) and README.md. hedcut.py is RETIRED; never import or edit it. The logs live in the repo at `logs/riddle-log.md` and `logs/content-log.md`; read both before writing content and never repeat anything in them.

@@ -56,16 +56,16 @@ p{{margin-bottom:3px;text-align:justify;hyphens:auto}}
 .foot{{border-top:3px double #161410;font-size:6.2pt;text-align:center;padding-top:2px;color:#444}}
 </style></head><body><div class="page">
 <div class="mast"><div class="title">The Fairfax Daily Scoop</div>
-<div class="ears"><span>Birmingham, Michigan</span><span>{d['date']}</span><span>Daily Edition · Est. 2026</span></div></div>
+<div class="ears"><span>Birmingham, Michigan</span><span>{d['date']}</span><span>{d.get('edition', 'Daily Edition')} · Est. 2026</span></div></div>
 <div class="strip">
  <div class="box"><h2>Weather · Birmingham</h2><div style="display:flex;gap:8px;align-items:center"><div class="big">{d['hi']}°</div><div>{d['wx']}<br><span class="cap">{d['wx2']}</span></div></div>
  <div style="display:flex;gap:4px;margin-top:3px">{''.join(f"<div style='flex:1;text-align:center;border:1px solid #161410;padding:1px 0;line-height:1.15'><b style='font-family:PF,serif'>{a}</b><br><b>{b}°</b> / {c}°<br><span class='cap' style='margin:0'>{e}</span></div>" for a,b,c,e in d['forecast'])}</div></div>
- <div class="box"><h2>Today's School Lunch · Quarton</h2><div style="font-weight:700;font-family:PF,serif;font-size:8.6pt">{d['lunch']}</div><div class="cap">{d['lunch_src']}</div></div>
+ <div class="box"><h2>{d.get('lunch_title', "Today's School Lunch")} · Quarton</h2><div style="font-weight:700;font-family:PF,serif;font-size:8.6pt">{d['lunch']}</div><div class="cap">{d['lunch_src']}</div></div>
 </div>
 <div class="body">
- <div class="col"><h2>The Family Schedule</h2><ul class="sched small">{li(d['sched'])}</ul>
+ <div class="col"><h2>{d.get('sched_title', 'The Family Schedule')}</h2><ul class="sched small">{li(d['sched'])}</ul>
   <div class="cap" style="margin-top:2px">{d['sched_note']}</div>
-  <div class="box2"><h2 style="border:0;margin:0">Coming Up</h2><ul class="small">{li(d['week'])}</ul></div>
+  <div class="box2"><h2 style="border:0;margin:0">{d.get('week_title', 'Coming Up')}</h2><ul class="small">{li(d['week'])}</ul></div>
   <div class="rule"></div><h2>Quarton Notes</h2><ul class="small">{li(d['quarton'])}</ul>
   <div class="rule"></div>{(f"<h2>Cutest Critter</h2><div style='border:1px solid #161410;line-height:0'><img src='data:image/jpeg;base64,{crit_b64}' style='width:100%;height:auto;max-height:150px;object-fit:cover'></div><div class='cap' style='text-align:center'><b>{d['critter']['name']}</b> — {d['critter']['fact']} <i>Photo: {d['critter'].get('credit','')}</i></div>") if d.get('critter') else story(*d['news'][2])}
  </div>
@@ -78,10 +78,10 @@ p{{margin-bottom:3px;text-align:justify;hyphens:auto}}
   <div class="box2" style="display:flex;gap:8px"><div style="flex:1"><h3 style="margin:0 0 1px">Daily Riddle</h3><p class="small" style="margin:0">{d['riddle']}<br><span class="cap" style="font-style:normal">{d['riddle_prev']}</span></p></div><div style="flex:1;border-left:1px solid #161410;padding-left:8px"><h3 style="margin:0 0 1px">Daily Joke</h3><p class="small" style="margin:0">{d['joke']}</p></div></div>
   </div>
  <div class="col"><h2>Sports Page</h2>
-  {("<h3 style='margin-top:0'>Yesterday's Scores</h3><div class='small'>"+''.join(f"<div style='padding:2px 0;border-bottom:1px dotted #aaa'><span class='cap'>{a}</span><br><b style='font-family:PF,serif;font-size:9pt'>{b}</b></div>" for a,b in d['yday'])+"</div>") if d.get('yday') else ""}
+  {("<h3 style='margin-top:0'>"+d.get('yday_title', "Yesterday's Scores")+"</h3><div class='small'>"+''.join(f"<div style='padding:2px 0;border-bottom:1px dotted #aaa'><span class='cap'>{a}</span><br><b style='font-family:PF,serif;font-size:9pt'>{b}</b></div>" for a,b in d['yday'])+"</div>") if d.get('yday') else ""}
   {("<h3>Lions Report</h3><p class='small'>"+d['lions']+"</p>") if d.get('lions') else ""}
   {("<h3>Fantasy Football: Top Performers</h3><ul class='small'>"+li(d['fantasy'])+"</ul>") if d.get('fantasy') else ""}
-  {("<h3>Tonight in Detroit</h3><ul class='small'>"+li(d['tonight'])+"</ul>") if d.get('tonight') else ""}
+  {("<h3>"+d.get('tonight_title', 'Tonight in Detroit')+"</h3><ul class='small'>"+li(d['tonight'])+"</ul>") if d.get('tonight') else ""}
   {("<h3>Seaholm &amp; Groves</h3><ul class='small'>"+li(d['hs'])+"</ul>") if d.get('hs') else ""}
   {"" if d.get('fantasy') else "<div class='rule'></div>"+story(*d['news'][0])}
  </div>
