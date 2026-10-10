@@ -1,0 +1,6 @@
+out/
+*.pdf
+*.png
+fonts/
+__pycache__/
+.env
