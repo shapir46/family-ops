@@ -1,13 +1,13 @@
 {
  "date": "Thursday, October 8, 2026",
  "hi": "68",
- "wx": "<b>Sunny.</b> High near 68. West wind 7\u201314 mph.",
+ "wx": "<b>Sunny.</b> High near 68. West wind 7–14 mph.",
  "wx2": "Tonight: mostly clear, low 48. Fri: sunny, high 70. Rain likely Sunday morning. (NWS)",
  "forecast": [
   [
    "Fri",
    "70",
-   "\u2014",
+   "—",
    "Sunny"
   ],
   [
@@ -32,35 +32,35 @@
  "lunch": "Baked whole grain chicken drumstick with baked tater tots<br><span style=\"font-size:7.4pt;font-weight:400\">Bagel Day! Bagels are delivered to students in their classrooms every Thursday morning.</span>",
  "lunch_src": "BPS elementary lunch menu",
  "sched": [
-  "<b>All day</b> \u2014 Picture Day, Quarton",
-  "<b>4:30\u20135:00 pm</b> \u2014 Hebrew tutoring, Ari",
-  "<b>6:00\u20137:15 pm</b> \u2014 Soccer practice, Elle \u00b7 Pembroke Park"
+  "<b>All day</b> — Picture Day, Quarton",
+  "<b>4:30–5:00 pm</b> — Hebrew tutoring, Ari",
+  "<b>6:00–7:15 pm</b> — Soccer practice, Elle · Pembroke Park"
  ],
  "sched_note": "From the Ari, Elle and Family calendars and PlayMetrics.",
  "week": [
-  "<b>Fri</b> \u2014 Trunk or Treat 5:30 \u00b7 Elle's game 6:00",
-  "<b>Sat</b> \u2014 Lila ballet 9:30 \u00b7 Ari basketball 12:15 \u00b7 Leo soccer 2:00",
-  "<b>Sun</b> \u2014 Elle's game 8:00 \u00b7 Sunday School 9:30 \u00b7 Ari flag football noon",
-  "<b>Mon</b> \u2014 Ari tennis 4:30 \u00b7 Elle dance 5:15",
-  "<b>Tue</b> \u2014 Half day, 11:50 dismissal \u00b7 Elle practice 6:00"
+  "<b>Fri</b> — Trunk or Treat 5:30 · Elle's game 6:00",
+  "<b>Sat</b> — Lila ballet 9:30 · Ari basketball 12:15 · Leo soccer 2:00",
+  "<b>Sun</b> — Elle's game 8:00 · Sunday School 9:30 · Ari flag football noon",
+  "<b>Mon</b> — Ari tennis 4:30 · Elle dance 5:15",
+  "<b>Tue</b> — Half day, 11:50 dismissal · Elle practice 6:00"
  ],
  "quarton": [
   "Picture Day is today.",
   "Leo's class party lotto closes tonight at 6 pm.",
   "Ari's class opens its second sign-up slot at 7 pm.",
-  "Trunk or Treat is Friday, 5:30\u20136:30 pm.",
+  "Trunk or Treat is Friday, 5:30–6:30 pm.",
   "Half day Tuesday: dismissal 11:50."
  ],
  "yday": [],
- "lions": "The Lions lost 32\u201326 at Carolina on Sunday and are 2\u20132. Next: Sunday at Arizona, 4:25 pm, on FOX.",
+ "lions": "The Lions lost 32–26 at Carolina on Sunday and are 2–2. Next: Sunday at Arizona, 4:25 pm, on FOX.",
  "tonight": [
   "<b>Red Wings:</b> No game. Fri vs. Seattle, Sat at Montreal, 7:00 pm.",
   "<b>Tigers:</b> No game found.",
   "<b>Lions &amp; Pistons:</b> No games. Lions play Sunday at Arizona."
  ],
  "hs": [
-  "<b>Seaholm FB</b> beat Southfield A&amp;T 49\u201334 (Oct. 2). Fri: vs. Harper Woods, 7:00.",
-  "<b>Groves FB</b> beat Oak Park 20\u201318 (Oct. 2). Fri: vs. Kettering, 4:00.",
+  "<b>Seaholm FB</b> beat Southfield A&amp;T 49–34 (Oct. 2). Fri: vs. Harper Woods, 7:00.",
+  "<b>Groves FB</b> beat Oak Park 20–18 (Oct. 2). Fri: vs. Kettering, 4:00.",
   "<b>Volleyball &amp; tennis:</b> results not posted."
  ],
  "head": "Zoo Boo Is Back at the Detroit Zoo: Merry, Not Scary",
@@ -94,8 +94,7 @@
   "active at night instead of during the day",
   "Bats are nocturnal animals."
  ],
- "riddle": "What has a neck but no head?",
- "riddle_prev": "<b>Yesterday:</b> What can you catch but never throw? <i>A cold!</i>",
  "joke": "Why did the giraffe get good grades? She was always on top of things! <i>(Ba-dum-chh!)</i>",
- "foot": "The Fairfax Daily Scoop \u00b7 Printed at the Shapiro house \u00b7 Scores: Hockey-Reference, CBS Sports, MaxPreps \u00b7 Weather: National Weather Service \u00b7 News: WXYZ, LittleGuide Detroit \u00b7 Illustrations and comic are original"
+ "foot": "The Fairfax Daily Scoop · Printed at the Shapiro house · Scores: Hockey-Reference, CBS Sports, MaxPreps · Weather: National Weather Service · News: WXYZ, LittleGuide Detroit · Illustrations and comic are original",
+ "banner": []
 }

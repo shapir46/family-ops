@@ -1,4 +1,4 @@
-# Riddle and joke log (newest last). Format: date | riddle | answer | joke
+# Joke and word log (newest last). Older lines: date | riddle | answer | joke (word). Since 2026-10-10 (no riddles): date | joke | word
 2026-10-05 | What has hands but can't clap? | A clock! | (not recorded)
 2026-10-06 | I'm full of holes, but I can still hold water. What am I? | A sponge! | Why did the polar bear skip the party? He wanted to keep things cool.
 2026-10-06 | What has to be broken before you can use it? | An egg! | Why do pumpkins sit on people's porches? They have no hands to knock!
