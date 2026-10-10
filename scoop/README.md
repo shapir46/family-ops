@@ -25,6 +25,12 @@ One-page Letter PDF newspaper. Files (in the family-ops repo): `scoop/` holds bu
 - It shows:
   - games and tournaments in the next 3 days: opponent, kickoff, arrival time, uniform, field;
   - the last game: the score, from `data/results/elle-mda-*.yaml`, which Jacob supplies with `/family-update`. "Elle scored a goal!" appears only when she scored; zero goals is never mentioned. With no result yet: "Final score coming soon."
+- **Format: like a pro sports schedule** (Jacob, 2026-10-10). Each entry is a card with four lines:
+  - date and time in small caps ("SAT OCT 17 · 12:30 PM"; "FINAL · SUN OCT 11" for results);
+  - the matchup "MDA vs Opponent" (results read "MDA 3, Blackhawks 1", winner in bold);
+  - the location as field and city;
+  - arrival time and uniform.
+  Tournaments read "TOURNAMENT · FRI OCT 23–SUN OCT 25 / Kalahari Cup / Sandusky, OH".
 - Monday's paper also reports Saturday's game (Saturday's paper prints before Saturday games, and there is no Sunday paper).
 - Elle's games still appear in the family schedule as usual. This box adds the details and results.
 

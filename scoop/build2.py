@@ -162,6 +162,10 @@ p{{margin-bottom:3px;text-align:justify;hyphens:auto}}
 .banner{{text-align:center;font-family:PF,serif;font-weight:700;font-size:10.5pt;letter-spacing:.6px;padding:3px 4px;border-bottom:1px solid #161410;background:#f6ecd2}}
 .banner span+span::before{{content:"  ·  ";font-weight:400}}
 .ff li{{padding:2px 0;border-bottom:1px dotted #b9ad8c}} .ff li:last-child{{border-bottom:0}}
+.gm-when{{display:block;font-family:PF,serif;font-weight:700;font-size:6.9pt;text-transform:uppercase;letter-spacing:.8px;color:#7a2e1f}}
+.gm-match{{display:block;font-family:PF,serif;font-weight:700;font-size:9.4pt;line-height:1.15}}
+.gm-loc{{display:block;font-style:italic;font-size:7.3pt}}
+.gm-extra{{display:block;font-size:7.3pt;color:#333}}
 .word{{border:2px solid #161410;background:#fff7e0;padding:4px 7px;margin-top:5px;display:flex;gap:9px;align-items:center}}
 .word .wl{{font-family:PF,serif;font-size:7pt;text-transform:uppercase;letter-spacing:1.2px;color:#7a2e1f}}
 .word .ww{{font-family:PF,serif;font-weight:700;font-size:23pt;line-height:1;color:#7a2e1f}}
