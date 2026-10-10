@@ -24,5 +24,5 @@ Family data is entered once and shared everywhere. Tell `/family-update` that Ar
 - Edit routine prompts. The daily routine just says "run the digest per the repo", so all changes go through the commands above.
 - Put passwords or private links in chat. Tokens and private feed links go in the environment settings at claude.ai/code (cloud button → Default → gear).
 
-## Until the move to Claude Code is finished
-The old Cowork routine still sends the real digest. Until it's retired, `/family-update` and `/digest-format` also apply your change to it, so both stay in sync.
+## The daily run
+The Claude Code routine **Family digest** runs at about 6:30 AM ET. It emails the digest to you and Rebekah, files the mail and prints the Scoop. Your inputs through the four commands above take effect on its next run. The old Cowork routine was retired on Oct 10, 2026: it is turned off, not deleted.

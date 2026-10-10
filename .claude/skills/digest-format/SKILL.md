@@ -15,4 +15,3 @@ Scope: the formatting rules of the family-digest skill: Step 4 (sections) and St
    - Run `./fo check-email --html <file> --to jacob@ivanhoecompanies.com --shadow`. It must say OK.
    - Show Jacob the sample.
 4. **Run `./fo test`.** It includes a guard that every digest step is still present. Then commit and push.
-5. **Transition:** until cutover, apply the same rule to the live Cowork routine prompt and verify it, as in `/family-update` step 8.

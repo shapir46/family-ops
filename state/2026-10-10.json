@@ -1,0 +1,306 @@
+{
+ "date": "2026-10-10",
+ "generated_at": "2026-10-10T17:23:51+00:00",
+ "window": {
+  "start": "2026-10-10",
+  "end": "2026-10-20"
+ },
+ "kids": {
+  "Ari": {
+   "color": "#2563EB",
+   "initial": "A"
+  },
+  "Elle": {
+   "color": "#DB2777",
+   "initial": "E"
+  },
+  "Leo": {
+   "color": "#16A34A",
+   "initial": "L"
+  },
+  "Lila": {
+   "color": "#9333EA",
+   "initial": "Li"
+  }
+ },
+ "events": [
+  {
+   "date": "2026-10-10",
+   "title": "Basketball game vs Tigers",
+   "kids": [
+    "Ari"
+   ],
+   "start": "12:15",
+   "end": null,
+   "end_date": null,
+   "location": "Berkshire Middle School, 21707 W 14 Mile Rd, Beverly Hills",
+   "kind": "game",
+   "details": null,
+   "sources": [
+    "MCE league schedule"
+   ],
+   "status": null,
+   "id": "2026-10-10|12:15|basketball game vs tigers"
+  },
+  {
+   "date": "2026-10-11",
+   "title": "Soccer game vs Blackhawks",
+   "kids": [
+    "Elle"
+   ],
+   "start": "08:00",
+   "end": "09:00",
+   "end_date": null,
+   "location": "Greg Grant Sports Complex 7v7, 45300 Mound Rd, Shelby Township, MI 48317, USA",
+   "kind": "game",
+   "details": "arrive 7:30 am, black-black-black",
+   "sources": [
+    "PlayMetrics"
+   ],
+   "status": null,
+   "id": "2026-10-11|08:00|soccer game vs blackhawks"
+  },
+  {
+   "date": "2026-10-13",
+   "title": "All schools half day (AM).",
+   "kids": [
+    "Ari",
+    "Elle",
+    "Leo"
+   ],
+   "start": null,
+   "end": null,
+   "end_date": null,
+   "location": null,
+   "kind": "school_status",
+   "details": null,
+   "sources": [
+    "BPS district calendar"
+   ],
+   "status": "half_day",
+   "id": "2026-10-13|allday|all schools half day am"
+  },
+  {
+   "date": "2026-10-13",
+   "title": "Soccer practice",
+   "kids": [
+    "Elle"
+   ],
+   "start": "18:00",
+   "end": "19:15",
+   "end_date": null,
+   "location": "UWM Sports Complex Field 1, 867 S Blvd E, Pontiac, MI 48341, USA",
+   "kind": "practice",
+   "details": null,
+   "sources": [
+    "PlayMetrics"
+   ],
+   "status": null,
+   "id": "2026-10-13|18:00|soccer practice"
+  },
+  {
+   "date": "2026-10-14",
+   "title": "Goalie Training",
+   "kids": [
+    "Elle"
+   ],
+   "start": "16:45",
+   "end": "18:00",
+   "end_date": null,
+   "location": "Pembroke Park, Buckingham Avenue, Birmingham, MI, USA",
+   "kind": "event",
+   "details": null,
+   "sources": [
+    "PlayMetrics"
+   ],
+   "status": null,
+   "id": "2026-10-14|16:45|goalie training"
+  },
+  {
+   "date": "2026-10-15",
+   "title": "Soccer practice",
+   "kids": [
+    "Elle"
+   ],
+   "start": "18:00",
+   "end": "19:15",
+   "end_date": null,
+   "location": "Pembroke Park 7v7, Birmingham, MI, USA",
+   "kind": "practice",
+   "details": null,
+   "sources": [
+    "PlayMetrics"
+   ],
+   "status": null,
+   "id": "2026-10-15|18:00|soccer practice"
+  },
+  {
+   "date": "2026-10-17",
+   "title": "Basketball game vs Hoosiers",
+   "kids": [
+    "Ari"
+   ],
+   "start": "09:55",
+   "end": null,
+   "end_date": null,
+   "location": "Berkshire Middle School, 21707 W 14 Mile Rd, Beverly Hills",
+   "kind": "game",
+   "details": null,
+   "sources": [
+    "MCE league schedule"
+   ],
+   "status": null,
+   "id": "2026-10-17|09:55|basketball game vs hoosiers"
+  },
+  {
+   "date": "2026-10-17",
+   "title": "Soccer game vs MI Stars Elite 2018/2017G White",
+   "kids": [
+    "Elle"
+   ],
+   "start": "12:30",
+   "end": "13:30",
+   "end_date": null,
+   "location": "Spencer Park Field 2, 3701 John R Rd, Rochester Hills, MI 48307, United States",
+   "kind": "game",
+   "details": "arrive 12:00 pm, black-black-black",
+   "sources": [
+    "PlayMetrics"
+   ],
+   "status": null,
+   "id": "2026-10-17|12:30|soccer game vs mi stars elite 2018 2017g"
+  },
+  {
+   "date": "2026-10-18",
+   "title": "Soccer game vs Romeo FC Fury",
+   "kids": [
+    "Elle"
+   ],
+   "start": "12:00",
+   "end": "13:00",
+   "end_date": null,
+   "location": "Simpson Park Field 6 7v7, 70199 Campground Rd, Bruce Township, MI 48065, United States",
+   "kind": "game",
+   "details": "arrive 11:30 am, black-black-black",
+   "sources": [
+    "PlayMetrics"
+   ],
+   "status": null,
+   "id": "2026-10-18|12:00|soccer game vs romeo fc fury"
+  },
+  {
+   "date": "2026-10-20",
+   "title": "Soccer practice",
+   "kids": [
+    "Elle"
+   ],
+   "start": "18:00",
+   "end": "19:15",
+   "end_date": null,
+   "location": "UWM Sports Complex Field 1, 867 S Blvd E, Pontiac, MI 48341, USA",
+   "kind": "practice",
+   "details": null,
+   "sources": [
+    "PlayMetrics"
+   ],
+   "status": null,
+   "id": "2026-10-20|18:00|soccer practice"
+  }
+ ],
+ "actions": [],
+ "fyi": [],
+ "conflicts": [],
+ "lunch": {
+  "line": "No school today.",
+  "entree": null
+ },
+ "weather": {
+  "hi": 74,
+  "today": "Partly Sunny",
+  "today_detail": "Partly sunny, with a high near 74. Southeast wind 6 to 10 mph, with gusts as high as 20 mph.",
+  "tonight_low": 57,
+  "tonight": "Mostly Cloudy then Chance Light Rain",
+  "icon": "partly",
+  "forecast": [
+   {
+    "date": "2026-10-11",
+    "day": "Sun",
+    "hi": 66,
+    "lo": 54,
+    "short": "Rain",
+    "icon": "rain"
+   },
+   {
+    "date": "2026-10-12",
+    "day": "Mon",
+    "hi": 77,
+    "lo": 60,
+    "short": "Partly Sunny",
+    "icon": "partly"
+   },
+   {
+    "date": "2026-10-13",
+    "day": "Tue",
+    "hi": 71,
+    "lo": 48,
+    "short": "Light Rain Likely",
+    "icon": "rain"
+   },
+   {
+    "date": "2026-10-14",
+    "day": "Wed",
+    "hi": 64,
+    "lo": 47,
+    "short": "Mostly Sunny",
+    "icon": "partly"
+   }
+  ],
+  "source": "National Weather Service",
+  "updated": "2026-10-10T08:24:27+00:00"
+ },
+ "due": [
+  {
+   "source": "league_schedules",
+   "who": "claude",
+   "what": "Re-check data/schedules/* against league sites and emails (MCE basketball, Snaptivities)",
+   "why": "never checked"
+  },
+  {
+   "source": "sunday_school",
+   "who": "jacob",
+   "what": "Temple Israel Sunday School calendar -> data/calendars/temple-israel-YYYY-YY.yaml (Jacob to supply; Temple Beth El dropped 2026-10-10)",
+   "why": "not supplied yet"
+  }
+ ],
+ "delivery": {
+  "email": null,
+  "dashboard": null,
+  "print": null,
+  "filed": null
+ },
+ "meta": {
+  "sources": {
+   "playmetrics": {
+    "ok": true,
+    "count": 7
+   },
+   "schedules": {
+    "ok": true,
+    "count": 2
+   },
+   "district_calendar": {
+    "ok": true,
+    "count": 1
+   },
+   "lunch": {
+    "ok": true,
+    "count": null
+   },
+   "weather": {
+    "ok": true,
+    "count": null
+   }
+  },
+  "warnings": []
+ }
+}

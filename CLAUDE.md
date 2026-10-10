@@ -3,7 +3,7 @@
 Jacob Shapiro's family automation. This is a **private** repo because it holds kids' names, schools, schedules and email conventions. Never copy its contents into a public repo, gist or artifact shared beyond Jacob.
 
 ## What runs here
-- **Daily, 6:30 AM America/New_York:** run the `family-digest` skill (Steps 1–6), then the `daily-scoop` skill (Step 7), in that order. The scoop reuses the digest's gathered data.
+- **Daily, about 6:30 AM America/New_York** (Claude Code routine "Family digest", live since 2026-10-10): run the `family-digest` skill (Steps 1–6), then the `daily-scoop` skill (Step 7), in that order. The scoop reuses the digest's gathered data. The run then commits its log appends, the day's `state/` file and any new lunch-menu URL to `main`. The old Cowork routine is retired (disabled, not deleted).
 - Recipients and destinations: the digest goes by Outlook email to jacob@ivanhoecompanies.com and Rebekah.Shapiro@gmail.com, and the scoop goes to the home printer relay.
 
 ## Three areas: where every change goes
@@ -37,11 +37,11 @@ Family data is shared: all three outputs read it, so a fact is changed once, in 
 ## Keeping knowledge in the repo
 When Jacob confirms a new fact (a new activity, teacher, schedule, correction or preference), record it with the `/family-update` procedure, even when he doesn't type the command. Never keep it only in a session. Daily runs commit their own log appends and newly found lunch-menu URLs directly to `main`.
 
-## Shadow mode (migration testing)
+## Shadow mode (testing changes without affecting the live run)
 When a run's prompt says **SHADOW mode**, run both skills with these overrides and nothing else changed:
 - **Send:** email the digest to jacob@ivanhoecompanies.com only, subject `[SHADOW] Family Digest — {Month D, YYYY}`.
 - **Never email Rebekah in shadow mode**: not as To, Cc or Bcc, not a forward, not a fallback or error notice. Every outbound message in a shadow run goes to jacob@ivanhoecompanies.com alone. Before any send, check the recipient list and stop if it holds anyone else.
-- **Step 6:** skip it entirely. Do not add categories, move, or delete any Outlook message. The live Cowork routine still owns the Family-Digest folder.
+- **Step 6:** skip it entirely. Do not add categories, move, or delete any Outlook message. The live run owns the Family-Digest folder.
 - **Newspaper:** build it and check it fully, but **do not print**. Deliver the PDF with SendUserFile only.
 - **Logs and repo:** do not append to `logs/` and do not commit or push anything. Shadow runs must leave no trace that the live run would see.
 - **Run report:** end with the normal run report plus a line on anything in the skills that did not work in this environment (missing tool, blocked host, unset variable).

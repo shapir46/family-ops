@@ -24,5 +24,4 @@ Family data is the single source of truth for every output: the digest email, th
 5. **Removing something** (a school, team or activity that ended): delete the data file or entry and every rule that refers to it, so nothing stale lingers. Archives under `docs/` stay as history.
 6. `./fo test` must pass. Then run `./fo collect --no-save` and confirm the change shows up (or stops showing up).
 7. **Commit and push to `main`.** The message says what changed and who confirmed it.
-8. **Transition (until the Cowork routine is retired):** if the change affects what the live digest shows, also apply it to the live Cowork routine prompt (`trig_01TDs2yyMLWr9tB7RWYJuDob`). Read the current prompt, edit it with a script, send it back, and verify the stored prompt matches byte for byte. Delete this step at cutover.
-9. **Reply in 2–4 lines:** what changed, where it lives, and that it takes effect on the next morning run. If you asked a question, put it last.
+8. **Reply in 2–4 lines:** what changed, where it lives, and that it takes effect on the next morning run. If you asked a question, put it last.
