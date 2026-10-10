@@ -1,7 +1,8 @@
 # Machine-readable family facts. Prose rules (attribution, bus/SACC) stay in data/family.md.
 # Update with the date and source whenever Jacob confirms a change.
 school_year: 2026-27
-congregation: Temple Israel   # moved from Temple Beth El, confirmed by Jacob 2026-10-10. Which kids attend Sunday School: not yet confirmed.
+congregation: Temple Israel   # moved from Temple Beth El, confirmed by Jacob 2026-10-10
+sunday_school: {where: Temple Israel, kids: [Ari, Elle]}   # Leo and Lila do not attend (Jacob, 2026-10-10)
 timezone: America/Detroit
 kids:
   Ari:
@@ -12,7 +13,7 @@ kids:
     teacher: Mrs. Ghareeb
     audiences: [all, jk8, elementary]
     outlook_calendar: Ari
-    activities: [flag football (Snaptivities), basketball (MCE Spartans)]
+    activities: [flag football (Snaptivities), basketball (MCE Spartans), Temple Israel Sunday School]
   Elle:
     initial: E
     color: "#DB2777"      # pink
@@ -21,7 +22,7 @@ kids:
     teacher: Mrs. Pallach
     audiences: [all, jk8, elementary]
     outlook_calendar: Elle
-    activities: [soccer (MDA U9G Black)]
+    activities: [soccer (MDA U9G Black), Temple Israel Sunday School]
   Leo:
     initial: L
     color: "#16A34A"      # green
