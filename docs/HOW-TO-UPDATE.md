@@ -6,7 +6,7 @@ Everything runs from one private repo, `shapir46/family-ops`. You talk to it by 
 
 | Start with | Use it for | Examples |
 |---|---|---|
-| **`/family-update`** | Facts, schedules, calendars, corrections, "include/drop this" rules | "Elle's soccer moved to Tuesdays." "Here's Temple Israel's calendar" (attach the PDF or a photo). "Leo started swim on Thursdays 5pm at Lifetime." "The digest said Ari for flag football, it's Elle." "Elle's game: won 3–1, she scored 1." |
+| **`/family-update`** | Facts, schedules, calendars, corrections, "include/drop this" rules | "Elle's soccer moved to Tuesdays." "Here's Temple Israel's calendar" (attach the PDF or a photo). "Leo started swim on Thursdays 5pm at Lifetime." "The digest said Ari for flag football, it's Elle." "Elle's game: won 3–1, she scored 1." "Spartans won 24–18, Ari had 6 points." |
 | **`/newspaper-design`** | How the Scoop looks or what kind of content it carries | "Bigger weather graphic." "Add a Halloween countdown box." "Drop high-school volleyball." "Make the comic three panels." |
 | **`/digest-format`** | How the daily email reads or is organized | "Put Needs Action first." "Shorter FYI section." |
 | **`/dashboard-design`** | The live dashboard and, later, the family wall device | "Add a week view." "Wall mode: bigger clock." |

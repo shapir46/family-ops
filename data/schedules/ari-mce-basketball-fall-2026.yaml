@@ -16,4 +16,4 @@ events:
   - {date: 2026-11-14, start: "09:00", end: "17:00", kind: game, tentative: true, title: "Basketball playoffs (if qualified)", details: "Times TBD."}
   - {date: 2026-11-21, start: "09:00", end: "17:00", kind: game, tentative: true, title: "Basketball boys semis & finals (if qualified)", details: "Times TBD."}
   - {date: 2026-11-16, kind: deadline, title: "MCE Winter League registration opens", details: "motorcityevolution.com"}
-  - {date: 2026-12-28, end_date: 2026-12-30, kind: event, tentative: true, title: "Holiday HOOPMANIA tournament (save the date)"}
+  - {date: 2026-12-28, end_date: 2026-12-30, kind: event, tentative: true, title: "Holiday HOOPMANIA tournament (save the date)", location: "Location TBD"}

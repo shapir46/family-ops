@@ -75,22 +75,25 @@ def sec_extra(i):
     return extra_html(_extras[i])
 def sec_extras():
     return ''.join(extra_html(e) for i, e in enumerate(_extras) if i not in _placed_extras)
-def sec_mda():
-    m = d.get('mda')
+def team_box(key, default_title):
+    """A kid's team box (mda, spartans), copied from state by the daily run: pro-schedule game cards (.gm-*)."""
+    m = d.get(key)
     if not m or not m.get('items'): return ''
-    return (f"<div class='box2'><h3 style='margin:0 0 1px'>{m.get('title', 'MDA Kicks &amp; Giggles')}</h3>"
+    return (f"<div class='box2'><h3 style='margin:0 0 1px'>{m.get('title', default_title)}</h3>"
             f"<ul class='small ff'>{li(m['items'])}</ul></div>")
+def sec_mda(): return team_box('mda', 'MDA Kicks &amp; Giggles')
+def sec_spartans(): return team_box('spartans', 'Spartans Hoop Scoop')
 def sec_news0():
     return '' if d.get('fantasy') or not d.get('news') else story(*d['news'][0])
 SECTIONS = {'schedule': sec_schedule, 'week': sec_week, 'school_notes': sec_school_notes, 'left_story': sec_left_story,
-            'lead': sec_lead, 'news1': sec_news1, 'word': sec_word, 'joke': sec_joke, 'sports': sec_sports, 'ari_fantasy': sec_ari_fantasy, 'mda': sec_mda, 'news0': sec_news0}
-BOXED = {'week', 'word', 'joke', 'ari_fantasy', 'mda'}
+            'lead': sec_lead, 'news1': sec_news1, 'word': sec_word, 'joke': sec_joke, 'sports': sec_sports, 'ari_fantasy': sec_ari_fantasy, 'mda': sec_mda, 'spartans': sec_spartans, 'news0': sec_news0}
+BOXED = {'week', 'word', 'joke', 'ari_fantasy', 'mda', 'spartans'}
 
 # Layout: flexible column count, widths and placement (README: readability first). Default = the approved 3-column page.
 DEFAULT_LAYOUT = {'columns': [
     {'width': '1.85in', 'sections': ['schedule', 'week', 'school_notes', 'left_story']},
     {'width': '3.95in', 'sections': ['lead', 'news1', 'word', 'joke']},
-    {'width': '2.1in', 'sections': ['ari_fantasy', 'mda', 'sports', 'news0']}]}
+    {'width': '2.1in', 'sections': ['ari_fantasy', 'spartans', 'mda', 'sports', 'news0']}]}
 layout = d.get('layout') or DEFAULT_LAYOUT
 for c in layout['columns']:
     for name in c['sections']:

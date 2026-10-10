@@ -13,7 +13,7 @@ Family data is the single source of truth for every output: the digest email, th
    - recurring activity or league schedule → `data/schedules/<kid>-<activity>-<season>.yaml`
    - a school/congregation year calendar (district, Sunday School) → `data/calendars/<name>-YYYY-YY.yaml`
    - a rule about what to include, drop or attribute ("drop X", "Y is Elle's") → `data/family.md`
-   - a game result ("Elle's game: won 3–1, she scored 1") → `data/results/<kid>-<team>-<season>.yaml`. Match it to the PlayMetrics game on that date and use the opponent's name exactly as PlayMetrics writes it.
+   - a game result ("Elle's game: won 3–1, she scored 1"; "Spartans won 24–18, Ari had 6") → `data/results/<kid>-<team>-<season>.yaml` (`elle-mda-*`: mda/opp/elle_goals; `ari-spartans-*`: spartans/opp/ari_points). Match it to the game on that date (PlayMetrics for MDA, `data/schedules/ari-mce-basketball-*.yaml` for the Spartans) and use the opponent's name exactly as the schedule writes it.
    - a lunch-menu URL → `data/lunch-menus.yaml`
    - anything about layout or wording of an output → not data: say which command to use instead (`/newspaper-design`, `/digest-format`, `/dashboard-design`)
 2. **From a PDF or photo:** extract every dated entry. Keep Jacob's source wording in a `label`/`notes` field. Do not summarize away details.

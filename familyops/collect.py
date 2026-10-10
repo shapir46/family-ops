@@ -7,7 +7,7 @@ from datetime import date, datetime, timedelta, timezone
 
 import yaml
 
-from . import ROOT, almanac, calendars, family, fantasy, lunch, playmetrics, schedules, soccer, weather
+from . import ROOT, almanac, calendars, family, fantasy, lunch, playmetrics, schedules, teams, weather
 from .model import Event, conflicts, merge
 
 STATE_DIR = ROOT / "state"
@@ -76,6 +76,7 @@ def collect(today: date) -> dict:
     groups.append(run("playmetrics", lambda: playmetrics.events(today, end, pm_text) if pm_text else []))
     pm_past = run("playmetrics_past", lambda: playmetrics.events(today - timedelta(days=3), today - timedelta(days=1), pm_text)) if pm_text else []
     groups.append(run("schedules", lambda: schedules.events(today, end)))
+    sched_past = run("schedules_past", lambda: schedules.events(today - timedelta(days=3), today - timedelta(days=1)))
     groups.append(run("district_calendar", lambda: calendars.bps_events(today, end)))
     events = merge([e for g in groups for e in g])
 
@@ -103,7 +104,8 @@ def collect(today: date) -> dict:
         "conflicts": conflicts([e.to_dict() for e in events]),
         "lunch": lunch_today,
         "weather": wx,
-        "mda": soccer.section(today, events, pm_past),   # Elle's 'MDA Kicks & Giggles' box, or None (hide)
+        "mda": teams.section(teams.MDA, today, events, pm_past),              # Elle's 'MDA Kicks & Giggles' box, or None (hide)
+        "spartans": teams.section(teams.SPARTANS, today, events, sched_past),  # Ari's 'Spartans Hoop Scoop' box, or None (hide)
         "fantasy": ff,    # Ari's ESPN league summary, or None (not configured / failed: print nothing)
         "almanac": alm,   # [today, tomorrow]: holidays, and Shabbat sunset on Fridays
         "due": due(today),

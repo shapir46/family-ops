@@ -1,0 +1,8 @@
+# Ari's Motor City Evolution (MCE) Spartans basketball results, as Jacob reports them (use /family-update).
+# One entry per game: date, opponent, score (spartans = Ari's team, opp = opponent), ari_points.
+# Optional: notes (one short kid-friendly line), source. Leave a game out until its result is known.
+team: Motor City Evolution Spartans
+kid: Ari
+results: []
+# Example:
+#  - {date: 2026-10-10, opponent: Tigers, spartans: 24, opp: 18, ari_points: 6, notes: "Ari hit a three", source: "Jacob, 2026-10-10"}
