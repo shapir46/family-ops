@@ -31,7 +31,8 @@ When Jacob confirms a new fact (a new activity, teacher, schedule, correction or
 
 ## Shadow mode (migration testing)
 When a run's prompt says **SHADOW mode**, run both skills with these overrides and nothing else changed:
-- **Send:** email the digest to jacob@ivanhoecompanies.com only (not Rebekah), subject `[SHADOW] Family Digest — {Month D, YYYY}`.
+- **Send:** email the digest to jacob@ivanhoecompanies.com only, subject `[SHADOW] Family Digest — {Month D, YYYY}`.
+- **Never email Rebekah in shadow mode**: not as To, Cc or Bcc, not a forward, not a fallback or error notice. Every outbound message in a shadow run goes to jacob@ivanhoecompanies.com alone. Before any send, check the recipient list and stop if it holds anyone else.
 - **Step 6:** skip it entirely. Do not add categories, move, or delete any Outlook message. The live Cowork routine still owns the Family-Digest folder.
 - **Newspaper:** build it and check it fully, but **do not print**. Deliver the PDF with SendUserFile only.
 - **Logs and repo:** do not append to `logs/` and do not commit or push anything. Shadow runs must leave no trace that the live run would see.
