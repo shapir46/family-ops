@@ -1,0 +1,163 @@
+{
+ "month": "October",
+ "days": {
+  "1": {
+   "weekday": "Thursday",
+   "entree": "Crispy Chicken Sandwich with Fresh Roasted Brussel Sprouts",
+   "half_day": false,
+   "no_school": false,
+   "theme": null
+  },
+  "2": {
+   "weekday": "Friday",
+   "entree": "Crispito Day!! Chicken and Cheese Whole Grain Crispitos With Refried Beans with Cheese",
+   "half_day": false,
+   "no_school": false,
+   "theme": null
+  },
+  "5": {
+   "weekday": "Monday",
+   "entree": "Emoji Brunch! Chicken & Waffles with Special Emoji Shaped Waffles with Baked Smiley Fries",
+   "half_day": false,
+   "no_school": false,
+   "theme": "BrunchforLunch"
+  },
+  "6": {
+   "weekday": "Tuesday",
+   "entree": "Whole Grain Breaded Pizza Crunchers with Marinara and Cheese With Steamed Peas",
+   "half_day": false,
+   "no_school": false,
+   "theme": null
+  },
+  "7": {
+   "weekday": "Wednesday",
+   "entree": "Smart Slice Cheese Pizza or Smart Slice Pepperoni Pizza",
+   "half_day": false,
+   "no_school": false,
+   "theme": null
+  },
+  "8": {
+   "weekday": "Thursday",
+   "entree": "Baked Whole Grain Chicken Drumstick with Baked Tater Tots",
+   "half_day": false,
+   "no_school": false,
+   "theme": null
+  },
+  "9": {
+   "weekday": "Friday",
+   "entree": "Mini Chicken Corndogs with Steamed Broccoli with Cheddar Cheese Cookie Day!",
+   "half_day": false,
+   "no_school": false,
+   "theme": null
+  },
+  "12": {
+   "weekday": "Monday",
+   "entree": "Whole Grain Funfetti Pancakes, Syrup, & Turkey Sausage Patty with Baked Tater Tots",
+   "half_day": false,
+   "no_school": false,
+   "theme": "BrunchforLunch"
+  },
+  "13": {
+   "weekday": "Tuesday",
+   "entree": null,
+   "half_day": true,
+   "no_school": false,
+   "theme": null
+  },
+  "14": {
+   "weekday": "Wednesday",
+   "entree": "Smart Slice Cheese Pizza or Smart Slice Pepperoni Pizza",
+   "half_day": false,
+   "no_school": false,
+   "theme": null
+  },
+  "15": {
+   "weekday": "Thursday",
+   "entree": "Cheesy Garlic French Bread Pizza Seasoned Green Beans",
+   "half_day": false,
+   "no_school": false,
+   "theme": null
+  },
+  "16": {
+   "weekday": "Friday",
+   "entree": "Fish & Chip Friday Whole Grain Baked Fish Sticks with Baked Tater Tots",
+   "half_day": false,
+   "no_school": false,
+   "theme": null
+  },
+  "19": {
+   "weekday": "Monday",
+   "entree": "Whole Grain Emoji Waffles and Cheddar Cheese Omelet With Baked Tater Tots Served with Blueberry Topping",
+   "half_day": false,
+   "no_school": false,
+   "theme": "BrunchforLunch"
+  },
+  "20": {
+   "weekday": "Tuesday",
+   "entree": "Flamebroiled Cheeseburger or Morningstar Veggie Burger with Romaine & Tomato Slices with Steamed Carrots",
+   "half_day": false,
+   "no_school": false,
+   "theme": null
+  },
+  "21": {
+   "weekday": "Wednesday",
+   "entree": "Smart Slice Cheese Pizza or Smart Slice Pepperoni Pizza",
+   "half_day": false,
+   "no_school": false,
+   "theme": null
+  },
+  "22": {
+   "weekday": "Thursday",
+   "entree": "Oven Baked Cheese Stuffed Breadsticks Served With Steamed Broccoli",
+   "half_day": false,
+   "no_school": false,
+   "theme": null
+  },
+  "23": {
+   "weekday": "Friday",
+   "entree": "Walking Taco or Nachos With Baked Tortilla Chips, Ground Beef or Beans, Cheddar Cheese, Romaine, and Tomatoes with Steamed Corn",
+   "half_day": false,
+   "no_school": false,
+   "theme": "FiestaFriday"
+  },
+  "26": {
+   "weekday": "Monday",
+   "entree": "Whole Grain Cinnamon French Toast, Syrup, & a Low-Fat \u201cRaspberry Rainbow\u201d Yogurt With Baked Hashbrown Patty",
+   "half_day": false,
+   "no_school": false,
+   "theme": "BrunchforLunch"
+  },
+  "27": {
+   "weekday": "Tuesday",
+   "entree": "All Beef Frank Hot Dog on Whole Grain Bun with Bush\u2019s Baked Beans",
+   "half_day": false,
+   "no_school": false,
+   "theme": null
+  },
+  "28": {
+   "weekday": "Wednesday",
+   "entree": "Smart Slice Cheese Pizza or Smart Slice Pepperoni Pizza",
+   "half_day": false,
+   "no_school": false,
+   "theme": null
+  },
+  "29": {
+   "weekday": "Thursday",
+   "entree": "Crispy Chicken Sandwich with Fresh Roasted Brussel Sprouts",
+   "half_day": false,
+   "no_school": false,
+   "theme": null
+  },
+  "30": {
+   "weekday": "Friday",
+   "entree": null,
+   "half_day": true,
+   "no_school": false,
+   "theme": null
+  }
+ },
+ "url": "https://resources.finalsite.net/images/v1790798886/birminghamk12mius/zvldezmgaxy97ihayh5o/EleOCTWEDSMenu2026.pdf",
+ "year": 2026,
+ "month_num": 10,
+ "problems": []
+}

@@ -13,7 +13,7 @@ Jacob Shapiro's family automation. This is a **private** repo because it holds k
 | `.claude/skills/daily-scoop/SKILL.md` | Step 7: the Fairfax Daily Scoop |
 | `data/family.md` | Established child facts, attribution rules, bus/SACC exclusion |
 | `data/bps-calendar-2026-27.md`, `data/tbe-religious-school-2026-27.md` | Static calendars (part of the instructions) |
-| `data/lunch-menus.md` | Monthly BPS lunch PDF URLs |
+| `data/lunch-menus.yaml` | Monthly BPS lunch PDF URLs |
 | `data/schedules/` | Activity schedules Jacob supplies (e.g. Ari's MCE basketball) |
 | `scoop/` | Newspaper build kit (build2.py, art.py, render.py, setup.sh, edition.json sample). `scoop/README.md` holds Jacob's standing newspaper rules and overrides the skill. hedcut.py is retired. |
 | `logs/` | riddle-log.md and content-log.md, appended by every run |

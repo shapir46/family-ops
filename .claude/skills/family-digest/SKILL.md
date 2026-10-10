@@ -155,10 +155,10 @@ The top section — the at-a-glance for the day Jacob is reading it.
 - **Lunch menu:** today's school lunch menu, per the source below.
 
 **Lunch menu source.** Birmingham Public Schools publishes the elementary lunch menu as a monthly PDF. The menu covers **Bingham Farms, Greenfield, Pierce, and Quarton** elementaries, so it applies to the kids at Quarton. It does NOT cover Derby Middle School; there is no Derby menu configured, so never show a menu for a Derby student.
-Known monthly URLs are listed in `data/lunch-menus.md` (fetch with the web fetch tool, which returns extracted text directly — no PDF tooling needed).
+Known monthly URLs are listed in `data/lunch-menus.yaml` (fetch with the web fetch tool, which returns extracted text directly — no PDF tooling needed).
 
 
-**Finding a new month's PDF.** The URL changes every month (the finalsite path is different each time). When today's month is not in the list above, find the current PDF by fetching the BPS food-services menus page: `https://www.birmingham.k12.mi.us/programs-services/food-services/menus` — look for the **Quarton** elementary menu link for the current month (the Bingham Farms / Greenfield / Pierce / Quarton elementary menu), fetch that PDF, and use it. This one page lookup is explicitly permitted. Do not go searching the wider web. If the menus page fetch fails, or no Quarton/current-month link is on it, fall back to the "source needs updating" line below. Once you find a working new-month URL, append it to `data/lunch-menus.md`, commit and push that change to `main`, and mention it in the run report.
+**Finding a new month's PDF.** The URL changes every month (the finalsite path is different each time). When today's month is not in the list above, find the current PDF by fetching the BPS food-services menus page: `https://www.birmingham.k12.mi.us/programs-services/food-services/menus` — look for the **Quarton** elementary menu link for the current month (the Bingham Farms / Greenfield / Pierce / Quarton elementary menu), fetch that PDF, and use it. This one page lookup is explicitly permitted. Do not go searching the wider web. If the menus page fetch fails, or no Quarton/current-month link is on it, fall back to the "source needs updating" line below. Once you find a working new-month URL, add it to `data/lunch-menus.yaml`, commit and push that change to `main`, and mention it in the run report.
 
 Rendering rules:
 - Show **today's entrée only**, as one short comma-separated line. Do not list the week.

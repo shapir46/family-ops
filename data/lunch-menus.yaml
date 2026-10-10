@@ -1,0 +1,6 @@
+# BPS elementary lunch menu PDFs (Bingham Farms, Greenfield, Pierce, Quarton). One per month.
+# The daily run finds a missing month on the BPS menus page, adds it here and commits.
+menus_page: https://www.birmingham.k12.mi.us/programs-services/food-services/menus
+menus:
+  2026-09: https://resources.finalsite.net/images/v1787597860/birminghamk12mius/h1hkymb9ntuc653jlaqm/EleSEPTwedsMenu2026.pdf
+  2026-10: https://resources.finalsite.net/images/v1790798886/birminghamk12mius/zvldezmgaxy97ihayh5o/EleOCTWEDSMenu2026.pdf
