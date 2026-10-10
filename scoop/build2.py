@@ -62,7 +62,7 @@ def sec_ari_fantasy():
     f = d.get('ari_fantasy')
     if not f: return ''
     return (f"<div class='box2'><h3 style='margin:0 0 1px'>{f.get('title', 'Ari&#8217;s Fantasy Team')}</h3>"
-            f"<ul class='small'>{li(f.get('items', []))}</ul></div>")
+            f"<ul class='small ff'>{li(f.get('items', []))}</ul></div>")
 def sec_news0():
     return '' if d.get('fantasy') or not d.get('news') else story(*d['news'][0])
 SECTIONS = {'schedule': sec_schedule, 'week': sec_week, 'school_notes': sec_school_notes, 'left_story': sec_left_story,
@@ -136,6 +136,7 @@ p{{margin-bottom:3px;text-align:justify;hyphens:auto}}
 .foot{{border-top:3px double #161410;font-size:6.2pt;text-align:center;padding-top:2px;color:#444}}
 .banner{{text-align:center;font-family:PF,serif;font-weight:700;font-size:10.5pt;letter-spacing:.6px;padding:3px 4px;border-bottom:1px solid #161410;background:#f6ecd2}}
 .banner span+span::before{{content:"  ·  ";font-weight:400}}
+.ff li{{padding:2px 0;border-bottom:1px dotted #b9ad8c}} .ff li:last-child{{border-bottom:0}}
 .word{{border:2px solid #161410;background:#fff7e0;padding:4px 7px;margin-top:5px;display:flex;gap:9px;align-items:center}}
 .word .wl{{font-family:PF,serif;font-size:7pt;text-transform:uppercase;letter-spacing:1.2px;color:#7a2e1f}}
 .word .ww{{font-family:PF,serif;font-weight:700;font-size:23pt;line-height:1;color:#7a2e1f}}

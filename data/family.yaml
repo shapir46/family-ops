@@ -46,5 +46,5 @@ kids:
     activities: []
 # Ari's ESPN fantasy football team (Jacob, 2026-10-10). Ids come from the league URL:
 # fantasy.espn.com/football/team?leagueId=<league_id>&teamId=<team_id>.
-fantasy: {owner: Ari, platform: espn, season: 2026, league_id: 703970420, team_id: 8}   # from Jacob's link, 2026-10-10; league is private (needs public view or ESPN_S2/ESPN_SWID)
+fantasy: {owner: Ari, platform: espn, season: 2026, league_id: 703970420, team_id: 8}   # Jacob, 2026-10-10: "Quarton 5th Grade DAWGS", team "LamARI SHAPson"; private league read with ESPN cookies (env)
 family_color: "#475569"   # slate, for events with no specific child
