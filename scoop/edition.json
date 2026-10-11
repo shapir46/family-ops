@@ -96,5 +96,133 @@
  ],
  "joke": "Why did the giraffe get good grades? She was always on top of things! <i>(Ba-dum-chh!)</i>",
  "foot": "The Fairfax Daily Scoop · Printed at the Shapiro house · Scores: Hockey-Reference, CBS Sports, MaxPreps · Weather: National Weather Service · News: WXYZ, LittleGuide Detroit · Illustrations and comic are original",
- "banner": []
+ "banner": [],
+ "comic": {
+  "title": "ARTIC & BIG BEAR",
+  "panels": [
+   {
+    "scene": "pumpkins",
+    "cast": [
+     {
+      "who": "bear",
+      "x": 50,
+      "pose": "hold",
+      "face": "happy",
+      "gear": {
+       "scarf": "#2f7d4f"
+      },
+      "hold": "pumpkin"
+     },
+     {
+      "who": "fox",
+      "x": 150,
+      "pose": "point",
+      "face": "surprised"
+     }
+    ],
+    "say": [
+     {
+      "who": "fox",
+      "text": "That pumpkin is so tiny!"
+     }
+    ]
+   },
+   {
+    "scene": "pumpkins",
+    "sky": "#f6d9b0",
+    "cast": [
+     {
+      "who": "bear",
+      "x": 48,
+      "pose": "akimbo",
+      "face": "proud",
+      "gear": {
+       "scarf": "#2f7d4f"
+      }
+     },
+     {
+      "who": "mack",
+      "x": 150,
+      "pose": "sit",
+      "face": "grin"
+     }
+    ],
+    "say": [
+     {
+      "who": "bear",
+      "text": "Small, but it's all mine."
+     }
+    ]
+   },
+   {
+    "scene": "pumpkins",
+    "cast": [
+     {
+      "who": "uni",
+      "x": 60,
+      "pose": "wave",
+      "face": "grin"
+     },
+     {
+      "who": "bob",
+      "x": 148,
+      "pose": "tada",
+      "face": "wink",
+      "gear": {
+       "cap": "#d33b2f"
+      }
+     }
+    ],
+    "props": [
+     [
+      "pumpkin",
+      104,
+      106,
+      2.4
+     ]
+    ],
+    "say": [
+     {
+      "who": "bob",
+      "text": "Ours is HUGE!"
+     }
+    ]
+   },
+   {
+    "scene": "pumpkins",
+    "sky": "#f3cf9f",
+    "cast": [
+     {
+      "who": "bear",
+      "x": 48,
+      "pose": "facepalm",
+      "face": "sad",
+      "gear": {
+       "scarf": "#2f7d4f"
+      }
+     },
+     {
+      "who": "fox",
+      "x": 150,
+      "pose": "shrug",
+      "face": "laugh"
+     }
+    ],
+    "props": [
+     [
+      "pumpkin",
+      100,
+      106,
+      0.6
+     ]
+    ],
+    "say": [
+     {
+      "who": "fox",
+      "text": "Size isn't everything!"
+     }
+    ]
+   }
+  ]
+ }
 }

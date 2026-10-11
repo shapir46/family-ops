@@ -1,4 +1,4 @@
-import base64, glob, json
+import base64, glob, json, sys
 import art
 import os
 G=os.environ.get("FONTDIR","./fonts")
@@ -122,6 +122,11 @@ for c in layout['columns']:
         if n.startswith('extra:'): _placed_extras.add(int(n.split(':', 1)[1]))
 body_html = ''.join(column(c['sections']) for c in layout['columns'])
 
+# Comic strip: composed from the art.py character library by edition.json `comic` (README: Comic).
+if not d.get('comic'):
+    print("COMIC WARNING: edition.json has no 'comic'; printing the sample strip, which repeats. Write a new one.", file=sys.stderr)
+comic_html = art.comic(d.get('comic'))
+
 # Top strip: weather, plus the lunch box only when there is lunch to show (none on weekend editions).
 has_lunch = bool(d.get('lunch'))
 strip_grid = '1.6fr 1fr' if has_lunch else '1fr'
@@ -186,6 +191,6 @@ p{{margin-bottom:3px;text-align:justify;hyphens:auto}}
  {lunch_html}
 </div>
 <div class="body">{body_html}</div>
-{art.comic()}
+{comic_html}
 <div class="foot">{d['foot']}</div></div></body></html>"""
 open('gazette.html','w').write(html)
