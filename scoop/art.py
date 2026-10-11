@@ -256,7 +256,7 @@ def draw_face(C, kind, with_mouth=True):
 # ---------------------------------------------------------------- gear (hats, scarves, capes, glasses)
 GEAR = ['scarf', 'beanie', 'earmuffs', 'cap', 'bow', 'party', 'crown', 'glasses', 'shades', 'cape', 'bowtie', 'collar']
 GEAR_COLOR = {'scarf': '#c9443b', 'beanie': '#3b6fb6', 'earmuffs': '#d9534f', 'cap': '#2f7d4f', 'bow': '#e0457b',
-              'party': '#8a5cd6', 'cape': '#c9443b', 'bowtie': '#2f5aa8', 'collar': '#2a9d8f'}
+              'party': '#8a5cd6', 'cape': '#c9443b', 'bowtie': '#2f5aa8', 'collar': '#b79be0'}
 
 
 def dark(c, k=.72):
@@ -645,8 +645,8 @@ class Poodle(Char):
 
     def head_front(self, face):
         out = (curly(2, -46, 12, 11, self.FUR) + crescent(2, -46, 11, 10, self.SH, op=.6) +
-               curly(1, -57, 11, 7, self.FUR, n=11) + curls([(-4, -58, 1.3), (3, -60, 1.3), (7, -56, 1.1)], self.SH) +
-               pth('M-6,-62 q-3,-3 -1,-6 M2,-63 q0,-4 3,-5 M8,-61 q3,-2 4,-5', 'none', 1, self.DEEP))
+               curls([(-4, -53, 1.3), (3, -55, 1.3), (8, -52, 1.1)], self.SH) +
+               pth('M-5,-55 q-3,-2 -2,-5 M1,-57 q0,-3 3,-4 M7,-56 q3,-1 4,-4', 'none', 1, self.DEEP))           # scruffy tufts, no topknot
         out += draw_face(self, face, with_mouth=False)
         out += (curly(6.5, -40.5, 7, 4.6, self.LIGHT, n=9, sw=1) +
                 ell(6.5, -42.8, 2.6, 2, INK, 0) + ell(5.9, -43.4, .8, .5, '#fff', 0))
@@ -804,7 +804,7 @@ def figure(C, pose='stand', face='happy', gear=None, hold=None, hold_opt=None, s
         raise SystemExit(f"comic: unknown face '{face}' (faces: {', '.join(FACES)})")
     gear = dict(gear or {})
     if C.key == 'mack' and 'collar' not in gear:
-        gear['collar'] = True                      # Mackenzie's own collar and tag; set "collar": false to drop it
+        gear['collar'] = True                      # Mackenzie's own lavender collar and tag; set "collar": false to drop it
     if C.key == 'bob':
         C.shirt = shirt or Bob.SHIRT
     P = dict(POSES[pose], _name=pose)

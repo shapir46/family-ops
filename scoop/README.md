@@ -28,7 +28,7 @@ One-page Letter PDF newspaper. Files (in the family-ops repo): `scoop/` holds bu
 - **Cast** (`who`):
   - `bear`: Big Bear, a polar bear.
   - `fox`: Artic, an arctic fox.
-  - `mack`: Mackenzie, a scruffy apricot mini-poodle with a teal collar.
+  - `mack`: Mackenzie, a scruffy apricot mini-poodle (no topknot) with a lavender collar (Jacob, 2026-10-11).
   - `uni`: Uni, a pastel unicorn.
   - `bob`: Bob, a toy brick guy. Never call him LEGO and never print a brand name or logo.
   - Artic and Big Bear star, and the title stays "ARTIC & BIG BEAR". Mackenzie, Uni and Bob join as the supporting cast: at least one of them appears in most strips, and never more than two characters share a panel.
