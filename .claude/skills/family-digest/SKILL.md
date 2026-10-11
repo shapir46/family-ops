@@ -149,6 +149,8 @@ Link handling rules:
 ## Step 4 — Write the digest
 Four sections, in this order.
 
+**Every item appears exactly once in the whole digest** (Jacob, 2026-10-11). Place each item in the first section it qualifies for, in this order: ☀️ Today (anything happening today) → ⚡ Needs Action (anything Jacob must do, with or without a date) → 🗓️ Next 10 Days (events from tomorrow through today + 10) → 📋 For Your Information (everything else). An item placed in one section is never repeated, summarized or cross-referenced in another: no "Due" lines in Next 10 Days for an action already in Needs Action, no FYI recap of an event already in the calendar, no FYI echo of an action item.
+
 ### ☀️ Today
 The top section — the at-a-glance for the day Jacob is reading it.
 
@@ -183,7 +185,7 @@ Anything with a deadline, a decision, or a task — from new mail and carried-fo
 - Keep this section tight. An actionable sign-up more than about four weeks out belongs in 📋 FYI, not here. An item that needs lead time to complete (anything requiring a doctor's signature, for instance) can appear earlier than its due date would suggest — say why.
 
 ### 📋 For Your Information
-Everything else, one or two lines each. Announcements, newsletters, schedule confirmations, general updates. Include a link only where it genuinely adds something (a calendar PDF, a policy document); otherwise keep these link-free.
+Everything else, one or two lines each, and only what no earlier section already shows: announcements, newsletters, policy changes, general updates, and dated events beyond the 10-day window. Announcements, newsletters, schedule confirmations, general updates. Include a link only where it genuinely adds something (a calendar PDF, a policy document); otherwise keep these link-free.
 
 ### 🗓️ Next 10 Days
 The final section. **Starts TOMORROW** — today is already covered in the ☀️ Today section at the top, so do not repeat it here. Covers tomorrow through today + 10 days, merging:
@@ -191,7 +193,7 @@ The final section. **Starts TOMORROW** — today is already covered in the ☀�
 2. Events from the PlayMetrics soccer feed (Step 2b), attributed to Elle.
 3. School-day changes from the BPS district calendar (Step 2c) — no-school days, half days, recesses, conference nights.
 4. Temple Israel Sunday School sessions from Outlook calendars and Temple Israel email (Step 2c-ii), attributed to Ari & Elle.
-5. Dated items from new mail (Step 1a) and carried-forward mail (Step 1b) — including deadlines, not just events.
+5. Dated events from new mail (Step 1a) and carried-forward mail (Step 1b). Deadlines and to-dos are NOT shown here; they live only in ⚡ Needs Action.
 
 All of it deduplicated per Step 2d.
 
@@ -202,13 +204,12 @@ All of it deduplicated per Step 2d.
 <ul>
 <li><b>12:00–12:30 pm</b> — JK/K playground meet-and-greet at Quarton <i>(Linda Sackett, Quarton)</i></li>
 <li><b>6:00–7:15 pm</b> — Soccer practice, Elle, at Pembroke Park <i>(PlayMetrics + Outlook · Elle)</i></li>
-<li><b>Due</b> — GSRP Care Plan + Permission to Administer Medication forms <i>(Lindsay Birckett, BPS GSRP)</i></li>
 </ul>
 ```
 
 List rules:
 - One `<p><b>day</b></p>` heading per day, followed by one `<ul>` of that day's items.
-- Each item starts with the bolded time ("12:00–12:30 pm", "All day", or "Due" for a deadline), then an em dash, then what it is, which child if known, and where.
+- Each item starts with the bolded time ("12:00–12:30 pm" or "All day"), then an em dash, then what it is, which child if known, and where.
 - Source goes last, in italics and parentheses. For Outlook calendars name which one: "Outlook · Family", "Outlook · Elle", "Outlook · Lila", or plain "Outlook" for the default calendar. Other sources are "PlayMetrics", "BPS district calendar", or the originating sender. Merged items name all contributing sources.
 - No-school days, half days, and Sunday School sessions lead their day's list, above timed events, since they reframe the whole day.
 - Strict chronological order. Omit days with nothing on them.
