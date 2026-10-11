@@ -3,7 +3,7 @@
 Jacob Shapiro's family automation. This is a **private** repo because it holds kids' names, schools, schedules and email conventions. Never copy its contents into a public repo, gist or artifact shared beyond Jacob.
 
 ## What runs here
-- **Daily, about 6:30 AM America/New_York** (Claude Code routine "Family digest", live since 2026-10-10): run the `family-digest` skill (Steps 1–6), then the `daily-scoop` skill (Step 7), in that order. The scoop reuses the digest's gathered data. The run then commits its log appends, the day's `state/` file and any new lunch-menu URL to `main`. The old Cowork routine is retired (disabled, not deleted).
+- **Daily, about 6:30 AM America/New_York** (Claude Code routine "Family digest", live since 2026-10-10): run the `family-digest` skill (Steps 1–6), then the `daily-scoop` skill (Step 7), in that order. The scoop reuses the digest's gathered data. The run then commits its log appends, the day's `state/` file, the day's newspaper PDF (`editions/`) and any new lunch-menu URL to `main`. The old Cowork routine is retired (disabled, not deleted).
 - Recipients and destinations: the digest goes by Outlook email to jacob@ivanhoecompanies.com and Rebekah.Shapiro@gmail.com, and the scoop goes to the home printer relay.
 
 ## Three areas: where every change goes
@@ -22,6 +22,7 @@ Family data is shared: all three outputs read it, so a fact is changed once, in 
 | `data/` | Family facts, calendars, schedules, lunch URLs: the single source of truth (see `data/CLAUDE.md`) |
 | `familyops/`, `./fo` | Collectors, merge/dedupe, validation, CLI. `./fo collect`, `./fo add`, `./fo check-email`, `./fo checked`, `./fo test`. Always use `./fo` or `.venv/bin/python`, never the system `python3`. |
 | `state/YYYY-MM-DD.json` | The day's single record that every output renders from |
+| `editions/YYYY-MM-DD.pdf` | Every printed newspaper, committed by the daily run; the digest links to today's (private: GitHub sign-in with repo access) |
 | `.claude/skills/` | `family-digest` and `daily-scoop` (the daily run), plus the four entry points above |
 | `scoop/` | Newspaper kit; `scoop/README.md` holds its standing rules |
 | `dashboard/` | Family dashboard (not built yet) |
