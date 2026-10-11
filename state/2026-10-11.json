@@ -1,0 +1,382 @@
+{
+ "date": "2026-10-11",
+ "generated_at": "2026-10-11T10:28:43+00:00",
+ "window": {
+  "start": "2026-10-11",
+  "end": "2026-10-21"
+ },
+ "kids": {
+  "Ari": {
+   "color": "#2563EB",
+   "initial": "A"
+  },
+  "Elle": {
+   "color": "#DB2777",
+   "initial": "E"
+  },
+  "Leo": {
+   "color": "#16A34A",
+   "initial": "L"
+  },
+  "Lila": {
+   "color": "#9333EA",
+   "initial": "Li"
+  }
+ },
+ "events": [
+  {
+   "date": "2026-10-11",
+   "title": "Soccer game vs Blackhawks",
+   "kids": [
+    "Elle"
+   ],
+   "start": "08:00",
+   "end": "09:00",
+   "end_date": null,
+   "location": "Greg Grant Sports Complex 7v7, 45300 Mound Rd, Shelby Township, MI 48317, USA",
+   "kind": "game",
+   "details": "arrive 7:30 am, black-black-black",
+   "sources": [
+    "PlayMetrics"
+   ],
+   "status": null,
+   "id": "2026-10-11|08:00|soccer game vs blackhawks"
+  },
+  {
+   "date": "2026-10-13",
+   "title": "All schools half day (AM).",
+   "kids": [
+    "Ari",
+    "Elle",
+    "Leo"
+   ],
+   "start": null,
+   "end": null,
+   "end_date": null,
+   "location": null,
+   "kind": "school_status",
+   "details": null,
+   "sources": [
+    "BPS district calendar"
+   ],
+   "status": "half_day",
+   "id": "2026-10-13|allday|all schools half day am"
+  },
+  {
+   "date": "2026-10-13",
+   "title": "Soccer practice",
+   "kids": [
+    "Elle"
+   ],
+   "start": "18:00",
+   "end": "19:15",
+   "end_date": null,
+   "location": "UWM Sports Complex Field 1, 867 S Blvd E, Pontiac, MI 48341, USA",
+   "kind": "practice",
+   "details": null,
+   "sources": [
+    "PlayMetrics"
+   ],
+   "status": null,
+   "id": "2026-10-13|18:00|soccer practice"
+  },
+  {
+   "date": "2026-10-14",
+   "title": "Goalie Training",
+   "kids": [
+    "Elle"
+   ],
+   "start": "16:45",
+   "end": "18:00",
+   "end_date": null,
+   "location": "Pembroke Park, Buckingham Avenue, Birmingham, MI, USA",
+   "kind": "event",
+   "details": null,
+   "sources": [
+    "PlayMetrics"
+   ],
+   "status": null,
+   "id": "2026-10-14|16:45|goalie training"
+  },
+  {
+   "date": "2026-10-15",
+   "title": "Soccer practice",
+   "kids": [
+    "Elle"
+   ],
+   "start": "18:00",
+   "end": "19:15",
+   "end_date": null,
+   "location": "Pembroke Park 7v7, Birmingham, MI, USA",
+   "kind": "practice",
+   "details": null,
+   "sources": [
+    "PlayMetrics"
+   ],
+   "status": null,
+   "id": "2026-10-15|18:00|soccer practice"
+  },
+  {
+   "date": "2026-10-17",
+   "title": "Basketball game vs Hoosiers",
+   "kids": [
+    "Ari"
+   ],
+   "start": "09:55",
+   "end": null,
+   "end_date": null,
+   "location": "Berkshire Middle School, 21707 W 14 Mile Rd, Beverly Hills",
+   "kind": "game",
+   "details": null,
+   "sources": [
+    "MCE league schedule"
+   ],
+   "status": null,
+   "id": "2026-10-17|09:55|basketball game vs hoosiers"
+  },
+  {
+   "date": "2026-10-17",
+   "title": "Soccer game vs MI Stars Elite 2018/2017G White",
+   "kids": [
+    "Elle"
+   ],
+   "start": "12:30",
+   "end": "13:30",
+   "end_date": null,
+   "location": "Spencer Park Field 2, 3701 John R Rd, Rochester Hills, MI 48307, United States",
+   "kind": "game",
+   "details": "arrive 12:00 pm, black-black-black",
+   "sources": [
+    "PlayMetrics"
+   ],
+   "status": null,
+   "id": "2026-10-17|12:30|soccer game vs mi stars elite 2018 2017g"
+  },
+  {
+   "date": "2026-10-18",
+   "title": "Soccer game vs Romeo FC Fury",
+   "kids": [
+    "Elle"
+   ],
+   "start": "12:00",
+   "end": "13:00",
+   "end_date": null,
+   "location": "Simpson Park Field 6 7v7, 70199 Campground Rd, Bruce Township, MI 48065, United States",
+   "kind": "game",
+   "details": "arrive 11:30 am, black-black-black",
+   "sources": [
+    "PlayMetrics"
+   ],
+   "status": null,
+   "id": "2026-10-18|12:00|soccer game vs romeo fc fury"
+  },
+  {
+   "date": "2026-10-20",
+   "title": "Soccer practice",
+   "kids": [
+    "Elle"
+   ],
+   "start": "18:00",
+   "end": "19:15",
+   "end_date": null,
+   "location": "UWM Sports Complex Field 1, 867 S Blvd E, Pontiac, MI 48341, USA",
+   "kind": "practice",
+   "details": null,
+   "sources": [
+    "PlayMetrics"
+   ],
+   "status": null,
+   "id": "2026-10-20|18:00|soccer practice"
+  },
+  {
+   "date": "2026-10-21",
+   "title": "Goalie Training",
+   "kids": [
+    "Elle"
+   ],
+   "start": "16:45",
+   "end": "18:00",
+   "end_date": null,
+   "location": "Pembroke Park, Buckingham Avenue, Birmingham, MI, USA",
+   "kind": "event",
+   "details": null,
+   "sources": [
+    "PlayMetrics"
+   ],
+   "status": null,
+   "id": "2026-10-21|16:45|goalie training"
+  }
+ ],
+ "actions": [],
+ "fyi": [],
+ "conflicts": [],
+ "lunch": {
+  "line": "No school today.",
+  "entree": null
+ },
+ "weather": {
+  "hi": 66,
+  "today": "Light Rain Likely",
+  "today_detail": "Rain likely before 2pm. Cloudy, with a high near 66. East wind around 7 mph. Chance of precipitation is 60%. New rainfall amounts less than a tenth of an inch possible.",
+  "tonight_low": 54,
+  "tonight": "Mostly Cloudy then Patchy Fog",
+  "icon": "rain",
+  "forecast": [
+   {
+    "date": "2026-10-12",
+    "day": "Mon",
+    "hi": 78,
+    "lo": 64,
+    "short": "Patchy Fog",
+    "icon": "fog"
+   },
+   {
+    "date": "2026-10-13",
+    "day": "Tue",
+    "hi": 80,
+    "lo": 56,
+    "short": "Chance Light Rain",
+    "icon": "rain"
+   },
+   {
+    "date": "2026-10-14",
+    "day": "Wed",
+    "hi": 68,
+    "lo": 50,
+    "short": "Slight Chance Light Ra",
+    "icon": "rain"
+   },
+   {
+    "date": "2026-10-15",
+    "day": "Thu",
+    "hi": 66,
+    "lo": 49,
+    "short": "Chance Light Rain",
+    "icon": "rain"
+   }
+  ],
+  "source": "National Weather Service",
+  "updated": "2026-10-11T08:24:37+00:00"
+ },
+ "mda": {
+  "title": "MDA Kicks &amp; Giggles",
+  "items": [
+   "<span class='gm-when'>Final · Fri Oct 9</span><span class='gm-match'>MDA 1, <b>Nationals Oakland Red 6</b></span><span class='gm-loc'>Derby Middle School 7v7, Birmingham</span>",
+   "<span class='gm-when'>Today · 8:00 am</span><span class='gm-match'>MDA vs Blackhawks</span><span class='gm-loc'>Greg Grant Sports Complex 7v7, Shelby Township</span><span class='gm-extra'>Arrive 7:30 am · Uniform: black-black-black</span>"
+  ]
+ },
+ "spartans": {
+  "title": "Spartans Hoop Scoop",
+  "items": [
+   "<span class='gm-when'>Last game · Sat Oct 10</span><span class='gm-match'>Spartans vs Tigers</span><span class='gm-loc'>Berkshire Middle School, Beverly Hills</span><span class='gm-extra'>Final score coming soon.</span>",
+   "<span class='gm-when'>Sat Oct 17 · 9:55 am</span><span class='gm-match'>Spartans vs Hoosiers</span><span class='gm-loc'>Berkshire Middle School, Beverly Hills</span>"
+  ]
+ },
+ "fantasy": {
+  "league": "Quarton 5th Grade DAWGS",
+  "team": "LamARI SHAPson",
+  "record": "4-0",
+  "rank": 1,
+  "teams": 10,
+  "week": 5,
+  "points_for": 605.7,
+  "this_week": {
+   "week": 5,
+   "opponent": "The Jude Crew",
+   "score": 28.0,
+   "opp_score": 0.0,
+   "winner": "UNDECIDED"
+  },
+  "last_week": {
+   "week": 4,
+   "opponent": "Frankly, I came to win",
+   "score": 143.3,
+   "opp_score": 111.3,
+   "winner": "AWAY",
+   "result": "W"
+  }
+ },
+ "almanac": [
+  {
+   "date": "2026-10-11",
+   "holidays": [],
+   "shabbat": null
+  },
+  {
+   "date": "2026-10-12",
+   "holidays": [
+    "Indigenous Peoples' Day"
+   ],
+   "shabbat": null
+  }
+ ],
+ "due": [
+  {
+   "source": "league_schedules",
+   "who": "claude",
+   "what": "Re-check data/schedules/* against league sites and emails (MCE basketball, Snaptivities)",
+   "why": "never checked"
+  },
+  {
+   "source": "sunday_school",
+   "who": "jacob",
+   "what": "Temple Israel Sunday School calendar -> data/calendars/temple-israel-YYYY-YY.yaml (Jacob to supply; Temple Beth El dropped 2026-10-10)",
+   "why": "not supplied yet"
+  }
+ ],
+ "delivery": {
+  "email": null,
+  "dashboard": null,
+  "print": null,
+  "filed": null
+ },
+ "meta": {
+  "sources": {
+   "playmetrics_feed": {
+    "ok": true,
+    "count": null
+   },
+   "playmetrics": {
+    "ok": true,
+    "count": 8
+   },
+   "playmetrics_past": {
+    "ok": true,
+    "count": 23
+   },
+   "schedules": {
+    "ok": true,
+    "count": 1
+   },
+   "schedules_past": {
+    "ok": true,
+    "count": 1
+   },
+   "mce_results": {
+    "ok": true,
+    "count": null
+   },
+   "district_calendar": {
+    "ok": true,
+    "count": 1
+   },
+   "lunch": {
+    "ok": true,
+    "count": null
+   },
+   "weather": {
+    "ok": true,
+    "count": null
+   },
+   "fantasy": {
+    "ok": true,
+    "count": null
+   },
+   "almanac": {
+    "ok": true,
+    "count": 2
+   }
+  },
+  "warnings": []
+ }
+}
