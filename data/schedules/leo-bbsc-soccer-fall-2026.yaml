@@ -1,19 +1,18 @@
 # Leo's soccer schedule: BBSC (Birmingham Bloomfield Soccer Club) Fall 2026, Kindergarten Boys.
 # Source: "BBSC Fall 2026 - Kindergarten Boys - Game Schedule" PDF (bbscsoccer.com, "F26 - KB.pdf"),
 # supplied by Jacob 2026-10-11. Leo's team is the Seattle Sounders (Jacob, 2026-10-11).
-# Saturdays 2:00-3:00 pm, 6 fields. The PDF names field numbers only, not the venue; BBSC's home fields are
-# Berkshire Middle School (21707 W 14 Mile Rd, Beverly Hills) and Birmingham Covington School
-# (1525 Covington Rd, Bloomfield Hills). Venue for Kindergarten Boys not yet confirmed: add a top-level
-# `location:` once Jacob confirms it.
+# Saturdays 2:00-3:00 pm, 6 fields. The PDF names field numbers only; every game is at Birmingham Covington
+# School (Jacob, 2026-10-11; address from bbscsoccer.com/field-locations).
 name: BBSC soccer (Seattle Sounders)
 source_label: BBSC schedule
 kids: [Leo]
+location: Birmingham Covington School, 1525 Covington Rd, Bloomfield Hills
 events:
-  - {date: 2026-09-12, start: "14:00", end: "15:00", kind: game, title: "Soccer game vs Charlotte FC", location: "BBSC field 2", details: "Week 1; Sounders away."}
+  - {date: 2026-09-12, start: "14:00", end: "15:00", kind: game, title: "Soccer game vs Charlotte FC", details: "Field 2. Week 1; Sounders away."}
   - {date: 2026-09-19, kind: event, title: "No soccer game (bye week)", details: "Week 2 bye."}
-  - {date: 2026-09-26, start: "14:00", end: "15:00", kind: game, title: "Soccer game vs Atlanta United", location: "BBSC field 1", details: "Week 3; Sounders away."}
-  - {date: 2026-10-03, start: "14:00", end: "15:00", kind: game, title: "Soccer game vs Nashville SC", location: "BBSC field 2", details: "Week 4; Sounders home."}
-  - {date: 2026-10-10, start: "14:00", end: "15:00", kind: game, title: "Soccer game vs LA Galaxy", location: "BBSC field 3", details: "Week 5; Sounders away."}
-  - {date: 2026-10-17, start: "14:00", end: "15:00", kind: game, title: "Soccer game vs FC Dallas", location: "BBSC field 4", details: "Week 6; Sounders home."}
-  - {date: 2026-10-24, start: "14:00", end: "15:00", kind: game, title: "Soccer game vs Colorado Rapids", location: "BBSC field 5", details: "Week 7; Sounders home."}
-  - {date: 2026-10-31, start: "14:00", end: "15:00", kind: game, title: "Soccer game vs Austin FC", location: "BBSC field 6", details: "Week 8, last game of the season; Sounders home."}
+  - {date: 2026-09-26, start: "14:00", end: "15:00", kind: game, title: "Soccer game vs Atlanta United", details: "Field 1. Week 3; Sounders away."}
+  - {date: 2026-10-03, start: "14:00", end: "15:00", kind: game, title: "Soccer game vs Nashville SC", details: "Field 2. Week 4; Sounders home."}
+  - {date: 2026-10-10, start: "14:00", end: "15:00", kind: game, title: "Soccer game vs LA Galaxy", details: "Field 3. Week 5; Sounders away."}
+  - {date: 2026-10-17, start: "14:00", end: "15:00", kind: game, title: "Soccer game vs FC Dallas", details: "Field 4. Week 6; Sounders home."}
+  - {date: 2026-10-24, start: "14:00", end: "15:00", kind: game, title: "Soccer game vs Colorado Rapids", details: "Field 5. Week 7; Sounders home."}
+  - {date: 2026-10-31, start: "14:00", end: "15:00", kind: game, title: "Soccer game vs Austin FC", details: "Field 6. Week 8, last game of the season; Sounders home."}
