@@ -32,7 +32,7 @@ kids:
     room: "109"
     audiences: [all, jk8, elementary, jk_k]
     outlook_calendar: Leo
-    activities: []
+    activities: [soccer (BBSC Kindergarten Boys, Seattle Sounders)]   # Jacob, 2026-10-11
   Lila:
     initial: Li
     color: "#9333EA"      # purple
