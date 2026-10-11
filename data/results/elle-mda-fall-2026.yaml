@@ -7,6 +7,9 @@ team: MDA U9G Black
 # That page sits behind a Google reCAPTCHA bot check, so the daily run cannot read it and must not try to get around
 # it. Scores reach this file when Jacob sends them (text, screenshot of that page, or a forwarded score email).
 kid: Elle
-results: []
+results:
+  # From Jacob's screenshot of the MYSL GotSport schedule page (2026-10-11). Elle's goals not reported yet.
+  - {date: 2026-09-27, opponent: Anchor Bay Jr Tars, mda: 1, opp: 4, source: "GotSport MYSL #1705, via Jacob 2026-10-11"}
+  - {date: 2026-10-09, opponent: Nationals Oakland Red, mda: 1, opp: 6, source: "GotSport MYSL #1698, via Jacob 2026-10-11"}
 # Example:
 #  - {date: 2026-10-11, opponent: Blackhawks, mda: 3, opp: 1, elle_goals: 1, notes: "Elle's goal came off a corner kick", source: "Jacob, 2026-10-11"}
