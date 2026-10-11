@@ -37,7 +37,7 @@ def dated_live(item_date: date, today: date) -> bool:
 
 
 def expired(cats: Iterable[str], today: date) -> bool:
-    """Purge rule (Step 6c): no live Hold date AND first seen 7+ days ago. No Digest-First = never purge (report it)."""
+    """Expiry rule: no live Hold date AND first seen 7+ days ago. Used only to COUNT expired Processed messages for the run report (Step 6c); nothing is ever deleted or moved (Jacob, 2026-10-11)."""
     cats = list(cats)
     f = first_seen(cats)
     if f is None:

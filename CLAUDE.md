@@ -32,7 +32,7 @@ Family data is shared: all three outputs read it, so a fact is changed once, in 
 - **Mail and calendars only through the Microsoft 365 (Outlook) connector.** Never use Gmail, Google Calendar or any other mail connector, for reading or sending.
 - **Secrets come from the environment, never the repo:** `RELAY_TOKEN` (print relay), `PLAYMETRICS_ICS_URL` (Elle's soccer feed), and `ESPN_S2` / `ESPN_SWID` (ESPN login cookies for Ari's fantasy league). Never echo, log, commit or put any of them into a digest, newspaper, artifact or commit message.
 - **Never re-transmit a credential URL** found in email (see the link rules in the family-digest skill).
-- **Mail filing (Step 6) only after a successful send.** The Outlook `Family-Digest/Processed` folder and the `Digest-First-*` / `Digest-Hold-*` categories are the digest's carry-forward memory. Keep their names and rules exactly as written.
+- **Mail filing (Step 6) only after a successful send.** The Outlook `Family-Digest/Processed` folder and the `Digest-First-*` / `Digest-Hold-*` categories are the digest's carry-forward memory. Keep their names and rules exactly as written. **Never delete or move a message that is already in Processed** (Jacob manages that folder; 2026-10-11): the run only files new mail into it.
 
 ## Keeping knowledge in the repo
 When Jacob confirms a new fact (a new activity, teacher, schedule, correction or preference), record it with the `/family-update` procedure, even when he doesn't type the command. Never keep it only in a session. Daily runs commit their own log appends and newly found lunch-menu URLs directly to `main`.

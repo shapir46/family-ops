@@ -253,15 +253,11 @@ Use `outlook_send_mail`:
 - Only file messages that were actually read in Step 1a this run. Never file a message you did not parse.
 - If a message's dates live only in an attachment you did not open, set no Hold category and note in the run report that the message will age out on the 7-day undated rule instead of on a real date.
 
-**6c — Purge expired messages out of Processed.** For each message currently in the Processed folder, read its categories. A message is expired when BOTH are true:
-- it has no `Digest-Hold-` category, OR its Hold date is before today; AND
-- its `Digest-First-` date is 7 or more days before today.
+**6c — Never delete or move anything already in Processed** (Jacob, 2026-10-11). Jacob manages that folder himself. Do not call `outlook_batch_delete_messages`, and do not move, re-categorize or otherwise touch any message that is already in Processed; Step 6b only moves the NEW messages from Family-Digest into it. Expired messages simply stay there. Their content still drops out of the digest under the Step 1b retention rules, so an expired message is ignored, not removed.
 
-Pass expired message ids to `outlook_batch_delete_messages` (max 50 per call). That is a recoverable soft delete to Deleted Items, not a permanent one — Jacob can restore anything. If nothing qualifies, call nothing and say so.
-
-Leave alone, and mention in the run report, any Processed message with no `Digest-First-` category. Do not guess at its age.
+In the run report, give one line with how many Processed messages are past retention (no live `Digest-Hold-` date and `Digest-First-` 7+ days ago) and how many have no `Digest-First-` category, so Jacob knows what is there to clean up. Do not list or act on them otherwise.
 
 ## Run report
-Confirm what was done: count of new messages processed and carried-forward messages re-read; how many carried-forward items were still live versus dropped as expired; how many events came from each of the six Outlook calendars versus filtered out as work; whether the PlayMetrics feed and the lunch-menu PDF fetched successfully (and, from the first of each month, the new month's PDF URL if you had to find it via the BPS menus page); how many duplicates were merged; how many bus/SACC items were suppressed; how many links were attached to action items and whether any credential-bearing URL was replaced with plain text; and for Step 6, how many messages were filed into Processed and how many were purged to Deleted Items.
+Confirm what was done: count of new messages processed and carried-forward messages re-read; how many carried-forward items were still live versus dropped as expired; how many events came from each of the six Outlook calendars versus filtered out as work; whether the PlayMetrics feed and the lunch-menu PDF fetched successfully (and, from the first of each month, the new month's PDF URL if you had to find it via the BPS menus page); how many duplicates were merged; how many bus/SACC items were suppressed; how many links were attached to action items and whether any credential-bearing URL was replaced with plain text; and for Step 6, how many new messages were filed into Processed, plus the one line on expired Processed messages left for Jacob (6c).
 
 If the send failed, that fact goes in the FIRST LINE of the report, ahead of all statistics. Only push-notify the user (PushNotification) if the run failed or needs Jacob's input (e.g. send failed, lunch-menu source could not be found, a Processed folder is missing); a clean run stays silent.
