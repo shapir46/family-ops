@@ -2,6 +2,10 @@
 # One entry per game: date, opponent, score (mda = Elle's team, opp = opponent), elle_goals.
 # Optional: notes (one short kid-friendly line), source. Leave a game out until its result is known.
 team: MDA U9G Black
+# League: MYSL Fall 2026 on GotSport (event 56310, team 4203599). Jacob named its schedule page as the score source
+# (2026-10-11): https://system.gotsport.com/org_event/events/56310/schedules?team=4203599
+# That page sits behind a Google reCAPTCHA bot check, so the daily run cannot read it and must not try to get around
+# it. Scores reach this file when Jacob sends them (text, screenshot of that page, or a forwarded score email).
 kid: Elle
 results: []
 # Example:
