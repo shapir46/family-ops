@@ -5,6 +5,7 @@
   check-email --html f.html --to a,b [--shadow] [--date D]          pre-send validation (exit 1 on problems)
   checked <source> [--date D]               record that a weekly/yearly source was re-checked
   lunch [--date D]                          today's lunch line
+  paper-link [--date D]                     no-login link to the day's newspaper (needs env PAPER_LINK_KEY)
 """
 import argparse
 import json
@@ -13,7 +14,7 @@ from datetime import date
 from zoneinfo import ZoneInfo
 from datetime import datetime
 
-from . import TZ, collect, lunch, validate
+from . import TZ, collect, lunch, paperlink, validate
 
 
 def _today(s):
@@ -29,6 +30,7 @@ def main(argv=None):
     v.add_argument("--shadow", action="store_true"); v.add_argument("--date")
     k = sub.add_parser("checked"); k.add_argument("source"); k.add_argument("--date")
     l = sub.add_parser("lunch"); l.add_argument("--date")
+    pl = sub.add_parser("paper-link"); pl.add_argument("--date")
     args = ap.parse_args(argv)
     today = _today(getattr(args, "date", None))
 
@@ -54,6 +56,8 @@ def main(argv=None):
         print(f"{args.source} checked {today}")
     elif args.cmd == "lunch":
         print(lunch.for_day(today)["line"])
+    elif args.cmd == "paper-link":
+        print(paperlink.link(today))
     return 0
 
 
