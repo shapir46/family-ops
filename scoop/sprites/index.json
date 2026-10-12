@@ -1,0 +1,3193 @@
+{
+"sprites": {
+"bear/body/akimbo": {
+"file": "bear/bear-body-akimbo.webp",
+"x": -37.48,
+"y": -109.28,
+"w": 77.25,
+"h": 111.61
+},
+"bear/body/cheer": {
+"file": "bear/bear-body-cheer.webp",
+"x": -37.0,
+"y": -114.95,
+"w": 74.0,
+"h": 98.94
+},
+"bear/body/dance": {
+"file": "bear/bear-body-dance.webp",
+"x": -45.58,
+"y": -109.56,
+"w": 77.48,
+"h": 112.18
+},
+"bear/body/facepalm": {
+"file": "bear/bear-body-facepalm.webp",
+"x": -35.47,
+"y": -110.57,
+"w": 68.55,
+"h": 112.9
+},
+"bear/body/hold": {
+"file": "bear/bear-body-hold.webp",
+"x": -34.43,
+"y": -107.98,
+"w": 87.19,
+"h": 110.2
+},
+"bear/body/point": {
+"file": "bear/bear-body-point.webp",
+"x": -35.37,
+"y": -108.33,
+"w": 91.58,
+"h": 110.68
+},
+"bear/body/run": {
+"file": "bear/bear-body-run.webp",
+"x": -34.93,
+"y": -109.4,
+"w": 92.73,
+"h": 111.22
+},
+"bear/body/scared": {
+"file": "bear/bear-body-scared.webp",
+"x": -38.62,
+"y": -112.24,
+"w": 77.83,
+"h": 109.96
+},
+"bear/body/shrug": {
+"file": "bear/bear-body-shrug.webp",
+"x": -48.63,
+"y": -110.52,
+"w": 97.51,
+"h": 112.57
+},
+"bear/body/sit": {
+"file": "bear/bear-body-sit.webp",
+"x": -32.83,
+"y": -89.32,
+"w": 68.01,
+"h": 92.95
+},
+"bear/body/stand": {
+"file": "bear/bear-body-stand.webp",
+"x": -33.93,
+"y": -106.91,
+"w": 70.94,
+"h": 108.9
+},
+"bear/body/tada": {
+"file": "bear/bear-body-tada.webp",
+"x": -53.68,
+"y": -108.39,
+"w": 107.6,
+"h": 110.25
+},
+"bear/body/think": {
+"file": "bear/bear-body-think.webp",
+"x": -28.34,
+"y": -106.71,
+"w": 58.24,
+"h": 107.83
+},
+"bear/body/wave": {
+"file": "bear/bear-body-wave.webp",
+"x": -35.32,
+"y": -109.54,
+"w": 80.3,
+"h": 111.54
+},
+"bear/gear/beanie/head": {
+"file": "bear/bear-gear-beanie-head.webp",
+"x": -21.47,
+"y": -126.29,
+"w": 50.97,
+"h": 36.97
+},
+"bear/gear/bow/head": {
+"file": "bear/bear-gear-bow-head.webp",
+"x": -19.19,
+"y": -112.8,
+"w": 22.14,
+"h": 15.99
+},
+"bear/gear/bowtie/neck": {
+"file": "bear/bear-gear-bowtie-neck.webp",
+"x": -6.02,
+"y": -65.3,
+"w": 19.98,
+"h": 7.22
+},
+"bear/gear/cap/head": {
+"file": "bear/bear-gear-cap-head.webp",
+"x": -18.9,
+"y": -117.74,
+"w": 62.58,
+"h": 27.71
+},
+"bear/gear/cape/back": {
+"file": "bear/bear-gear-cape-back.webp",
+"x": -55.03,
+"y": -59.17,
+"w": 80.98,
+"h": 51.82
+},
+"bear/gear/cape/neck": {
+"file": "bear/bear-gear-cape-neck.webp",
+"x": -14.78,
+"y": -68.81,
+"w": 29.52,
+"h": 10.48
+},
+"bear/gear/collar/neck": {
+"file": "bear/bear-gear-collar-neck.webp",
+"x": -14.8,
+"y": -68.79,
+"w": 29.49,
+"h": 16.97
+},
+"bear/gear/crown/head": {
+"file": "bear/bear-gear-crown-head.webp",
+"x": -12.75,
+"y": -118.92,
+"w": 33.48,
+"h": 18.54
+},
+"bear/gear/earmuffs/head": {
+"file": "bear/bear-gear-earmuffs-head.webp",
+"x": -26.96,
+"y": -107.67,
+"w": 61.26,
+"h": 33.46
+},
+"bear/gear/glasses/head": {
+"file": "bear/bear-gear-glasses-head.webp",
+"x": -9.99,
+"y": -95.51,
+"w": 29.97,
+"h": 13.0
+},
+"bear/gear/party/head": {
+"file": "bear/bear-gear-party-head.webp",
+"x": -7.96,
+"y": -138.04,
+"w": 29.34,
+"h": 39.52
+},
+"bear/gear/scarf/neck": {
+"file": "bear/bear-gear-scarf-neck.webp",
+"x": -14.8,
+"y": -69.87,
+"w": 33.34,
+"h": 32.5
+},
+"bear/gear/shades/head": {
+"file": "bear/bear-gear-shades-head.webp",
+"x": -9.99,
+"y": -95.51,
+"w": 29.97,
+"h": 13.0
+},
+"bear/head/angry": {
+"file": "bear/bear-head-angry.webp",
+"x": -23.29,
+"y": -123.38,
+"w": 59.62,
+"h": 61.61
+},
+"bear/head/grin": {
+"file": "bear/bear-head-grin.webp",
+"x": -23.23,
+"y": -108.15,
+"w": 53.44,
+"h": 46.46
+},
+"bear/head/happy": {
+"file": "bear/bear-head-happy.webp",
+"x": -23.23,
+"y": -108.27,
+"w": 53.44,
+"h": 46.58
+},
+"bear/head/laugh": {
+"file": "bear/bear-head-laugh.webp",
+"x": -23.23,
+"y": -108.63,
+"w": 53.8,
+"h": 46.94
+},
+"bear/head/love": {
+"file": "bear/bear-head-love.webp",
+"x": -23.23,
+"y": -108.27,
+"w": 53.44,
+"h": 46.58
+},
+"bear/head/proud": {
+"file": "bear/bear-head-proud.webp",
+"x": -23.23,
+"y": -108.15,
+"w": 53.44,
+"h": 46.46
+},
+"bear/head/sad": {
+"file": "bear/bear-head-sad.webp",
+"x": -23.23,
+"y": -108.63,
+"w": 54.4,
+"h": 46.94
+},
+"bear/head/sleepy": {
+"file": "bear/bear-head-sleepy.webp",
+"x": -23.98,
+"y": -139.16,
+"w": 79.67,
+"h": 77.43
+},
+"bear/head/smug": {
+"file": "bear/bear-head-smug.webp",
+"x": -23.23,
+"y": -108.39,
+"w": 53.44,
+"h": 46.7
+},
+"bear/head/surprised": {
+"file": "bear/bear-head-surprised.webp",
+"x": -23.23,
+"y": -108.27,
+"w": 53.44,
+"h": 46.58
+},
+"bear/head/wink": {
+"file": "bear/bear-head-wink.webp",
+"x": -23.23,
+"y": -108.27,
+"w": 53.44,
+"h": 46.58
+},
+"bear/head/worried": {
+"file": "bear/bear-head-worried.webp",
+"x": -23.23,
+"y": -108.27,
+"w": 53.44,
+"h": 46.58
+},
+"bear/near/akimbo": {
+"file": "bear/bear-near-akimbo.webp",
+"x": 13.22,
+"y": -69.88,
+"w": 25.59,
+"h": 33.52
+},
+"bear/near/cheer": {
+"file": "bear/bear-near-cheer.webp",
+"x": 13.23,
+"y": -103.83,
+"w": 22.6,
+"h": 40.63
+},
+"bear/near/dance": {
+"file": "bear/bear-near-dance.webp",
+"x": 9.12,
+"y": -96.91,
+"w": 22.77,
+"h": 40.73
+},
+"bear/near/facepalm": {
+"file": "bear/bear-near-facepalm.webp",
+"x": 2.28,
+"y": -93.71,
+"w": 26.51,
+"h": 39.59
+},
+"bear/near/hold": {
+"file": "bear/bear-near-hold.webp",
+"x": 13.13,
+"y": -69.78,
+"w": 38.67,
+"h": 25.03
+},
+"bear/near/point": {
+"file": "bear/bear-near-point.webp",
+"x": 13.14,
+"y": -72.39,
+"w": 41.99,
+"h": 18.15
+},
+"bear/near/run": {
+"file": "bear/bear-near-run.webp",
+"x": 18.9,
+"y": -66.12,
+"w": 38.89,
+"h": 22.53
+},
+"bear/near/scared": {
+"file": "bear/bear-near-scared.webp",
+"x": 13.23,
+"y": -94.76,
+"w": 25.98,
+"h": 36.61
+},
+"bear/near/shrug": {
+"file": "bear/bear-near-shrug.webp",
+"x": 13.11,
+"y": -72.67,
+"w": 35.77,
+"h": 25.11
+},
+"bear/near/sit": {
+"file": "bear/bear-near-sit.webp",
+"x": 10.45,
+"y": -50.88,
+"w": 23.6,
+"h": 38.75
+},
+"bear/near/stand": {
+"file": "bear/bear-near-stand.webp",
+"x": 13.17,
+"y": -69.78,
+"w": 22.89,
+"h": 41.4
+},
+"bear/near/tada": {
+"file": "bear/bear-near-tada.webp",
+"x": 13.12,
+"y": -76.73,
+"w": 40.8,
+"h": 22.51
+},
+"bear/near/think": {
+"file": "bear/bear-near-think.webp",
+"x": 1.27,
+"y": -83.44,
+"w": 27.54,
+"h": 29.24
+},
+"bear/near/wave": {
+"file": "bear/bear-near-wave.webp",
+"x": 13.13,
+"y": -91.49,
+"w": 31.0,
+"h": 37.3
+},
+"bob/body/akimbo": {
+"file": "bob/bob-body-akimbo.webp",
+"x": -18.66,
+"y": -64.46,
+"w": 37.64,
+"h": 63.77
+},
+"bob/body/cheer": {
+"file": "bob/bob-body-cheer.webp",
+"x": -17.45,
+"y": -75.27,
+"w": 36.31,
+"h": 66.48
+},
+"bob/body/dance": {
+"file": "bob/bob-body-dance.webp",
+"x": -22.68,
+"y": -65.86,
+"w": 45.05,
+"h": 65.37
+},
+"bob/body/facepalm": {
+"file": "bob/bob-body-facepalm.webp",
+"x": -18.06,
+"y": -66.52,
+"w": 31.85,
+"h": 66.03
+},
+"bob/body/hold": {
+"file": "bob/bob-body-hold.webp",
+"x": -17.97,
+"y": -66.2,
+"w": 45.71,
+"h": 65.65
+},
+"bob/body/point": {
+"file": "bob/bob-body-point.webp",
+"x": -18.2,
+"y": -66.2,
+"w": 48.11,
+"h": 65.45
+},
+"bob/body/run": {
+"file": "bob/bob-body-run.webp",
+"x": -16.36,
+"y": -62.86,
+"w": 45.99,
+"h": 62.73
+},
+"bob/body/scared": {
+"file": "bob/bob-body-scared.webp",
+"x": -18.9,
+"y": -70.29,
+"w": 37.8,
+"h": 66.3
+},
+"bob/body/shrug": {
+"file": "bob/bob-body-shrug.webp",
+"x": -24.36,
+"y": -66.29,
+"w": 48.79,
+"h": 65.34
+},
+"bob/body/sit": {
+"file": "bob/bob-body-sit.webp",
+"x": -15.81,
+"y": -52.42,
+"w": 31.63,
+"h": 53.06
+},
+"bob/body/stand": {
+"file": "bob/bob-body-stand.webp",
+"x": -18.64,
+"y": -66.2,
+"w": 37.35,
+"h": 64.42
+},
+"bob/body/tada": {
+"file": "bob/bob-body-tada.webp",
+"x": -27.63,
+"y": -65.7,
+"w": 55.26,
+"h": 65.14
+},
+"bob/body/think": {
+"file": "bob/bob-body-think.webp",
+"x": -13.17,
+"y": -65.96,
+"w": 27.37,
+"h": 64.86
+},
+"bob/body/wave": {
+"file": "bob/bob-body-wave.webp",
+"x": -17.76,
+"y": -66.38,
+"w": 39.93,
+"h": 65.29
+},
+"bob/gear/beanie/head": {
+"file": "bob/bob-gear-beanie-head.webp",
+"x": -12.15,
+"y": -71.66,
+"w": 24.29,
+"h": 17.81
+},
+"bob/gear/bow/head": {
+"file": "bob/bob-gear-bow-head.webp",
+"x": -11.04,
+"y": -65.62,
+"w": 11.19,
+"h": 8.26
+},
+"bob/gear/bowtie/neck": {
+"file": "bob/bob-gear-bowtie-neck.webp",
+"x": -5.25,
+"y": -42.62,
+"w": 10.5,
+"h": 4.78
+},
+"bob/gear/cap/head": {
+"file": "bob/bob-gear-cap-head.webp",
+"x": -10.81,
+"y": -67.73,
+"w": 29.3,
+"h": 13.48
+},
+"bob/gear/cape/back": {
+"file": "bob/bob-gear-cape-back.webp",
+"x": -25.47,
+"y": -43.16,
+"w": 37.66,
+"h": 40.21
+},
+"bob/gear/cape/neck": {
+"file": "bob/bob-gear-cape-neck.webp",
+"x": -9.18,
+"y": -44.17,
+"w": 18.37,
+"h": 5.87
+},
+"bob/gear/collar/neck": {
+"file": "bob/bob-gear-collar-neck.webp",
+"x": -9.34,
+"y": -44.17,
+"w": 18.68,
+"h": 9.26
+},
+"bob/gear/crown/head": {
+"file": "bob/bob-gear-crown-head.webp",
+"x": -8.28,
+"y": -68.43,
+"w": 16.56,
+"h": 9.54
+},
+"bob/gear/earmuffs/head": {
+"file": "bob/bob-gear-earmuffs-head.webp",
+"x": -14.43,
+"y": -63.31,
+"w": 28.79,
+"h": 16.28
+},
+"bob/gear/glasses/head": {
+"file": "bob/bob-gear-glasses-head.webp",
+"x": -6.25,
+"y": -57.44,
+"w": 15.67,
+"h": 7.87
+},
+"bob/gear/party/head": {
+"file": "bob/bob-gear-party-head.webp",
+"x": -5.85,
+"y": -76.84,
+"w": 14.22,
+"h": 18.67
+},
+"bob/gear/scarf/neck": {
+"file": "bob/bob-gear-scarf-neck.webp",
+"x": -9.42,
+"y": -44.4,
+"w": 18.83,
+"h": 16.75
+},
+"bob/gear/shades/head": {
+"file": "bob/bob-gear-shades-head.webp",
+"x": -6.25,
+"y": -57.44,
+"w": 15.67,
+"h": 7.87
+},
+"bob/head/angry": {
+"file": "bob/bob-head-angry.webp",
+"x": -11.39,
+"y": -70.36,
+"w": 26.09,
+"h": 29.65
+},
+"bob/head/grin": {
+"file": "bob/bob-head-grin.webp",
+"x": -11.04,
+"y": -66.32,
+"w": 21.99,
+"h": 25.62
+},
+"bob/head/happy": {
+"file": "bob/bob-head-happy.webp",
+"x": -11.34,
+"y": -66.47,
+"w": 22.69,
+"h": 25.78
+},
+"bob/head/laugh": {
+"file": "bob/bob-head-laugh.webp",
+"x": -11.19,
+"y": -66.32,
+"w": 22.38,
+"h": 25.62
+},
+"bob/head/love": {
+"file": "bob/bob-head-love.webp",
+"x": -11.19,
+"y": -66.32,
+"w": 22.3,
+"h": 25.62
+},
+"bob/head/proud": {
+"file": "bob/bob-head-proud.webp",
+"x": -11.04,
+"y": -66.32,
+"w": 21.99,
+"h": 25.62
+},
+"bob/head/sad": {
+"file": "bob/bob-head-sad.webp",
+"x": -11.27,
+"y": -66.32,
+"w": 22.54,
+"h": 25.62
+},
+"bob/head/sleepy": {
+"file": "bob/bob-head-sleepy.webp",
+"x": -11.28,
+"y": -76.87,
+"w": 34.66,
+"h": 36.14
+},
+"bob/head/smug": {
+"file": "bob/bob-head-smug.webp",
+"x": -11.34,
+"y": -66.47,
+"w": 22.69,
+"h": 25.78
+},
+"bob/head/surprised": {
+"file": "bob/bob-head-surprised.webp",
+"x": -11.27,
+"y": -66.47,
+"w": 22.54,
+"h": 25.78
+},
+"bob/head/wink": {
+"file": "bob/bob-head-wink.webp",
+"x": -11.27,
+"y": -66.55,
+"w": 22.54,
+"h": 25.85
+},
+"bob/head/worried": {
+"file": "bob/bob-head-worried.webp",
+"x": -11.27,
+"y": -66.39,
+"w": 23.0,
+"h": 25.7
+},
+"bob/near/akimbo": {
+"file": "bob/bob-near-akimbo.webp",
+"x": 4.82,
+"y": -42.61,
+"w": 14.15,
+"h": 18.74
+},
+"bob/near/cheer": {
+"file": "bob/bob-near-cheer.webp",
+"x": 4.87,
+"y": -65.94,
+"w": 12.83,
+"h": 23.01
+},
+"bob/near/dance": {
+"file": "bob/bob-near-dance.webp",
+"x": 2.82,
+"y": -57.28,
+"w": 12.59,
+"h": 22.49
+},
+"bob/near/facepalm": {
+"file": "bob/bob-near-facepalm.webp",
+"x": -0.69,
+"y": -56.87,
+"w": 14.48,
+"h": 22.97
+},
+"bob/near/hold": {
+"file": "bob/bob-near-hold.webp",
+"x": 4.81,
+"y": -42.58,
+"w": 22.17,
+"h": 12.19
+},
+"bob/near/point": {
+"file": "bob/bob-near-point.webp",
+"x": 4.82,
+"y": -44.02,
+"w": 24.02,
+"h": 10.21
+},
+"bob/near/run": {
+"file": "bob/bob-near-run.webp",
+"x": 7.85,
+"y": -41.32,
+"w": 21.78,
+"h": 11.48
+},
+"bob/near/scared": {
+"file": "bob/bob-near-scared.webp",
+"x": 4.88,
+"y": -58.6,
+"w": 14.02,
+"h": 20.68
+},
+"bob/near/shrug": {
+"file": "bob/bob-near-shrug.webp",
+"x": 4.92,
+"y": -45.68,
+"w": 19.52,
+"h": 13.74
+},
+"bob/near/sit": {
+"file": "bob/bob-near-sit.webp",
+"x": 2.68,
+"y": -28.76,
+"w": 13.14,
+"h": 21.55
+},
+"bob/near/stand": {
+"file": "bob/bob-near-stand.webp",
+"x": 4.83,
+"y": -42.43,
+"w": 13.35,
+"h": 22.63
+},
+"bob/near/tada": {
+"file": "bob/bob-near-tada.webp",
+"x": 4.94,
+"y": -46.41,
+"w": 22.69,
+"h": 12.5
+},
+"bob/near/think": {
+"file": "bob/bob-near-think.webp",
+"x": -2.44,
+"y": -50.1,
+"w": 16.64,
+"h": 16.18
+},
+"bob/near/wave": {
+"file": "bob/bob-near-wave.webp",
+"x": 4.88,
+"y": -54.75,
+"w": 17.29,
+"h": 20.86
+},
+"fox/body/akimbo": {
+"file": "fox/fox-body-akimbo.webp",
+"x": -41.98,
+"y": -92.94,
+"w": 65.7,
+"h": 93.91
+},
+"fox/body/cheer": {
+"file": "fox/fox-body-cheer.webp",
+"x": -48.04,
+"y": -96.73,
+"w": 73.85,
+"h": 84.13
+},
+"fox/body/dance": {
+"file": "fox/fox-body-dance.webp",
+"x": -51.39,
+"y": -92.84,
+"w": 70.41,
+"h": 94.78
+},
+"fox/body/facepalm": {
+"file": "fox/fox-body-facepalm.webp",
+"x": -41.67,
+"y": -93.79,
+"w": 67.55,
+"h": 95.27
+},
+"fox/body/hold": {
+"file": "fox/fox-body-hold.webp",
+"x": -41.16,
+"y": -91.83,
+"w": 71.73,
+"h": 93.03
+},
+"fox/body/point": {
+"file": "fox/fox-body-point.webp",
+"x": -40.93,
+"y": -92.03,
+"w": 73.99,
+"h": 93.75
+},
+"fox/body/run": {
+"file": "fox/fox-body-run.webp",
+"x": -30.55,
+"y": -93.46,
+"w": 65.86,
+"h": 93.64
+},
+"fox/body/scared": {
+"file": "fox/fox-body-scared.webp",
+"x": -38.49,
+"y": -96.36,
+"w": 62.93,
+"h": 93.88
+},
+"fox/body/shrug": {
+"file": "fox/fox-body-shrug.webp",
+"x": -41.72,
+"y": -94.62,
+"w": 71.05,
+"h": 96.28
+},
+"fox/body/sit": {
+"file": "fox/fox-body-sit.webp",
+"x": -41.2,
+"y": -79.06,
+"w": 65.55,
+"h": 80.4
+},
+"fox/body/stand": {
+"file": "fox/fox-body-stand.webp",
+"x": -41.18,
+"y": -91.83,
+"w": 63.08,
+"h": 93.44
+},
+"fox/body/tada": {
+"file": "fox/fox-body-tada.webp",
+"x": -41.58,
+"y": -92.04,
+"w": 73.98,
+"h": 92.99
+},
+"fox/body/think": {
+"file": "fox/fox-body-think.webp",
+"x": -42.23,
+"y": -93.84,
+"w": 65.05,
+"h": 95.0
+},
+"fox/body/wave": {
+"file": "fox/fox-body-wave.webp",
+"x": -44.76,
+"y": -93.51,
+"w": 71.84,
+"h": 95.65
+},
+"fox/gear/beanie/head": {
+"file": "fox/fox-gear-beanie-head.webp",
+"x": -17.08,
+"y": -95.89,
+"w": 38.28,
+"h": 29.0
+},
+"fox/gear/bow/head": {
+"file": "fox/fox-gear-bow-head.webp",
+"x": -16.3,
+"y": -85.26,
+"w": 17.78,
+"h": 12.33
+},
+"fox/gear/bowtie/neck": {
+"file": "fox/fox-gear-bowtie-neck.webp",
+"x": -4.48,
+"y": -50.53,
+"w": 12.95,
+"h": 7.3
+},
+"fox/gear/cap/head": {
+"file": "fox/fox-gear-cap-head.webp",
+"x": -15.52,
+"y": -88.96,
+"w": 48.71,
+"h": 21.48
+},
+"fox/gear/cape/back": {
+"file": "fox/fox-gear-cape-back.webp",
+"x": -29.24,
+"y": -49.91,
+"w": 43.46,
+"h": 48.71
+},
+"fox/gear/cape/neck": {
+"file": "fox/fox-gear-cape-neck.webp",
+"x": -9.62,
+"y": -50.84,
+"w": 23.33,
+"h": 7.5
+},
+"fox/gear/collar/neck": {
+"file": "fox/fox-gear-collar-neck.webp",
+"x": -9.82,
+"y": -50.84,
+"w": 23.43,
+"h": 11.41
+},
+"fox/gear/crown/head": {
+"file": "fox/fox-gear-crown-head.webp",
+"x": -11.67,
+"y": -90.09,
+"w": 27.33,
+"h": 14.69
+},
+"fox/gear/earmuffs/head": {
+"file": "fox/fox-gear-earmuffs-head.webp",
+"x": -22.26,
+"y": -82.07,
+"w": 48.5,
+"h": 26.92
+},
+"fox/gear/glasses/head": {
+"file": "fox/fox-gear-glasses-head.webp",
+"x": -9.1,
+"y": -70.67,
+"w": 24.25,
+"h": 11.3
+},
+"fox/gear/party/head": {
+"file": "fox/fox-gear-party-head.webp",
+"x": -7.44,
+"y": -105.07,
+"w": 23.13,
+"h": 31.11
+},
+"fox/gear/scarf/neck": {
+"file": "fox/fox-gear-scarf-neck.webp",
+"x": -9.93,
+"y": -51.86,
+"w": 23.84,
+"h": 21.48
+},
+"fox/gear/shades/head": {
+"file": "fox/fox-gear-shades-head.webp",
+"x": -9.1,
+"y": -70.67,
+"w": 24.25,
+"h": 11.3
+},
+"fox/head/angry": {
+"file": "fox/fox-head-angry.webp",
+"x": -18.18,
+"y": -93.42,
+"w": 45.15,
+"h": 47.66
+},
+"fox/head/grin": {
+"file": "fox/fox-head-grin.webp",
+"x": -18.25,
+"y": -91.83,
+"w": 42.44,
+"h": 46.14
+},
+"fox/head/happy": {
+"file": "fox/fox-head-happy.webp",
+"x": -18.35,
+"y": -91.83,
+"w": 43.26,
+"h": 46.14
+},
+"fox/head/laugh": {
+"file": "fox/fox-head-laugh.webp",
+"x": -18.76,
+"y": -91.83,
+"w": 42.33,
+"h": 46.14
+},
+"fox/head/love": {
+"file": "fox/fox-head-love.webp",
+"x": -18.25,
+"y": -91.94,
+"w": 42.54,
+"h": 46.24
+},
+"fox/head/proud": {
+"file": "fox/fox-head-proud.webp",
+"x": -18.15,
+"y": -92.04,
+"w": 42.33,
+"h": 46.34
+},
+"fox/head/sad": {
+"file": "fox/fox-head-sad.webp",
+"x": -18.76,
+"y": -91.94,
+"w": 43.57,
+"h": 46.24
+},
+"fox/head/sleepy": {
+"file": "fox/fox-head-sleepy.webp",
+"x": -18.69,
+"y": -105.6,
+"w": 60.64,
+"h": 59.89
+},
+"fox/head/smug": {
+"file": "fox/fox-head-smug.webp",
+"x": -17.94,
+"y": -91.63,
+"w": 41.72,
+"h": 45.93
+},
+"fox/head/surprised": {
+"file": "fox/fox-head-surprised.webp",
+"x": -18.56,
+"y": -92.04,
+"w": 42.85,
+"h": 46.34
+},
+"fox/head/wink": {
+"file": "fox/fox-head-wink.webp",
+"x": -18.15,
+"y": -91.32,
+"w": 42.23,
+"h": 45.62
+},
+"fox/head/worried": {
+"file": "fox/fox-head-worried.webp",
+"x": -18.15,
+"y": -91.73,
+"w": 42.54,
+"h": 46.03
+},
+"fox/near/akimbo": {
+"file": "fox/fox-near-akimbo.webp",
+"x": 5.92,
+"y": -48.07,
+"w": 16.45,
+"h": 22.39
+},
+"fox/near/cheer": {
+"file": "fox/fox-near-cheer.webp",
+"x": 5.87,
+"y": -73.63,
+"w": 14.95,
+"h": 26.75
+},
+"fox/near/dance": {
+"file": "fox/fox-near-dance.webp",
+"x": 3.19,
+"y": -65.24,
+"w": 15.52,
+"h": 26.35
+},
+"fox/near/facepalm": {
+"file": "fox/fox-near-facepalm.webp",
+"x": 3.02,
+"y": -65.12,
+"w": 13.07,
+"h": 27.19
+},
+"fox/near/hold": {
+"file": "fox/fox-near-hold.webp",
+"x": 5.87,
+"y": -48.09,
+"w": 24.7,
+"h": 16.16
+},
+"fox/near/point": {
+"file": "fox/fox-near-point.webp",
+"x": 5.89,
+"y": -49.53,
+"w": 27.17,
+"h": 11.63
+},
+"fox/near/run": {
+"file": "fox/fox-near-run.webp",
+"x": 9.68,
+"y": -46.13,
+"w": 25.21,
+"h": 13.48
+},
+"fox/near/scared": {
+"file": "fox/fox-near-scared.webp",
+"x": 5.89,
+"y": -65.62,
+"w": 16.91,
+"h": 23.68
+},
+"fox/near/shrug": {
+"file": "fox/fox-near-shrug.webp",
+"x": 5.9,
+"y": -50.28,
+"w": 23.33,
+"h": 16.05
+},
+"fox/near/sit": {
+"file": "fox/fox-near-sit.webp",
+"x": 4.0,
+"y": -35.03,
+"w": 15.31,
+"h": 25.03
+},
+"fox/near/stand": {
+"file": "fox/fox-near-stand.webp",
+"x": 5.85,
+"y": -48.09,
+"w": 15.13,
+"h": 26.14
+},
+"fox/near/tada": {
+"file": "fox/fox-near-tada.webp",
+"x": 5.9,
+"y": -52.69,
+"w": 26.51,
+"h": 14.8
+},
+"fox/near/think": {
+"file": "fox/fox-near-think.webp",
+"x": 1.63,
+"y": -56.3,
+"w": 16.34,
+"h": 18.45
+},
+"fox/near/wave": {
+"file": "fox/fox-near-wave.webp",
+"x": 5.9,
+"y": -61.95,
+"w": 20.14,
+"h": 24.02
+},
+"held/ball": {
+"file": "held/held-ball.webp",
+"x": -9.62,
+"y": -21.66,
+"w": 19.28,
+"h": 19.38
+},
+"held/balloon": {
+"file": "held/held-balloon.webp",
+"x": -8.65,
+"y": -70.77,
+"w": 23.38,
+"h": 71.61
+},
+"held/basketball": {
+"file": "held/held-basketball.webp",
+"x": -9.66,
+"y": -21.66,
+"w": 19.34,
+"h": 19.38
+},
+"held/book": {
+"file": "held/held-book.webp",
+"x": -14.56,
+"y": -8.67,
+"w": 29.16,
+"h": 20.34
+},
+"held/cocoa": {
+"file": "held/held-cocoa.webp",
+"x": -7.42,
+"y": -21.12,
+"w": 21.15,
+"h": 21.44
+},
+"held/cookie": {
+"file": "held/held-cookie.webp",
+"x": -8.55,
+"y": -16.55,
+"w": 17.14,
+"h": 17.17
+},
+"held/fish": {
+"file": "held/held-fish.webp",
+"x": -5.51,
+"y": -6.39,
+"w": 11.11,
+"h": 33.96
+},
+"held/flag": {
+"file": "held/held-flag.webp",
+"x": -0.89,
+"y": -41.2,
+"w": 26.13,
+"h": 48.81
+},
+"held/flower": {
+"file": "held/held-flower.webp",
+"x": -10.09,
+"y": -35.47,
+"w": 22.67,
+"h": 40.39
+},
+"held/gift": {
+"file": "held/held-gift.webp",
+"x": -9.52,
+"y": -21.71,
+"w": 19.03,
+"h": 21.51
+},
+"held/icecream": {
+"file": "held/held-icecream.webp",
+"x": -8.04,
+"y": -31.6,
+"w": 16.26,
+"h": 45.26
+},
+"held/leaf": {
+"file": "held/held-leaf.webp",
+"x": -2.54,
+"y": -19.49,
+"w": 13.11,
+"h": 21.55
+},
+"held/magnifier": {
+"file": "held/held-magnifier.webp",
+"x": -1.48,
+"y": -26.04,
+"w": 25.74,
+"h": 32.0
+},
+"held/mug": {
+"file": "held/held-mug.webp",
+"x": -7.65,
+"y": -32.89,
+"w": 20.79,
+"h": 32.56
+},
+"held/pizza": {
+"file": "held/held-pizza.webp",
+"x": -10.62,
+"y": -23.11,
+"w": 21.25,
+"h": 29.8
+},
+"held/pumpkin": {
+"file": "held/held-pumpkin.webp",
+"x": -11.96,
+"y": -24.35,
+"w": 23.96,
+"h": 24.53
+},
+"held/rake": {
+"file": "held/held-rake.webp",
+"x": -4.95,
+"y": -45.67,
+"w": 30.51,
+"h": 77.34
+},
+"held/rod": {
+"file": "held/held-rod.webp",
+"x": -4.88,
+"y": -41.19,
+"w": 51.25,
+"h": 52.12
+},
+"held/snowball": {
+"file": "held/held-snowball.webp",
+"x": -7.07,
+"y": -13.09,
+"w": 14.19,
+"h": 14.32
+},
+"held/trophy": {
+"file": "held/held-trophy.webp",
+"x": -13.77,
+"y": -30.63,
+"w": 27.59,
+"h": 28.39
+},
+"held/umbrella": {
+"file": "held/held-umbrella.webp",
+"x": -28.76,
+"y": -54.76,
+"w": 57.76,
+"h": 66.54
+},
+"held/wand": {
+"file": "held/held-wand.webp",
+"x": -6.26,
+"y": -38.21,
+"w": 26.06,
+"h": 45.8
+},
+"mack/body/akimbo": {
+"file": "mack/mack-body-akimbo.webp",
+"x": -22.65,
+"y": -61.95,
+"w": 44.51,
+"h": 63.54
+},
+"mack/body/cheer": {
+"file": "mack/mack-body-cheer.webp",
+"x": -26.62,
+"y": -69.71,
+"w": 49.42,
+"h": 61.51
+},
+"mack/body/dance": {
+"file": "mack/mack-body-dance.webp",
+"x": -28.18,
+"y": -60.53,
+"w": 49.2,
+"h": 62.5
+},
+"mack/body/facepalm": {
+"file": "mack/mack-body-facepalm.webp",
+"x": -22.59,
+"y": -60.49,
+"w": 47.0,
+"h": 62.37
+},
+"mack/body/hold": {
+"file": "mack/mack-body-hold.webp",
+"x": -22.57,
+"y": -61.58,
+"w": 46.62,
+"h": 63.22
+},
+"mack/body/point": {
+"file": "mack/mack-body-point.webp",
+"x": -22.36,
+"y": -59.96,
+"w": 48.39,
+"h": 61.81
+},
+"mack/body/run": {
+"file": "mack/mack-body-run.webp",
+"x": -19.92,
+"y": -61.14,
+"w": 46.56,
+"h": 61.32
+},
+"mack/body/scared": {
+"file": "mack/mack-body-scared.webp",
+"x": -22.98,
+"y": -65.83,
+"w": 45.55,
+"h": 63.63
+},
+"mack/body/shrug": {
+"file": "mack/mack-body-shrug.webp",
+"x": -24.04,
+"y": -62.09,
+"w": 48.31,
+"h": 64.57
+},
+"mack/body/sit": {
+"file": "mack/mack-body-sit.webp",
+"x": -22.72,
+"y": -51.55,
+"w": 44.72,
+"h": 52.58
+},
+"mack/body/stand": {
+"file": "mack/mack-body-stand.webp",
+"x": -22.63,
+"y": -58.56,
+"w": 44.77,
+"h": 60.12
+},
+"mack/body/tada": {
+"file": "mack/mack-body-tada.webp",
+"x": -25.14,
+"y": -59.45,
+"w": 50.53,
+"h": 60.85
+},
+"mack/body/think": {
+"file": "mack/mack-body-think.webp",
+"x": -21.06,
+"y": -61.32,
+"w": 42.8,
+"h": 62.84
+},
+"mack/body/wave": {
+"file": "mack/mack-body-wave.webp",
+"x": -24.99,
+"y": -59.61,
+"w": 46.96,
+"h": 61.4
+},
+"mack/gear/beanie/head": {
+"file": "mack/mack-gear-beanie-head.webp",
+"x": -12.88,
+"y": -70.34,
+"w": 29.83,
+"h": 21.72
+},
+"mack/gear/bow/head": {
+"file": "mack/mack-gear-bow-head.webp",
+"x": -11.44,
+"y": -62.8,
+"w": 13.21,
+"h": 9.55
+},
+"mack/gear/bowtie/neck": {
+"file": "mack/mack-gear-bowtie-neck.webp",
+"x": -3.41,
+"y": -35.37,
+"w": 9.21,
+"h": 5.16
+},
+"mack/gear/cap/head": {
+"file": "mack/mack-gear-cap-head.webp",
+"x": -11.46,
+"y": -65.49,
+"w": 36.73,
+"h": 16.47
+},
+"mack/gear/cape/back": {
+"file": "mack/mack-gear-cape-back.webp",
+"x": -24.01,
+"y": -29.35,
+"w": 35.87,
+"h": 32.11
+},
+"mack/gear/cape/neck": {
+"file": "mack/mack-gear-cape-neck.webp",
+"x": -7.17,
+"y": -36.12,
+"w": 12.93,
+"h": 5.87
+},
+"mack/gear/collar/neck": {
+"file": "mack/mack-gear-collar-neck.webp",
+"x": -7.1,
+"y": -36.1,
+"w": 12.89,
+"h": 9.06
+},
+"mack/gear/crown/head": {
+"file": "mack/mack-gear-crown-head.webp",
+"x": -7.97,
+"y": -66.01,
+"w": 19.88,
+"h": 11.07
+},
+"mack/gear/earmuffs/head": {
+"file": "mack/mack-gear-earmuffs-head.webp",
+"x": -16.16,
+"y": -60.04,
+"w": 36.17,
+"h": 20.04
+},
+"mack/gear/glasses/head": {
+"file": "mack/mack-gear-glasses-head.webp",
+"x": -7.76,
+"y": -53.49,
+"w": 21.51,
+"h": 10.31
+},
+"mack/gear/party/head": {
+"file": "mack/mack-gear-party-head.webp",
+"x": -5.06,
+"y": -77.14,
+"w": 17.29,
+"h": 23.23
+},
+"mack/gear/scarf/neck": {
+"file": "mack/mack-gear-scarf-neck.webp",
+"x": -7.1,
+"y": -36.1,
+"w": 17.61,
+"h": 16.72
+},
+"mack/gear/shades/head": {
+"file": "mack/mack-gear-shades-head.webp",
+"x": -7.76,
+"y": -53.49,
+"w": 21.51,
+"h": 10.31
+},
+"mack/head/angry": {
+"file": "mack/mack-head-angry.webp",
+"x": -19.72,
+"y": -68.79,
+"w": 43.42,
+"h": 39.72
+},
+"mack/head/grin": {
+"file": "mack/mack-head-grin.webp",
+"x": -19.69,
+"y": -62.33,
+"w": 43.39,
+"h": 33.22
+},
+"mack/head/happy": {
+"file": "mack/mack-head-happy.webp",
+"x": -19.69,
+"y": -59.45,
+"w": 43.39,
+"h": 30.35
+},
+"mack/head/laugh": {
+"file": "mack/mack-head-laugh.webp",
+"x": -19.69,
+"y": -61.81,
+"w": 43.39,
+"h": 32.71
+},
+"mack/head/love": {
+"file": "mack/mack-head-love.webp",
+"x": -19.69,
+"y": -61.52,
+"w": 43.39,
+"h": 32.41
+},
+"mack/head/proud": {
+"file": "mack/mack-head-proud.webp",
+"x": -19.69,
+"y": -61.81,
+"w": 43.39,
+"h": 32.71
+},
+"mack/head/sad": {
+"file": "mack/mack-head-sad.webp",
+"x": -19.69,
+"y": -60.78,
+"w": 43.39,
+"h": 31.68
+},
+"mack/head/sleepy": {
+"file": "mack/mack-head-sleepy.webp",
+"x": -19.73,
+"y": -60.89,
+"w": 43.42,
+"h": 31.87
+},
+"mack/head/smug": {
+"file": "mack/mack-head-smug.webp",
+"x": -19.69,
+"y": -60.71,
+"w": 43.39,
+"h": 31.6
+},
+"mack/head/surprised": {
+"file": "mack/mack-head-surprised.webp",
+"x": -19.69,
+"y": -61.52,
+"w": 43.39,
+"h": 32.41
+},
+"mack/head/wink": {
+"file": "mack/mack-head-wink.webp",
+"x": -19.69,
+"y": -61.59,
+"w": 43.39,
+"h": 32.49
+},
+"mack/head/worried": {
+"file": "mack/mack-head-worried.webp",
+"x": -19.69,
+"y": -61.37,
+"w": 43.39,
+"h": 32.27
+},
+"mack/near/akimbo": {
+"file": "mack/mack-near-akimbo.webp",
+"x": 3.87,
+"y": -36.1,
+"w": 14.76,
+"h": 17.38
+},
+"mack/near/cheer": {
+"file": "mack/mack-near-cheer.webp",
+"x": 3.91,
+"y": -56.81,
+"w": 13.34,
+"h": 21.87
+},
+"mack/near/dance": {
+"file": "mack/mack-near-dance.webp",
+"x": 2.1,
+"y": -48.43,
+"w": 13.6,
+"h": 21.71
+},
+"mack/near/facepalm": {
+"file": "mack/mack-near-facepalm.webp",
+"x": 1.18,
+"y": -48.03,
+"w": 12.92,
+"h": 22.16
+},
+"mack/near/hold": {
+"file": "mack/mack-near-hold.webp",
+"x": 3.91,
+"y": -36.06,
+"w": 20.14,
+"h": 14.16
+},
+"mack/near/point": {
+"file": "mack/mack-near-point.webp",
+"x": 3.9,
+"y": -37.54,
+"w": 22.13,
+"h": 11.65
+},
+"mack/near/run": {
+"file": "mack/mack-near-run.webp",
+"x": 6.46,
+"y": -34.69,
+"w": 20.19,
+"h": 13.04
+},
+"mack/near/scared": {
+"file": "mack/mack-near-scared.webp",
+"x": 3.91,
+"y": -49.74,
+"w": 14.77,
+"h": 19.84
+},
+"mack/near/shrug": {
+"file": "mack/mack-near-shrug.webp",
+"x": 3.87,
+"y": -38.25,
+"w": 19.32,
+"h": 15.18
+},
+"mack/near/sit": {
+"file": "mack/mack-near-sit.webp",
+"x": 2.2,
+"y": -26.06,
+"w": 13.61,
+"h": 20.63
+},
+"mack/near/stand": {
+"file": "mack/mack-near-stand.webp",
+"x": 3.92,
+"y": -36.06,
+"w": 12.98,
+"h": 21.39
+},
+"mack/near/tada": {
+"file": "mack/mack-near-tada.webp",
+"x": 3.88,
+"y": -39.57,
+"w": 21.51,
+"h": 13.63
+},
+"mack/near/think": {
+"file": "mack/mack-near-think.webp",
+"x": 0.72,
+"y": -41.29,
+"w": 16.38,
+"h": 15.39
+},
+"mack/near/wave": {
+"file": "mack/mack-near-wave.webp",
+"x": 3.89,
+"y": -46.0,
+"w": 17.01,
+"h": 20.11
+},
+"prop/ball": {
+"file": "prop/prop-ball.webp",
+"x": -8.67,
+"y": -16.79,
+"w": 17.46,
+"h": 17.58
+},
+"prop/basketball": {
+"file": "prop/prop-basketball.webp",
+"x": -8.61,
+"y": -16.7,
+"w": 17.34,
+"h": 17.37
+},
+"prop/bench": {
+"file": "prop/prop-bench.webp",
+"x": -26.49,
+"y": -24.57,
+"w": 52.92,
+"h": 25.59
+},
+"prop/boot": {
+"file": "prop/prop-boot.webp",
+"x": -13.52,
+"y": -23.69,
+"w": 27.34,
+"h": 24.53
+},
+"prop/bucket": {
+"file": "prop/prop-bucket.webp",
+"x": -8.58,
+"y": -22.53,
+"w": 17.16,
+"h": 23.2
+},
+"prop/bush": {
+"file": "prop/prop-bush.webp",
+"x": -17.17,
+"y": -20.66,
+"w": 34.16,
+"h": 23.42
+},
+"prop/cake": {
+"file": "prop/prop-cake.webp",
+"x": -14.6,
+"y": -35.54,
+"w": 29.2,
+"h": 36.25
+},
+"prop/campfire": {
+"file": "prop/prop-campfire.webp",
+"x": -13.77,
+"y": -24.77,
+"w": 27.57,
+"h": 26.79
+},
+"prop/cloud": {
+"file": "prop/prop-cloud.webp",
+"x": -14.6,
+"y": -8.37,
+"w": 29.29,
+"h": 16.75
+},
+"prop/fish": {
+"file": "prop/prop-fish.webp",
+"x": -5.5,
+"y": -24.19,
+"w": 11.08,
+"h": 24.88
+},
+"prop/flowers": {
+"file": "prop/prop-flowers.webp",
+"x": -11.71,
+"y": -15.76,
+"w": 23.73,
+"h": 17.02
+},
+"prop/gift": {
+"file": "prop/prop-gift.webp",
+"x": -10.43,
+"y": -24.11,
+"w": 20.93,
+"h": 23.75
+},
+"prop/hearts": {
+"file": "prop/prop-hearts.webp",
+"x": -10.45,
+"y": -13.32,
+"w": 23.02,
+"h": 16.78
+},
+"prop/hole": {
+"file": "prop/prop-hole.webp",
+"x": -20.62,
+"y": -6.64,
+"w": 41.29,
+"h": 13.45
+},
+"prop/kite": {
+"file": "prop/prop-kite.webp",
+"x": -10.55,
+"y": -14.6,
+"w": 21.09,
+"h": 58.99
+},
+"prop/leafpile": {
+"file": "prop/prop-leafpile.webp",
+"x": -24.58,
+"y": -22.62,
+"w": 49.22,
+"h": 23.37
+},
+"prop/pine": {
+"file": "prop/prop-pine.webp",
+"x": -10.48,
+"y": -30.51,
+"w": 20.93,
+"h": 31.07
+},
+"prop/puddle": {
+"file": "prop/prop-puddle.webp",
+"x": -18.46,
+"y": -5.91,
+"w": 36.91,
+"h": 7.91
+},
+"prop/pumpkin": {
+"file": "prop/prop-pumpkin.webp",
+"x": -10.98,
+"y": -21.21,
+"w": 22.06,
+"h": 22.37
+},
+"prop/rock": {
+"file": "prop/prop-rock.webp",
+"x": -12.56,
+"y": -12.59,
+"w": 26.24,
+"h": 13.29
+},
+"prop/sandcastle": {
+"file": "prop/prop-sandcastle.webp",
+"x": -20.57,
+"y": -36.46,
+"w": 41.13,
+"h": 36.86
+},
+"prop/sled": {
+"file": "prop/prop-sled.webp",
+"x": -22.7,
+"y": -9.62,
+"w": 49.59,
+"h": 8.6
+},
+"prop/snowman": {
+"file": "prop/prop-snowman.webp",
+"x": -16.82,
+"y": -44.0,
+"w": 33.87,
+"h": 46.11
+},
+"prop/snowpile": {
+"file": "prop/prop-snowpile.webp",
+"x": -21.0,
+"y": -16.03,
+"w": 41.84,
+"h": 20.12
+},
+"prop/stars": {
+"file": "prop/prop-stars.webp",
+"x": -9.66,
+"y": -10.93,
+"w": 21.19,
+"h": 15.63
+},
+"prop/sun": {
+"file": "prop/prop-sun.webp",
+"x": -17.62,
+"y": -17.81,
+"w": 35.34,
+"h": 35.58
+},
+"prop/table": {
+"file": "prop/prop-table.webp",
+"x": -24.58,
+"y": -24.59,
+"w": 49.16,
+"h": 25.91
+},
+"prop/tent": {
+"file": "prop/prop-tent.webp",
+"x": -26.49,
+"y": -34.66,
+"w": 53.04,
+"h": 35.51
+},
+"prop/tree": {
+"file": "prop/prop-tree.webp",
+"x": -16.98,
+"y": -47.27,
+"w": 33.33,
+"h": 48.04
+},
+"prop/trophy": {
+"file": "prop/prop-trophy.webp",
+"x": -13.77,
+"y": -30.75,
+"w": 27.63,
+"h": 28.47
+},
+"uni/body/akimbo": {
+"file": "uni/uni-body-akimbo.webp",
+"x": -40.93,
+"y": -110.98,
+"w": 66.99,
+"h": 112.09
+},
+"uni/body/cheer": {
+"file": "uni/uni-body-cheer.webp",
+"x": -36.43,
+"y": -119.61,
+"w": 61.76,
+"h": 107.46
+},
+"uni/body/dance": {
+"file": "uni/uni-body-dance.webp",
+"x": -34.05,
+"y": -109.68,
+"w": 57.04,
+"h": 111.62
+},
+"uni/body/facepalm": {
+"file": "uni/uni-body-facepalm.webp",
+"x": -40.41,
+"y": -109.04,
+"w": 62.26,
+"h": 110.15
+},
+"uni/body/hold": {
+"file": "uni/uni-body-hold.webp",
+"x": -39.67,
+"y": -110.42,
+"w": 76.89,
+"h": 111.65
+},
+"uni/body/point": {
+"file": "uni/uni-body-point.webp",
+"x": -40.37,
+"y": -109.83,
+"w": 80.09,
+"h": 111.65
+},
+"uni/body/run": {
+"file": "uni/uni-body-run.webp",
+"x": -43.45,
+"y": -107.61,
+"w": 85.22,
+"h": 107.0
+},
+"uni/body/scared": {
+"file": "uni/uni-body-scared.webp",
+"x": -40.65,
+"y": -113.62,
+"w": 66.76,
+"h": 110.84
+},
+"uni/body/shrug": {
+"file": "uni/uni-body-shrug.webp",
+"x": -40.35,
+"y": -109.54,
+"w": 74.98,
+"h": 110.64
+},
+"uni/body/sit": {
+"file": "uni/uni-body-sit.webp",
+"x": -40.71,
+"y": -93.79,
+"w": 63.38,
+"h": 100.09
+},
+"uni/body/stand": {
+"file": "uni/uni-body-stand.webp",
+"x": -40.28,
+"y": -109.95,
+"w": 66.45,
+"h": 111.18
+},
+"uni/body/tada": {
+"file": "uni/uni-body-tada.webp",
+"x": -40.64,
+"y": -109.96,
+"w": 79.13,
+"h": 111.47
+},
+"uni/body/think": {
+"file": "uni/uni-body-think.webp",
+"x": -40.47,
+"y": -109.44,
+"w": 60.49,
+"h": 110.96
+},
+"uni/body/wave": {
+"file": "uni/uni-body-wave.webp",
+"x": -41.18,
+"y": -110.36,
+"w": 73.15,
+"h": 111.29
+},
+"uni/gear/beanie/head": {
+"file": "uni/uni-gear-beanie-head.webp",
+"x": -16.72,
+"y": -102.14,
+"w": 35.18,
+"h": 25.94
+},
+"uni/gear/bow/head": {
+"file": "uni/uni-gear-bow-head.webp",
+"x": -15.29,
+"y": -93.14,
+"w": 16.23,
+"h": 11.73
+},
+"uni/gear/bowtie/neck": {
+"file": "uni/uni-gear-bowtie-neck.webp",
+"x": -3.45,
+"y": -58.43,
+"w": 11.02,
+"h": 7.23
+},
+"uni/gear/cap/head": {
+"file": "uni/uni-gear-cap-head.webp",
+"x": -15.06,
+"y": -96.34,
+"w": 43.24,
+"h": 19.66
+},
+"uni/gear/cape/back": {
+"file": "uni/uni-gear-cape-back.webp",
+"x": -34.96,
+"y": -50.73,
+"w": 51.41,
+"h": 45.49
+},
+"uni/gear/cape/neck": {
+"file": "uni/uni-gear-cape-neck.webp",
+"x": -3.21,
+"y": -56.3,
+"w": 11.25,
+"h": 4.5
+},
+"uni/gear/collar/neck": {
+"file": "uni/uni-gear-collar-neck.webp",
+"x": -3.45,
+"y": -57.01,
+"w": 9.0,
+"h": 9.71
+},
+"uni/gear/crown/head": {
+"file": "uni/uni-gear-crown-head.webp",
+"x": -11.03,
+"y": -97.17,
+"w": 24.17,
+"h": 13.39
+},
+"uni/gear/earmuffs/head": {
+"file": "uni/uni-gear-earmuffs-head.webp",
+"x": -20.62,
+"y": -89.94,
+"w": 43.12,
+"h": 23.93
+},
+"uni/gear/glasses/head": {
+"file": "uni/uni-gear-glasses-head.webp",
+"x": -12.93,
+"y": -82.36,
+"w": 27.84,
+"h": 14.69
+},
+"uni/gear/party/head": {
+"file": "uni/uni-gear-party-head.webp",
+"x": -7.49,
+"y": -110.16,
+"w": 20.67,
+"h": 27.56
+},
+"uni/gear/scarf/neck": {
+"file": "uni/uni-gear-scarf-neck.webp",
+"x": -3.45,
+"y": -57.25,
+"w": 14.45,
+"h": 18.95
+},
+"uni/gear/shades/head": {
+"file": "uni/uni-gear-shades-head.webp",
+"x": -12.93,
+"y": -82.36,
+"w": 27.84,
+"h": 14.69
+},
+"uni/head/angry": {
+"file": "uni/uni-head-angry.webp",
+"x": -24.53,
+"y": -109.6,
+"w": 47.62,
+"h": 72.85
+},
+"uni/head/grin": {
+"file": "uni/uni-head-grin.webp",
+"x": -23.94,
+"y": -110.2,
+"w": 46.32,
+"h": 73.44
+},
+"uni/head/happy": {
+"file": "uni/uni-head-happy.webp",
+"x": -24.53,
+"y": -109.84,
+"w": 46.91,
+"h": 73.09
+},
+"uni/head/laugh": {
+"file": "uni/uni-head-laugh.webp",
+"x": -25.01,
+"y": -110.55,
+"w": 47.38,
+"h": 73.8
+},
+"uni/head/love": {
+"file": "uni/uni-head-love.webp",
+"x": -25.01,
+"y": -110.2,
+"w": 47.38,
+"h": 73.44
+},
+"uni/head/proud": {
+"file": "uni/uni-head-proud.webp",
+"x": -24.77,
+"y": -110.31,
+"w": 47.15,
+"h": 73.56
+},
+"uni/head/sad": {
+"file": "uni/uni-head-sad.webp",
+"x": -24.89,
+"y": -110.31,
+"w": 47.26,
+"h": 73.56
+},
+"uni/head/sleepy": {
+"file": "uni/uni-head-sleepy.webp",
+"x": -25.62,
+"y": -111.62,
+"w": 62.19,
+"h": 74.83
+},
+"uni/head/smug": {
+"file": "uni/uni-head-smug.webp",
+"x": -24.53,
+"y": -109.84,
+"w": 46.91,
+"h": 73.09
+},
+"uni/head/surprised": {
+"file": "uni/uni-head-surprised.webp",
+"x": -24.53,
+"y": -110.55,
+"w": 46.91,
+"h": 73.8
+},
+"uni/head/wink": {
+"file": "uni/uni-head-wink.webp",
+"x": -24.53,
+"y": -109.84,
+"w": 46.91,
+"h": 73.09
+},
+"uni/head/worried": {
+"file": "uni/uni-head-worried.webp",
+"x": -24.65,
+"y": -109.84,
+"w": 47.03,
+"h": 73.09
+},
+"uni/near/akimbo": {
+"file": "uni/uni-near-akimbo.webp",
+"x": 7.16,
+"y": -58.82,
+"w": 18.9,
+"h": 27.04
+},
+"uni/near/cheer": {
+"file": "uni/uni-near-cheer.webp",
+"x": 7.16,
+"y": -88.09,
+"w": 16.99,
+"h": 31.88
+},
+"uni/near/dance": {
+"file": "uni/uni-near-dance.webp",
+"x": 3.85,
+"y": -79.63,
+"w": 17.17,
+"h": 31.28
+},
+"uni/near/facepalm": {
+"file": "uni/uni-near-facepalm.webp",
+"x": -2.03,
+"y": -78.45,
+"w": 20.84,
+"h": 31.31
+},
+"uni/near/hold": {
+"file": "uni/uni-near-hold.webp",
+"x": 7.2,
+"y": -58.81,
+"w": 30.02,
+"h": 18.04
+},
+"uni/near/point": {
+"file": "uni/uni-near-point.webp",
+"x": 7.21,
+"y": -61.18,
+"w": 32.51,
+"h": 14.0
+},
+"uni/near/run": {
+"file": "uni/uni-near-run.webp",
+"x": 11.9,
+"y": -57.5,
+"w": 29.88,
+"h": 16.66
+},
+"uni/near/scared": {
+"file": "uni/uni-near-scared.webp",
+"x": 7.21,
+"y": -79.59,
+"w": 18.91,
+"h": 28.36
+},
+"uni/near/shrug": {
+"file": "uni/uni-near-shrug.webp",
+"x": 7.15,
+"y": -63.5,
+"w": 27.48,
+"h": 19.42
+},
+"uni/near/sit": {
+"file": "uni/uni-near-sit.webp",
+"x": 3.4,
+"y": -42.93,
+"w": 19.17,
+"h": 30.38
+},
+"uni/near/stand": {
+"file": "uni/uni-near-stand.webp",
+"x": 7.18,
+"y": -58.81,
+"w": 17.92,
+"h": 32.04
+},
+"uni/near/tada": {
+"file": "uni/uni-near-tada.webp",
+"x": 7.21,
+"y": -64.47,
+"w": 31.27,
+"h": 17.29
+},
+"uni/near/think": {
+"file": "uni/uni-near-think.webp",
+"x": 0.94,
+"y": -68.76,
+"w": 18.11,
+"h": 21.61
+},
+"uni/near/wave": {
+"file": "uni/uni-near-wave.webp",
+"x": 7.19,
+"y": -76.31,
+"w": 23.94,
+"h": 29.12
+}
+},
+"jobs": {
+"body/bear/akimbo": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"body/bear/cheer": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"body/bear/dance": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"body/bear/facepalm": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"body/bear/hold": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"body/bear/point": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"body/bear/run": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"body/bear/scared": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"body/bear/shrug": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"body/bear/sit": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"body/bear/stand": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"body/bear/tada": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"body/bear/think": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"body/bear/wave": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"body/bob/akimbo": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"body/bob/cheer": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"body/bob/dance": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"body/bob/facepalm": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"body/bob/hold": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"body/bob/point": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"body/bob/run": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"body/bob/scared": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"body/bob/shrug": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"body/bob/sit": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"body/bob/stand": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"body/bob/tada": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"body/bob/think": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"body/bob/wave": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"body/fox/akimbo": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"body/fox/cheer": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"body/fox/dance": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"body/fox/facepalm": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"body/fox/hold": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"body/fox/point": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"body/fox/run": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"body/fox/scared": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"body/fox/shrug": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"body/fox/sit": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"body/fox/stand": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"body/fox/tada": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"body/fox/think": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"body/fox/wave": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"body/mack/akimbo": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"body/mack/cheer": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"body/mack/dance": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"body/mack/facepalm": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"body/mack/hold": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"body/mack/point": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"body/mack/run": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"body/mack/scared": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"body/mack/shrug": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"body/mack/sit": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"body/mack/stand": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"body/mack/tada": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"body/mack/think": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"body/mack/wave": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"body/uni/akimbo": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"body/uni/cheer": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"body/uni/dance": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"body/uni/facepalm": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"body/uni/hold": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"body/uni/point": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"body/uni/run": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"body/uni/scared": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"body/uni/shrug": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"body/uni/sit": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"body/uni/stand": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"body/uni/tada": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"body/uni/think": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"body/uni/wave": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"gear/bear/beanie": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"gear/bear/bow": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"gear/bear/bowtie": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"gear/bear/cap": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"gear/bear/cape": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"gear/bear/collar": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"gear/bear/crown": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"gear/bear/earmuffs": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"gear/bear/glasses": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"gear/bear/party": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"gear/bear/scarf": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"gear/bear/shades": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"gear/bob/beanie": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"gear/bob/bow": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"gear/bob/bowtie": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"gear/bob/cap": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"gear/bob/cape": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"gear/bob/collar": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"gear/bob/crown": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"gear/bob/earmuffs": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"gear/bob/glasses": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"gear/bob/party": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"gear/bob/scarf": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"gear/bob/shades": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"gear/fox/beanie": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"gear/fox/bow": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"gear/fox/bowtie": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"gear/fox/cap": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"gear/fox/cape": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"gear/fox/collar": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"gear/fox/crown": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"gear/fox/earmuffs": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"gear/fox/glasses": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"gear/fox/party": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"gear/fox/scarf": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"gear/fox/shades": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"gear/mack/beanie": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"gear/mack/bow": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"gear/mack/bowtie": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"gear/mack/cap": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"gear/mack/cape": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"gear/mack/collar": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"gear/mack/crown": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"gear/mack/earmuffs": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"gear/mack/glasses": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"gear/mack/party": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"gear/mack/scarf": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"gear/mack/shades": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"gear/uni/beanie": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"gear/uni/bow": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"gear/uni/bowtie": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"gear/uni/cap": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"gear/uni/cape": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"gear/uni/collar": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"gear/uni/crown": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"gear/uni/earmuffs": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"gear/uni/glasses": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"gear/uni/party": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"gear/uni/scarf": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"gear/uni/shades": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"head/bear/angry": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"head/bear/grin": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"head/bear/happy": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"head/bear/laugh": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"head/bear/love": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"head/bear/proud": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"head/bear/sad": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"head/bear/sleepy": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"head/bear/smug": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"head/bear/surprised": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"head/bear/wink": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"head/bear/worried": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"head/bob/angry": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"head/bob/grin": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"head/bob/happy": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"head/bob/laugh": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"head/bob/love": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"head/bob/proud": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"head/bob/sad": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"head/bob/sleepy": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"head/bob/smug": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"head/bob/surprised": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"head/bob/wink": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"head/bob/worried": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"head/fox/angry": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"head/fox/grin": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"head/fox/happy": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"head/fox/laugh": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"head/fox/love": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"head/fox/proud": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"head/fox/sad": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"head/fox/sleepy": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"head/fox/smug": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"head/fox/surprised": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"head/fox/wink": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"head/fox/worried": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"head/mack/angry": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"head/mack/grin": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"head/mack/happy": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"head/mack/laugh": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"head/mack/love": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"head/mack/proud": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"head/mack/sad": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"head/mack/sleepy": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"head/mack/smug": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"head/mack/surprised": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"head/mack/wink": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"head/mack/worried": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"head/uni/angry": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"head/uni/grin": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"head/uni/happy": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"head/uni/laugh": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"head/uni/love": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"head/uni/proud": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"head/uni/sad": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"head/uni/sleepy": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"head/uni/smug": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"head/uni/surprised": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"head/uni/wink": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"head/uni/worried": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"held/ball": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"held/balloon": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"held/basketball": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"held/book": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"held/cocoa": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"held/cookie": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"held/fish": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"held/flag": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"held/flower": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"held/gift": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"held/icecream": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"held/leaf": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"held/magnifier": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"held/mug": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"held/pizza": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"held/pumpkin": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"held/rake": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"held/rod": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"held/snowball": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"held/trophy": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"held/umbrella": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"held/wand": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"prop/ball": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"prop/basketball": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"prop/bench": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"prop/boot": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"prop/bucket": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"prop/bush": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"prop/cake": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"prop/campfire": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"prop/cloud": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"prop/fish": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"prop/flowers": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"prop/gift": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"prop/hearts": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"prop/hole": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"prop/kite": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"prop/leafpile": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"prop/pine": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"prop/puddle": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"prop/pumpkin": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"prop/rock": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"prop/sandcastle": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"prop/sled": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"prop/snowman": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"prop/snowpile": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"prop/stars": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"prop/sun": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"prop/table": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"prop/tent": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"prop/tree": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"prop/trophy": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+}
+}
+}

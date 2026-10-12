@@ -142,6 +142,12 @@ if d.get('head_photo', {}).get('credit') and hp_b64: _credits.append(f"Headline 
 if d.get('critter', {}).get('credit') and d['critter'].get('img'): _credits.append(f"{d['critter'].get('name', 'Critter')} photo: {d['critter']['credit']}")
 _credits += [f"{e['title'].split(':')[0]}: {e['credit']}" for e in _extras if e.get('img') and e.get('credit') and not e.get('illus')]
 if any(e.get('img') and e.get('illus') for e in _extras): _credits.append("Illustrations labeled “Illustration” are AI-generated with Grok (xAI)")
+# Painted characters (library) or painted backdrops: credit Grok, and the footer's "comic is original" covers only the characters.
+_painted_cast = art.COMIC_STATS['painted'] > 0          # set by art.comic() above
+if _painted_cast or art.uses_painted(d.get('comic')):
+    _credits.append("Comic " + ("art" if _painted_cast and art.uses_painted(d.get('comic')) else "characters" if _painted_cast else "backgrounds")
+                    + " painted with Grok (xAI)" + (" from the original character designs" if _painted_cast else ""))
+    d['foot'] = re.sub(r'\b([Cc]omic) (?:is|are) original', r'\1 characters are original', d['foot'])
 foot_html = d['foot'] + (f"<br>Pictures: {' · '.join(_credits)}" if _credits else '')
 
 # Top strip: weather, plus the lunch box only when there is lunch to show (none on weekend editions).

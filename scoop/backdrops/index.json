@@ -1,0 +1,156 @@
+{
+ "bakery": {
+  "subject": "a bright home kitchen with a counter, a mixing bowl, a tray of fresh cookies, a fridge and a window with plants",
+  "season": "any",
+  "ground": 108,
+  "model": "grok-imagine-image-2.0",
+  "made": "2026-10-12"
+ },
+ "bedroom": {
+  "subject": "a kid's bedroom at night with a bed with a patchwork quilt, a toy chest, a night light and a window with stars and the moon",
+  "season": "any",
+  "ground": 108,
+  "model": "grok-imagine-image-2.0",
+  "made": "2026-10-12"
+ },
+ "cabin": {
+  "subject": "a cozy log cabin in the snowy woods at evening with warm glowing windows and smoke from the chimney, flat snow in front",
+  "season": "winter",
+  "ground": 108,
+  "model": "grok-imagine-image-2.0",
+  "made": "2026-10-12"
+ },
+ "campsite": {
+  "subject": "a campsite in the woods at night with a tent, a crackling campfire, logs to sit on and a starry sky with a full moon",
+  "season": "summer",
+  "ground": 108,
+  "model": "grok-imagine-image-2.0",
+  "made": "2026-10-12"
+ },
+ "cornmaze": {
+  "subject": "the entrance to a corn maze with tall golden corn stalks on both sides, hay bales and a blue autumn sky",
+  "season": "fall",
+  "ground": 108,
+  "model": "grok-imagine-image-2.0",
+  "made": "2026-10-12"
+ },
+ "farm": {
+  "subject": "a pumpkin patch farm with hay bales, orange and yellow autumn trees and a red barn far away",
+  "season": "fall",
+  "ground": 108,
+  "model": "grok-imagine-image-2.0",
+  "made": "2026-10-12"
+ },
+ "fireplace": {
+  "subject": "a cozy living room with a crackling stone fireplace, a soft armchair, a round rug on a wood floor and a window showing falling snow",
+  "season": "winter",
+  "ground": 108,
+  "model": "grok-imagine-image-2.0",
+  "made": "2026-10-12"
+ },
+ "garden": {
+  "subject": "a backyard vegetable and flower garden in spring with a white wooden fence, tulips, a watering can and a garden shed",
+  "season": "spring",
+  "ground": 108,
+  "model": "grok-imagine-image-2.0",
+  "made": "2026-10-12"
+ },
+ "lake": {
+  "subject": "a summer lake with a wooden dock, a red canoe pulled up on the sandy shore and pine trees across the water",
+  "season": "summer",
+  "ground": 108,
+  "model": "grok-imagine-image-2.0",
+  "made": "2026-10-12"
+ },
+ "leafpark": {
+  "subject": "a town park in autumn with a winding path, a wooden bench, big orange and yellow trees and fallen leaves on the grass",
+  "season": "fall",
+  "ground": 108,
+  "model": "grok-imagine-image-2.0",
+  "made": "2026-10-12"
+ },
+ "library": {
+  "subject": "a cozy library with tall wooden bookshelves full of colorful books with blank spines, a reading nook with beanbags and a big window",
+  "season": "any",
+  "ground": 108,
+  "model": "grok-imagine-image-2.0",
+  "made": "2026-10-12"
+ },
+ "mainstreet": {
+  "subject": "a small Midwestern downtown street on a sunny day with brick shops with blank colorful awnings and no signs, flower planters, street trees and a wide sidewalk",
+  "season": "any",
+  "ground": 108,
+  "model": "grok-imagine-image-2.0",
+  "made": "2026-10-12"
+ },
+ "market": {
+  "subject": "an outdoor farmers market with wooden stalls of fruit and vegetables under striped awnings, crates of apples and flowers, no signs",
+  "season": "summer",
+  "ground": 108,
+  "model": "grok-imagine-image-2.0",
+  "made": "2026-10-12"
+ },
+ "moon": {
+  "subject": "the surface of the moon with gray craters, the blue and white Earth in the black starry sky and a small silver rocket in the distance",
+  "season": "any",
+  "ground": 108,
+  "model": "grok-imagine-image-2.0",
+  "made": "2026-10-12"
+ },
+ "museum": {
+  "subject": "a science museum hall with a giant model rocket, hanging planet models and glass display cases with rocks and crystals",
+  "season": "any",
+  "ground": 108,
+  "model": "grok-imagine-image-2.0",
+  "made": "2026-10-12"
+ },
+ "orchard": {
+  "subject": "an apple orchard with rows of apple trees full of red apples, a wooden ladder and baskets of apples",
+  "season": "fall",
+  "ground": 108,
+  "model": "grok-imagine-image-2.0",
+  "made": "2026-10-12"
+ },
+ "party": {
+  "subject": "a party room with bunches of balloons, paper streamers, a table with a birthday cake and wrapped presents",
+  "season": "any",
+  "ground": 108,
+  "model": "grok-imagine-image-2.0",
+  "made": "2026-10-12"
+ },
+ "playground": {
+  "subject": "a sunny school playground with a slide, swings and a climbing frame on soft wood chips, trees behind",
+  "season": "any",
+  "ground": 108,
+  "model": "grok-imagine-image-2.0",
+  "made": "2026-10-12"
+ },
+ "porch": {
+  "subject": "a friendly neighborhood street at dusk in October, houses with warm glowing windows and carved smiling jack-o'-lanterns on the porches, cozy and not scary",
+  "season": "fall",
+  "ground": 108,
+  "model": "grok-imagine-image-2.0",
+  "made": "2026-10-12"
+ },
+ "rink": {
+  "subject": "an outdoor ice skating rink in a snowy park with pine trees and string lights, a smooth open patch of ice in front",
+  "season": "winter",
+  "ground": 108,
+  "model": "grok-imagine-image-2.0",
+  "made": "2026-10-12"
+ },
+ "sledhill": {
+  "subject": "a snowy sledding hill with snow-covered pine trees and gentle falling snowflakes, flat snow in front",
+  "season": "winter",
+  "ground": 108,
+  "model": "grok-imagine-image-2.0",
+  "made": "2026-10-12"
+ },
+ "stage": {
+  "subject": "a school auditorium stage with red velvet curtains pulled open, a spotlight and a wooden stage floor",
+  "season": "any",
+  "ground": 108,
+  "model": "grok-imagine-image-2.0",
+  "made": "2026-10-12"
+ }
+}

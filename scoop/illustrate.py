@@ -48,24 +48,31 @@ def model(key):
     return ids[0]
 
 
-def generate(subject, out):
+def request_image(prompt, model_id=None, aspect_ratio=None):
+    """One image from xAI's image API, as verified bytes. Also used by backdrops.py (comic backdrops)."""
     key = _key()
-    r = requests.post(f'{API}/images/generations', headers={'Authorization': f'Bearer {key}'}, timeout=120,
-                      json={'model': model(key), 'prompt': STYLE + subject, 'n': 1, 'response_format': 'b64_json'})
+    body = {'model': model_id or model(key), 'prompt': prompt, 'n': 1, 'response_format': 'b64_json'}
+    if aspect_ratio:
+        body['aspect_ratio'] = aspect_ratio
+    r = requests.post(f'{API}/images/generations', headers={'Authorization': f'Bearer {key}'}, timeout=180, json=body)
     if r.status_code != 200:
         # xAI's error text explains refusals and billing problems; it never contains the key
-        raise SystemExit(f'illustrate.py: xAI images returned HTTP {r.status_code}: {r.text[:300]}')
+        raise SystemExit(f'xAI images returned HTTP {r.status_code}: {r.text[:300]}')
     item = (r.json().get('data') or [{}])[0]
     if item.get('b64_json'):
         data = base64.b64decode(item['b64_json'])
     elif item.get('url'):
         data = requests.get(item['url'], timeout=60).content
     else:
-        raise SystemExit('illustrate.py: xAI returned no image')
+        raise SystemExit('xAI returned no image')
     from PIL import Image   # confirm it is a real image before the page embeds it
     import io
     Image.open(io.BytesIO(data)).verify()
-    Path(out).write_bytes(data)
+    return data
+
+
+def generate(subject, out):
+    Path(out).write_bytes(request_image(STYLE + subject))
     tag = hashlib.sha1(subject.encode()).hexdigest()[:10]
     return {'img': str(out), 'illus': True, 'log': f'grok:{date.today().isoformat()}:{tag} ({subject[:80]})'}
 
