@@ -1113,12 +1113,26 @@
 "w": 20.14,
 "h": 24.02
 },
+"held/ball": {
+"file": "held/held-ball.webp",
+"x": -9.62,
+"y": -21.66,
+"w": 19.28,
+"h": 19.38
+},
 "held/balloon": {
 "file": "held/held-balloon.webp",
 "x": -8.65,
 "y": -70.77,
 "w": 23.38,
 "h": 71.61
+},
+"held/basketball": {
+"file": "held/held-basketball.webp",
+"x": -9.66,
+"y": -21.66,
+"w": 19.34,
+"h": 19.38
 },
 "held/book": {
 "file": "held/held-book.webp",
@@ -1134,12 +1148,47 @@
 "w": 21.15,
 "h": 21.44
 },
+"held/cookie": {
+"file": "held/held-cookie.webp",
+"x": -8.55,
+"y": -16.55,
+"w": 17.14,
+"h": 17.17
+},
+"held/flag": {
+"file": "held/held-flag.webp",
+"x": -0.89,
+"y": -41.2,
+"w": 26.13,
+"h": 48.81
+},
 "held/flower": {
 "file": "held/held-flower.webp",
 "x": -10.09,
 "y": -35.47,
 "w": 22.67,
 "h": 40.39
+},
+"held/icecream": {
+"file": "held/held-icecream.webp",
+"x": -8.04,
+"y": -31.6,
+"w": 16.26,
+"h": 45.26
+},
+"held/leaf": {
+"file": "held/held-leaf.webp",
+"x": -2.54,
+"y": -19.49,
+"w": 13.11,
+"h": 21.55
+},
+"held/magnifier": {
+"file": "held/held-magnifier.webp",
+"x": -1.48,
+"y": -26.04,
+"w": 25.74,
+"h": 32.0
 },
 "held/mug": {
 "file": "held/held-mug.webp",
@@ -1148,6 +1197,13 @@
 "w": 20.79,
 "h": 32.56
 },
+"held/pizza": {
+"file": "held/held-pizza.webp",
+"x": -10.62,
+"y": -23.11,
+"w": 21.25,
+"h": 29.8
+},
 "held/pumpkin": {
 "file": "held/held-pumpkin.webp",
 "x": -11.96,
@@ -1155,12 +1211,40 @@
 "w": 23.96,
 "h": 24.53
 },
+"held/rake": {
+"file": "held/held-rake.webp",
+"x": -4.95,
+"y": -45.67,
+"w": 30.51,
+"h": 77.34
+},
+"held/rod": {
+"file": "held/held-rod.webp",
+"x": -4.88,
+"y": -41.19,
+"w": 51.25,
+"h": 52.12
+},
+"held/snowball": {
+"file": "held/held-snowball.webp",
+"x": -7.07,
+"y": -13.09,
+"w": 14.19,
+"h": 14.32
+},
 "held/umbrella": {
 "file": "held/held-umbrella.webp",
 "x": -28.76,
 "y": -54.76,
 "w": 57.76,
 "h": 66.54
+},
+"held/wand": {
+"file": "held/held-wand.webp",
+"x": -6.26,
+"y": -38.21,
+"w": 26.06,
+"h": 45.8
 },
 "mack/body/akimbo": {
 "file": "mack/mack-body-akimbo.webp",
@@ -2673,7 +2757,15 @@
 "model": "grok-imagine-image-2.0",
 "made": "2026-10-12"
 },
+"held/ball": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
 "held/balloon": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"held/basketball": {
 "model": "grok-imagine-image-2.0",
 "made": "2026-10-12"
 },
@@ -2685,7 +2777,27 @@
 "model": "grok-imagine-image-2.0",
 "made": "2026-10-12"
 },
+"held/cookie": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"held/flag": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
 "held/flower": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"held/icecream": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"held/leaf": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"held/magnifier": {
 "model": "grok-imagine-image-2.0",
 "made": "2026-10-12"
 },
@@ -2693,11 +2805,31 @@
 "model": "grok-imagine-image-2.0",
 "made": "2026-10-12"
 },
+"held/pizza": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
 "held/pumpkin": {
 "model": "grok-imagine-image-2.0",
 "made": "2026-10-12"
 },
+"held/rake": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"held/rod": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"held/snowball": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
 "held/umbrella": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"held/wand": {
 "model": "grok-imagine-image-2.0",
 "made": "2026-10-12"
 },
