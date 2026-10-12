@@ -6,6 +6,7 @@ Change it through `/newspaper-design`. **`README.md` is the rule book**: standin
 - `art.py`: the comic character library (Artic, Big Bear, Mackenzie, Uni, Bob: poses, faces, gear, props, scenes). Daily strips are data in `edition.json` `comic`; `python art.py --sheet cast.html` draws the model sheet
 - `render.py`: HTML to a one-page Letter PDF, plus the overflow check
 - `photos.py`: finds and downloads free pictures (Openverse photos, National Gallery of Art open-access art) with their credit lines (README: Photo sources)
+- `illustrate.py`: one AI illustration (xAI Grok) for a fun extra, labeled on the page (README: AI illustrations)
 - `setup.sh`: fonts into `./fonts`
 - `edition.json`: a sample edition (schema and style example only)
 - `hedcut.py`: retired, never used

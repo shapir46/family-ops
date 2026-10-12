@@ -70,8 +70,9 @@ def extra_html(e):
     if e.get('img'):
         from PIL import Image; import io
         im = Image.open(e['img']).convert('RGB'); im.thumbnail((600, 400)); bio = io.BytesIO(); im.save(bio, 'JPEG', quality=82)
-        pic = (f"<div style='border:1px solid #161410;line-height:0;margin:1px 0 1px'><img src='data:image/jpeg;base64,{base64.b64encode(bio.getvalue()).decode()}' "
-               f"style='width:100%;height:auto;max-height:{int(e.get('img_h', 130))}px;object-fit:cover'></div>")
+        tag = "<span class='illus'>Illustration</span>" if e.get('illus') else ''   # AI art is always labeled (README: AI illustrations)
+        pic = (f"<div style='position:relative;border:1px solid #161410;line-height:0;margin:1px 0 1px'><img src='data:image/jpeg;base64,{base64.b64encode(bio.getvalue()).decode()}' "
+               f"style='width:100%;height:auto;max-height:{int(e.get('img_h', 130))}px;object-fit:cover'>{tag}</div>")
     return f"<div class='box2'><h3 style='margin:0 0 1px'>{e['title']}</h3>{pic}<p class='small' style='margin:0'>{e['text']}</p></div>"
 _extras = d.get('extras') or []
 _placed_extras = set()
@@ -139,7 +140,8 @@ for k in ('wx', 'wx2'):
 _credits = []
 if d.get('head_photo', {}).get('credit') and hp_b64: _credits.append(f"Headline photo: {d['head_photo']['credit']}")
 if d.get('critter', {}).get('credit') and d['critter'].get('img'): _credits.append(f"{d['critter'].get('name', 'Critter')} photo: {d['critter']['credit']}")
-_credits += [f"{e['title'].split(':')[0]}: {e['credit']}" for e in _extras if e.get('img') and e.get('credit')]
+_credits += [f"{e['title'].split(':')[0]}: {e['credit']}" for e in _extras if e.get('img') and e.get('credit') and not e.get('illus')]
+if any(e.get('img') and e.get('illus') for e in _extras): _credits.append("Illustrations labeled “Illustration” are AI-generated with Grok (xAI)")
 foot_html = d['foot'] + (f"<br>Pictures: {' · '.join(_credits)}" if _credits else '')
 
 # Top strip: weather, plus the lunch box only when there is lunch to show (none on weekend editions).
@@ -188,6 +190,7 @@ p{{margin-bottom:3px;text-align:justify;hyphens:auto}}
 /* School lunch: large and bold, no source line (Jacob, 2026-10-12) */
 .lunch{{font-weight:700;font-family:PF,serif;font-size:11pt;line-height:1.25}}
 .lunch span{{display:block;line-height:1.3;margin-top:2px}}
+.illus{{position:absolute;right:3px;bottom:3px;line-height:1;background:#fff;border:1px solid #161410;font-size:5.8pt;letter-spacing:.6px;text-transform:uppercase;padding:1px 3px}}
 .banner{{text-align:center;font-family:PF,serif;font-weight:700;font-size:10.5pt;letter-spacing:.6px;padding:3px 4px;border-bottom:1px solid #161410;background:#f6ecd2}}
 .banner span+span::before{{content:"  ·  ";font-weight:400}}
 .ff li{{padding:2px 0;border-bottom:1px dotted #b9ad8c}} .ff li:last-child{{border-bottom:0}}
