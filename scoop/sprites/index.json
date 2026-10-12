@@ -1155,6 +1155,13 @@
 "w": 17.14,
 "h": 17.17
 },
+"held/fish": {
+"file": "held/held-fish.webp",
+"x": -5.51,
+"y": -6.39,
+"w": 11.11,
+"h": 33.96
+},
 "held/flag": {
 "file": "held/held-flag.webp",
 "x": -0.89,
@@ -1168,6 +1175,13 @@
 "y": -35.47,
 "w": 22.67,
 "h": 40.39
+},
+"held/gift": {
+"file": "held/held-gift.webp",
+"x": -9.52,
+"y": -21.71,
+"w": 19.03,
+"h": 21.51
 },
 "held/icecream": {
 "file": "held/held-icecream.webp",
@@ -1231,6 +1245,13 @@
 "y": -13.09,
 "w": 14.19,
 "h": 14.32
+},
+"held/trophy": {
+"file": "held/held-trophy.webp",
+"x": -13.77,
+"y": -30.63,
+"w": 27.59,
+"h": 28.39
 },
 "held/umbrella": {
 "file": "held/held-umbrella.webp",
@@ -1617,12 +1638,201 @@
 "w": 17.01,
 "h": 20.11
 },
+"prop/ball": {
+"file": "prop/prop-ball.webp",
+"x": -8.67,
+"y": -16.79,
+"w": 17.46,
+"h": 17.58
+},
+"prop/basketball": {
+"file": "prop/prop-basketball.webp",
+"x": -8.61,
+"y": -16.7,
+"w": 17.34,
+"h": 17.37
+},
+"prop/bench": {
+"file": "prop/prop-bench.webp",
+"x": -26.49,
+"y": -24.57,
+"w": 52.92,
+"h": 25.59
+},
+"prop/boot": {
+"file": "prop/prop-boot.webp",
+"x": -13.52,
+"y": -23.69,
+"w": 27.34,
+"h": 24.53
+},
+"prop/bucket": {
+"file": "prop/prop-bucket.webp",
+"x": -8.58,
+"y": -22.53,
+"w": 17.16,
+"h": 23.2
+},
+"prop/bush": {
+"file": "prop/prop-bush.webp",
+"x": -17.17,
+"y": -20.66,
+"w": 34.16,
+"h": 23.42
+},
+"prop/cake": {
+"file": "prop/prop-cake.webp",
+"x": -14.6,
+"y": -35.54,
+"w": 29.2,
+"h": 36.25
+},
+"prop/campfire": {
+"file": "prop/prop-campfire.webp",
+"x": -13.77,
+"y": -24.77,
+"w": 27.57,
+"h": 26.79
+},
+"prop/fish": {
+"file": "prop/prop-fish.webp",
+"x": -5.5,
+"y": -24.19,
+"w": 11.08,
+"h": 24.88
+},
+"prop/flowers": {
+"file": "prop/prop-flowers.webp",
+"x": -11.71,
+"y": -15.76,
+"w": 23.73,
+"h": 17.02
+},
+"prop/gift": {
+"file": "prop/prop-gift.webp",
+"x": -10.43,
+"y": -24.11,
+"w": 20.93,
+"h": 23.75
+},
+"prop/hearts": {
+"file": "prop/prop-hearts.webp",
+"x": -10.45,
+"y": -13.32,
+"w": 23.02,
+"h": 16.78
+},
+"prop/hole": {
+"file": "prop/prop-hole.webp",
+"x": -20.62,
+"y": -6.64,
+"w": 41.29,
+"h": 13.45
+},
+"prop/kite": {
+"file": "prop/prop-kite.webp",
+"x": -10.55,
+"y": -14.6,
+"w": 21.09,
+"h": 58.99
+},
+"prop/leafpile": {
+"file": "prop/prop-leafpile.webp",
+"x": -24.58,
+"y": -22.62,
+"w": 49.22,
+"h": 23.37
+},
+"prop/pine": {
+"file": "prop/prop-pine.webp",
+"x": -10.48,
+"y": -30.51,
+"w": 20.93,
+"h": 31.07
+},
+"prop/puddle": {
+"file": "prop/prop-puddle.webp",
+"x": -18.46,
+"y": -5.91,
+"w": 36.91,
+"h": 7.91
+},
+"prop/pumpkin": {
+"file": "prop/prop-pumpkin.webp",
+"x": -10.98,
+"y": -21.21,
+"w": 22.06,
+"h": 22.37
+},
+"prop/rock": {
+"file": "prop/prop-rock.webp",
+"x": -12.56,
+"y": -12.59,
+"w": 26.24,
+"h": 13.29
+},
+"prop/sandcastle": {
+"file": "prop/prop-sandcastle.webp",
+"x": -20.57,
+"y": -36.46,
+"w": 41.13,
+"h": 36.86
+},
+"prop/sled": {
+"file": "prop/prop-sled.webp",
+"x": -22.7,
+"y": -9.62,
+"w": 49.59,
+"h": 8.6
+},
+"prop/snowman": {
+"file": "prop/prop-snowman.webp",
+"x": -16.82,
+"y": -44.0,
+"w": 33.87,
+"h": 46.11
+},
+"prop/snowpile": {
+"file": "prop/prop-snowpile.webp",
+"x": -21.0,
+"y": -16.03,
+"w": 41.84,
+"h": 20.12
+},
+"prop/stars": {
+"file": "prop/prop-stars.webp",
+"x": -9.66,
+"y": -10.93,
+"w": 21.19,
+"h": 15.63
+},
+"prop/table": {
+"file": "prop/prop-table.webp",
+"x": -24.58,
+"y": -24.59,
+"w": 49.16,
+"h": 25.91
+},
+"prop/tent": {
+"file": "prop/prop-tent.webp",
+"x": -26.49,
+"y": -34.66,
+"w": 53.04,
+"h": 35.51
+},
 "prop/tree": {
 "file": "prop/prop-tree.webp",
 "x": -16.98,
 "y": -47.27,
 "w": 33.33,
 "h": 48.04
+},
+"prop/trophy": {
+"file": "prop/prop-trophy.webp",
+"x": -13.77,
+"y": -30.75,
+"w": 27.63,
+"h": 28.47
 },
 "uni/body/akimbo": {
 "file": "uni/uni-body-akimbo.webp",
@@ -2781,11 +2991,19 @@
 "model": "grok-imagine-image-2.0",
 "made": "2026-10-12"
 },
+"held/fish": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
 "held/flag": {
 "model": "grok-imagine-image-2.0",
 "made": "2026-10-12"
 },
 "held/flower": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"held/gift": {
 "model": "grok-imagine-image-2.0",
 "made": "2026-10-12"
 },
@@ -2825,6 +3043,10 @@
 "model": "grok-imagine-image-2.0",
 "made": "2026-10-12"
 },
+"held/trophy": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
 "held/umbrella": {
 "model": "grok-imagine-image-2.0",
 "made": "2026-10-12"
@@ -2833,7 +3055,115 @@
 "model": "grok-imagine-image-2.0",
 "made": "2026-10-12"
 },
+"prop/ball": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"prop/basketball": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"prop/bench": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"prop/boot": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"prop/bucket": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"prop/bush": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"prop/cake": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"prop/campfire": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"prop/fish": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"prop/flowers": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"prop/gift": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"prop/hearts": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"prop/hole": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"prop/kite": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"prop/leafpile": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"prop/pine": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"prop/puddle": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"prop/pumpkin": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"prop/rock": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"prop/sandcastle": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"prop/sled": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"prop/snowman": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"prop/snowpile": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"prop/stars": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"prop/table": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"prop/tent": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
 "prop/tree": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"prop/trophy": {
 "model": "grok-imagine-image-2.0",
 "made": "2026-10-12"
 }
