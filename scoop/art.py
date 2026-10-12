@@ -1254,10 +1254,80 @@ def comic(spec=None, warn=None):
     return f'<div class="comic"><div class="ct">{title}</div><div class="cg">{svgs}</div></div>'
 
 
+# ---------------------------------------------------------------- weather icons (Jacob, 2026-10-12)
+# Original drawn icons for the weather box, picked from the NWS wording ("Sunny", "Rain Likely", ...).
+WX_ICONS = ['sun', 'mostly_sunny', 'partly', 'cloudy', 'showers', 'rain', 'storm', 'snow', 'fog', 'wind', 'moon']
+WX_SUN, WX_CLOUD, WX_GREY, WX_RAIN = '#f5b82e', '#ffffff', '#b9bec6', '#3b7fc4'
+
+
+def wx_kind(text):
+    """The icon for a forecast phrase, or None. Only the first sentence counts ('Sunny. ... Rain likely Sunday.')."""
+    t = re.sub(r'<[^>]+>', ' ', text or '').lower()
+    t = re.split(r'[.;]', t.strip(), maxsplit=1)[0]
+    has = lambda *w: any(x in t for x in w)
+    if has('thunder', 't-storm', 'tstorm'): return 'storm'
+    if has('snow', 'flurr', 'sleet', 'wintry', 'ice pellet', 'freezing'): return 'snow'
+    if has('rain', 'shower', 'drizzle', 'sprinkle'):
+        return 'showers' if has('chance', 'slight', 'scattered', 'isolated', 'partly', 'sunny', 'then') else 'rain'
+    if has('fog', 'haze', 'mist', 'smoke'): return 'fog'
+    if has('overcast') or ('cloudy' in t and 'partly cloudy' not in t): return 'cloudy'
+    if has('partly', 'mostly sunny', 'mostly clear', 'increasing clouds', 'decreasing clouds', 'clouds'):
+        return 'mostly_sunny' if has('mostly sunny', 'mostly clear') else 'partly'
+    if has('sunny', 'clear', 'fair', 'hot'): return 'sun'
+    if has('wind', 'breezy', 'blustery', 'gust'): return 'wind'
+    return None
+
+
+def _wx_sun(cx, cy, r):
+    rays = ''.join(pth(f'M{cx + (r + 2.2) * math.cos(a):.1f},{cy + (r + 2.2) * math.sin(a):.1f} '
+                       f'L{cx + (r + 5.4) * math.cos(a):.1f},{cy + (r + 5.4) * math.sin(a):.1f}', 'none', 1.5, '#e09a12')
+                   for a in (i * math.pi / 4 for i in range(8)))
+    return rays + circ(cx, cy, r, WX_SUN, 1.3) + crescent(cx, cy, r, r, '#e09a12', op=.35)
+
+
+def _wx_cloud(x, y, s=1, fill=WX_CLOUD):
+    """A puffy cloud whose flat bottom sits at y, centered on x."""
+    bumps = [(-8, -4, 5.5), (-1.5, -8.5, 7.5), (7, -5, 6), (11, -1.5, 3.8), (-12, -1, 3.6)]
+    outline = ''.join(circ(x + dx * s, y + dy * s, r * s, fill, 1.3) for dx, dy, r in bumps)
+    body = ''.join(circ(x + dx * s, y + dy * s, r * s - .65, fill, 0) for dx, dy, r in bumps)
+    base = pth(f'M{x - 12 * s:.1f},{y + 2.6 * s:.1f} H{x + 11 * s:.1f}', 'none', 1.3)
+    return outline + rct(x - 12 * s, y - 3 * s, 23 * s, 5.6 * s, fill, 0) + body + base
+
+
+def _wx_drops(x, y, n=3, col=WX_RAIN):
+    return ''.join(pth(f'M{x + i * 6:.1f},{y:.1f} l-2,5', 'none', 1.8, col) for i in range(n))
+
+
+def weather_icon(kind, px=30):
+    """An inline SVG icon (40x40 viewBox) for wx_kind(); '' for None or an unknown kind."""
+    if kind not in WX_ICONS:
+        return ''
+    g = {
+        'sun': lambda: _wx_sun(20, 20, 9),
+        'mostly_sunny': lambda: _wx_sun(17, 17, 9) + _wx_cloud(27, 33, .62),
+        'partly': lambda: _wx_sun(14, 14, 8) + _wx_cloud(23, 32, .95),
+        'cloudy': lambda: _wx_cloud(15, 22, .7, '#e4e7eb') + _wx_cloud(21, 31, 1.05),
+        'showers': lambda: _wx_sun(13, 12, 7) + _wx_cloud(22, 26, .95) + _wx_drops(16, 31),
+        'rain': lambda: _wx_cloud(20, 24, 1.1, '#dfe3e8') + _wx_drops(13, 29, 4),
+        'storm': lambda: _wx_cloud(20, 23, 1.1, WX_GREY) + _wx_drops(10, 28, 2) +
+                         pth('M22,24 L17,32 H21 L18,39 L26,29 H22 L25,24 Z', WX_SUN, 1.1),
+        'snow': lambda: _wx_cloud(20, 23, 1.1, '#e8edf3') + ''.join(
+            pth(f'M{x},{y - 3} V{y + 3} M{x - 2.6},{y - 1.5} L{x + 2.6},{y + 1.5} M{x - 2.6},{y + 1.5} L{x + 2.6},{y - 1.5}',
+                'none', 1.1, WX_RAIN) for x, y in ((12, 32), (20, 35), (28, 32))),
+        'fog': lambda: _wx_cloud(20, 18, .9, '#e4e7eb') + ''.join(
+            pth(f'M{x0},{y} q3,-2 6,0 t6,0 t6,0 t6,0', 'none', 1.5, '#8a9099') for x0, y in ((7, 25), (10, 30), (7, 35))),
+        'wind': lambda: ''.join(pth(d, 'none', 1.8, '#5a7d9a') for d in
+                                ('M5,14 H24 a4,4 0 1 0 -4,-4', 'M5,21 H31 a4.5,4.5 0 1 1 -4.5,4.5', 'M8,28 H20 a3.5,3.5 0 1 1 -3.5,3.5')),
+        'moon': lambda: pth('M25,8 A12,12 0 1 0 32,26 A9.5,9.5 0 1 1 25,8 Z', '#f3dc8a', 1.3),
+    }[kind]()
+    return (f'<svg class="wxi" viewBox="0 0 40 40" width="{px}" height="{px}" xmlns="http://www.w3.org/2000/svg" '
+            f'role="img" aria-label="{kind.replace("_", " ")}">{g}</svg>')
+
+
 # ---------------------------------------------------------------- library listing and model sheet
 def library():
     return {'cast': {k: c.name for k, c in CAST.items()}, 'poses': list(POSES), 'faces': list(FACES), 'gear': GEAR,
-            'held': HELD, 'props': PROPS, 'scenes': SCENES}
+            'held': HELD, 'props': PROPS, 'scenes': SCENES, 'weather icons': WX_ICONS}
 
 
 def sheet():
@@ -1279,7 +1349,8 @@ body{{font-family:Georgia,serif;margin:16px;background:#fff;color:{INK}}} h2{{ma
 .row{{display:flex;flex-wrap:wrap;gap:4px;margin-bottom:4px}} .cell{{width:120px;text-align:center;font-size:11px}} .cell svg{{width:120px;height:100px;display:block}}
 .wide{{width:200px}} .wide svg{{width:200px;height:122px}}</style></head><body><h1>Fairfax Daily Scoop: comic cast</h1>
 {"".join(rows)}<h2>Gear</h2><div class="row">{gear_demo}</div><h2>Held props</h2><div class="row">{held_demo}</div>
-<h2>Props</h2><div class="row">{props_demo}</div><h2>Scenes</h2><div class="row">{scenes}</div>
+<h2>Props</h2><div class="row">{props_demo}</div>
+<h2>Weather icons</h2><div class="row">{''.join(f'<div class="cell">{weather_icon(k, 80)}<div>{k}</div></div>' for k in WX_ICONS)}</div><h2>Scenes</h2><div class="row">{scenes}</div>
 <h2>Sample strip</h2><div style="width:7.6in">{comic(SAMPLE).replace('class="cg"', 'style="display:grid;grid-template-columns:repeat(4,1fr);gap:3px"')}</div></body></html>'''
 
 

@@ -151,6 +151,9 @@ body{{font-family:LB,serif;font-size:7.8pt;line-height:1.3;color:#161410}}
 h2{{font-family:PF,serif;font-weight:700;font-size:9.2pt;text-transform:uppercase;letter-spacing:.8px;border-bottom:1px solid #161410;margin-bottom:3px;padding-bottom:1px}}
 h3{{font-family:PF,serif;font-weight:700;font-size:10.8pt;line-height:1.12;margin:4px 0 2px}}
 .big{{font-family:PF,serif;font-weight:700;font-size:22pt;line-height:1}}
+/* Weather icons from art.py, picked from the NWS wording (Jacob, 2026-10-12) */
+.wxi{{flex:none;display:block}}
+.fc{{flex:1;display:flex;align-items:center;justify-content:center;gap:3px;border:1px solid #161410;padding:1px 2px;line-height:1.15;text-align:center}}
 .body{{flex:1;display:grid;grid-template-columns:{grid};min-height:0}}
 .col{{padding:3px 6px;overflow:hidden;min-height:0}} .col+.col{{border-left:1px solid #161410}}
 ul{{list-style:none}} .sched li{{padding:3px 0;border-bottom:1px dotted #8a8478}}
@@ -186,8 +189,8 @@ p{{margin-bottom:3px;text-align:justify;hyphens:auto}}
 <div class="ears"><span>Birmingham, Michigan</span><span>{d['date']}</span><span>{d.get('edition', 'Daily Edition')} · Est. 2026</span></div></div>
 {banner_html}
 <div class="strip">
- <div class="box"><h2>Weather · Birmingham</h2><div style="display:flex;gap:8px;align-items:center"><div class="big">{d['hi']}°</div><div>{d['wx']}<br><span class="cap">{d['wx2']}</span></div></div>
- <div style="display:flex;gap:4px;margin-top:3px">{''.join(f"<div style='flex:1;text-align:center;border:1px solid #161410;padding:1px 0;line-height:1.15'><b style='font-family:PF,serif'>{a}</b><br><b>{b}°</b> / {c}°<br><span class='cap' style='margin:0'>{e}</span></div>" for a,b,c,e in d['forecast'])}</div></div>
+ <div class="box"><h2>Weather · Birmingham</h2><div style="display:flex;gap:8px;align-items:center">{art.weather_icon(art.wx_kind(d['wx']), 38)}<div class="big">{d['hi']}°</div><div>{d['wx']}<br><span class="cap">{d['wx2']}</span></div></div>
+ <div style="display:flex;gap:4px;margin-top:3px">{''.join(f"<div class='fc'>{art.weather_icon(art.wx_kind(e), 26)}<div><b style='font-family:PF,serif'>{a}</b><br><b>{b}°</b> / {c}°<br><span class='cap' style='margin:0'>{e}</span></div></div>" for a,b,c,e in d['forecast'])}</div></div>
  {lunch_html}
 </div>
 <div class="body">{body_html}</div>
