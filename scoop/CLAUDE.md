@@ -7,7 +7,8 @@ Change it through `/newspaper-design`. **`README.md` is the rule book**: standin
 - `render.py`: HTML to a one-page Letter PDF, plus the overflow check
 - `photos.py`: finds and downloads free pictures (Openverse photos, National Gallery of Art open-access art) with their credit lines (README: Photo sources)
 - `illustrate.py`: one AI illustration (xAI Grok) for a fun extra, labeled on the page (README: AI illustrations)
-- `backdrops.py`, `backdrops/`: painted comic backdrops (xAI Grok), made once and committed; the cast stays drawn by art.py (README: Comic: painted backdrops)
+- `backdrops.py`, `backdrops/`: painted comic backdrops (xAI Grok), made once and committed (README: Comic: painted backdrops)
+- `repaint.py`: has Grok repaint each day's composed strip, characters included; cached in the work dir's `painted/` (README: Comic: painted by Grok)
 - `setup.sh`: fonts into `./fonts`
 - `edition.json`: a sample edition (schema and style example only)
 - `hedcut.py`: retired, never used

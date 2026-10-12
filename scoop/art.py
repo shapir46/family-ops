@@ -8,7 +8,8 @@ picks a scene, places the cast and writes the bubbles (README: "Comic"). Nothing
   python art.py --sheet cast.html    draw a model sheet of every character, pose, face, prop and scene
 
 Scenes are drawn here (SCENES) or painted: PAINTED backdrops are Grok-made scenery in backdrops/ (backdrops.py;
-README: "Comic: painted backdrops"). The cast is always drawn here, never generated.
+README: "Comic: painted backdrops"). Each day repaint.py has Grok repaint the composed panels, characters included
+(README: "Comic: painted by Grok"); the composition, and the drawn fallback, always come from here.
 """
 import base64
 import html as _html
@@ -1012,6 +1013,24 @@ def painted(name):
     return _bd_cache[name], PAINTED[name].get('ground', 108)
 
 
+# Painted strip (Jacob, 2026-10-12): repaint.py has Grok repaint each composed panel into painted/<key>.jpg (work dir).
+PAINT_MODEL = 'grok-imagine-image-2.0'      # keeps poses, expressions and places best (tested 2026-10-12)
+
+
+def painted_file(p):
+    """Where repaint.py keeps this panel's painting. The key covers the composition, not the bubbles or caption."""
+    import hashlib
+    comp = {k: v for k, v in p.items() if k not in ('say', 'caption', 'paint')}
+    h = hashlib.sha1(json.dumps([comp, PAINT_MODEL], sort_keys=True).encode()).hexdigest()[:16]
+    return Path('painted') / f'{h}.jpg'
+
+
+def strip_painted(spec):
+    """True when every panel has its Grok painting (all or nothing, so the strip never mixes styles)."""
+    panels = (spec or {}).get('panels', [])
+    return (spec or {}).get('paint') is not False and len(panels) == 4 and all(painted_file(p).exists() for p in panels)
+
+
 def uses_painted(spec):
     """True when a comic spec has a painted backdrop in any panel (build2.py credits Grok in the footer)."""
     return any(p.get('scene') in PAINTED for p in (spec or {}).get('panels', []))
@@ -1173,6 +1192,10 @@ def caption(text, x=4, y=4):
 def panel(p, idx=0, warn=None):
     warn = warn if warn is not None else []
     name = p.get('scene', 'plain')
+    art_img = ''
+    if p.get('paint'):                         # comic() sets this when the whole strip is painted
+        b64 = base64.b64encode(painted_file(p).read_bytes()).decode()
+        art_img = el('image', href=f'data:image/jpeg;base64,{b64}', x=1, y=1, width=W - 2, height=H - 2, preserveAspectRatio='xMidYMid slice')
     if name in PAINTED:
         bg, ground = painted(name)
         if p.get('sky'):
@@ -1247,7 +1270,8 @@ def panel(p, idx=0, warn=None):
         rects.append((x, y, w, h))
         out += bubble_svg(b.get('kind', 'say'), x, y, w, lines, tail)
     frame = rct(1, 1, W - 2, H - 2, 'none', 2)
-    return f'<svg viewBox="0 0 {W} {H}" width="100%" xmlns="http://www.w3.org/2000/svg">{bg}{shadows}{back_props}{cast_svg}{front_props}{out}{frame}</svg>'
+    pic = art_img or f'{bg}{shadows}{back_props}{cast_svg}{front_props}'     # Grok's painting replaces the drawn art
+    return f'<svg viewBox="0 0 {W} {H}" width="100%" xmlns="http://www.w3.org/2000/svg">{pic}{out}{frame}</svg>'
 
 
 SAMPLE = {
@@ -1282,7 +1306,10 @@ def comic(spec=None, warn=None):
     panels = spec.get('panels', [])
     if len(panels) != 4:
         raise SystemExit(f'comic: needs exactly 4 panels, got {len(panels)}')
-    svgs = ''.join(panel(p, i, warns) for i, p in enumerate(panels))
+    paint = strip_painted(spec)
+    if not paint and spec.get('paint') is not False and any(painted_file(p).exists() for p in panels):
+        warns.append('only some panels are painted (a panel changed since repaint.py ran?): printing the drawn strip; run repaint.py again')
+    svgs = ''.join(panel({**p, 'paint': paint}, i, warns) for i, p in enumerate(panels))
     if warn is None:
         for w_ in warns:
             print('COMIC WARNING:', w_, file=sys.stderr)
