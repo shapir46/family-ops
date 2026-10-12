@@ -1,0 +1,402 @@
+{
+ "date": "2026-10-12",
+ "generated_at": "2026-10-12T10:28:05+00:00",
+ "window": {
+  "start": "2026-10-12",
+  "end": "2026-10-22"
+ },
+ "kids": {
+  "Ari": {
+   "color": "#2563EB",
+   "initial": "A"
+  },
+  "Elle": {
+   "color": "#DB2777",
+   "initial": "E"
+  },
+  "Leo": {
+   "color": "#16A34A",
+   "initial": "L"
+  },
+  "Lila": {
+   "color": "#9333EA",
+   "initial": "Li"
+  }
+ },
+ "events": [
+  {
+   "date": "2026-10-13",
+   "title": "All schools half day (AM).",
+   "kids": [
+    "Ari",
+    "Elle",
+    "Leo"
+   ],
+   "start": null,
+   "end": null,
+   "end_date": null,
+   "location": null,
+   "kind": "school_status",
+   "details": null,
+   "sources": [
+    "BPS district calendar"
+   ],
+   "status": "half_day",
+   "id": "2026-10-13|allday|all schools half day am"
+  },
+  {
+   "date": "2026-10-13",
+   "title": "Soccer practice",
+   "kids": [
+    "Elle"
+   ],
+   "start": "18:00",
+   "end": "19:15",
+   "end_date": null,
+   "location": "UWM Sports Complex Field 1, 867 S Blvd E, Pontiac, MI 48341, USA",
+   "kind": "practice",
+   "details": null,
+   "sources": [
+    "PlayMetrics"
+   ],
+   "status": null,
+   "id": "2026-10-13|18:00|soccer practice"
+  },
+  {
+   "date": "2026-10-14",
+   "title": "Goalie Training",
+   "kids": [
+    "Elle"
+   ],
+   "start": "16:45",
+   "end": "18:00",
+   "end_date": null,
+   "location": "Pembroke Park, Buckingham Avenue, Birmingham, MI, USA",
+   "kind": "event",
+   "details": null,
+   "sources": [
+    "PlayMetrics"
+   ],
+   "status": null,
+   "id": "2026-10-14|16:45|goalie training"
+  },
+  {
+   "date": "2026-10-15",
+   "title": "Soccer practice",
+   "kids": [
+    "Elle"
+   ],
+   "start": "18:00",
+   "end": "19:15",
+   "end_date": null,
+   "location": "Pembroke Park 7v7, Birmingham, MI, USA",
+   "kind": "practice",
+   "details": null,
+   "sources": [
+    "PlayMetrics"
+   ],
+   "status": null,
+   "id": "2026-10-15|18:00|soccer practice"
+  },
+  {
+   "date": "2026-10-17",
+   "title": "Basketball game vs Hoosiers",
+   "kids": [
+    "Ari"
+   ],
+   "start": "09:55",
+   "end": null,
+   "end_date": null,
+   "location": "Berkshire Middle School, 21707 W 14 Mile Rd, Beverly Hills",
+   "kind": "game",
+   "details": null,
+   "sources": [
+    "MCE league schedule"
+   ],
+   "status": null,
+   "id": "2026-10-17|09:55|basketball game vs hoosiers"
+  },
+  {
+   "date": "2026-10-17",
+   "title": "Soccer game vs MI Stars Elite 2018/2017G White",
+   "kids": [
+    "Elle"
+   ],
+   "start": "12:30",
+   "end": "13:30",
+   "end_date": null,
+   "location": "Spencer Park Field 2, 3701 John R Rd, Rochester Hills, MI 48307, United States",
+   "kind": "game",
+   "details": "arrive 12:00 pm, black-black-black",
+   "sources": [
+    "PlayMetrics"
+   ],
+   "status": null,
+   "id": "2026-10-17|12:30|soccer game vs mi stars elite 2018 2017g"
+  },
+  {
+   "date": "2026-10-17",
+   "title": "Soccer game vs FC Dallas",
+   "kids": [
+    "Leo"
+   ],
+   "start": "14:00",
+   "end": "15:00",
+   "end_date": null,
+   "location": "Birmingham Covington School, 1525 Covington Rd, Bloomfield Hills",
+   "kind": "game",
+   "details": "Field 4. Week 6; Sounders home.",
+   "sources": [
+    "BBSC schedule"
+   ],
+   "status": null,
+   "id": "2026-10-17|14:00|soccer game vs fc dallas"
+  },
+  {
+   "date": "2026-10-18",
+   "title": "Soccer game vs Romeo FC Fury",
+   "kids": [
+    "Elle"
+   ],
+   "start": "12:00",
+   "end": "13:00",
+   "end_date": null,
+   "location": "Simpson Park Field 6 7v7, 70199 Campground Rd, Bruce Township, MI 48065, United States",
+   "kind": "game",
+   "details": "arrive 11:30 am, black-black-black",
+   "sources": [
+    "PlayMetrics"
+   ],
+   "status": null,
+   "id": "2026-10-18|12:00|soccer game vs romeo fc fury"
+  },
+  {
+   "date": "2026-10-20",
+   "title": "Soccer practice",
+   "kids": [
+    "Elle"
+   ],
+   "start": "18:00",
+   "end": "19:15",
+   "end_date": null,
+   "location": "UWM Sports Complex Field 1, 867 S Blvd E, Pontiac, MI 48341, USA",
+   "kind": "practice",
+   "details": null,
+   "sources": [
+    "PlayMetrics"
+   ],
+   "status": null,
+   "id": "2026-10-20|18:00|soccer practice"
+  },
+  {
+   "date": "2026-10-21",
+   "title": "Goalie Training",
+   "kids": [
+    "Elle"
+   ],
+   "start": "16:45",
+   "end": "18:00",
+   "end_date": null,
+   "location": "Pembroke Park, Buckingham Avenue, Birmingham, MI, USA",
+   "kind": "event",
+   "details": null,
+   "sources": [
+    "PlayMetrics"
+   ],
+   "status": null,
+   "id": "2026-10-21|16:45|goalie training"
+  },
+  {
+   "date": "2026-10-22",
+   "title": "Soccer practice",
+   "kids": [
+    "Elle"
+   ],
+   "start": "18:00",
+   "end": "19:15",
+   "end_date": null,
+   "location": "Pembroke Park 7v7, Birmingham, MI, USA",
+   "kind": "practice",
+   "details": null,
+   "sources": [
+    "PlayMetrics"
+   ],
+   "status": null,
+   "id": "2026-10-22|18:00|soccer practice"
+  }
+ ],
+ "actions": [],
+ "fyi": [],
+ "conflicts": [],
+ "lunch": {
+  "line": "Whole Grain Funfetti Pancakes, Syrup, & Turkey Sausage Patty with Baked Tater Tots",
+  "entree": "Whole Grain Funfetti Pancakes, Syrup, & Turkey Sausage Patty with Baked Tater Tots",
+  "theme": "BrunchforLunch",
+  "problems": []
+ },
+ "weather": {
+  "hi": 79,
+  "today": "Patchy Fog then Partly Sunny",
+  "today_detail": "Patchy fog before 11am. Partly sunny, with a high near 79. Southwest wind 5 to 9 mph, with gusts as high as 18 mph.",
+  "tonight_low": 65,
+  "tonight": "Slight Chance T-storms",
+  "icon": "fog",
+  "forecast": [
+   {
+    "date": "2026-10-13",
+    "day": "Tue",
+    "hi": 82,
+    "lo": 59,
+    "short": "Sunny",
+    "icon": "sun"
+   },
+   {
+    "date": "2026-10-14",
+    "day": "Wed",
+    "hi": 69,
+    "lo": 50,
+    "short": "Chance Light Rain",
+    "icon": "rain"
+   },
+   {
+    "date": "2026-10-15",
+    "day": "Thu",
+    "hi": 65,
+    "lo": 50,
+    "short": "Chance Light Rain",
+    "icon": "rain"
+   },
+   {
+    "date": "2026-10-16",
+    "day": "Fri",
+    "hi": 60,
+    "lo": 35,
+    "short": "Chance Light Rain",
+    "icon": "rain"
+   }
+  ],
+  "source": "National Weather Service",
+  "updated": "2026-10-12T08:24:33+00:00"
+ },
+ "mda": {
+  "title": "MDA Kicks &amp; Giggles",
+  "items": [
+   "<span class='gm-when'>Last game · Sun Oct 11</span><span class='gm-match'>MDA vs Blackhawks</span><span class='gm-loc'>Greg Grant Sports Complex 7v7, Shelby Township</span><span class='gm-extra'>Final score coming soon.</span>",
+   "<span class='gm-when'>Sat Oct 17 · 12:30 pm</span><span class='gm-match'>MDA vs MI Stars Elite 2018/2017G White</span><span class='gm-loc'>Spencer Park Field 2, Rochester Hills</span><span class='gm-extra'>Arrive 12:00 pm · Uniform: black-black-black</span>"
+  ]
+ },
+ "spartans": {
+  "title": "Spartans Hoop Scoop",
+  "items": [
+   "<span class='gm-when'>Last game · Sat Oct 10</span><span class='gm-match'>Spartans vs Tigers</span><span class='gm-loc'>Berkshire Middle School, Beverly Hills</span><span class='gm-extra'>Final score coming soon.</span>",
+   "<span class='gm-when'>Sat Oct 17 · 9:55 am</span><span class='gm-match'>Spartans vs Hoosiers</span><span class='gm-loc'>Berkshire Middle School, Beverly Hills</span>"
+  ]
+ },
+ "fantasy": {
+  "league": "Quarton 5th Grade DAWGS",
+  "team": "LamARI SHAPson",
+  "record": "4-0",
+  "rank": 1,
+  "teams": 10,
+  "week": 5,
+  "points_for": 605.7,
+  "this_week": {
+   "week": 5,
+   "opponent": "The Jude Crew",
+   "score": 206.6,
+   "opp_score": 89.8,
+   "winner": "UNDECIDED"
+  },
+  "last_week": {
+   "week": 4,
+   "opponent": "Frankly, I came to win",
+   "score": 143.3,
+   "opp_score": 111.3,
+   "winner": "AWAY",
+   "result": "W"
+  }
+ },
+ "almanac": [
+  {
+   "date": "2026-10-12",
+   "holidays": [
+    "Indigenous Peoples' Day"
+   ],
+   "shabbat": null
+  },
+  {
+   "date": "2026-10-13",
+   "holidays": [],
+   "shabbat": null
+  }
+ ],
+ "due": [
+  {
+   "source": "league_schedules",
+   "who": "claude",
+   "what": "Re-check data/schedules/* against league sites and emails (MCE basketball, Snaptivities)",
+   "why": "never checked"
+  },
+  {
+   "source": "sunday_school",
+   "who": "jacob",
+   "what": "Temple Israel Sunday School calendar -> data/calendars/temple-israel-YYYY-YY.yaml (Jacob to supply; Temple Beth El dropped 2026-10-10)",
+   "why": "not supplied yet"
+  }
+ ],
+ "delivery": {
+  "email": null,
+  "dashboard": null,
+  "print": null,
+  "filed": null
+ },
+ "meta": {
+  "sources": {
+   "playmetrics_feed": {
+    "ok": true,
+    "count": null
+   },
+   "playmetrics": {
+    "ok": true,
+    "count": 8
+   },
+   "playmetrics_past": {
+    "ok": true,
+    "count": 23
+   },
+   "schedules": {
+    "ok": true,
+    "count": 2
+   },
+   "schedules_past": {
+    "ok": true,
+    "count": 5
+   },
+   "mce_results": {
+    "ok": true,
+    "count": null
+   },
+   "district_calendar": {
+    "ok": true,
+    "count": 1
+   },
+   "lunch": {
+    "ok": true,
+    "count": null
+   },
+   "weather": {
+    "ok": true,
+    "count": null
+   },
+   "fantasy": {
+    "ok": true,
+    "count": null
+   },
+   "almanac": {
+    "ok": true,
+    "count": 2
+   }
+  },
+  "warnings": []
+ }
+}
