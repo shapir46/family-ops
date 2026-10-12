@@ -1,6 +1,7 @@
 out/
 *.pdf
 !editions/*.pdf
+!tests/fixtures/*.pdf
 *.png
 fonts/
 __pycache__/
