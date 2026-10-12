@@ -142,7 +142,11 @@ if d.get('head_photo', {}).get('credit') and hp_b64: _credits.append(f"Headline 
 if d.get('critter', {}).get('credit') and d['critter'].get('img'): _credits.append(f"{d['critter'].get('name', 'Critter')} photo: {d['critter']['credit']}")
 _credits += [f"{e['title'].split(':')[0]}: {e['credit']}" for e in _extras if e.get('img') and e.get('credit') and not e.get('illus')]
 if any(e.get('img') and e.get('illus') for e in _extras): _credits.append("Illustrations labeled “Illustration” are AI-generated with Grok (xAI)")
-foot_html = d['foot'] + (f"<br>Pictures: {' · '.join(_credits)}" if _credits else '')
+# Painted comic backdrops are Grok-made: credit them, and the footer's "comic is original" covers only the characters.
+if art.uses_painted(d.get('comic')):
+    _credits.append("Comic backgrounds painted with Grok (xAI)")
+    d['foot'] = re.sub(r'\b([Cc]omic) (?:is|are) original', r'\1 characters are original', d['foot'])
+foot_html = d['foot'] +(f"<br>Pictures: {' · '.join(_credits)}" if _credits else '')
 
 # Top strip: weather, plus the lunch box only when there is lunch to show (none on weekend editions).
 has_lunch = bool(d.get('lunch'))

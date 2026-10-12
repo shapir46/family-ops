@@ -6,11 +6,17 @@ picks a scene, places the cast and writes the bubbles (README: "Comic"). Nothing
 
   python art.py --list               print the library (cast, poses, faces, gear, held, props, scenes)
   python art.py --sheet cast.html    draw a model sheet of every character, pose, face, prop and scene
+
+Scenes are drawn here (SCENES) or painted: PAINTED backdrops are Grok-made scenery in backdrops/ (backdrops.py;
+README: "Comic: painted backdrops"). The cast is always drawn here, never generated.
 """
+import base64
 import html as _html
+import json
 import math
 import re
 import sys
+from pathlib import Path
 
 INK = '#161410'
 W, H = 200, 122                      # panel viewBox
@@ -991,6 +997,25 @@ def scene(name, sky=None):
 
 SCENES = ['snow', 'ice', 'autumn', 'hill', 'beach', 'night', 'kitchen', 'living', 'classroom', 'town', 'backyard', 'pumpkins', 'soccer', 'gym', 'space', 'rain', 'plain']
 
+# Painted backdrops (Jacob, 2026-10-12): scenery painted once with Grok, committed in backdrops/ with index.json.
+_BD = Path(__file__).resolve().parent / 'backdrops'
+PAINTED = json.loads((_BD / 'index.json').read_text()) if (_BD / 'index.json').exists() else {}
+_bd_cache = {}
+
+
+def painted(name):
+    """(svg, ground y) for a painted backdrop: the picture fills the panel; the cast is drawn on top."""
+    if name not in _bd_cache:
+        b64 = base64.b64encode((_BD / f'{name}.jpg').read_bytes()).decode()
+        _bd_cache[name] = el('image', href=f'data:image/jpeg;base64,{b64}', x=1, y=1, width=W - 2, height=H - 2,
+                             preserveAspectRatio='xMidYMid slice')
+    return _bd_cache[name], PAINTED[name].get('ground', 108)
+
+
+def uses_painted(spec):
+    """True when a comic spec has a painted backdrop in any panel (build2.py credits Grok in the footer)."""
+    return any(p.get('scene') in PAINTED for p in (spec or {}).get('panels', []))
+
 
 # ---------------------------------------------------------------- free props (panel units, base at x, y)
 def prop(name, x, y, s=1, opt=None):
@@ -1147,10 +1172,19 @@ def caption(text, x=4, y=4):
 # ---------------------------------------------------------------- panel and strip
 def panel(p, idx=0, warn=None):
     warn = warn if warn is not None else []
-    bg, ground = scene(p.get('scene', 'plain'), p.get('sky'))
+    name = p.get('scene', 'plain')
+    if name in PAINTED:
+        bg, ground = painted(name)
+        if p.get('sky'):
+            warn.append(f"panel {idx + 1}: 'sky' does nothing on the painted backdrop '{name}' (use mirror or another backdrop)")
+    else:
+        if name not in SCENES:
+            warn.append(f"panel {idx + 1}: unknown scene '{name}', drawn as 'plain' (python art.py --list)")
+        bg, ground = scene(name, p.get('sky'))
     if p.get('mirror'):
         bg = grp(bg, f'translate({W},0) scale(-1,1)')
     back_props, front_props, cast_svg, heads = '', '', '', {}
+    shadows = ''                                  # painted scenes only: a soft shadow sets each character on the ground
     for pr in p.get('props', []):
         if isinstance(pr, dict):
             name, x, y, s, opt, front = pr['name'], pr.get('x', 100), pr.get('y', ground), pr.get('s', 1), pr.get('opt'), pr.get('front')
@@ -1171,6 +1205,8 @@ def panel(p, idx=0, warn=None):
         flip = c.get('flip', x > 100)
         fig = figure(C, c.get('pose', 'stand'), c.get('face', 'happy'), c.get('gear'), c.get('hold'), c.get('hold_opt'), c.get('shirt'), flip)
         cast_svg += grp(fig, f'translate({x:.1f},{y:.1f}) scale({-s if flip else s:.3f},{s:.3f})')
+        if name in PAINTED:
+            shadows += ell(x, y + .5, 24 * s, 2.6, INK, 0, opacity=.2)
         hx, hy, hr = C.head
         lift = (C.sit_drop if c.get('pose') == 'sit' else POSES.get(c.get('pose', 'stand'), {}).get('dy', 0))
         wx = x + (-1 if flip else 1) * s * hx
@@ -1211,7 +1247,7 @@ def panel(p, idx=0, warn=None):
         rects.append((x, y, w, h))
         out += bubble_svg(b.get('kind', 'say'), x, y, w, lines, tail)
     frame = rct(1, 1, W - 2, H - 2, 'none', 2)
-    return f'<svg viewBox="0 0 {W} {H}" width="100%" xmlns="http://www.w3.org/2000/svg">{bg}{back_props}{cast_svg}{front_props}{out}{frame}</svg>'
+    return f'<svg viewBox="0 0 {W} {H}" width="100%" xmlns="http://www.w3.org/2000/svg">{bg}{shadows}{back_props}{cast_svg}{front_props}{out}{frame}</svg>'
 
 
 SAMPLE = {
@@ -1327,7 +1363,8 @@ def weather_icon(kind, px=30):
 # ---------------------------------------------------------------- library listing and model sheet
 def library():
     return {'cast': {k: c.name for k, c in CAST.items()}, 'poses': list(POSES), 'faces': list(FACES), 'gear': GEAR,
-            'held': HELD, 'props': PROPS, 'scenes': SCENES, 'weather icons': WX_ICONS}
+            'held': HELD, 'props': PROPS, 'scenes': SCENES,
+            'painted scenes': {k: f"{v['season']}: {v['subject']}" for k, v in PAINTED.items()}, 'weather icons': WX_ICONS}
 
 
 def sheet():
@@ -1344,6 +1381,9 @@ def sheet():
                         for h, k in zip(HELD, list(CAST) * 5))
     props_demo = ''.join(cell(prop(p, 60, 92, 1, None) if p not in ('kite', 'cloud', 'sun', 'stars', 'hearts', 'sfx') else prop(p, 60, 50, 1, None), p) for p in PROPS)
     scenes = ''.join(f'<div class="cell wide"><svg viewBox="0 0 200 122" xmlns="http://www.w3.org/2000/svg">{scene(s)[0]}{rct(1, 1, 198, 120, "none", 2)}</svg><div>{s}</div></div>' for s in SCENES)
+    gl = lambda k: pth(f'M1,{PAINTED[k].get("ground", 108)} H199', 'none', .7, '#d33b2f', stroke_dasharray='3 2')   # where feet go
+    painted_demo = ''.join(f'<div class="cell wide"><svg viewBox="0 0 200 122" xmlns="http://www.w3.org/2000/svg">{painted(k)[0]}{gl(k)}{rct(1, 1, 198, 120, "none", 2)}</svg>'
+                           f'<div>{k} <small>({v["season"]})</small></div></div>' for k, v in PAINTED.items())
     return f'''<!doctype html><html><head><meta charset="utf-8"><title>Comic cast sheet</title><style>
 body{{font-family:Georgia,serif;margin:16px;background:#fff;color:{INK}}} h2{{margin:14px 0 4px;font-size:16px}} small{{color:#777;font-weight:400}}
 .row{{display:flex;flex-wrap:wrap;gap:4px;margin-bottom:4px}} .cell{{width:120px;text-align:center;font-size:11px}} .cell svg{{width:120px;height:100px;display:block}}
@@ -1351,6 +1391,7 @@ body{{font-family:Georgia,serif;margin:16px;background:#fff;color:{INK}}} h2{{ma
 {"".join(rows)}<h2>Gear</h2><div class="row">{gear_demo}</div><h2>Held props</h2><div class="row">{held_demo}</div>
 <h2>Props</h2><div class="row">{props_demo}</div>
 <h2>Weather icons</h2><div class="row">{''.join(f'<div class="cell">{weather_icon(k, 80)}<div>{k}</div></div>' for k in WX_ICONS)}</div><h2>Scenes</h2><div class="row">{scenes}</div>
+<h2>Painted scenes <small>(Grok backdrops; dashed line = ground)</small></h2><div class="row">{painted_demo}</div>
 <h2>Sample strip</h2><div style="width:7.6in">{comic(SAMPLE).replace('class="cg"', 'style="display:grid;grid-template-columns:repeat(4,1fr);gap:3px"')}</div></body></html>'''
 
 
