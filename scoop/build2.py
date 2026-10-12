@@ -1,4 +1,4 @@
-import base64, glob, json, sys
+import base64, glob, json, re, sys
 import art
 import os
 G=os.environ.get("FONTDIR","./fonts")
@@ -17,14 +17,14 @@ hp_b64=''
 if d.get('head_photo') and d['head_photo'].get('img'):
     from PIL import Image; import io
     im=Image.open(d['head_photo']['img']).convert('RGB'); im.thumbnail((900,500)); bio=io.BytesIO(); im.save(bio,'JPEG',quality=85); hp_b64=base64.b64encode(bio.getvalue()).decode()
-head_photo_html=(f"<div style='border:1px solid #161410;line-height:0'><img src='data:image/jpeg;base64,{hp_b64}' style='width:100%;height:auto;max-height:190px;object-fit:cover'></div><div class='cap' style='text-align:center'>Photo: {d['head_photo'].get('credit','')}</div>") if hp_b64 else ''
+head_photo_html=(f"<div style='border:1px solid #161410;line-height:0'><img src='data:image/jpeg;base64,{hp_b64}' style='width:100%;height:auto;max-height:190px;object-fit:cover'></div>") if hp_b64 else ''
 li=lambda xs:"".join(f"<li>{x}</li>" for x in xs)
-def story(h,t,s,first=False): return f"<h3>{h}</h3><p>{t}</p><div class='cap'>{s}</div>"
+def story(h,t,*_): return f"<h3>{h}</h3><p>{t}</p>"   # no source line on the page; sources go in the footer (Jacob, 2026-10-12)
 
 # ---- Sections: each returns HTML ('' = omit). The layout below places them. ----
 def sec_schedule():
     return (f"<h2>{d.get('sched_title', 'The Family Schedule')}</h2><ul class='sched small'>{li(d.get('sched', []))}</ul>"
-            f"<div class='cap' style='margin-top:2px'>{d.get('sched_note', '')}</div>") if d.get('sched') else ''
+            ) if d.get('sched') else ''
 def sec_week():
     return (f"<div class='box2'><h2 style='border:0;margin:0'>{d.get('week_title', 'Coming Up')}</h2><ul class='small'>{li(d['week'])}</ul></div>") if d.get('week') else ''
 def sec_school_notes():
@@ -33,14 +33,14 @@ def sec_left_story():
     if d.get('critter'):
         c = d['critter']
         return (f"<h2>Cutest Critter</h2><div style='border:1px solid #161410;line-height:0'><img src='data:image/jpeg;base64,{crit_b64}' style='width:100%;height:auto;max-height:150px;object-fit:cover'></div>"
-                f"<div class='cap' style='text-align:center'><b>{c['name']}</b> — {c['fact']} <i>Photo: {c.get('credit','')}</i></div>")
+                f"<div class='cap' style='text-align:center'><b>{c['name']}</b> — {c['fact']}</div>")
     return story(*d['news'][2]) if len(d.get('news', [])) > 2 else ''
 def sec_lead():
     return (f"<div class='headline'>{d['head']}</div><div class='sub'>{d['sub']}</div>{head_photo_html}"
-            f"<div class='cols2'>{''.join(f'<p>{x}</p>' for x in d['story'])}</div><div class='cap'>{d['head_src']}</div>")
+            f"<div class='cols2'>{''.join(f'<p>{x}</p>' for x in d['story'])}</div>")
 def sec_news1():
     n = d['news'][1]
-    return f"<h3 style='margin-top:2px'>{n[0]}</h3><div class='cols2' style='font-size:8pt'><p style='margin:0'>{n[1]}</p></div><div class='cap'>{n[2]}</div>"
+    return f"<h3 style='margin-top:2px'>{n[0]}</h3><div class='cols2' style='font-size:8pt'><p style='margin:0'>{n[1]}</p></div>"
 def sec_word():
     if not d.get('word'): return ''
     w, pos, defn, ex = d['word']
@@ -66,15 +66,13 @@ def sec_ari_fantasy():
 def extra_html(e):
     """One filler item: title + short text (+ source), with an optional real picture (img + credit; README: Photo sources).
     No drawing activities (Jacob, 2026-10-10)."""
-    src = f"<div class='cap' style='margin:1px 0 0'>{e['source']}</div>" if e.get('source') else ''
     pic = ''
     if e.get('img'):
         from PIL import Image; import io
         im = Image.open(e['img']).convert('RGB'); im.thumbnail((600, 400)); bio = io.BytesIO(); im.save(bio, 'JPEG', quality=82)
         pic = (f"<div style='border:1px solid #161410;line-height:0;margin:1px 0 1px'><img src='data:image/jpeg;base64,{base64.b64encode(bio.getvalue()).decode()}' "
-               f"style='width:100%;height:auto;max-height:{int(e.get('img_h', 130))}px;object-fit:cover'></div>"
-               f"<div class='cap' style='margin:0 0 2px'>{e.get('credit', '')}</div>")
-    return f"<div class='box2'><h3 style='margin:0 0 1px'>{e['title']}</h3>{pic}<p class='small' style='margin:0'>{e['text']}</p>{src}</div>"
+               f"style='width:100%;height:auto;max-height:{int(e.get('img_h', 130))}px;object-fit:cover'></div>")
+    return f"<div class='box2'><h3 style='margin:0 0 1px'>{e['title']}</h3>{pic}<p class='small' style='margin:0'>{e['text']}</p></div>"
 _extras = d.get('extras') or []
 _placed_extras = set()
 def sec_extra(i):
@@ -135,11 +133,20 @@ if not d.get('comic'):
     print("COMIC WARNING: edition.json has no 'comic'; printing the sample strip, which repeats. Write a new one.", file=sys.stderr)
 comic_html = art.comic(d.get('comic'))
 
+# No sources inside the page: they are credited only in the small footer (Jacob, 2026-10-12).
+for k in ('wx', 'wx2'):
+    d[k] = re.sub(r'\s*\((?:NWS|National Weather Service)\)', '', d.get(k) or '')
+_credits = []
+if d.get('head_photo', {}).get('credit') and hp_b64: _credits.append(f"Headline photo: {d['head_photo']['credit']}")
+if d.get('critter', {}).get('credit') and d['critter'].get('img'): _credits.append(f"{d['critter'].get('name', 'Critter')} photo: {d['critter']['credit']}")
+_credits += [f"{e['title'].split(':')[0]}: {e['credit']}" for e in _extras if e.get('img') and e.get('credit')]
+foot_html = d['foot'] + (f"<br>Pictures: {' · '.join(_credits)}" if _credits else '')
+
 # Top strip: weather, plus the lunch box only when there is lunch to show (none on weekend editions).
 has_lunch = bool(d.get('lunch'))
 strip_grid = '1.6fr 1fr' if has_lunch else '1fr'
 lunch_title = d.get('lunch_title', "Today's School Lunch")
-lunch_html = (f"<div class='box'><h2>{lunch_title} · Quarton</h2><div style='font-weight:700;font-family:PF,serif;font-size:8.6pt'>{d['lunch']}</div><div class='cap'>{d.get('lunch_src','')}</div></div>") if has_lunch else ''
+lunch_html = (f"<div class='box'><h2>{lunch_title} · Quarton</h2><div class='lunch'>{d['lunch']}</div></div>") if has_lunch else ''
 banner_html = (f"<div class='banner'>{''.join(f'<span>{b}</span>' for b in d['banner'])}</div>") if d.get('banner') else ''
 html=f"""<!doctype html><html><head><meta charset="utf-8"><title>The Fairfax Daily Scoop — {d['date']}</title><style>
 @font-face{{font-family:Frak;src:url(data:font/woff2;base64,{frak}) format('woff2');font-weight:700}}
@@ -178,6 +185,9 @@ p{{margin-bottom:3px;text-align:justify;hyphens:auto}}
 .ct{{font-family:PF,serif;font-weight:700;letter-spacing:2px;text-align:center;font-size:9pt;margin-bottom:2px}}
 .cg{{display:grid;grid-template-columns:repeat(4,1fr);gap:3px}}
 .foot{{border-top:3px double #161410;font-size:6.2pt;text-align:center;padding-top:2px;color:#444}}
+/* School lunch: large and bold, no source line (Jacob, 2026-10-12) */
+.lunch{{font-weight:700;font-family:PF,serif;font-size:11pt;line-height:1.25}}
+.lunch span{{display:block;line-height:1.3;margin-top:2px}}
 .banner{{text-align:center;font-family:PF,serif;font-weight:700;font-size:10.5pt;letter-spacing:.6px;padding:3px 4px;border-bottom:1px solid #161410;background:#f6ecd2}}
 .banner span+span::before{{content:"  ·  ";font-weight:400}}
 .ff li{{padding:2px 0;border-bottom:1px dotted #b9ad8c}} .ff li:last-child{{border-bottom:0}}
@@ -203,5 +213,5 @@ p{{margin-bottom:3px;text-align:justify;hyphens:auto}}
 </div>
 <div class="body">{body_html}</div>
 {comic_html}
-<div class="foot">{d['foot']}</div></div></body></html>"""
+<div class="foot">{foot_html}</div></div></body></html>"""
 open('gazette.html','w').write(html)
