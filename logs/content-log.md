@@ -38,3 +38,12 @@ Read before building; append after printing. Riddles/jokes/words are in riddle-l
 - Comic: kite gag ("Look, Big Bear! My kite flies!" / "Wow! It is so high up there." / "Um, Artic? You let go of the string." / "Fine! The kite is on a trip. Without us."); windy green hilltop with clouds, orange/purple kites; bear in red scarf, fox with no hat — USED
 - Critter: none (Saturday)
 - Weather note: NWS page was stale (issued Oct 6); only Sat/Sun printed, one-day forecast row.
+
+## 2026-10-12
+- Headline: "Sunrise on Mars: Curiosity Snaps a Dawn Over Wind-Carved Cliffs" (NASA/JPL-Caltech, Oct. 6, 2026; yardangs on Mount Sharp)
+- News: glow-in-the-dark pressure paint on a NASA Langley wing model (NASA, Oct. 2); Scientists Say: pyrolysis (Science News Explores, Oct. 5; not printed, no room); SPHEREx brown dwarfs (NASA, Oct. 8; not printed, no room)
+- Extra: Fun Fact, a sol on Mars is 24 h 39 min
+- Headline photo: no photo (NASA/JPL-Caltech/MSSS dawn panorama was found but did not fit the one-page layout)
+- Lions: beat Arizona 45–21 Oct 11 (3–2), bye week
+- Comic: pancake-flip gag ("Watch me flip a pancake!" / "3... 2... 1... FLIP!" / "Where did it go?" "Look up!" / "Breakfast delivered!"); kitchen scene in all four panels, cream and white-sky variants; bear in white cap (akimbo/proud, tada/grin, think/surprised, facepalm/happy), fox (stand/worried, cheer/laugh), Mackenzie (sit/surprised, point/laugh) — USED
+- Critter: none (Monday)
