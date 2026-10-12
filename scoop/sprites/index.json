@@ -469,6 +469,104 @@
 "w": 39.93,
 "h": 65.29
 },
+"bob/gear/beanie/head": {
+"file": "bob/bob-gear-beanie-head.webp",
+"x": -12.15,
+"y": -71.66,
+"w": 24.29,
+"h": 17.81
+},
+"bob/gear/bow/head": {
+"file": "bob/bob-gear-bow-head.webp",
+"x": -11.04,
+"y": -65.62,
+"w": 11.19,
+"h": 8.26
+},
+"bob/gear/bowtie/neck": {
+"file": "bob/bob-gear-bowtie-neck.webp",
+"x": -5.25,
+"y": -42.62,
+"w": 10.5,
+"h": 4.78
+},
+"bob/gear/cap/head": {
+"file": "bob/bob-gear-cap-head.webp",
+"x": -10.81,
+"y": -67.73,
+"w": 29.3,
+"h": 13.48
+},
+"bob/gear/cape/back": {
+"file": "bob/bob-gear-cape-back.webp",
+"x": -25.47,
+"y": -43.16,
+"w": 37.66,
+"h": 41.13
+},
+"bob/gear/cape/neck": {
+"file": "bob/bob-gear-cape-neck.webp",
+"x": -9.18,
+"y": -44.17,
+"w": 18.37,
+"h": 5.87
+},
+"bob/gear/collar/neck": {
+"file": "bob/bob-gear-collar-neck.webp",
+"x": -9.34,
+"y": -44.17,
+"w": 18.68,
+"h": 9.26
+},
+"bob/gear/crown/head": {
+"file": "bob/bob-gear-crown-head.webp",
+"x": -8.28,
+"y": -68.43,
+"w": 16.56,
+"h": 9.54
+},
+"bob/gear/earmuffs/head": {
+"file": "bob/bob-gear-earmuffs-head.webp",
+"x": -14.43,
+"y": -63.31,
+"w": 28.79,
+"h": 16.28
+},
+"bob/gear/glasses/head": {
+"file": "bob/bob-gear-glasses-head.webp",
+"x": -6.25,
+"y": -57.44,
+"w": 15.67,
+"h": 7.87
+},
+"bob/gear/party/head": {
+"file": "bob/bob-gear-party-head.webp",
+"x": -5.85,
+"y": -76.84,
+"w": 14.22,
+"h": 18.67
+},
+"bob/gear/scarf/neck": {
+"file": "bob/bob-gear-scarf-neck.webp",
+"x": -9.42,
+"y": -44.4,
+"w": 18.83,
+"h": 16.75
+},
+"bob/gear/shades/head": {
+"file": "bob/bob-gear-shades-head.webp",
+"x": -6.25,
+"y": -57.44,
+"w": 15.67,
+"h": 7.87
+},
+"bob/head/angry": {
+"file": "bob/bob-head-angry.webp",
+"x": -11.39,
+"y": -70.36,
+"w": 26.09,
+"h": 29.65
+},
 "bob/head/grin": {
 "file": "bob/bob-head-grin.webp",
 "x": -11.04,
@@ -490,6 +588,20 @@
 "w": 22.38,
 "h": 25.62
 },
+"bob/head/love": {
+"file": "bob/bob-head-love.webp",
+"x": -11.19,
+"y": -66.32,
+"w": 22.3,
+"h": 25.62
+},
+"bob/head/proud": {
+"file": "bob/bob-head-proud.webp",
+"x": -11.04,
+"y": -66.32,
+"w": 21.99,
+"h": 25.62
+},
 "bob/head/sad": {
 "file": "bob/bob-head-sad.webp",
 "x": -11.27,
@@ -497,12 +609,40 @@
 "w": 22.54,
 "h": 25.62
 },
+"bob/head/sleepy": {
+"file": "bob/bob-head-sleepy.webp",
+"x": -11.28,
+"y": -76.87,
+"w": 34.66,
+"h": 36.14
+},
+"bob/head/smug": {
+"file": "bob/bob-head-smug.webp",
+"x": -11.34,
+"y": -66.47,
+"w": 22.69,
+"h": 25.78
+},
 "bob/head/surprised": {
 "file": "bob/bob-head-surprised.webp",
 "x": -11.27,
 "y": -66.47,
 "w": 22.54,
 "h": 25.78
+},
+"bob/head/wink": {
+"file": "bob/bob-head-wink.webp",
+"x": -11.27,
+"y": -66.55,
+"w": 22.54,
+"h": 25.85
+},
+"bob/head/worried": {
+"file": "bob/bob-head-worried.webp",
+"x": -11.27,
+"y": -66.39,
+"w": 23.0,
+"h": 25.7
 },
 "bob/near/akimbo": {
 "file": "bob/bob-near-akimbo.webp",
@@ -973,12 +1113,54 @@
 "w": 20.14,
 "h": 24.02
 },
+"held/balloon": {
+"file": "held/held-balloon.webp",
+"x": -8.65,
+"y": -70.77,
+"w": 23.38,
+"h": 71.61
+},
+"held/book": {
+"file": "held/held-book.webp",
+"x": -14.56,
+"y": -8.67,
+"w": 29.16,
+"h": 20.34
+},
+"held/cocoa": {
+"file": "held/held-cocoa.webp",
+"x": -7.42,
+"y": -21.12,
+"w": 21.15,
+"h": 21.44
+},
+"held/flower": {
+"file": "held/held-flower.webp",
+"x": -10.09,
+"y": -35.47,
+"w": 22.67,
+"h": 40.39
+},
+"held/mug": {
+"file": "held/held-mug.webp",
+"x": -7.65,
+"y": -32.89,
+"w": 20.79,
+"h": 32.56
+},
 "held/pumpkin": {
 "file": "held/held-pumpkin.webp",
 "x": -11.96,
 "y": -24.35,
 "w": 23.96,
 "h": 24.53
+},
+"held/umbrella": {
+"file": "held/held-umbrella.webp",
+"x": -28.76,
+"y": -54.76,
+"w": 57.76,
+"h": 66.54
 },
 "mack/body/akimbo": {
 "file": "mack/mack-body-akimbo.webp",
@@ -2059,6 +2241,54 @@
 "model": "grok-imagine-image-2.0",
 "made": "2026-10-12"
 },
+"gear/bob/beanie": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"gear/bob/bow": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"gear/bob/bowtie": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"gear/bob/cap": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"gear/bob/cape": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"gear/bob/collar": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"gear/bob/crown": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"gear/bob/earmuffs": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"gear/bob/glasses": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"gear/bob/party": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"gear/bob/scarf": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"gear/bob/shades": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
 "gear/fox/beanie": {
 "model": "grok-imagine-image-2.0",
 "made": "2026-10-12"
@@ -2251,6 +2481,10 @@
 "model": "grok-imagine-image-2.0",
 "made": "2026-10-12"
 },
+"head/bob/angry": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
 "head/bob/grin": {
 "model": "grok-imagine-image-2.0",
 "made": "2026-10-12"
@@ -2263,11 +2497,35 @@
 "model": "grok-imagine-image-2.0",
 "made": "2026-10-12"
 },
+"head/bob/love": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"head/bob/proud": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
 "head/bob/sad": {
 "model": "grok-imagine-image-2.0",
 "made": "2026-10-12"
 },
+"head/bob/sleepy": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"head/bob/smug": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
 "head/bob/surprised": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"head/bob/wink": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"head/bob/worried": {
 "model": "grok-imagine-image-2.0",
 "made": "2026-10-12"
 },
@@ -2415,7 +2673,31 @@
 "model": "grok-imagine-image-2.0",
 "made": "2026-10-12"
 },
+"held/balloon": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"held/book": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"held/cocoa": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"held/flower": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"held/mug": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
 "held/pumpkin": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"held/umbrella": {
 "model": "grok-imagine-image-2.0",
 "made": "2026-10-12"
 },
