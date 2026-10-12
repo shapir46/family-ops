@@ -157,7 +157,7 @@ Today's school lunch is the very first thing in the email, above ☀️ Today an
 <p><i>(BPS elementary lunch menu)</i></p>
 ```
 
-The text after "Lunch today:" is the entrée line from the lunch menu source and rendering rules below. When those rules call for a one-line status instead, the banner carries it: `<h3>🍽️ No school lunch today: no school</h3>`, `<h3>🍽️ Lunch today: couldn't read today's menu</h3>`, or `<h3>🍽️ Lunch menu: source needs updating for {Month}</h3>`. The banner appears every day, Sunday included. It is the only `<h3>` in the email, and lunch never appears again in ☀️ Today or anywhere else.
+The text after "Lunch today:" is the entrée line from the lunch menu source and rendering rules below. **On a day with no school lunch, leave the banner out entirely and do not mention lunch anywhere in the email** (Jacob, 2026-10-12): weekends, no-school days, summer break, and half days whose cell shows no entrée. The email then starts at ☀️ Today. On a school day whose menu cannot be read or found, the banner carries that status instead: `<h3>🍽️ Lunch today: couldn't read today's menu</h3>` or `<h3>🍽️ Lunch menu: source needs updating for {Month}</h3>`. It is the only `<h3>` in the email, and lunch never appears again in ☀️ Today or anywhere else.
 
 **Every item appears exactly once in the whole digest** (Jacob, 2026-10-11). Place each item in the first section it qualifies for, in this order: ☀️ Today (anything happening today) → ⚡ Needs Action (anything Jacob must do, with or without a date) → 🗓️ Next 10 Days (events from tomorrow through today + 10) → 📋 For Your Information (everything else). An item placed in one section is never repeated, summarized or cross-referenced in another: no "Due" lines in Next 10 Days for an action already in Needs Action, no FYI recap of an event already in the calendar, no FYI echo of an action item.
 
@@ -178,7 +178,7 @@ Rendering rules:
 - Show **today's entrée only**, as one short comma-separated line. Do not list the week.
 - **Ignore the Fruit & Vegetable Bar completely.** The PDF carries a large "Daily Fruit & Vegetable Bar" grid beneath the entrée calendar, roughly half the document. Never include it, never summarize it, never mention it. The same goes for the standing "Cold Lunch Choice" row — skip it unless a day has no hot entrée at all.
 - The menu grid runs Monday-Friday with the day number leading each cell. Wednesdays are usually Smart Slice cheese or pepperoni pizza — a useful sanity check that you have read the grid onto the right weekday. **Trust the day number in the cell above everything else.** The first week of school is a known exception where the columns are shifted, so the Wednesday-pizza heuristic misfires there; the day numbers stay correct. A good cross-check: the "No School!" / "½ DAY" cells should line up with the district calendar's no-school and half-day dates. **Known quirk:** the text extraction of these PDFs can come back with garbled weekday labels and can drop days; always match on the day number, sanity-check against the Wednesday-pizza pattern and the half-day dates, and if the cell for today cannot be read confidently, say so rather than guessing.
-- If today is a weekend, a no-school day, a summer-break day, or a half day whose cell shows no entrée (half days are marked "½ Day !!" / "½ DAY" with no meal listed), say that in one line instead — e.g. "No school lunch today: no school" (or "half day"). Never invent menu items. This no-school line takes precedence over the month-mismatch line below.
+- If today is a weekend, a no-school day, a summer-break day, or a half day whose cell shows no entrée (half days are marked "½ Day !!" / "½ DAY" with no meal listed), there is no lunch: leave the banner out (see 🍽️ Lunch banner above). Never invent menu items. This no-lunch rule takes precedence over the month-mismatch line below.
 - If the PDF's header month does not match today's month on a day that IS a school day (and no correct month's PDF can be found via the menus page), render "Lunch menu: source needs updating for {Month}" and flag it in the run report so Jacob can supply the new URL.
 - The banner names its source on its own italic line underneath: <i>(BPS elementary lunch menu)</i>.
 
@@ -239,7 +239,7 @@ Use `outlook_send_mail`:
 - To: jacob@ivanhoecompanies.com, Rebekah.Shapiro@gmail.com
 - Subject: `Family Digest — {Month D, YYYY}` using today's date
 - `bodyType: "html"`
-- Body: the digest as clean semantic HTML. Start with the 🍽️ Lunch banner's `<h3>`, then the first `<h2>` — no `<h1>`, since the subject line already carries the title.
+- Body: the digest as clean semantic HTML. Start with the 🍽️ Lunch banner's `<h3>` (when there is one), then the first `<h2>` — no `<h1>`, since the subject line already carries the title.
 
 **Mobile formatting requirements — this email is read on a phone:**
 - Use `<h3>` for the lunch banner only, `<h2>` for the four section headings, `<p>` for day headings, `<ul>`/`<li>` for everything else. No `<table>` anywhere.
