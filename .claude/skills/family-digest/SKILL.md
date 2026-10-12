@@ -147,7 +147,17 @@ Link handling rules:
 - Do NOT surface the PlayMetrics ICS feed URL anywhere in the digest. It is a credential, not content.
 
 ## Step 4 — Write the digest
-Four sections, in this order.
+A lunch banner, then four sections, in this order.
+
+### 🍽️ Lunch banner (top of the email)
+Today's school lunch is the very first thing in the email, above ☀️ Today and every other section, and is never a bullet (Jacob, 2026-10-12). Render it as exactly two elements:
+
+```
+<h3>🍽️ Lunch today: Smart Slice pepperoni pizza, corn</h3>
+<p><i>(BPS elementary lunch menu)</i></p>
+```
+
+The text after "Lunch today:" is the entrée line from the lunch menu source and rendering rules below. When those rules call for a one-line status instead, the banner carries it: `<h3>🍽️ No school lunch today: no school</h3>`, `<h3>🍽️ Lunch today: couldn't read today's menu</h3>`, or `<h3>🍽️ Lunch menu: source needs updating for {Month}</h3>`. The banner appears every day, Sunday included. It is the only `<h3>` in the email, and lunch never appears again in ☀️ Today or anywhere else.
 
 **Every item appears exactly once in the whole digest** (Jacob, 2026-10-11). Place each item in the first section it qualifies for, in this order: ☀️ Today (anything happening today) → ⚡ Needs Action (anything Jacob must do, with or without a date) → 🗓️ Next 10 Days (events from tomorrow through today + 10) → 📋 For Your Information (everything else). An item placed in one section is never repeated, summarized or cross-referenced in another: no "Due" lines in Next 10 Days for an action already in Needs Action, no FYI recap of an event already in the calendar, no FYI echo of an action item.
 
@@ -156,10 +166,9 @@ The top section — the at-a-glance for the day Jacob is reading it.
 
 - **School day status first.** If today is a no-school day, a half day, or a recess day per the BPS district calendar (Step 2c), that is the FIRST line of this section, bolded, even when nothing else is on. Example: "**No school today — Labor Day.**" or "**Half day today — AM only, dismissal 11:50.**" When a half day applies only to certain grades, say which child it affects and give the dismissal time — and say what the other kids are doing, so Jacob is not left guessing. Do not mention busing. This is the single most schedule-disrupting fact in the digest and must not be buried. During summer, before the first day of school, say so once and name the first day. On a Sunday, a Temple Israel Sunday School session from Step 2c-ii's live sources leads the day the same way.
 - **Events today:** every family/school event on today's date, from all calendar sources and from dated email items. Bullet each one, leading with the bolded time, and name the child where the source identifies one. Note any overlap in one short clause. Routine daily dismissal times belong in the school-status line, not as their own bullets. If nothing is on, write a single line: "Nothing on the calendar today."
-- **Lunch menu:** today's school lunch menu, per the source below.
 - **Newspaper link** (Mon–Sat only; never on Sunday, when there is no paper): the last bullet of ☀️ Today is `<li><b>📰 Newspaper</b> — <a href="LINK">Today's Fairfax Daily Scoop</a> (ready about 20 min after this email)</li>`, where LINK is the exact output of `./fo paper-link` (run it; never build the link by hand). With `PAPER_LINK_KEY` set it is a no-login link to the Mac mini print relay, which shows a "not ready yet" page until the paper prints; without the key it falls back to the private GitHub archive. The link is not a credential and may be emailed; never print, log or commit `PAPER_LINK_KEY` itself (Jacob, 2026-10-12).
 
-**Lunch menu source.** Birmingham Public Schools publishes the elementary lunch menu as a monthly PDF. The menu covers **Bingham Farms, Greenfield, Pierce, and Quarton** elementaries, so it applies to the kids at Quarton. It does NOT cover Derby Middle School; there is no Derby menu configured, so never show a menu for a Derby student.
+**Lunch menu source** (for the 🍽️ Lunch banner above). Birmingham Public Schools publishes the elementary lunch menu as a monthly PDF. The menu covers **Bingham Farms, Greenfield, Pierce, and Quarton** elementaries, so it applies to the kids at Quarton. It does NOT cover Derby Middle School; there is no Derby menu configured, so never show a menu for a Derby student.
 Known monthly URLs are listed in `data/lunch-menus.yaml` (fetch with the web fetch tool, which returns extracted text directly — no PDF tooling needed).
 
 
@@ -169,9 +178,9 @@ Rendering rules:
 - Show **today's entrée only**, as one short comma-separated line. Do not list the week.
 - **Ignore the Fruit & Vegetable Bar completely.** The PDF carries a large "Daily Fruit & Vegetable Bar" grid beneath the entrée calendar, roughly half the document. Never include it, never summarize it, never mention it. The same goes for the standing "Cold Lunch Choice" row — skip it unless a day has no hot entrée at all.
 - The menu grid runs Monday-Friday with the day number leading each cell. Wednesdays are usually Smart Slice cheese or pepperoni pizza — a useful sanity check that you have read the grid onto the right weekday. **Trust the day number in the cell above everything else.** The first week of school is a known exception where the columns are shifted, so the Wednesday-pizza heuristic misfires there; the day numbers stay correct. A good cross-check: the "No School!" / "½ DAY" cells should line up with the district calendar's no-school and half-day dates. **Known quirk:** the text extraction of these PDFs can come back with garbled weekday labels and can drop days; always match on the day number, sanity-check against the Wednesday-pizza pattern and the half-day dates, and if the cell for today cannot be read confidently, say so rather than guessing.
-- If today is a weekend, a no-school day, a summer-break day, or a half day whose cell shows no entrée (half days are marked "½ Day !!" / "½ DAY" with no meal listed), say that in one line instead — e.g. "Lunch menu: no school today." Never invent menu items. This no-school line takes precedence over the month-mismatch line below.
+- If today is a weekend, a no-school day, a summer-break day, or a half day whose cell shows no entrée (half days are marked "½ Day !!" / "½ DAY" with no meal listed), say that in one line instead — e.g. "No school lunch today: no school" (or "half day"). Never invent menu items. This no-school line takes precedence over the month-mismatch line below.
 - If the PDF's header month does not match today's month on a day that IS a school day (and no correct month's PDF can be found via the menus page), render "Lunch menu: source needs updating for {Month}" and flag it in the run report so Jacob can supply the new URL.
-- Every item names its source, including the lunch line: <i>(BPS elementary lunch menu)</i>.
+- The banner names its source on its own italic line underneath: <i>(BPS elementary lunch menu)</i>.
 
 ### ⚡ Needs Action
 Anything with a deadline, a decision, or a task — from new mail and carried-forward items alike. One bullet each:
@@ -230,10 +239,10 @@ Use `outlook_send_mail`:
 - To: jacob@ivanhoecompanies.com, Rebekah.Shapiro@gmail.com
 - Subject: `Family Digest — {Month D, YYYY}` using today's date
 - `bodyType: "html"`
-- Body: the digest as clean semantic HTML. Start at the first `<h2>` — no `<h1>`, since the subject line already carries the title.
+- Body: the digest as clean semantic HTML. Start with the 🍽️ Lunch banner's `<h3>`, then the first `<h2>` — no `<h1>`, since the subject line already carries the title.
 
 **Mobile formatting requirements — this email is read on a phone:**
-- Use `<h2>` for the four section headings, `<p>` for day headings, `<ul>`/`<li>` for everything else. No `<table>` anywhere.
+- Use `<h3>` for the lunch banner only, `<h2>` for the four section headings, `<p>` for day headings, `<ul>`/`<li>` for everything else. No `<table>` anywhere.
 - Keep each bullet to roughly one or two phone lines. If an item needs more, split the extra context into a short trailing sentence rather than one long run-on line.
 - Bold the scannable anchor (date, time, or URGENT) at the START of each bullet so the eye can skim the left edge.
 - **Links must always be `<a href="...">` with short descriptive text.** A pasted tracking URL destroys mobile line wrapping — these URLs run hundreds of characters. Where no link exists, name the domain in plain text (e.g. "pay at tbebloomfieldhills.shulcloud.com").
