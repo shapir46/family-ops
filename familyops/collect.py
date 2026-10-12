@@ -109,6 +109,7 @@ def collect(today: date) -> dict:
         "mda": teams.section(teams.MDA, today, events, pm_past),              # Elle's 'MDA Kicks & Giggles' box, or None (hide)
         "spartans": teams.section(teams.SPARTANS, today, events, sched_past, mce_scores or {}),  # Ari's 'Spartans Hoop Scoop' box, or None (hide)
         "fantasy": ff,    # Ari's ESPN league summary, or None (not configured / failed: print nothing)
+        "ari_fantasy": fantasy.box(ff, today),   # the newspaper's 'Ari's Fantasy Team' box, or None (hide)
         "almanac": alm,   # [today, tomorrow]: holidays, and Shabbat sunset on Fridays
         "due": due(today),
         "delivery": {"email": None, "dashboard": None, "print": None, "filed": None},
