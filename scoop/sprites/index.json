@@ -1,11 +1,74 @@
 {
 "sprites": {
+"bear/body/akimbo": {
+"file": "bear/bear-body-akimbo.webp",
+"x": -37.48,
+"y": -109.28,
+"w": 77.25,
+"h": 111.61
+},
+"bear/body/cheer": {
+"file": "bear/bear-body-cheer.webp",
+"x": -37.0,
+"y": -114.95,
+"w": 74.0,
+"h": 98.94
+},
+"bear/body/dance": {
+"file": "bear/bear-body-dance.webp",
+"x": -45.58,
+"y": -109.56,
+"w": 77.48,
+"h": 112.18
+},
 "bear/body/facepalm": {
 "file": "bear/bear-body-facepalm.webp",
 "x": -35.47,
 "y": -110.57,
 "w": 68.55,
 "h": 112.9
+},
+"bear/body/hold": {
+"file": "bear/bear-body-hold.webp",
+"x": -34.43,
+"y": -107.98,
+"w": 87.19,
+"h": 110.2
+},
+"bear/body/point": {
+"file": "bear/bear-body-point.webp",
+"x": -35.37,
+"y": -108.33,
+"w": 91.58,
+"h": 110.68
+},
+"bear/body/run": {
+"file": "bear/bear-body-run.webp",
+"x": -34.93,
+"y": -109.4,
+"w": 92.73,
+"h": 111.22
+},
+"bear/body/scared": {
+"file": "bear/bear-body-scared.webp",
+"x": -38.62,
+"y": -112.24,
+"w": 77.83,
+"h": 109.96
+},
+"bear/body/shrug": {
+"file": "bear/bear-body-shrug.webp",
+"x": -48.63,
+"y": -110.52,
+"w": 97.51,
+"h": 112.57
+},
+"bear/body/sit": {
+"file": "bear/bear-body-sit.webp",
+"x": -32.83,
+"y": -89.32,
+"w": 68.01,
+"h": 92.95
 },
 "bear/body/stand": {
 "file": "bear/bear-body-stand.webp",
@@ -14,12 +77,103 @@
 "w": 70.94,
 "h": 108.9
 },
+"bear/body/tada": {
+"file": "bear/bear-body-tada.webp",
+"x": -53.68,
+"y": -108.39,
+"w": 107.6,
+"h": 110.25
+},
+"bear/body/think": {
+"file": "bear/bear-body-think.webp",
+"x": -28.34,
+"y": -106.71,
+"w": 58.24,
+"h": 107.83
+},
+"bear/body/wave": {
+"file": "bear/bear-body-wave.webp",
+"x": -35.32,
+"y": -109.54,
+"w": 80.3,
+"h": 111.54
+},
 "bear/gear/beanie/head": {
 "file": "bear/bear-gear-beanie-head.webp",
 "x": -21.47,
 "y": -126.29,
 "w": 50.97,
 "h": 36.97
+},
+"bear/gear/bow/head": {
+"file": "bear/bear-gear-bow-head.webp",
+"x": -19.19,
+"y": -112.8,
+"w": 22.14,
+"h": 15.99
+},
+"bear/gear/bowtie/neck": {
+"file": "bear/bear-gear-bowtie-neck.webp",
+"x": -6.02,
+"y": -65.3,
+"w": 19.98,
+"h": 7.22
+},
+"bear/gear/cap/head": {
+"file": "bear/bear-gear-cap-head.webp",
+"x": -18.9,
+"y": -117.74,
+"w": 62.58,
+"h": 27.71
+},
+"bear/gear/cape/back": {
+"file": "bear/bear-gear-cape-back.webp",
+"x": -55.03,
+"y": -59.17,
+"w": 80.98,
+"h": 52.06
+},
+"bear/gear/cape/neck": {
+"file": "bear/bear-gear-cape-neck.webp",
+"x": -14.78,
+"y": -68.81,
+"w": 29.52,
+"h": 10.48
+},
+"bear/gear/collar/neck": {
+"file": "bear/bear-gear-collar-neck.webp",
+"x": -14.8,
+"y": -68.79,
+"w": 29.49,
+"h": 16.97
+},
+"bear/gear/crown/head": {
+"file": "bear/bear-gear-crown-head.webp",
+"x": -12.75,
+"y": -118.92,
+"w": 33.48,
+"h": 18.54
+},
+"bear/gear/earmuffs/head": {
+"file": "bear/bear-gear-earmuffs-head.webp",
+"x": -26.96,
+"y": -107.67,
+"w": 61.26,
+"h": 33.46
+},
+"bear/gear/glasses/head": {
+"file": "bear/bear-gear-glasses-head.webp",
+"x": -9.99,
+"y": -95.51,
+"w": 29.97,
+"h": 13.0
+},
+"bear/gear/party/head": {
+"file": "bear/bear-gear-party-head.webp",
+"x": -7.96,
+"y": -138.04,
+"w": 29.34,
+"h": 39.52
 },
 "bear/gear/scarf/neck": {
 "file": "bear/bear-gear-scarf-neck.webp",
@@ -28,12 +182,75 @@
 "w": 33.34,
 "h": 32.5
 },
+"bear/gear/shades/head": {
+"file": "bear/bear-gear-shades-head.webp",
+"x": -9.99,
+"y": -95.51,
+"w": 29.97,
+"h": 13.0
+},
+"bear/head/angry": {
+"file": "bear/bear-head-angry.webp",
+"x": -23.29,
+"y": -123.38,
+"w": 59.62,
+"h": 61.61
+},
+"bear/head/grin": {
+"file": "bear/bear-head-grin.webp",
+"x": -23.23,
+"y": -108.15,
+"w": 53.44,
+"h": 46.46
+},
 "bear/head/happy": {
 "file": "bear/bear-head-happy.webp",
 "x": -23.23,
 "y": -108.27,
 "w": 53.44,
 "h": 46.58
+},
+"bear/head/laugh": {
+"file": "bear/bear-head-laugh.webp",
+"x": -23.23,
+"y": -108.63,
+"w": 53.8,
+"h": 46.94
+},
+"bear/head/love": {
+"file": "bear/bear-head-love.webp",
+"x": -23.23,
+"y": -108.27,
+"w": 53.44,
+"h": 46.58
+},
+"bear/head/proud": {
+"file": "bear/bear-head-proud.webp",
+"x": -23.23,
+"y": -108.15,
+"w": 53.44,
+"h": 46.46
+},
+"bear/head/sad": {
+"file": "bear/bear-head-sad.webp",
+"x": -23.23,
+"y": -108.63,
+"w": 54.4,
+"h": 46.94
+},
+"bear/head/sleepy": {
+"file": "bear/bear-head-sleepy.webp",
+"x": -23.98,
+"y": -139.16,
+"w": 79.67,
+"h": 77.43
+},
+"bear/head/smug": {
+"file": "bear/bear-head-smug.webp",
+"x": -23.23,
+"y": -108.39,
+"w": 53.44,
+"h": 46.7
 },
 "bear/head/surprised": {
 "file": "bear/bear-head-surprised.webp",
@@ -42,6 +259,41 @@
 "w": 53.44,
 "h": 46.58
 },
+"bear/head/wink": {
+"file": "bear/bear-head-wink.webp",
+"x": -23.23,
+"y": -108.27,
+"w": 53.44,
+"h": 46.58
+},
+"bear/head/worried": {
+"file": "bear/bear-head-worried.webp",
+"x": -23.23,
+"y": -108.27,
+"w": 53.44,
+"h": 46.58
+},
+"bear/near/akimbo": {
+"file": "bear/bear-near-akimbo.webp",
+"x": 13.22,
+"y": -69.88,
+"w": 25.59,
+"h": 33.52
+},
+"bear/near/cheer": {
+"file": "bear/bear-near-cheer.webp",
+"x": 13.23,
+"y": -103.83,
+"w": 22.6,
+"h": 40.63
+},
+"bear/near/dance": {
+"file": "bear/bear-near-dance.webp",
+"x": 9.12,
+"y": -96.91,
+"w": 22.77,
+"h": 40.73
+},
 "bear/near/facepalm": {
 "file": "bear/bear-near-facepalm.webp",
 "x": 2.28,
@@ -49,12 +301,89 @@
 "w": 26.51,
 "h": 39.59
 },
+"bear/near/hold": {
+"file": "bear/bear-near-hold.webp",
+"x": 13.13,
+"y": -69.78,
+"w": 38.67,
+"h": 25.03
+},
+"bear/near/point": {
+"file": "bear/bear-near-point.webp",
+"x": 13.14,
+"y": -72.39,
+"w": 41.99,
+"h": 18.15
+},
+"bear/near/run": {
+"file": "bear/bear-near-run.webp",
+"x": 18.9,
+"y": -66.12,
+"w": 38.89,
+"h": 22.53
+},
+"bear/near/scared": {
+"file": "bear/bear-near-scared.webp",
+"x": 13.23,
+"y": -94.76,
+"w": 25.98,
+"h": 36.61
+},
+"bear/near/shrug": {
+"file": "bear/bear-near-shrug.webp",
+"x": 13.11,
+"y": -72.67,
+"w": 35.77,
+"h": 25.11
+},
+"bear/near/sit": {
+"file": "bear/bear-near-sit.webp",
+"x": 10.45,
+"y": -50.88,
+"w": 23.6,
+"h": 38.75
+},
 "bear/near/stand": {
 "file": "bear/bear-near-stand.webp",
 "x": 13.17,
 "y": -69.78,
 "w": 22.89,
 "h": 41.4
+},
+"bear/near/tada": {
+"file": "bear/bear-near-tada.webp",
+"x": 13.12,
+"y": -76.73,
+"w": 40.8,
+"h": 22.51
+},
+"bear/near/think": {
+"file": "bear/bear-near-think.webp",
+"x": 1.27,
+"y": -83.44,
+"w": 27.54,
+"h": 29.24
+},
+"bear/near/wave": {
+"file": "bear/bear-near-wave.webp",
+"x": 13.13,
+"y": -91.49,
+"w": 31.0,
+"h": 37.3
+},
+"fox/body/stand": {
+"file": "fox/fox-body-stand.webp",
+"x": -41.18,
+"y": -91.83,
+"w": 63.08,
+"h": 93.44
+},
+"fox/near/stand": {
+"file": "fox/fox-near-stand.webp",
+"x": 5.85,
+"y": -48.09,
+"w": 15.13,
+"h": 26.14
 },
 "held/pumpkin": {
 "file": "held/held-pumpkin.webp",
@@ -72,7 +401,43 @@
 }
 },
 "jobs": {
+"body/bear/akimbo": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"body/bear/cheer": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"body/bear/dance": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
 "body/bear/facepalm": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"body/bear/hold": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"body/bear/point": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"body/bear/run": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"body/bear/scared": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"body/bear/shrug": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"body/bear/sit": {
 "model": "grok-imagine-image-2.0",
 "made": "2026-10-12"
 },
@@ -80,7 +445,59 @@
 "model": "grok-imagine-image-2.0",
 "made": "2026-10-12"
 },
+"body/bear/tada": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"body/bear/think": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"body/bear/wave": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"body/fox/stand": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
 "gear/bear/beanie": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"gear/bear/bow": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"gear/bear/bowtie": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"gear/bear/cap": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"gear/bear/cape": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"gear/bear/collar": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"gear/bear/crown": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"gear/bear/earmuffs": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"gear/bear/glasses": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"gear/bear/party": {
 "model": "grok-imagine-image-2.0",
 "made": "2026-10-12"
 },
@@ -88,11 +505,55 @@
 "model": "grok-imagine-image-2.0",
 "made": "2026-10-12"
 },
+"gear/bear/shades": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"head/bear/angry": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"head/bear/grin": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
 "head/bear/happy": {
 "model": "grok-imagine-image-2.0",
 "made": "2026-10-12"
 },
+"head/bear/laugh": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"head/bear/love": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"head/bear/proud": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"head/bear/sad": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"head/bear/sleepy": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"head/bear/smug": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
 "head/bear/surprised": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"head/bear/wink": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"head/bear/worried": {
 "model": "grok-imagine-image-2.0",
 "made": "2026-10-12"
 },
