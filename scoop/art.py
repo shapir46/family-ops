@@ -5,11 +5,13 @@ wear any FACE and GEAR and hold a HELD prop. A daily strip is data, not code: ed
 picks a scene, places the cast and writes the bubbles (README: "Comic"). Nothing here is family data.
 
   python art.py --list               print the library (cast, poses, faces, gear, held, props, scenes)
-  python art.py --sheet cast.html    draw a model sheet of every character, pose, face, prop and scene
+  python art.py --sheet cast.html    draw a model sheet of every character, pose, face, prop and scene (painted
+                                     library where it exists; add --drawn for the drawn rig)
 
 Scenes are drawn here (SCENES) or painted: PAINTED backdrops are Grok-made scenery in backdrops/ (backdrops.py;
-README: "Comic: painted backdrops"). Each day repaint.py has Grok repaint the composed panels, characters included
-(README: "Comic: painted by Grok"); the composition, and the drawn fallback, always come from here.
+README: "Comic: painted backdrops"). The cast, gear and props are drawn here AND were painted once by Grok into the
+sprites/ library (sprites.py, README: "Comic: painted character library"): painted_figure() stacks those sprites on
+this rig, so the daily comic uses the painted cast with no API call, and falls back to the drawing for a missing part.
 """
 import base64
 import html as _html
@@ -802,8 +804,9 @@ def who(name):
     return CAST[k]
 
 
-def figure(C, pose='stand', face='happy', gear=None, hold=None, hold_opt=None, shirt=None, flip=False):
-    """One character in local units: origin at the feet, facing right (flip: the caller mirrors it; text is kept readable)."""
+def figure_parts(C, pose='stand', face='happy', gear=None, hold=None, hold_opt=None, shirt=None, flip=False):
+    """One character as named layers, bottom to top: [(name, svg, frame)]. Frames: 'root' (feet at the origin),
+    'legs' and 'upper' (pose lift and lean), 'head' (upper + head tilt). figure() draws them; sprites.py paints them."""
     C._flip = flip
     if pose not in POSES:
         raise SystemExit(f"comic: unknown pose '{pose}' (poses: {', '.join(POSES)})")
@@ -820,16 +823,30 @@ def figure(C, pose='stand', face='happy', gear=None, hold=None, hold_opt=None, s
     legs = '' if sit else C.leg(-1, *P['LL']) + C.leg(1, *P['RL'])
     far, _ = C.arm(-1, P['L'])
     near, hand = C.arm(1, P['R'])
-    hx, hy = C.neck[0], C.neck[1]
-    headg = grp(C.head_back() + C.head_front(face) + gear_head(C, gear), f'rotate({P.get("tilt", 0)} {hx} {hy})')
     prop = held(hold, hand[0], hand[1], max(.85, C.hand_r / 6), hold_opt) if hold else ''
     if hold and not prop:
         raise SystemExit(f"comic: unknown held prop '{hold}' (held: {', '.join(HELD)})")
     feet = grp(C.sit_feet(), f'translate(0,{-dy})') if sit else ''
-    upper = C.back(P) + gear_back(C, gear) + C.body() + feet + gear_neck(C, gear) + far + headg + prop + near
-    fx = motion(P.get('fx'), C, hand)
-    lean = P.get('lean', 0)
-    return grp(grp(legs, f'translate(0,{dy})') + grp(upper + fx, f'translate(0,{dy}) rotate({lean} 0 {C.hip[1]})'))
+    return [('legs', legs, 'legs'), ('back', C.back(P), 'upper'), ('gear_back', gear_back(C, gear), 'upper'),
+            ('body', C.body() + feet, 'upper'), ('gear_neck', gear_neck(C, gear), 'upper'), ('far', far, 'upper'),
+            ('head', C.head_back() + C.head_front(face), 'head'), ('gear_head', gear_head(C, gear), 'head'),
+            ('prop', prop, 'upper'), ('near', near, 'upper'), ('fx', motion(P.get('fx'), C, hand), 'upper')], hand
+
+
+def frames(C, pose):
+    """The SVG transform of each figure_parts frame, from the root frame."""
+    P = POSES[pose]
+    dy = C.sit_drop if P.get('sit') else P.get('dy', 0)
+    upper = f'translate(0,{dy}) rotate({P.get("lean", 0)} 0 {C.hip[1]})'
+    return {'root': '', 'legs': f'translate(0,{dy})', 'upper': upper,
+            'head': f'{upper} rotate({P.get("tilt", 0)} {C.neck[0]} {C.neck[1]})'}
+
+
+def figure(C, pose='stand', face='happy', gear=None, hold=None, hold_opt=None, shirt=None, flip=False, skip=()):
+    """One character in local units: origin at the feet, facing right (flip: the caller mirrors it; text is kept readable)."""
+    parts, _ = figure_parts(C, pose, face, gear, hold, hold_opt, shirt, flip)
+    T = frames(C, pose)
+    return grp(''.join(grp(svg, T[fr]) for name, svg, fr in parts if svg and name not in skip))
 
 
 def motion(kind, C, hand):
@@ -1013,22 +1030,110 @@ def painted(name):
     return _bd_cache[name], PAINTED[name].get('ground', 108)
 
 
-# Painted strip (Jacob, 2026-10-12): repaint.py has Grok repaint each composed panel into painted/<key>.jpg (work dir).
-PAINT_MODEL = 'grok-imagine-image-2.0'      # keeps poses, expressions and places best (tested 2026-10-12)
+# ---------------------------------------------------------------- painted character library (Jacob, 2026-10-12)
+# Grok painted every pose, face, gear item and prop once (sprites.py); the sprites sit in the same frames as the
+# drawn parts, so any combination stacks up like figure() does. No API call happens here. README: "Comic: painted
+# character library".
+_SP = Path(__file__).resolve().parent / 'sprites'
+_SPI = json.loads((_SP / 'index.json').read_text()) if (_SP / 'index.json').exists() else {'sprites': {}, 'jobs': {}}
+SPRITES, SPRITE_JOBS = _SPI['sprites'], _SPI['jobs']
+COMIC_STATS = {'painted': 0, 'drawn': 0}
+_b64 = {}
 
 
-def painted_file(p):
-    """Where repaint.py keeps this panel's painting. The key covers the composition, not the bubbles or caption."""
-    import hashlib
-    comp = {k: v for k, v in p.items() if k not in ('say', 'caption', 'paint')}
-    h = hashlib.sha1(json.dumps([comp, PAINT_MODEL], sort_keys=True).encode()).hexdigest()[:16]
-    return Path('painted') / f'{h}.jpg'
+def _lum(c):
+    r, g, b = (int(c[i:i + 2], 16) / 255 for i in (1, 3, 5))
+    return r, g, b, max(.05, .299 * r + .587 * g + .114 * b)
 
 
-def strip_painted(spec):
-    """True when every panel has its Grok painting (all or nothing, so the strip never mixes styles)."""
-    panels = (spec or {}).get('panels', [])
-    return (spec or {}).get('paint') is not False and len(panels) == 4 and all(painted_file(p).exists() for p in panels)
+def _hue(c):
+    import colorsys
+    return colorsys.rgb_to_hsv(*_lum(c)[:3])[0] * 360
+
+
+def tint_filter(default, target):
+    """(id, defs): recolor an item painted in `default` to `target` by turning its hue and saturation. White,
+    gray and black parts (fur, pompoms, ink outlines) are left as they are."""
+    import colorsys
+    if not (isinstance(target, str) and re.fullmatch(r'#[0-9a-fA-F]{6}', target)) or target.lower() == default.lower():
+        return '', ''
+    hd, sd, _ = colorsys.rgb_to_hsv(*_lum(default)[:3])
+    ht, st, _ = colorsys.rgb_to_hsv(*_lum(target)[:3])
+    deg, sat = round((ht - hd) * 360) % 360, round(min(3, st / max(sd, .05)), 2)
+    fid = f'tn{default[1:]}{target[1:]}'.lower()
+    return fid, (f'<filter id="{fid}" color-interpolation-filters="sRGB"><feColorMatrix type="hueRotate" values="{deg}"/>'
+                 f'<feColorMatrix type="saturate" values="{sat}"/></filter>')
+
+
+def hue_filter(default, target):
+    if not (isinstance(target, str) and re.fullmatch(r'#[0-9a-fA-F]{6}', target)):
+        return '', ''
+    deg = round(_hue(target) - _hue(default)) % 360
+    if deg == 0:
+        return '', ''
+    return f'hr{deg}', f'<filter id="hr{deg}" color-interpolation-filters="sRGB"><feColorMatrix type="hueRotate" values="{deg}"/></filter>'
+
+
+def sprite(key, tf='', fid=''):
+    """An <image> of one library sprite at its own place in its frame."""
+    e = SPRITES[key]
+    if key not in _b64:
+        _b64[key] = base64.b64encode((_SP / e['file']).read_bytes()).decode()
+    img = (f'<image href="data:image/webp;base64,{_b64[key]}" x="{e["x"]}" y="{e["y"]}" width="{e["w"]}" height="{e["h"]}" '
+           f'preserveAspectRatio="none"{f" filter={chr(34)}url(#{fid}){chr(34)}" if fid else ""}/>')
+    return f'<g transform="{tf}">{img}</g>' if tf else img
+
+
+# default colors the items were painted in (gear recolors from these)
+HELD_COLOR = {'balloon': '#e0457b', 'umbrella': '#e0457b', 'flower': '#f6a6c6', 'flag': '#2f5aa8', 'leaf': '#e0782f',
+              'mug': '#3b6fb6', 'cocoa': '#c9443b', 'book': '#c9443b', 'gift': '#e0457b', 'fish': '#7fb3d5'}
+PROP_COLOR = {'pumpkin': '#e8823a', 'tree': '#e0782f', 'leafpile': '#e0782f', 'kite': '#e0457b', 'bucket': '#e0457b',
+              'tent': '#2f7d4f', 'sled': '#c9443b', 'bush': '#7fbf6a', 'gift': '#e0457b', 'fish': '#7fb3d5'}
+
+
+def painted_figure(C, pose='stand', face='happy', gear=None, hold=None, hold_opt=None, shirt=None, flip=False, warn=None, where=''):
+    """The character from the painted library, or None (with a warning) when a part has not been painted yet."""
+    parts, hand = figure_parts(C, pose, face, gear, hold, hold_opt, shirt, flip)
+    k = C.key
+    gear = dict(gear or {})
+    if k == 'mack' and 'collar' not in gear:
+        gear['collar'] = True                      # Mackenzie's own collar, as in figure_parts
+    gear = {g: v for g, v in gear.items() if v}
+    need = [f'body/{k}/{pose}', f'head/{k}/{face}'] + [f'gear/{k}/{g}' for g in gear] + ([f'held/{hold}'] if hold else [])
+    missing = [j for j in need if j not in SPRITE_JOBS]
+    if missing:
+        if warn is not None:
+            warn.append(f"{where}: {C.name} is drawn, not painted: the library has no {', '.join(missing)} yet (sprites.py)")
+        return None
+    T = frames(C, pose)
+    defs, out = '', {'back': '', 'neck': '', 'head': ''}
+    for g, v in gear.items():
+        fid, fd = tint_filter(GEAR_COLOR[g], v) if g in GEAR_COLOR else ('', '')
+        defs += fd
+        for part in out:
+            if f'{k}/gear/{g}/{part}' in SPRITES:
+                out[part] += sprite(f'{k}/gear/{g}/{part}', T['head'] if part == 'head' else T['upper'], fid)
+    if k == 'bob' and shirt and shirt.lower() != Bob.SHIRT and warn is not None:
+        warn.append(f"{where}: painted Bob always wears his red shirt; 'shirt' is ignored")
+    held_svg = ''
+    if hold:
+        fid, fd = hue_filter(HELD_COLOR[hold], hold_opt) if hold in HELD_COLOR else ('', '')
+        defs += fd
+        held_svg = sprite(f'held/{hold}', f'{T["upper"]} translate({hand[0]:.1f},{hand[1]:.1f}) scale({max(.85, C.hand_r / 6):.2f})', fid)
+    fx = ''.join(grp(svg, T[fr]) for n, svg, fr in parts if n == 'fx' and svg)
+    body = f'{k}/body/{pose}'
+    return grp((f'<defs>{defs}</defs>' if defs else '') + out['back'] + sprite(body) + out['neck'] + sprite(f'{k}/head/{face}', T['head']) +
+               out['head'] + held_svg + sprite(f'{k}/near/{pose}') + fx)
+
+
+def painted_prop(name, x, y, s=1, opt=None, held=False):
+    """A scene prop (or held prop) from the painted library at (x, y), size s; None when it has not been painted."""
+    key = f'held/{name}' if held or (name in HELD and f'prop/{name}' not in SPRITES) else f'prop/{name}'
+    if key not in SPRITES:
+        return None
+    fid, fd = hue_filter((HELD_COLOR if key.startswith('held') else PROP_COLOR).get(name, ''), opt) if opt and \
+        name in (HELD_COLOR if key.startswith('held') else PROP_COLOR) else ('', '')
+    return (f'<defs>{fd}</defs>' if fd else '') + sprite(key, f'translate({x:.1f},{y:.1f}) scale({s})', fid)
 
 
 def uses_painted(spec):
@@ -1192,10 +1297,6 @@ def caption(text, x=4, y=4):
 def panel(p, idx=0, warn=None):
     warn = warn if warn is not None else []
     name = p.get('scene', 'plain')
-    art_img = ''
-    if p.get('paint'):                         # comic() sets this when the whole strip is painted
-        b64 = base64.b64encode(painted_file(p).read_bytes()).decode()
-        art_img = el('image', href=f'data:image/jpeg;base64,{b64}', x=1, y=1, width=W - 2, height=H - 2, preserveAspectRatio='xMidYMid slice')
     if name in PAINTED:
         bg, ground = painted(name)
         if p.get('sky'):
@@ -1215,7 +1316,7 @@ def panel(p, idx=0, warn=None):
             name, x, y, s, opt, front = (list(pr) + [None] * 6)[:6]
             y = ground if y is None else y
             s = s or 1
-        svg = prop(name, x, y, s, opt)
+        svg = (painted_prop(name, x, y, s, opt) if p.get('paint', True) and SPRITES else None) or prop(name, x, y, s, opt)
         if front:
             front_props += svg
         else:
@@ -1226,7 +1327,10 @@ def panel(p, idx=0, warn=None):
         y = c.get('y', ground)
         s = C.scale * c.get('s', 1)
         flip = c.get('flip', x > 100)
-        fig = figure(C, c.get('pose', 'stand'), c.get('face', 'happy'), c.get('gear'), c.get('hold'), c.get('hold_opt'), c.get('shirt'), flip)
+        args = (C, c.get('pose', 'stand'), c.get('face', 'happy'), c.get('gear'), c.get('hold'), c.get('hold_opt'), c.get('shirt'), flip)
+        fig = painted_figure(*args, warn=warn, where=f'panel {idx + 1}') if p.get('paint', True) and SPRITES else None
+        COMIC_STATS['painted' if fig else 'drawn'] += 1
+        fig = fig or figure(*args)
         cast_svg += grp(fig, f'translate({x:.1f},{y:.1f}) scale({-s if flip else s:.3f},{s:.3f})')
         if name in PAINTED:
             shadows += ell(x, y + .5, 24 * s, 2.6, INK, 0, opacity=.2)
@@ -1270,7 +1374,7 @@ def panel(p, idx=0, warn=None):
         rects.append((x, y, w, h))
         out += bubble_svg(b.get('kind', 'say'), x, y, w, lines, tail)
     frame = rct(1, 1, W - 2, H - 2, 'none', 2)
-    pic = art_img or f'{bg}{shadows}{back_props}{cast_svg}{front_props}'     # Grok's painting replaces the drawn art
+    pic = f'{bg}{shadows}{back_props}{cast_svg}{front_props}'
     return f'<svg viewBox="0 0 {W} {H}" width="100%" xmlns="http://www.w3.org/2000/svg">{pic}{out}{frame}</svg>'
 
 
@@ -1306,9 +1410,8 @@ def comic(spec=None, warn=None):
     panels = spec.get('panels', [])
     if len(panels) != 4:
         raise SystemExit(f'comic: needs exactly 4 panels, got {len(panels)}')
-    paint = strip_painted(spec)
-    if not paint and spec.get('paint') is not False and any(painted_file(p).exists() for p in panels):
-        warns.append('only some panels are painted (a panel changed since repaint.py ran?): printing the drawn strip; run repaint.py again')
+    paint = spec.get('paint') is not False
+    COMIC_STATS.update(painted=0, drawn=0)
     svgs = ''.join(panel({**p, 'paint': paint}, i, warns) for i, p in enumerate(panels))
     if warn is None:
         for w_ in warns:
@@ -1394,19 +1497,25 @@ def library():
             'painted scenes': {k: f"{v['season']}: {v['subject']}" for k, v in PAINTED.items()}, 'weather icons': WX_ICONS}
 
 
-def sheet():
+def character(C, pose='stand', face='happy', gear=None, hold=None, paint=True):
+    """Painted from the library when it has every part, else drawn."""
+    return (painted_figure(C, pose, face, gear, hold) if paint and SPRITES else None) or figure(C, pose, face, gear, hold)
+
+
+def sheet(paint=True):
     cell = lambda inner, label: (f'<div class="cell"><svg viewBox="0 0 120 100" xmlns="http://www.w3.org/2000/svg">'
                                  f'{rct(0, 0, 120, 100, "#f6f1e3", 0)}{pth("M0,92 H120", "none", .6, "#bbb")}{inner}</svg><div>{label}</div></div>')
     rows = []
     for C in CAST.values():
-        figs = ''.join(cell(grp(figure(C, p), f'translate(60,92) scale({C.scale * 1.05:.2f})'), p) for p in POSES)
-        faces = ''.join(cell(grp(figure(C, 'stand', f), f'translate(60,{92 + C.top * C.scale * 1.7 * -.42:.0f}) scale({C.scale * 1.7:.2f})'), f) for f in FACES)
+        figs = ''.join(cell(grp(character(C, p, paint=paint), f'translate(60,92) scale({C.scale * 1.05:.2f})'), p) for p in POSES)
+        faces = ''.join(cell(grp(character(C, 'stand', f, paint=paint), f'translate(60,{92 + C.top * C.scale * 1.7 * -.42:.0f}) scale({C.scale * 1.7:.2f})'), f) for f in FACES)
         rows.append(f'<h2>{C.name} <small>({C.key})</small></h2><div class="row">{figs}</div><div class="row">{faces}</div>')
-    gear_demo = ''.join(cell(grp(figure(CAST[k], 'stand', 'happy', {g_: True}), f'translate(60,92) scale({CAST[k].scale * 1.05:.2f})'), g_)
+    gear_demo = ''.join(cell(grp(character(CAST[k], 'stand', 'happy', {g_: True}, paint=paint), f'translate(60,92) scale({CAST[k].scale * 1.05:.2f})'), g_)
                         for g_, k in zip(GEAR, ['bear', 'fox', 'uni', 'bob', 'mack', 'bear', 'uni', 'fox', 'bob', 'bear', 'bob', 'mack']))
-    held_demo = ''.join(cell(grp(figure(CAST[k], 'hold', 'happy', hold=h), f'translate(60,92) scale({CAST[k].scale * 1.05:.2f})'), h)
+    held_demo = ''.join(cell(grp(character(CAST[k], 'hold', 'happy', hold=h, paint=paint), f'translate(60,92) scale({CAST[k].scale * 1.05:.2f})'), h)
                         for h, k in zip(HELD, list(CAST) * 5))
-    props_demo = ''.join(cell(prop(p, 60, 92, 1, None) if p not in ('kite', 'cloud', 'sun', 'stars', 'hearts', 'sfx') else prop(p, 60, 50, 1, None), p) for p in PROPS)
+    pp = lambda p, y: ((painted_prop(p, 60, y) if paint and SPRITES else None) or prop(p, 60, y, 1, None))
+    props_demo = ''.join(cell(pp(p, 92) if p not in ('kite', 'cloud', 'sun', 'stars', 'hearts', 'sfx') else pp(p, 50), p) for p in PROPS)
     scenes = ''.join(f'<div class="cell wide"><svg viewBox="0 0 200 122" xmlns="http://www.w3.org/2000/svg">{scene(s)[0]}{rct(1, 1, 198, 120, "none", 2)}</svg><div>{s}</div></div>' for s in SCENES)
     gl = lambda k: pth(f'M1,{PAINTED[k].get("ground", 108)} H199', 'none', .7, '#d33b2f', stroke_dasharray='3 2')   # where feet go
     painted_demo = ''.join(f'<div class="cell wide"><svg viewBox="0 0 200 122" xmlns="http://www.w3.org/2000/svg">{painted(k)[0]}{gl(k)}{rct(1, 1, 198, 120, "none", 2)}</svg>'
@@ -1428,7 +1537,7 @@ if __name__ == '__main__':
             print(f'{k}: {", ".join(f"{a} ({b})" for a, b in v.items()) if isinstance(v, dict) else ", ".join(v)}')
     elif '--sheet' in sys.argv:
         out = sys.argv[sys.argv.index('--sheet') + 1] if len(sys.argv) > sys.argv.index('--sheet') + 1 else 'cast.html'
-        open(out, 'w').write(sheet())
+        open(out, 'w').write(sheet(paint='--drawn' not in sys.argv))
         print('wrote', out)
     else:
         print(__doc__)

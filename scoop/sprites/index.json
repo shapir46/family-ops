@@ -1,0 +1,108 @@
+{
+"sprites": {
+"bear/body/facepalm": {
+"file": "bear/bear-body-facepalm.webp",
+"x": -35.47,
+"y": -110.57,
+"w": 68.55,
+"h": 112.9
+},
+"bear/body/stand": {
+"file": "bear/bear-body-stand.webp",
+"x": -33.93,
+"y": -106.91,
+"w": 70.94,
+"h": 108.9
+},
+"bear/gear/beanie/head": {
+"file": "bear/bear-gear-beanie-head.webp",
+"x": -21.47,
+"y": -126.29,
+"w": 50.97,
+"h": 36.97
+},
+"bear/gear/scarf/neck": {
+"file": "bear/bear-gear-scarf-neck.webp",
+"x": -14.8,
+"y": -69.87,
+"w": 33.34,
+"h": 32.5
+},
+"bear/head/happy": {
+"file": "bear/bear-head-happy.webp",
+"x": -23.23,
+"y": -108.27,
+"w": 53.44,
+"h": 46.58
+},
+"bear/head/surprised": {
+"file": "bear/bear-head-surprised.webp",
+"x": -23.23,
+"y": -108.27,
+"w": 53.44,
+"h": 46.58
+},
+"bear/near/facepalm": {
+"file": "bear/bear-near-facepalm.webp",
+"x": 2.28,
+"y": -93.71,
+"w": 26.51,
+"h": 39.59
+},
+"bear/near/stand": {
+"file": "bear/bear-near-stand.webp",
+"x": 13.17,
+"y": -69.78,
+"w": 22.89,
+"h": 41.4
+},
+"held/pumpkin": {
+"file": "held/held-pumpkin.webp",
+"x": -11.96,
+"y": -24.35,
+"w": 23.96,
+"h": 24.53
+},
+"prop/tree": {
+"file": "prop/prop-tree.webp",
+"x": -16.98,
+"y": -47.27,
+"w": 33.33,
+"h": 48.04
+}
+},
+"jobs": {
+"body/bear/facepalm": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"body/bear/stand": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"gear/bear/beanie": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"gear/bear/scarf": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"head/bear/happy": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"head/bear/surprised": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"held/pumpkin": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+},
+"prop/tree": {
+"model": "grok-imagine-image-2.0",
+"made": "2026-10-12"
+}
+}
+}
