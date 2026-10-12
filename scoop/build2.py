@@ -64,9 +64,17 @@ def sec_ari_fantasy():
     return (f"<div class='box2 plain'><h3 style='margin:0 0 1px'>{f.get('title', 'Ari&#8217;s Fantasy Team')}</h3>"
             f"<ul class='small ff'>{li(f.get('items', []))}</ul></div>")
 def extra_html(e):
-    """One filler item: title + short text (+ source). No drawing activities (Jacob, 2026-10-10)."""
+    """One filler item: title + short text (+ source), with an optional real picture (img + credit; README: Photo sources).
+    No drawing activities (Jacob, 2026-10-10)."""
     src = f"<div class='cap' style='margin:1px 0 0'>{e['source']}</div>" if e.get('source') else ''
-    return f"<div class='box2'><h3 style='margin:0 0 1px'>{e['title']}</h3><p class='small' style='margin:0'>{e['text']}</p>{src}</div>"
+    pic = ''
+    if e.get('img'):
+        from PIL import Image; import io
+        im = Image.open(e['img']).convert('RGB'); im.thumbnail((600, 400)); bio = io.BytesIO(); im.save(bio, 'JPEG', quality=82)
+        pic = (f"<div style='border:1px solid #161410;line-height:0;margin:1px 0 1px'><img src='data:image/jpeg;base64,{base64.b64encode(bio.getvalue()).decode()}' "
+               f"style='width:100%;height:auto;max-height:{int(e.get('img_h', 130))}px;object-fit:cover'></div>"
+               f"<div class='cap' style='margin:0 0 2px'>{e.get('credit', '')}</div>")
+    return f"<div class='box2'><h3 style='margin:0 0 1px'>{e['title']}</h3>{pic}<p class='small' style='margin:0'>{e['text']}</p>{src}</div>"
 _extras = d.get('extras') or []
 _placed_extras = set()
 def sec_extra(i):

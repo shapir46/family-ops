@@ -6,3 +6,4 @@ fonts/
 __pycache__/
 .env
 .venv/
+cache/nga-index.json.gz
