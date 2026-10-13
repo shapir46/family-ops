@@ -47,3 +47,12 @@ Read before building; append after printing. Riddles/jokes/words are in riddle-l
 - Lions: beat Arizona 45–21 Oct 11 (3–2), bye week
 - Comic: pancake-flip gag ("Watch me flip a pancake!" / "3... 2... 1... FLIP!" / "Where did it go?" "Look up!" / "Breakfast delivered!"); kitchen scene in all four panels, cream and white-sky variants; bear in white cap (akimbo/proud, tada/grin, think/surprised, facepalm/happy), fox (stand/worried, cheer/laugh), Mackenzie (sit/surprised, point/laugh) — USED
 - Critter: none (Monday)
+
+## 2026-10-13
+- Headline: "Perseverance Sets a Distance Record on Mars" (NASA/JPL Perseverance blog, Oct. 12, 2026; 45.22 km, passes Opportunity)
+- News: Spider Crater, Western Australia (NASA Earth Observatory, Oct. 2026); NASA heat shield capsules tested from the ISS cargo craft (NASA Ames, Oct. 2026; not printed, no room)
+- Extras: Fun Fact, octopus has three hearts; This Week in History, White House cornerstone Oct. 13, 1792
+- Headline photo: no photo
+- Lions: beat Arizona 45–21 Oct 11 (sports: NLCS Game 2 and ALCS Game 1 only; NHL/NFL Monday scores single-sourced, left out)
+- Comic: library gag ("Shh! Quiet voices!" / "So quiet... quiet..." / "Then... AH-AH-ACHOO!" / "Best book pile ever!"); library backdrop in all four panels (two mirrored); bear stand/happy, think/worried, scared/surprised, facepalm/sad all in glasses; fox point/grin, scared/worried, cheer/laugh; Mackenzie sit/surprised; book prop — USED
+- Critter: Red Fox (USFWSAlaska / Flickr, public domain) openverse:4a658101-ef62-4bd3-b5f6-b901913425e6
