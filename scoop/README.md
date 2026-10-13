@@ -27,6 +27,12 @@ One-page Letter PDF newspaper. Files (in the family-ops repo): `scoop/` holds bu
 - **Holidays.** If the day is a holiday, name it in the `banner` strip under the masthead (e.g. "Happy Halloween!", "Indigenous Peoples' Day", "Chanukah: 3 Candles").
   - Use `state.almanac[0].holidays`. On the Weekend Edition, also give Sunday's with a "Sun:" prefix, from `almanac[1]`.
 - **Shabbat, Fridays only.** The banner says it is Shabbat and gives the sunset time from `state.almanac[0].shabbat.sunset`, e.g. "Shabbat Shalom! Shabbat begins at sunset, 6:49 pm". Never on other days, including the Saturday Weekend Edition.
+- **Balanced news, one local story** (Jacob, 2026-10-13). The articles (headline story and `news[0..2]`) are a mix of topics, not mostly science.
+  - **One local article in every edition.** Birmingham MI first, else Detroit, else elsewhere in Michigan. Give it the headline when there is a good one. Sources: City of Birmingham, BPS, Patch, Hoodline, Hometown Life, LittleGuide Detroit, Metro Parent, Detroit Free Press, Detroit News, WXYZ, WDIV ClickOnDetroit, MLive, Michigan Radio, the Detroit Zoo, The Henry Ford, the DIA, Cranbrook.
+  - **Every article a different topic.** Topics: local community and events; animals and nature; arts, music, books and movies; people and kids doing amazing things; history and anniversaries; food and holidays around the world; fun world news (records, inventions, oddities); science and space.
+  - **At most one science or space article per edition.** On Tech Corner days (Wed, Sat), Tech Corner is that one, so there are no other science articles.
+  - **At most one article from any one outlet.** Science News Explores and NASA are for the science slot only.
+  - Don't lead with the same topic two editions in a row. Tag each headline and news item in content-log.md with its topic, e.g. "[local]", "[animals]", "[arts]", so the balance can be checked.
 
 ## COMIC: CHARACTER LIBRARY (Jacob, 2026-10-11) — overrides anything below that conflicts
 - **The comic is composed, not hand-drawn.** `art.py` is a library of detailed, original characters on a rig. Every character can take any pose, wear any face and gear and hold a prop.
@@ -176,7 +182,7 @@ date ("Tuesday, October 6, 2026"), hi (temp number), wx (HTML: high/wind/morning
 
 ## Rules (user-approved layout)
 - Masthead "The Fairfax Daily Scoop" (Grenze Gotisch); columns are flexible (see Design & Content Updates); the comic strip stays at the bottom ("ARTIC, BIG BEAR & FRIENDS", composed by edition.json `comic` from the painted character library on Grok-painted backdrops; see Comic: painted character library and Comic: painted backdrops).
-- Stories: only fun, kid-friendly. Prefer Birmingham MI, else Detroit/Michigan, else anywhere. Headline story ~3 short paragraphs, with a real photo only if one can be obtained (see New Standing Rule 3).
+- Stories: only fun, kid-friendly, on a balanced mix of topics with one local (Birmingham MI, else Detroit/Michigan) article in every edition (see Balanced news, one local story). Headline story ~3 short paragraphs, with a real photo only if one can be obtained (see New Standing Rule 3).
 - No third-party characters. The comic is original; NEW 4-panel gag AND new artwork each day in edition.json `comic` (keep text short so bubbles fit).
 - Kids' sports appear in the family schedule, plus as a game under "Tonight in Detroit" when that evening. Elle's MDA soccer and Ari's Spartans basketball also have their own boxes (MDA Kicks & Giggles, Spartans Hoop Scoop; above).
 - Daily joke: new each day, kid-friendly, never repeat riddle-log.md. No riddle (Jacob, 2026-10-10). After building, append today's joke and word to riddle-log.md.
