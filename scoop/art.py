@@ -1492,6 +1492,34 @@ def weather_icon(kind, px=30):
             f'role="img" aria-label="{kind.replace("_", " ")}">{g}</svg>')
 
 
+# ---------------------------------------------------------------- the paper's icon (Jacob, 2026-10-13)
+CONE, CONE_DK, STRAWBERRY, CHOCOLATE, CHERRY = '#e7b46a', '#b9813b', '#f6a7bd', '#8a5636', '#d8343c'
+SPRINKLES = ('#3b7fc4', '#f5b82e', '#ffffff', '#5bb36a', '#f6a7bd')
+
+
+def scoop_icon(px=56, flip=False):
+    """The Fairfax Daily Scoop's official icon: an original ice cream cone (waffle cone, strawberry and chocolate
+    scoops, sprinkles, a cherry). Inline SVG, 40x60 viewBox, `px` tall; `flip` mirrors it."""
+    tri = 'M7,31 L33,31 L20,58 Z'
+    waffle = ''.join(pth(f'M{x},28 l18,32', 'none', .8, CONE_DK) + pth(f'M{x + 18},28 l-18,32', 'none', .8, CONE_DK)
+                     for x in range(-6, 40, 6))
+    cone = pth(tri, CONE, 1.4) + el('g', waffle, clip_path='url(#scoopcone)') + pth(tri, 'none', 1.4)
+    drip = 'M6,30 C6,21 12,15 20,15 C28,15 34,21 34,30 Q32,35 30,31 Q28,37 25,32 Q22,35 20,31 Q17,36 14,32 Q11,35 9,31 Q7,34 6,30 Z'
+    low = pth(drip, STRAWBERRY, 1.4) + pth('M11,22 Q13,19 16,18', 'none', 1.2, '#ffffff', stroke_opacity=.8)
+    top = (pth('M9,17 C9,9 14,5 20,5 C26,5 31,9 31,17 C31,20 28,21 25,19.5 C23,21.5 17,21.5 15,19.5 C12,21 9,20 9,17 Z',
+               CHOCOLATE, 1.4)
+           + ''.join(pth(f'M{x},{y} l{dx},{dy}', 'none', 1.5, c) for (x, y, dx, dy), c in
+                     zip(((13, 12, 2, -1), (18, 9, 1.5, 1.5), (24, 11, 2, .5), (16, 16, 2, 0), (26, 16, 1, -2), (21, 14, -1.5, 1.2)),
+                         SPRINKLES * 2)))
+    cherry = pth('M21,4 Q22,-1 26,-2', 'none', 1.1) + circ(20, 4.5, 3.4, CHERRY, 1.2) + circ(19, 3.5, .9, '#ffffff', 0)
+    g = el('defs', el('clipPath', pth(tri, '#000', 0), id='scoopcone')) + cone + low + top + cherry
+    if flip:
+        g = grp(g, 'translate(40,0) scale(-1,1)')
+    w = round(px * 40 / 64)
+    return (f'<svg class="scoopi" viewBox="0 -4 40 64" width="{w}" height="{px}" xmlns="http://www.w3.org/2000/svg" '
+            f'role="img" aria-label="ice cream cone">{g}</svg>')
+
+
 # ---------------------------------------------------------------- library listing and model sheet
 def library():
     return {'cast': {k: c.name for k, c in CAST.items()}, 'poses': list(POSES), 'faces': list(FACES), 'gear': GEAR,

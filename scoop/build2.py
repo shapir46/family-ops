@@ -169,6 +169,8 @@ body{{font-family:LB,serif;font-size:7.8pt;line-height:1.3;color:#161410}}
 .page{{width:7.9in;height:10.4in;overflow:hidden;display:flex;flex-direction:column}}
 .mast{{text-align:center;border-bottom:3px double #161410;padding-bottom:2px}}
 .title{{font-family:Frak,serif;font-size:50pt;font-weight:700;line-height:1}}
+/* The paper's official icon, an ice cream cone (art.py scoop_icon), on both sides of the title (Jacob, 2026-10-13) */
+.titlerow{{display:flex;align-items:center;justify-content:center;gap:14px}}
 .ears{{display:flex;justify-content:space-between;font-family:PF,serif;font-size:7.2pt;border-top:1px solid #161410;border-bottom:1px solid #161410;padding:2px 4px;margin-top:3px;text-transform:uppercase;letter-spacing:.6px}}
 .strip{{display:grid;grid-template-columns:{strip_grid};border-bottom:1px solid #161410}}
 .box{{padding:3px 7px}} .box+.box{{border-left:1px solid #161410}}
@@ -213,7 +215,7 @@ p{{margin-bottom:3px;text-align:justify;hyphens:auto}}
 .word .wp{{font-style:italic;font-size:7.4pt;color:#555}}
 .word .wd{{font-size:8.2pt;line-height:1.28;border-left:1px solid #c9b88a;padding-left:9px;flex:1}}
 </style></head><body><div class="page">
-<div class="mast"><div class="title">The Fairfax Daily Scoop</div>
+<div class="mast"><div class="titlerow">{art.scoop_icon(58)}<div class="title">The Fairfax Daily Scoop</div>{art.scoop_icon(58, flip=True)}</div>
 <div class="ears"><span>Birmingham, Michigan</span><span>{d['date']}</span><span>{d.get('edition', 'Daily Edition')} · Est. 2026</span></div></div>
 {banner_html}
 <div class="strip">
