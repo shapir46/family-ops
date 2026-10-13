@@ -147,9 +147,18 @@ Link handling rules:
 - Do NOT surface the PlayMetrics ICS feed URL anywhere in the digest. It is a credential, not content.
 
 ## Step 4 — Write the digest
-A lunch banner, then four sections, in this order.
+The newspaper line, then a lunch banner, then four sections, in this order.
 
-### 🍽️ Lunch banner (top of the email)
+### 📰 Newspaper line (very top of the email)
+Mon–Sat only; never on Sunday, when there is no paper. The newspaper link is the first thing in the email, above the lunch banner, as its own paragraph and never a bullet (Jacob, 2026-10-13):
+
+```
+<p><b>📰 <a href="LINK">Today's Fairfax Daily Scoop</a></b> — ready about 20 min after this email</p>
+```
+
+LINK is the exact output of `./fo paper-link` (run it; never build the link by hand). With `PAPER_LINK_KEY` set it is a no-login link to the Mac mini print relay, which shows a "not ready yet" page until the paper prints; without the key it falls back to the private GitHub archive. The link is not a credential and may be emailed; never print, log or commit `PAPER_LINK_KEY` itself (Jacob, 2026-10-12). The newspaper never appears again in ☀️ Today or anywhere else.
+
+### 🍽️ Lunch banner (top of the email, under the newspaper line)
 Today's school lunch is the very first thing in the email, above ☀️ Today and every other section, and is never a bullet (Jacob, 2026-10-12). Render it as exactly two elements:
 
 ```
@@ -157,7 +166,7 @@ Today's school lunch is the very first thing in the email, above ☀️ Today an
 <p><i>(BPS elementary lunch menu)</i></p>
 ```
 
-The text after "Lunch today:" is the entrée line from the lunch menu source and rendering rules below. **On a day with no school lunch, leave the banner out entirely and do not mention lunch anywhere in the email** (Jacob, 2026-10-12): weekends, no-school days, summer break, and half days whose cell shows no entrée. The email then starts at ☀️ Today. On a school day whose menu cannot be read or found, the banner carries that status instead: `<h3>🍽️ Lunch today: couldn't read today's menu</h3>` or `<h3>🍽️ Lunch menu: source needs updating for {Month}</h3>`. It is the only `<h3>` in the email, and lunch never appears again in ☀️ Today or anywhere else.
+The text after "Lunch today:" is the entrée line from the lunch menu source and rendering rules below. **On a day with no school lunch, leave the banner out entirely and do not mention lunch anywhere in the email** (Jacob, 2026-10-12): weekends, no-school days, summer break, and half days whose cell shows no entrée. The email then goes straight from the newspaper line (or, on Sunday, from the top) to ☀️ Today. On a school day whose menu cannot be read or found, the banner carries that status instead: `<h3>🍽️ Lunch today: couldn't read today's menu</h3>` or `<h3>🍽️ Lunch menu: source needs updating for {Month}</h3>`. It is the only `<h3>` in the email, and lunch never appears again in ☀️ Today or anywhere else.
 
 **Every item appears exactly once in the whole digest** (Jacob, 2026-10-11). Place each item in the first section it qualifies for, in this order: ☀️ Today (anything happening today) → ⚡ Needs Action (anything Jacob must do, with or without a date) → 🗓️ Next 10 Days (events from tomorrow through today + 10) → 📋 For Your Information (everything else). An item placed in one section is never repeated, summarized or cross-referenced in another: no "Due" lines in Next 10 Days for an action already in Needs Action, no FYI recap of an event already in the calendar, no FYI echo of an action item.
 
@@ -166,7 +175,6 @@ The top section — the at-a-glance for the day Jacob is reading it.
 
 - **School day status first.** If today is a no-school day, a half day, or a recess day per the BPS district calendar (Step 2c), that is the FIRST line of this section, bolded, even when nothing else is on. Example: "**No school today — Labor Day.**" or "**Half day today — AM only, dismissal 11:50.**" When a half day applies only to certain grades, say which child it affects and give the dismissal time — and say what the other kids are doing, so Jacob is not left guessing. Do not mention busing. This is the single most schedule-disrupting fact in the digest and must not be buried. During summer, before the first day of school, say so once and name the first day. On a Sunday, a Temple Israel Sunday School session from Step 2c-ii's live sources leads the day the same way.
 - **Events today:** every family/school event on today's date, from all calendar sources and from dated email items. Bullet each one, leading with the bolded time, and name the child where the source identifies one. Note any overlap in one short clause. Routine daily dismissal times belong in the school-status line, not as their own bullets. If nothing is on, write a single line: "Nothing on the calendar today."
-- **Newspaper link** (Mon–Sat only; never on Sunday, when there is no paper): the last bullet of ☀️ Today is `<li><b>📰 Newspaper</b> — <a href="LINK">Today's Fairfax Daily Scoop</a> (ready about 20 min after this email)</li>`, where LINK is the exact output of `./fo paper-link` (run it; never build the link by hand). With `PAPER_LINK_KEY` set it is a no-login link to the Mac mini print relay, which shows a "not ready yet" page until the paper prints; without the key it falls back to the private GitHub archive. The link is not a credential and may be emailed; never print, log or commit `PAPER_LINK_KEY` itself (Jacob, 2026-10-12).
 
 **Lunch menu source** (for the 🍽️ Lunch banner above). Birmingham Public Schools publishes the elementary lunch menu as a monthly PDF. The menu covers **Bingham Farms, Greenfield, Pierce, and Quarton** elementaries, so it applies to the kids at Quarton. It does NOT cover Derby Middle School; there is no Derby menu configured, so never show a menu for a Derby student.
 Known monthly URLs are listed in `data/lunch-menus.yaml` (fetch with the web fetch tool, which returns extracted text directly — no PDF tooling needed).
@@ -239,7 +247,7 @@ Use `outlook_send_mail`:
 - To: jacob@ivanhoecompanies.com, Rebekah.Shapiro@gmail.com
 - Subject: `Family Digest — {Month D, YYYY}` using today's date
 - `bodyType: "html"`
-- Body: the digest as clean semantic HTML. Start with the 🍽️ Lunch banner's `<h3>` (when there is one), then the first `<h2>` — no `<h1>`, since the subject line already carries the title.
+- Body: the digest as clean semantic HTML. Start with the 📰 newspaper `<p>` (Mon–Sat), then the 🍽️ Lunch banner's `<h3>` (when there is one), then the first `<h2>` — no `<h1>`, since the subject line already carries the title.
 
 **Mobile formatting requirements — this email is read on a phone:**
 - Use `<h3>` for the lunch banner only, `<h2>` for the four section headings, `<p>` for day headings, `<ul>`/`<li>` for everything else. No `<table>` anywhere.
