@@ -23,6 +23,7 @@ One-page Letter PDF newspaper. Files (in the family-ops repo): `scoop/` holds bu
 - **No sources on the page; credits only in the footer** (Jacob, 2026-10-12). No source or credit line appears under any item: not the lunch, the family schedule, stories, news, extras, pictures or the weather (no "(NWS)" in `wx`/`wx2`).
   - Credit sources in `foot`, the small line at the bottom: "Scores: ... · Weather: National Weather Service · News: <outlets>". build2.py adds every picture credit (`head_photo`, `critter`, picture extras) to the footer itself, as the photo licenses require.
   - `head_src` and each news item's source stay in edition.json for the log and the footer, but are not printed.
+  - **The footer is one run-on line** (Jacob, 2026-10-13): sources, notes and picture credits run together, separated by " · ", with no line breaks. build2.py turns any `<br>` in `foot` into " · ".
 - **School lunch is large and bold** (Jacob, 2026-10-12): the menu prints at 11pt bold (`.lunch` in build2.py), with no source line. The Thursday bagel note stays as a smaller line under it.
 - **Holidays.** If the day is a holiday, name it in the `banner` strip under the masthead (e.g. "Happy Halloween!", "Indigenous Peoples' Day", "Chanukah: 3 Candles").
   - Use `state.almanac[0].holidays`. On the Weekend Edition, also give Sunday's with a "Sun:" prefix, from `almanac[1]`.

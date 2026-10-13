@@ -148,7 +148,8 @@ if _painted_cast or art.uses_painted(d.get('comic')):
     _credits.append("Comic " + ("art" if _painted_cast and art.uses_painted(d.get('comic')) else "characters" if _painted_cast else "backgrounds")
                     + " painted with Grok (xAI)" + (" from the original character designs" if _painted_cast else ""))
     d['foot'] = re.sub(r'\b([Cc]omic) (?:is|are) original', r'\1 characters are original', d['foot'])
-foot_html = d['foot'] + (f"<br>Pictures: {' · '.join(_credits)}" if _credits else '')
+# One run-on line, no breaks, so the footer takes as little room as possible (Jacob, 2026-10-13).
+foot_html = re.sub(r'\s*<br\s*/?>\s*', ' · ', d['foot'].strip()) + (f" · Pictures: {' · '.join(_credits)}" if _credits else '')
 
 # Top strip: weather, plus the lunch box only when there is lunch to show (none on weekend editions).
 has_lunch = bool(d.get('lunch'))
@@ -192,7 +193,7 @@ p{{margin-bottom:3px;text-align:justify;hyphens:auto}}
 .comic{{border:2px solid #161410;padding:2px 3px;margin:2px 0 3px}}
 .ct{{font-family:PF,serif;font-weight:700;letter-spacing:2px;text-align:center;font-size:9pt;margin-bottom:2px}}
 .cg{{display:grid;grid-template-columns:repeat(4,1fr);gap:3px}}
-.foot{{border-top:3px double #161410;font-size:6.2pt;text-align:center;padding-top:2px;color:#444}}
+.foot{{border-top:3px double #161410;font-size:6.2pt;line-height:1.2;text-align:center;padding-top:2px;color:#444}}
 /* School lunch: large and bold, no source line (Jacob, 2026-10-12) */
 .lunch{{font-weight:700;font-family:PF,serif;font-size:11pt;line-height:1.25}}
 .lunch span{{display:block;line-height:1.3;margin-top:2px}}
