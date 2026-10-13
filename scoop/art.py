@@ -1379,7 +1379,6 @@ def panel(p, idx=0, warn=None):
 
 
 SAMPLE = {
-    "title": "ARTIC & BIG BEAR",
     "panels": [
         {"scene": "pumpkins", "cast": [
             {"who": "bear", "x": 50, "pose": "hold", "face": "happy", "gear": {"scarf": "#2f7d4f"}, "hold": "pumpkin"},
@@ -1403,6 +1402,9 @@ SAMPLE = {
 }
 
 
+COMIC_TITLE = 'ARTIC, BIG BEAR & FRIENDS'      # the strip's name (Jacob, 2026-10-13)
+
+
 def comic(spec=None, warn=None):
     """The strip at the bottom of the page. spec = edition.json `comic` (README: Comic)."""
     spec = spec or SAMPLE
@@ -1416,7 +1418,7 @@ def comic(spec=None, warn=None):
     if warn is None:
         for w_ in warns:
             print('COMIC WARNING:', w_, file=sys.stderr)
-    title = esc(spec.get('title', 'ARTIC &amp; BIG BEAR'))
+    title = esc(COMIC_TITLE)                     # fixed; edition.json does not set it (Jacob, 2026-10-13)
     return f'<div class="comic"><div class="ct">{title}</div><div class="cg">{svgs}</div></div>'
 
 
