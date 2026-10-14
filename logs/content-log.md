@@ -56,3 +56,12 @@ Read before building; append after printing. Riddles/jokes/words are in riddle-l
 - Lions: beat Arizona 45–21 Oct 11 (sports: NLCS Game 2 and ALCS Game 1 only; NHL/NFL Monday scores single-sourced, left out)
 - Comic: library gag ("Shh! Quiet voices!" / "So quiet... quiet..." / "Then... AH-AH-ACHOO!" / "Best book pile ever!"); library backdrop in all four panels (two mirrored); bear stand/happy, think/worried, scared/surprised, facepalm/sad all in glasses; fox point/grin, scared/worried, cheer/laugh; Mackenzie sit/surprised; book prop — USED
 - Critter: Red Fox (USFWSAlaska / Flickr, public domain) openverse:4a658101-ef62-4bd3-b5f6-b901913425e6
+
+## 2026-10-14
+- Headline: "Five Cheetah Cubs Are Growing Up on Camera" [animals] (Smithsonian Magazine, Oct. 9, 2026; Zura's litter, Smithsonian Conservation Biology Institute, Cheetah Cub Cam)
+- News: Birmingham's Community Fall Festival, Sun Oct 18 [local] (Patch); Tech Corner: Is AI making us dumber? [tech] (Science News Explores, Oct. 13, 2026); Fun Fact in the third slot, wombats make cube-shaped droppings
+- Extras: This Week in History, Chuck Yeager breaks the sound barrier Oct. 14, 1947
+- Headline photo: no photo
+- Lions: beat Arizona 45–21 Oct 11, bye Oct 18, host Green Bay Oct 25 (sports: no confirmed scores, left blank)
+- Comic: cookie gag ("One cookie, please!" / "Fresh from the oven!" / "It's bigger than me!" / "Mackenzie, want half?"); bakery backdrop in all four panels (two mirrored); bear stand/happy, tada/proud + cookie, shrug/smug all in white cap; fox point/grin, cheer/love, scared/surprised, sit/laugh; Mackenzie sit/love; cookie prop big and small — USED
+- Critter: none (Wednesday)

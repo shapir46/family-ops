@@ -9,3 +9,4 @@
 2026-10-10 | What has keys but can't open a lock? | A piano! | Why can't a leopard play hide-and-seek? Because he's always spotted! (word: resilient)
 2026-10-12 | Why did the pancake go to the doctor? It was feeling a little flat! | luminous
 2026-10-13 | What do you call a sleeping dinosaur? A dino-snore! | meander
+2026-10-14 | Why did the cookie go to the nurse? It felt crumby! | tenacious
