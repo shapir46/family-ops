@@ -92,9 +92,34 @@ def sec_mda(): return team_box('mda', 'MDA Kicks &amp; Giggles')
 def sec_spartans(): return team_box('spartans', 'Spartans Hoop Scoop')
 def sec_news0():
     return '' if d.get('fantasy') or not d.get('news') else story(*d['news'][0])
-SECTIONS = {'schedule': sec_schedule, 'week': sec_week, 'school_notes': sec_school_notes, 'left_story': sec_left_story,
+# Featured artwork: a family kid's own art, framed like a gallery piece (Jacob, 2026-10-14; README: Featured artwork).
+# edition.json `featured_art`, or else the entry in featured/queue.json whose date falls in this edition's date(s).
+_MONTHS = ['january', 'february', 'march', 'april', 'may', 'june', 'july', 'august', 'september', 'october', 'november', 'december']
+def edition_days():
+    """ISO dates this edition covers, from `date` ("Thursday, October 15, 2026" or "Saturday & Sunday, October 17–18, 2026")."""
+    m = re.search(r'([A-Za-z]+) (\d{1,2})(?:\s*[–-]\s*(\d{1,2}))?, (\d{4})', d.get('date', ''))
+    if not m or m.group(1).lower() not in _MONTHS: return []
+    mo, a, b, y = _MONTHS.index(m.group(1).lower()) + 1, int(m.group(2)), int(m.group(3) or m.group(2)), int(m.group(4))
+    return [f"{y}-{mo:02d}-{day:02d}" for day in range(a, b + 1)]
+_KIT = os.path.dirname(os.path.abspath(__file__))
+if not d.get('featured_art') and os.path.exists(os.path.join(_KIT, 'featured', 'queue.json')):
+    _due = [e for e in json.load(open(os.path.join(_KIT, 'featured', 'queue.json'))) if e.get('date') in edition_days()]
+    if _due:
+        d['featured_art'] = dict(_due[0], img=os.path.join(_KIT, _due[0]['img']))
+if d.get('featured_art'):
+    print(f"FEATURED: {d['featured_art']['title']} by {d['featured_art']['artist']}", file=sys.stderr)
+def sec_featured():
+    a = d.get('featured_art')
+    if not a or not a.get('img'): return ''
+    from PIL import Image; import io
+    im = Image.open(a['img']).convert('RGB'); im.thumbnail((700, 900)); bio = io.BytesIO(); im.save(bio, 'JPEG', quality=86)
+    note = f"<p class='fa-note'>{a['note']}</p>" if a.get('note') else ''
+    return (f"<div class='featured'><div class='fa-frame'><img src='data:image/jpeg;base64,{base64.b64encode(bio.getvalue()).decode()}'></div>"
+            f"<div class='fa-card'><div class='fa-kicker'>Featured Artwork</div><div class='fa-title'>{a['title']}</div>"
+            f"<div class='fa-by'>by {a['artist']}</div>{note}</div></div>")
+SECTIONS = {'featured': sec_featured, 'schedule': sec_schedule, 'week': sec_week, 'school_notes': sec_school_notes, 'left_story': sec_left_story,
             'lead': sec_lead, 'news1': sec_news1, 'word': sec_word, 'joke': sec_joke, 'sports': sec_sports, 'ari_fantasy': sec_ari_fantasy, 'mda': sec_mda, 'spartans': sec_spartans, 'news0': sec_news0}
-BOXED = {'week', 'word', 'joke', 'ari_fantasy', 'mda', 'spartans'}
+BOXED = {'week', 'word', 'joke', 'ari_fantasy', 'mda', 'spartans', 'featured'}
 
 # Layout: flexible column count, widths and placement (README: readability first). Default = the approved 3-column page.
 DEFAULT_LAYOUT = {'columns': [
@@ -106,6 +131,11 @@ for c in layout['columns']:
     for name in c['sections']:
         if name not in SECTIONS and not name.startswith('extra:') and name != 'extras':
             raise SystemExit(f"layout: unknown section '{name}' (known: {', '.join(SECTIONS)})")
+# A due featured artwork is never dropped: if the layout doesn't place it, it goes right under the headline story.
+if d.get('featured_art') and 'featured' not in [n for c in layout['columns'] for n in c['sections']]:
+    layout = json.loads(json.dumps(layout))
+    for c in layout['columns']:
+        if 'lead' in c['sections']: c['sections'].insert(c['sections'].index('lead') + 1, 'featured')
 placed = [n for c in layout['columns'] for n in c['sections']]
 missing = [n for n in ('lead', 'word') if n not in placed]
 if missing:
@@ -188,6 +218,15 @@ p{{margin-bottom:3px;text-align:justify;hyphens:auto}}
 .small{{font-size:7.7pt;line-height:1.26}}
 .rule{{border-top:1px solid #161410;margin:4px 0}}
 .box2{{background:#efe9d8;border:1px solid #161410;padding:3px 5px;margin-top:4px}}
+/* Featured artwork: gallery frame + museum title card (Jacob, 2026-10-14) */
+.featured{{display:flex;gap:10px;align-items:center;margin-top:5px;padding:6px;border:1px solid #161410;background:#fbf7ec}}
+.fa-frame{{flex:0 0 auto;padding:5px;background:#c9a34a;border:1px solid #161410;box-shadow:inset 0 0 0 2px #e9d397}}
+.fa-frame img{{display:block;height:196px;width:auto;border:3px solid #fff;outline:1px solid #8a6d28}}
+.fa-card{{flex:1;text-align:center}}
+.fa-kicker{{font-family:PF,serif;font-weight:700;font-size:8.4pt;text-transform:uppercase;letter-spacing:1.4px;border-top:1px solid #161410;border-bottom:1px solid #161410;padding:1px 0;margin-bottom:6px}}
+.fa-title{{font-family:PF,serif;font-style:italic;font-weight:700;font-size:16pt;line-height:1.1}}
+.fa-by{{font-family:PF,serif;font-size:10pt;margin:3px 0 6px}}
+.fa-note{{font-size:7.8pt;line-height:1.3;margin:0}}
 .headline{{font-family:PF,serif;font-weight:700;font-size:20pt;line-height:1.02;text-align:center;margin:2px 0 2px}}
 .sub{{font-style:italic;text-align:center;font-size:8.6pt;margin-bottom:4px}}
 .cols2{{column-count:2;column-gap:9px;column-rule:1px solid #bbb;font-size:8.2pt}}
