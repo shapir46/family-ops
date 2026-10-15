@@ -65,3 +65,12 @@ Read before building; append after printing. Riddles/jokes/words are in riddle-l
 - Lions: beat Arizona 45–21 Oct 11, bye Oct 18, host Green Bay Oct 25 (sports: no confirmed scores, left blank)
 - Comic: cookie gag ("One cookie, please!" / "Fresh from the oven!" / "It's bigger than me!" / "Mackenzie, want half?"); bakery backdrop in all four panels (two mirrored); bear stand/happy, tada/proud + cookie, shrug/smug all in white cap; fox point/grin, cheer/love, scared/surprised, sit/laugh; Mackenzie sit/love; cookie prop big and small — USED
 - Critter: none (Wednesday)
+
+## 2026-10-15
+- Headline: "Divers Find What May Be the World's Oldest Shipwreck" [history] (Smithsonian Magazine, Oct. 14, 2026; Kekova Island, Turkey, ~4,700 years old, jars of olive oil or wine)
+- News: Adopt an Animal at the Detroit Zoo [local] (Detroit Zoo ADOPTS, Oct. 12, 2026); not printed, no room: hula hoop around the nose, Ashwi Vashishth [people] (UNI India, Oct. 8) and Fun Fact, owl group is a parliament
+- Featured art: Rainbow Party Ghosts by Leo
+- Headline photo: no photo
+- Lions: beat Arizona 45–21 Oct 11 (3–2), bye Oct 18, host Green Bay Oct 25
+- Comic: fetch gag ("Mackenzie, fetch!" / "You first, Artic." / "Fine! I'll fetch it!" / "Later... Good Artic! Again?"); playground backdrop in all four panels (two mirrored); fox hold+ball/grin, point/proud, run/worried, tada+ball/happy; Mackenzie sit/happy, smug, laugh, love
+- Critter: none (Thursday)

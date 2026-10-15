@@ -1,0 +1,464 @@
+{
+ "date": "2026-10-15",
+ "generated_at": "2026-10-15T10:28:21+00:00",
+ "window": {
+  "start": "2026-10-15",
+  "end": "2026-10-25"
+ },
+ "kids": {
+  "Ari": {
+   "color": "#2563EB",
+   "initial": "A"
+  },
+  "Elle": {
+   "color": "#DB2777",
+   "initial": "E"
+  },
+  "Leo": {
+   "color": "#16A34A",
+   "initial": "L"
+  },
+  "Lila": {
+   "color": "#9333EA",
+   "initial": "Li"
+  }
+ },
+ "events": [
+  {
+   "date": "2026-10-15",
+   "title": "Soccer practice",
+   "kids": [
+    "Elle"
+   ],
+   "start": "18:00",
+   "end": "19:15",
+   "end_date": null,
+   "location": "Pembroke Park 7v7, Birmingham, MI, USA",
+   "kind": "practice",
+   "details": null,
+   "sources": [
+    "PlayMetrics"
+   ],
+   "status": null,
+   "id": "2026-10-15|18:00|soccer practice"
+  },
+  {
+   "date": "2026-10-17",
+   "title": "Basketball game vs Hoosiers",
+   "kids": [
+    "Ari"
+   ],
+   "start": "09:55",
+   "end": null,
+   "end_date": null,
+   "location": "Berkshire Middle School, 21707 W 14 Mile Rd, Beverly Hills",
+   "kind": "game",
+   "details": null,
+   "sources": [
+    "MCE league schedule"
+   ],
+   "status": null,
+   "id": "2026-10-17|09:55|basketball game vs hoosiers"
+  },
+  {
+   "date": "2026-10-17",
+   "title": "Soccer game vs MI Stars Elite 2018/2017G White",
+   "kids": [
+    "Elle"
+   ],
+   "start": "12:30",
+   "end": "13:30",
+   "end_date": null,
+   "location": "Spencer Park Field 2, 3701 John R Rd, Rochester Hills, MI 48307, United States",
+   "kind": "game",
+   "details": "arrive 12:00 pm, black-black-black",
+   "sources": [
+    "PlayMetrics"
+   ],
+   "status": null,
+   "id": "2026-10-17|12:30|soccer game vs mi stars elite 2018 2017g"
+  },
+  {
+   "date": "2026-10-17",
+   "title": "Soccer game vs FC Dallas",
+   "kids": [
+    "Leo"
+   ],
+   "start": "14:00",
+   "end": "15:00",
+   "end_date": null,
+   "location": "Birmingham Covington School, 1525 Covington Rd, Bloomfield Hills",
+   "kind": "game",
+   "details": "Field 4. Week 6; Sounders home.",
+   "sources": [
+    "BBSC schedule"
+   ],
+   "status": null,
+   "id": "2026-10-17|14:00|soccer game vs fc dallas"
+  },
+  {
+   "date": "2026-10-18",
+   "title": "Soccer game vs Romeo FC Fury",
+   "kids": [
+    "Elle"
+   ],
+   "start": "12:00",
+   "end": "13:00",
+   "end_date": null,
+   "location": "Simpson Park Field 6 7v7, 70199 Campground Rd, Bruce Township, MI 48065, United States",
+   "kind": "game",
+   "details": "arrive 11:30 am, black-black-black",
+   "sources": [
+    "PlayMetrics"
+   ],
+   "status": null,
+   "id": "2026-10-18|12:00|soccer game vs romeo fc fury"
+  },
+  {
+   "date": "2026-10-20",
+   "title": "Soccer practice",
+   "kids": [
+    "Elle"
+   ],
+   "start": "18:00",
+   "end": "19:15",
+   "end_date": null,
+   "location": "UWM Sports Complex Field 1, 867 S Blvd E, Pontiac, MI 48341, USA",
+   "kind": "practice",
+   "details": null,
+   "sources": [
+    "PlayMetrics"
+   ],
+   "status": null,
+   "id": "2026-10-20|18:00|soccer practice"
+  },
+  {
+   "date": "2026-10-21",
+   "title": "Goalie Training",
+   "kids": [
+    "Elle"
+   ],
+   "start": "16:45",
+   "end": "18:00",
+   "end_date": null,
+   "location": "Pembroke Park, Buckingham Avenue, Birmingham, MI, USA",
+   "kind": "event",
+   "details": null,
+   "sources": [
+    "PlayMetrics"
+   ],
+   "status": null,
+   "id": "2026-10-21|16:45|goalie training"
+  },
+  {
+   "date": "2026-10-22",
+   "title": "Soccer practice",
+   "kids": [
+    "Elle"
+   ],
+   "start": "18:00",
+   "end": "19:15",
+   "end_date": null,
+   "location": "Pembroke Park 7v7, Birmingham, MI, USA",
+   "kind": "practice",
+   "details": null,
+   "sources": [
+    "PlayMetrics"
+   ],
+   "status": null,
+   "id": "2026-10-22|18:00|soccer practice"
+  },
+  {
+   "date": "2026-10-23",
+   "title": "Kalahari Cup",
+   "kids": [
+    "Elle"
+   ],
+   "start": null,
+   "end": null,
+   "end_date": null,
+   "location": "Sandusky, OH, USA",
+   "kind": "event",
+   "details": null,
+   "sources": [
+    "PlayMetrics"
+   ],
+   "status": null,
+   "id": "2026-10-23|allday|kalahari cup"
+  },
+  {
+   "date": "2026-10-24",
+   "title": "Kalahari Cup",
+   "kids": [
+    "Elle"
+   ],
+   "start": null,
+   "end": null,
+   "end_date": null,
+   "location": "Sandusky, OH, USA",
+   "kind": "event",
+   "details": null,
+   "sources": [
+    "PlayMetrics"
+   ],
+   "status": null,
+   "id": "2026-10-24|allday|kalahari cup"
+  },
+  {
+   "date": "2026-10-24",
+   "title": "Basketball game vs Duke",
+   "kids": [
+    "Ari"
+   ],
+   "start": "12:00",
+   "end": null,
+   "end_date": null,
+   "location": "Berkshire Middle School, 21707 W 14 Mile Rd, Beverly Hills",
+   "kind": "game",
+   "details": null,
+   "sources": [
+    "MCE league schedule"
+   ],
+   "status": null,
+   "id": "2026-10-24|12:00|basketball game vs duke"
+  },
+  {
+   "date": "2026-10-24",
+   "title": "Soccer game vs Colorado Rapids",
+   "kids": [
+    "Leo"
+   ],
+   "start": "14:00",
+   "end": "15:00",
+   "end_date": null,
+   "location": "Birmingham Covington School, 1525 Covington Rd, Bloomfield Hills",
+   "kind": "game",
+   "details": "Field 5. Week 7; Sounders home.",
+   "sources": [
+    "BBSC schedule"
+   ],
+   "status": null,
+   "id": "2026-10-24|14:00|soccer game vs colorado rapids"
+  },
+  {
+   "date": "2026-10-25",
+   "title": "Kalahari Cup",
+   "kids": [
+    "Elle"
+   ],
+   "start": null,
+   "end": null,
+   "end_date": null,
+   "location": "Sandusky, OH, USA",
+   "kind": "event",
+   "details": null,
+   "sources": [
+    "PlayMetrics"
+   ],
+   "status": null,
+   "id": "2026-10-25|allday|kalahari cup"
+  }
+ ],
+ "actions": [],
+ "fyi": [],
+ "conflicts": [],
+ "lunch": {
+  "line": "Cheesy Garlic French Bread Pizza Seasoned Green Beans",
+  "entree": "Cheesy Garlic French Bread Pizza Seasoned Green Beans",
+  "theme": null,
+  "problems": []
+ },
+ "weather": {
+  "hi": 64,
+  "today": "Mostly Cloudy then Slight Chance Light Rain",
+  "today_detail": "A slight chance of rain after 5pm. Mostly cloudy. High near 64, with temperatures falling to around 61 in the afternoon. East wind around 8 mph. Chance of precipitation is 20%. New rainfall amounts less than a tenth of an inch possible.",
+  "tonight_low": 53,
+  "tonight": "Rain",
+  "icon": "rain",
+  "forecast": [
+   {
+    "date": "2026-10-16",
+    "day": "Fri",
+    "hi": 59,
+    "lo": 36,
+    "short": "Light Rain Likely",
+    "icon": "rain"
+   },
+   {
+    "date": "2026-10-17",
+    "day": "Sat",
+    "hi": 52,
+    "lo": 38,
+    "short": "Sunny",
+    "icon": "sun"
+   },
+   {
+    "date": "2026-10-18",
+    "day": "Sun",
+    "hi": 62,
+    "lo": 41,
+    "short": "Sunny",
+    "icon": "sun"
+   },
+   {
+    "date": "2026-10-19",
+    "day": "Mon",
+    "hi": 65,
+    "lo": 44,
+    "short": "Sunny",
+    "icon": "sun"
+   }
+  ],
+  "source": "National Weather Service",
+  "updated": "2026-10-15T08:24:27+00:00"
+ },
+ "mda": {
+  "title": "MDA Kicks &amp; Giggles",
+  "items": [
+   "<span class='gm-when'>Last game · Sun Oct 11</span><span class='gm-match'>MDA vs Blackhawks</span><span class='gm-loc'>Greg Grant Sports Complex 7v7, Shelby Township</span><span class='gm-extra'>Final score coming soon.</span>",
+   "<span class='gm-when'>Sat Oct 17 · 12:30 pm</span><span class='gm-match'>MDA vs MI Stars Elite 2018/2017G White</span><span class='gm-loc'>Spencer Park Field 2, Rochester Hills</span><span class='gm-extra'>Arrive 12:00 pm · Uniform: black-black-black</span>"
+  ]
+ },
+ "spartans": {
+  "title": "Spartans Hoop Scoop",
+  "items": [
+   "<span class='gm-when'>Last game · Sat Oct 10</span><span class='gm-match'>Spartans vs Tigers</span><span class='gm-loc'>Berkshire Middle School, Beverly Hills</span><span class='gm-extra'>Final score coming soon.</span>",
+   "<span class='gm-when'>Sat Oct 17 · 9:55 am</span><span class='gm-match'>Spartans vs Hoosiers</span><span class='gm-loc'>Berkshire Middle School, Beverly Hills</span>"
+  ]
+ },
+ "fantasy": {
+  "league": "Quarton 5th Grade DAWGS",
+  "team": "LamARI SHAPson",
+  "record": "5-0",
+  "rank": 1,
+  "teams": 10,
+  "week": 6,
+  "points_for": 811.3,
+  "active": true,
+  "latest_period": 6,
+  "this_week": {
+   "week": 6,
+   "opponent": "Hard Knox",
+   "score": 0.0,
+   "opp_score": 0.0,
+   "winner": "UNDECIDED",
+   "proj": 132.5,
+   "opp_proj": 88.0,
+   "top": null,
+   "opp_top": null
+  },
+  "last_week": {
+   "week": 5,
+   "opponent": "The Jude Crew",
+   "score": 205.6,
+   "opp_score": 107.0,
+   "winner": "HOME",
+   "proj": null,
+   "opp_proj": null,
+   "top": {
+    "name": "Jahmyr Gibbs",
+    "pos": "RB",
+    "pts": 37.7
+   },
+   "opp_top": {
+    "name": "Trevor Lawrence",
+    "pos": "QB",
+    "pts": 21.7
+   },
+   "result": "W"
+  }
+ },
+ "ari_fantasy": {
+  "title": "Ari&#8217;s Fantasy Team: LamARI SHAPson",
+  "items": [
+   "5–0, 1st of 10",
+   "<b>Week 6</b> vs Hard Knox",
+   "Score: <b>0.0–0.0</b>, no games yet",
+   "Projected: 132.5–88.0"
+  ]
+ },
+ "almanac": [
+  {
+   "date": "2026-10-15",
+   "holidays": [],
+   "shabbat": null
+  },
+  {
+   "date": "2026-10-16",
+   "holidays": [],
+   "shabbat": {
+    "sunset": "6:49 pm",
+    "source": "Hebcal"
+   }
+  }
+ ],
+ "due": [
+  {
+   "source": "league_schedules",
+   "who": "claude",
+   "what": "Re-check data/schedules/* against league sites and emails (MCE basketball, Snaptivities)",
+   "why": "never checked"
+  },
+  {
+   "source": "sunday_school",
+   "who": "jacob",
+   "what": "Temple Israel Sunday School calendar -> data/calendars/temple-israel-YYYY-YY.yaml (Jacob to supply; Temple Beth El dropped 2026-10-10)",
+   "why": "not supplied yet"
+  }
+ ],
+ "delivery": {
+  "email": null,
+  "dashboard": null,
+  "print": null,
+  "filed": null
+ },
+ "meta": {
+  "sources": {
+   "playmetrics_feed": {
+    "ok": true,
+    "count": null
+   },
+   "playmetrics": {
+    "ok": true,
+    "count": 9
+   },
+   "playmetrics_past": {
+    "ok": true,
+    "count": 24
+   },
+   "schedules": {
+    "ok": true,
+    "count": 4
+   },
+   "schedules_past": {
+    "ok": true,
+    "count": 5
+   },
+   "mce_results": {
+    "ok": true,
+    "count": null
+   },
+   "district_calendar": {
+    "ok": true,
+    "count": 0
+   },
+   "lunch": {
+    "ok": true,
+    "count": null
+   },
+   "weather": {
+    "ok": true,
+    "count": null
+   },
+   "fantasy": {
+    "ok": true,
+    "count": null
+   },
+   "almanac": {
+    "ok": true,
+    "count": 2
+   }
+  },
+  "warnings": []
+ }
+}
