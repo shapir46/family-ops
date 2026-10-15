@@ -258,6 +258,7 @@ p{{margin-bottom:3px;text-align:justify;hyphens:auto}}
 .gm-match{{display:block;font-family:PF,serif;font-weight:700;font-size:9.4pt;line-height:1.15}}
 .gm-loc{{display:block;font-style:italic;font-size:7.3pt}}
 .gm-extra{{display:block;font-size:7.3pt;color:#333}}
+.gm-recap{{display:block;font-size:7.3pt;line-height:1.2;text-align:justify;hyphens:auto;margin-top:2px;padding-top:2px;border-top:1px dotted #9bb596}}
 .word{{border:2px solid #161410;background:#fff7e0;padding:4px 7px;margin-top:5px;display:flex;gap:9px;align-items:center}}
 .word .wl{{font-family:PF,serif;font-size:7pt;text-transform:uppercase;letter-spacing:1.2px;color:#7a2e1f}}
 .word .ww{{font-family:PF,serif;font-weight:700;font-size:23pt;line-height:1;color:#7a2e1f}}

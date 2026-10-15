@@ -129,7 +129,8 @@ def test_mce_parse_matches_division_date_and_both_teams():
     sched = [{"date": date(2026, 10, 10), "kind": "game", "title": "Basketball game vs Tigers"}]
     cfg = {"url": "x", "team": "Spartans", "player": "Ari Shapiro", "score_key": "spartans", "stat_key": "ari_points"}
     got = mce.results({**cfg, "division": "College"}, sched, date(2026, 10, 12), page=PAGE)
-    assert got == {"2026-10-10": {"spartans": 24, "opp": 18, "opponent": "Tigers", "ari_points": 10, "source": "MCE league results"}}
+    assert got == {"2026-10-10": {"spartans": 24, "opp": 18, "opponent": "Tigers", "ari_points": 10, "source": "MCE league results",
+                                  "recap": "Ari Shapiro scored six of his ten points in the first half, while Sam Lee had 12 points."}}
     # Without a division, the Rookie "Spartans 30, Tigers 2" also matches; the recap naming Ari decides.
     assert mce.results(cfg, sched, date(2026, 10, 12), page=PAGE)["2026-10-10"]["spartans"] == 24
     # Two same-name games and no way to tell them apart: skipped, never guessed.
@@ -142,3 +143,44 @@ def test_mce_player_points():
     assert mce.player_points(r, "Reece Roe") == 6
     assert mce.player_points(r, "Beau Poe") == 12
     assert mce.player_points(r, "Nobody") is None
+
+
+PAGE_ABBREV = """<html><body><p>BOYS LEAGUE: SATURDAY, OCT 10</p>
+<p>Knicks 28, Hoosiers 20</p><p>:</p><p>Knicks recap.</p>
+<p>Spartans 31, Tigers 24</p><p>:</p><p>The Spartans rallied in the fourth. Ari Shapiro added 4pts.</p></body></html>"""
+
+
+def test_mce_abbreviated_heading_division_list_and_recap():
+    # MCE's Oct 2026 page: "BOYS LEAGUE: SATURDAY, OCT 10" (abbreviated month, no "College").
+    sched = [{"date": date(2026, 10, 10), "kind": "game", "title": "Basketball game vs Tigers"}]
+    cfg = {"url": "x", "team": "Spartans", "player": "Ari Shapiro", "score_key": "spartans", "stat_key": "ari_points",
+           "division": ["College", "Boys League"]}
+    got = mce.results(cfg, sched, date(2026, 10, 15), page=PAGE_ABBREV)["2026-10-10"]
+    assert (got["spartans"], got["opp"], got["ari_points"]) == (31, 24, 4)
+    assert got["recap"] == "The Spartans rallied in the fourth. Ari Shapiro added 4pts."
+    assert mce.results({**cfg, "division": "College"}, sched, date(2026, 10, 15), page=PAGE_ABBREV) == {}
+    assert [g["date"] for g in mce.parse("<p>ROOKIE LEAGUE: SEPT 28:</p><p>A 1, B 2</p>", date(2026, 10, 1))] == ["2026-09-28"]
+
+
+def test_mce_short_recap_cuts_at_a_sentence():
+    assert mce.short_recap("One two three. Four five six. Seven.", max_words=6) == "One two three. Four five six."
+    assert mce.short_recap("A very long first sentence here.", max_words=2) == "A very long first sentence here."
+
+
+def test_spartans_friday_prints_the_recap(monkeypatch):
+    no_results(monkeypatch)
+    posted = {"2026-10-10": {**POSTED["2026-10-10"], "recap": "Spartans & friends won."}}
+    past = bb(date(2026, 9, 18), date(2026, 10, 15))
+    fri = teams.section(SPARTANS, date(2026, 10, 16), bb(date(2026, 10, 16), date(2026, 10, 26)), past, posted)
+    assert fri["items"][0] == _card("Final · Sat Oct 10", "<b>Spartans 24</b>, Tigers 18", BERKSHIRE,
+                                    "<b>Ari scored 6 points!</b>", "Spartans & friends won.")
+    assert "Spartans &amp; friends won." in fri["items"][0]
+    # Not on other days.
+    thu = teams.section(SPARTANS, date(2026, 10, 15), bb(date(2026, 10, 15), date(2026, 10, 25)), past, posted)
+    assert "gm-recap" not in thu["items"][0]
+    # Friday with the next game more than 3 days away (bye week): the box still appears for the recap.
+    far = [e for e in bb(date(2026, 10, 16), date(2026, 10, 30)) if e.date > "2026-10-20"]
+    assert "gm-recap" in teams.section(SPARTANS, date(2026, 10, 16), far, past, posted)["items"][0]
+    # No recap posted: Friday falls back to the normal rules.
+    assert "gm-recap" not in teams.section(SPARTANS, date(2026, 10, 16), bb(date(2026, 10, 16), date(2026, 10, 26)), past,
+                                           POSTED)["items"][0]

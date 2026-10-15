@@ -7,7 +7,8 @@ location: Berkshire Middle School, 21707 W 14 Mile Rd, Beverly Hills
 # Scores from the previous weekend are posted here (Jacob, 2026-10-10); read daily by familyops/mce.py.
 # team = the name MCE writes for Ari's team; division = a word in the page heading over his division's games
 # (the Rookie League also has a Spartans team); player = how a recap names Ari (his points are read only from that).
-results: {url: "https://www.motorcityevolution.com/league-results", team: Spartans, division: College, player: Ari Shapiro}
+# The page heads his games "BOYS LEAGUE: SATURDAY, OCT 10" (seen 2026-10-15); earlier it said "College".
+results: {url: "https://www.motorcityevolution.com/league-results", team: Spartans, division: [College, Boys League], player: Ari Shapiro}
 refresh: weekly   # recheck motorcityevolution.com / league email for changes
 events:
   - {date: 2026-10-10, start: "12:15", kind: game, title: "Basketball game vs Tigers"}

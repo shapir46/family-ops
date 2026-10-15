@@ -1,12 +1,15 @@
 """Motor City Evolution league results page -> game scores for Ari's Spartans box (Jacob, 2026-10-10).
 
 MCE posts the previous weekend's scores and short recaps at the page in data/schedules/ari-mce-basketball-*.yaml
-(`results_url`). The page groups games under headings like "ROOKIE LEAGUE: SEPTEMBER 28:" and writes each game as
+(`results_url`), usually by Thursday. The page groups games under headings like "ROOKIE LEAGUE: SEPTEMBER 28:" or
+"BOYS LEAGUE: SATURDAY, OCT 10" (month spelled out or abbreviated) and writes each game as
 "Spartans 21, Crush 2" followed by a recap paragraph. Other divisions have teams with the same names (the Rookie League
-also has Spartans), so a game counts only when it is under Ari's division heading (`division`, e.g. "College") and its
+also has Spartans), so a game counts only when it is under Ari's division heading (`division`: one word or phrase, or a
+list of them, e.g. ["College", "Boys League"]) and its
 date AND both team names match a game on Ari's schedule. Two matches the same day without a way to tell them apart are
 skipped.
-Ari's points are read from the recap only when it names him in full ("Ari Shapiro ... six points").
+Ari's points are read from the recap only when it names him in full ("Ari Shapiro ... six points"). The recap itself
+is returned too: Friday's paper prints it under the final score (Jacob, 2026-10-15).
 Unconfirmed = silent: anything that doesn't parse is skipped, never guessed.
 """
 from __future__ import annotations
@@ -19,9 +22,13 @@ import requests
 
 MONTHS = ["JANUARY", "FEBRUARY", "MARCH", "APRIL", "MAY", "JUNE", "JULY", "AUGUST", "SEPTEMBER", "OCTOBER",
           "NOVEMBER", "DECEMBER"]
-HEADING = re.compile(r"^(?P<league>[A-Z][A-Z0-9 &'/.-]*?)\s*:\s*(?:[A-Z]+DAY,?\s+)?(?P<month>" + "|".join(MONTHS)
-                     + r")\.?\s+(?P<day>\d{1,2})(?:ST|ND|RD|TH)?\s*:?\s*$")
+# Month spelled out ("OCTOBER 10") or abbreviated ("OCT 10", "SEPT 28"); weekday optional, also abbreviated.
+_MONTH = "|".join(m[:3] + "(?:" + m[3:] + ")?" for m in MONTHS).replace("SEP(?:", "SEPT?(?:")
+HEADING = re.compile(r"^(?P<league>[A-Z][A-Z0-9 &'/.-]*?)\s*:\s*(?:(?:[A-Z]+DAY|MON|TUES?|WED|THUR?S?|FRI|SAT|SUN)\.?,?\s+)?"
+                     r"(?P<month>" + _MONTH + r")\.?\s+(?P<day>\d{1,2})(?:ST|ND|RD|TH)?\s*:?\s*$")
 GAME = re.compile(r"^(?P<a>[A-Za-z][\w .'&/-]*?)\s+(?P<sa>\d{1,3})\s*,\s*(?P<b>[A-Za-z][\w .'&/-]*?)\s+(?P<sb>\d{1,3})\s*:?\s*$")
+RECAP_WORDS = 90   # Friday's recap is cut at a sentence end to stay under this
+
 WORDS = {w: i for i, w in enumerate("zero one two three four five six seven eight nine ten eleven twelve thirteen "
                                      "fourteen fifteen sixteen seventeen eighteen nineteen twenty".split())}
 WORDS.update({"twenty-" + w: 20 + i for w, i in list(WORDS.items())[1:10]})
@@ -56,7 +63,7 @@ def parse(page: str, today: date) -> list[dict]:
         h = HEADING.match(ln) if ln == ln.upper() else None
         if h:
             league = h["league"].strip().title()
-            when = _year(MONTHS.index(h["month"]) + 1, int(h["day"]), today)
+            when = _year(next(i for i, m in enumerate(MONTHS, 1) if m.startswith(h["month"][:3])), int(h["day"]), today)
             cur = None
             continue
         g = GAME.match(ln)
@@ -85,8 +92,18 @@ def player_points(recap: str, player: str) -> int | None:
     return None
 
 
+def short_recap(recap: str, max_words: int = RECAP_WORDS) -> str:
+    """The recap cut at a sentence end so it stays under `max_words` (always at least one sentence)."""
+    out = []
+    for sentence in re.split(r"(?<=[.!?])\s+", recap.strip()):
+        if out and len(" ".join(out + [sentence]).split()) > max_words:
+            break
+        out.append(sentence)
+    return " ".join(out)
+
+
 def results(cfg: dict, schedule: list[dict], today: date, page: str | None = None) -> dict[str, dict]:
-    """{date: {team_key: ours, 'opp': theirs, 'opponent', '<stat_key>'?, 'source'}} for games on Ari's schedule.
+    """{date: {team_key: ours, 'opp': theirs, 'opponent', '<stat_key>'?, 'recap'?, 'source'}} for games on Ari's schedule.
     cfg = the schedule file's results block: {url, team, division, player} plus score_key, stat_key."""
     if page is None:
         page = requests.get(cfg["url"], timeout=30, headers={"User-Agent": "Mozilla/5.0 family-ops"}).text
@@ -96,11 +113,12 @@ def results(cfg: dict, schedule: list[dict], today: date, page: str | None = Non
         t = e.get("title", "")
         if e.get("kind") == "game" and " vs " in t:
             wanted[str(e["date"])] = t.split(" vs ", 1)[1].replace(" (tentative)", "").strip().lower()
-    division = (cfg.get("division") or "").lower()
+    division = cfg.get("division") or []
+    divisions = [x.lower() for x in ([division] if isinstance(division, str) else division)]
     found: dict[str, list[dict]] = {}
     for g in parse(page, today):
         opp = wanted.get(g["date"])
-        if not opp or (division and division not in (g["league"] or "").lower()):
+        if not opp or (divisions and not any(x in (g["league"] or "").lower() for x in divisions)):
             continue
         if g["a"].lower() == team.lower() and g["b"].lower() == opp:
             us, them, opp_name = g["sa"], g["sb"], g["b"]
@@ -112,6 +130,8 @@ def results(cfg: dict, schedule: list[dict], today: date, page: str | None = Non
         pts = player_points(g["recap"], cfg["player"]) if cfg.get("player") else None
         if pts is not None:
             r[cfg["stat_key"]] = pts
+        if g["recap"]:
+            r["recap"] = short_recap(g["recap"])
         found.setdefault(g["date"], []).append(r)
     out = {}
     for d, rs in found.items():

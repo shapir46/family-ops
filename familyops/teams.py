@@ -7,9 +7,12 @@ Each box shows only the LAST game (score, or "Final score coming soon.") and the
 the kid's goals/points come from data/results/<kid>-<team>-*.yaml, which Jacob supplies; Spartans scores are also read
 from the MCE league results page (familyops/mce.py), and Jacob's file wins. A box is shown only when there was a game
 since the last paper or the next game/tournament is within 3 days. A zero stat is never printed.
+Fridays: the Spartans box also prints the league's recap under the last game's final score, and appears whenever that
+game was in the past week (MCE posts scores and recaps by Thursday; Jacob, 2026-10-15).
 """
 from __future__ import annotations
 
+import html
 from dataclasses import dataclass
 from datetime import date, timedelta
 
@@ -19,6 +22,7 @@ from . import ROOT
 from .model import Event, fmt_time
 
 LOOKAHEAD_DAYS = 3
+RECAP_WEEKDAY = 4     # Friday: the paper prints the posted recap of the past week's game
 LOOKBACK_DAYS = 28   # how far back collect looks for each kid's last game
 
 
@@ -117,13 +121,15 @@ def place(loc: str | None) -> str:
     return field if field == city else f"{field}, {city}"
 
 
-def _card(when: str, match: str, where: str = "", extra: str = "") -> str:
+def _card(when: str, match: str, where: str = "", extra: str = "", recap: str = "") -> str:
     """One schedule entry, styled by build2.py (.gm-*)."""
     out = f"<span class='gm-when'>{when}</span><span class='gm-match'>{match}</span>"
     if where:
         out += f"<span class='gm-loc'>{where}</span>"
     if extra:
         out += f"<span class='gm-extra'>{extra}</span>"
+    if recap:
+        out += f"<span class='gm-recap'>{html.escape(recap, quote=False)}</span>"
     return out
 
 
@@ -171,7 +177,10 @@ def section(team: Team, today: date, events: list[Event], past_events: list[Even
     nxt.sort(key=lambda x: (x[0], x[1]))
     recent = {d.isoformat() for d in recent_days(today)}
     horizon = (today + timedelta(days=LOOKAHEAD_DAYS)).isoformat()
-    if not ((last and last.date in recent) or (nxt and nxt[0][0] <= horizon)):
+    friday = today.weekday() == RECAP_WEEKDAY and last and (today - date.fromisoformat(last.date)).days <= 7
+    r_last = res.get(last.date) if last else None
+    recap = (r_last or {}).get("recap", "") if friday and r_last and team.score_key in r_last else ""
+    if not ((last and last.date in recent) or (nxt and nxt[0][0] <= horizon) or recap):
         return None
     items = []
     if last:
@@ -184,7 +193,7 @@ def section(team: Team, today: date, events: list[Event], past_events: list[Even
             extra = f"<b>{team.kid} scored {team.stat_one if n == 1 else team.stat_many.format(n=n)}!</b>" if n else ""
             if r.get("notes"):
                 extra = (extra + " " + r["notes"]).strip()
-            items.append(_card(f"Final · {_day(last.date)}", f"{a}, {b}", place(last.location), extra))
+            items.append(_card(f"Final · {_day(last.date)}", f"{a}, {b}", place(last.location), extra, recap))
         else:
             fresh = (today - date.fromisoformat(last.date)).days <= RESULT_WAIT_DAYS
             items.append(_card(f"Last game · {_day(last.date)}", f"{team.name} vs {opp}", place(last.location),
