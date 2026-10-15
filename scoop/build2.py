@@ -9,6 +9,24 @@ pf7=f(f"{G}/fontsource-playfair-display*/package/files/playfair-display-latin-70
 lb4=f(f"{G}/fontsource-libre-baskerville*/package/files/libre-baskerville-latin-400-normal.woff2")
 lb7=f(f"{G}/fontsource-libre-baskerville*/package/files/libre-baskerville-latin-700-normal.woff2")
 d=json.load(open('edition.json'))
+_MONTHS = ['january', 'february', 'march', 'april', 'may', 'june', 'july', 'august', 'september', 'october', 'november', 'december']
+def edition_days():
+    """ISO dates this edition covers, from `date` ("Thursday, October 15, 2026" or "Saturday & Sunday, October 17–18, 2026")."""
+    m = re.search(r'([A-Za-z]+) (\d{1,2})(?:\s*[–-]\s*(\d{1,2}))?, (\d{4})', d.get('date', ''))
+    if not m or m.group(1).lower() not in _MONTHS: return []
+    mo, a, b, y = _MONTHS.index(m.group(1).lower()) + 1, int(m.group(2)), int(m.group(3) or m.group(2)), int(m.group(4))
+    return [f"{y}-{mo:02d}-{day:02d}" for day in range(a, b + 1)]
+_KIT = os.path.dirname(os.path.abspath(__file__))
+# Assigned stories: a one-time headline story Jacob asks for, written ahead with his own photo, in assigned/queue.json.
+# The entry whose date falls in this edition replaces the headline story (README: Assigned stories, Jacob 2026-10-15).
+if os.path.exists(os.path.join(_KIT, 'assigned', 'queue.json')):
+    _due = [e for e in json.load(open(os.path.join(_KIT, 'assigned', 'queue.json'))) if e.get('date') in edition_days()]
+    if _due:
+        a = _due[0]
+        d.update(head=a['head'], sub=a['sub'], story=a['story'], head_src=a['head_src'])
+        if a.get('photo'): d['head_photo'] = dict(a['photo'], img=os.path.join(_KIT, a['photo']['img']))
+        else: d.pop('head_photo', None)
+        print(f"ASSIGNED STORY: {a['head']}", file=sys.stderr)
 crit_b64=''
 if d.get('critter') and d['critter'].get('img'):
     from PIL import Image; import io
@@ -17,7 +35,7 @@ hp_b64=''
 if d.get('head_photo') and d['head_photo'].get('img'):
     from PIL import Image; import io
     im=Image.open(d['head_photo']['img']).convert('RGB'); im.thumbnail((900,500)); bio=io.BytesIO(); im.save(bio,'JPEG',quality=85); hp_b64=base64.b64encode(bio.getvalue()).decode()
-head_photo_html=(f"<div style='border:1px solid #161410;line-height:0'><img src='data:image/jpeg;base64,{hp_b64}' style='width:100%;height:auto;max-height:190px;object-fit:cover'></div>") if hp_b64 else ''
+head_photo_html=(f"<div style='border:1px solid #161410;line-height:0'><img src='data:image/jpeg;base64,{hp_b64}' style='width:100%;height:auto;max-height:{int(d["head_photo"].get("h", 190))}px;object-fit:cover'></div>") if hp_b64 else ''
 li=lambda xs:"".join(f"<li>{x}</li>" for x in xs)
 def story(h,t,*_): return f"<h3>{h}</h3><p>{t}</p>"   # no source line on the page; sources go in the footer (Jacob, 2026-10-12)
 
@@ -94,14 +112,6 @@ def sec_news0():
     return '' if d.get('fantasy') or not d.get('news') else story(*d['news'][0])
 # Featured artwork: a family kid's own art, framed like a gallery piece (Jacob, 2026-10-14; README: Featured artwork).
 # edition.json `featured_art`, or else the entry in featured/queue.json whose date falls in this edition's date(s).
-_MONTHS = ['january', 'february', 'march', 'april', 'may', 'june', 'july', 'august', 'september', 'october', 'november', 'december']
-def edition_days():
-    """ISO dates this edition covers, from `date` ("Thursday, October 15, 2026" or "Saturday & Sunday, October 17–18, 2026")."""
-    m = re.search(r'([A-Za-z]+) (\d{1,2})(?:\s*[–-]\s*(\d{1,2}))?, (\d{4})', d.get('date', ''))
-    if not m or m.group(1).lower() not in _MONTHS: return []
-    mo, a, b, y = _MONTHS.index(m.group(1).lower()) + 1, int(m.group(2)), int(m.group(3) or m.group(2)), int(m.group(4))
-    return [f"{y}-{mo:02d}-{day:02d}" for day in range(a, b + 1)]
-_KIT = os.path.dirname(os.path.abspath(__file__))
 if not d.get('featured_art') and os.path.exists(os.path.join(_KIT, 'featured', 'queue.json')):
     _due = [e for e in json.load(open(os.path.join(_KIT, 'featured', 'queue.json'))) if e.get('date') in edition_days()]
     if _due:
@@ -219,10 +229,10 @@ p{{margin-bottom:3px;text-align:justify;hyphens:auto}}
 .rule{{border-top:1px solid #161410;margin:4px 0}}
 .box2{{background:#efe9d8;border:1px solid #161410;padding:3px 5px;margin-top:4px}}
 /* Featured artwork: gallery frame + museum title card (Jacob, 2026-10-14) */
-.featured{{display:flex;gap:10px;align-items:center;margin-top:5px;padding:6px;border:1px solid #161410;background:#fbf7ec}}
+.featured{{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;align-items:center;margin-top:5px;padding:6px;border:1px solid #161410;background:#fbf7ec}}
 .fa-frame{{flex:0 0 auto;padding:5px;background:#c9a34a;border:1px solid #161410;box-shadow:inset 0 0 0 2px #e9d397}}
 .fa-frame img{{display:block;height:196px;width:auto;border:3px solid #fff;outline:1px solid #8a6d28}}
-.fa-card{{flex:1;text-align:center}}
+.fa-card{{flex:1 1 150px;text-align:center}}
 .fa-kicker{{font-family:PF,serif;font-weight:700;font-size:8.4pt;text-transform:uppercase;letter-spacing:1.4px;border-top:1px solid #161410;border-bottom:1px solid #161410;padding:1px 0;margin-bottom:6px}}
 .fa-title{{font-family:PF,serif;font-style:italic;font-weight:700;font-size:16pt;line-height:1.1}}
 .fa-by{{font-family:PF,serif;font-size:10pt;margin:3px 0 6px}}
