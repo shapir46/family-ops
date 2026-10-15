@@ -113,8 +113,8 @@ One-page Letter PDF newspaper. Files (in the family-ops repo): `scoop/` holds bu
 - Jacob can also send a score or Ari's points (`data/results/ari-spartans-*.yaml`, via `/family-update`); his entry wins over the page. "Ari scored 6 points!" appears only when he scored; zero is never mentioned. With no score yet: "Final score coming soon."
 - Playoff dates without a known opponent read "Spartans · Playoffs (if qualified)"; no time is printed while the league says "Times TBD".
 
-## ARI'S FANTASY TEAM (Jacob, 2026-10-12; replaces the Oct 10 rule)
-- **Only Monday, Tuesday, Thursday and the Saturday Weekend Edition, during the NFL season.** Never on Wednesday or Friday. Outside the season (ESPN league inactive, or no current matchup) there is no box.
+## ARI'S FANTASY TEAM (Jacob, 2026-10-12; days changed 2026-10-15)
+- **Only Friday, the Saturday Weekend Edition (which covers Sunday), Monday and Tuesday, during the NFL season** (Jacob, 2026-10-15). Never on Wednesday or Thursday. Outside the season (ESPN league inactive, or no current matchup) there is no box.
 - The box (`ari_fantasy`) is **copied verbatim from `state.ari_fantasy`**, which `familyops/fantasy.py` (`box()`) computes from Ari's ESPN league. When it is null, the box does not appear. Never hand-write it and never guess a score.
 - Content:
   - title "Ari's Fantasy Team: <team name>", then record and standing ("4–0, 1st of 10");

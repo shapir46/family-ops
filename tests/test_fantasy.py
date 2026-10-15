@@ -42,10 +42,10 @@ def test_top_player_is_a_starter_with_that_weeks_points():
     assert fantasy._top({}, 6) is None
 
 
-def test_box_only_mon_tue_thu_sat():
+def test_box_only_fri_sat_mon_tue():
     s = _summary()
     shown = {d: fantasy.box(s, date(2026, 10, d)) is not None for d in range(12, 19)}   # Mon Oct 12 .. Sun Oct 18
-    assert shown == {12: True, 13: True, 14: False, 15: True, 16: False, 17: True, 18: False}
+    assert shown == {12: True, 13: True, 14: False, 15: False, 16: True, 17: True, 18: False}
     assert fantasy.box(None, date(2026, 10, 12)) is None
     assert fantasy.box({**s, "active": False}, date(2026, 10, 12)) is None
 
@@ -56,8 +56,8 @@ def test_box_score_projection_and_top_players():
     assert mon["items"] == ["4–1, 2nd of 10", "<b>Week 6</b> vs Bloomfield Blitz", "Score: <b>70.5–61.8</b>, leading",
                             "Projected: 112.4–98.0", "Ari&#8217;s top player: <b>Jahmyr Gibbs</b>, RB, 24.1 pts",
                             "Their top player: <b>Rams D/ST</b>, 9.0 pts"]
-    thu = fantasy.box(_summary(score=0.0, opp_score=0.0), date(2026, 10, 15))
-    assert thu["items"][2:] == ["Score: <b>0.0–0.0</b>, no games yet", "Projected: 112.4–98.0"]   # no top players on Thu
+    fri = fantasy.box(_summary(score=0.0, opp_score=0.0), date(2026, 10, 16))
+    assert fri["items"][2:] == ["Score: <b>0.0–0.0</b>, no games yet", "Projected: 112.4–98.0"]   # no top players on Fri
 
 
 def test_tuesday_shows_the_week_just_played():
@@ -72,4 +72,4 @@ def test_tuesday_shows_the_week_just_played():
 
 
 def test_box_hidden_after_the_season():
-    assert fantasy.box(_summary(winner="HOME"), date(2026, 10, 15)) is None   # Thursday, current week already final
+    assert fantasy.box(_summary(winner="HOME"), date(2026, 10, 16)) is None   # Friday, current week already final

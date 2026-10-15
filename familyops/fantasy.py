@@ -1,5 +1,5 @@
 """Ari's ESPN fantasy football league -> a small summary for the newspaper and dashboard, plus the newspaper's
-"Ari's Fantasy Team" box (box(): Mon, Tue, Thu and the Saturday Weekend Edition only; Jacob, 2026-10-12).
+"Ari's Fantasy Team" box (box(): Fri, the Saturday Weekend Edition, Mon and Tue only; Jacob, 2026-10-15).
 
 Reads ESPN's league API (the JSON the ESPN Fantasy site itself uses). League and team ids live in
 data/family.yaml (fantasy:). A league that is "viewable to public" needs nothing else; a private league needs
@@ -135,7 +135,7 @@ def get() -> dict | None:
 
 
 # --- The newspaper box (Jacob, 2026-10-12) ---------------------------------------------------------------------
-SHOW_DAYS = {0, 1, 3, 5}   # Mon, Tue, Thu, Sat (Weekend Edition); hidden Wed and Fri, and there is no Sunday paper
+SHOW_DAYS = {0, 1, 4, 5}   # Mon, Tue, Fri, Sat (Weekend Edition, covers Sunday); hidden Wed and Thu, and there is no Sunday paper
 TOP_DAYS = {0, 1}          # Mon and Tue also show each team's top performer
 
 
@@ -162,7 +162,7 @@ def _player(p: dict) -> str:
 
 def box(s: dict | None, today: date) -> dict | None:
     """The 'Ari's Fantasy Team' box, {title, items}, or None (hide it). During the NFL (fantasy) season only, on
-    Mon/Tue/Thu/Sat: the current matchup with its score and projected score; Mon and Tue add each team's top
+    Fri/Sat/Mon/Tue: the current matchup with its score and projected score; Mon and Tue add each team's top
     performer. Tuesday shows the week just played, even after ESPN has moved on to the next week."""
     if not s or not s.get("active") or today.weekday() not in SHOW_DAYS:
         return None
