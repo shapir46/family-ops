@@ -74,3 +74,12 @@ Read before building; append after printing. Riddles/jokes/words are in riddle-l
 - Lions: beat Arizona 45–21 Oct 11 (3–2), bye Oct 18, host Green Bay Oct 25
 - Comic: fetch gag ("Mackenzie, fetch!" / "You first, Artic." / "Fine! I'll fetch it!" / "Later... Good Artic! Again?"); playground backdrop in all four panels (two mirrored); fox hold+ball/grin, point/proud, run/worried, tada+ball/happy; Mackenzie sit/happy, smug, laugh, love
 - Critter: none (Thursday)
+
+## 2026-10-16
+- Headline: "The Shapiros Have Been Boo'ed!" [local] (assigned by Jacob, his doorbell-camera photo)
+- News: none printed, no room (written but unprinted: Rules, London's oldest restaurant, given to the National Trust [history]; Canaletto fantasy sketch heading to auction [arts]; Mars rover photo of mysterious cliffs [science]; all Smithsonian Magazine Oct. 15 / National Trust / Londonist)
+- Featured art: Tim Burton Self Portrait by Ari
+- Headline photo: Shapiro doorbell camera
+- Lions: not printed (next game confirmation single-sourced); sports: no confirmed scores, left blank
+- Comic: apple-picking gag ("Apple picking day!" / "They're too high!" / "Hold still, apples!" / "Apple pie for everyone!"); orchard backdrop in all four panels (two mirrored); bear point/happy + shrug/surprised + scared/surprised in orange beanie, fox cheer/grin, think/worried, akimbo/proud, Uni tada/smug, Mackenzie sit/love; tree and bucket props
+- Critter: none printed, no room (Sea Otter, openverse:7929ddec-abcb-4706-aaa6-c75b17c379f2, not shown)
