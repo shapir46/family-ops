@@ -83,3 +83,12 @@ Read before building; append after printing. Riddles/jokes/words are in riddle-l
 - Lions: not printed (next game confirmation single-sourced); sports: no confirmed scores, left blank
 - Comic: apple-picking gag ("Apple picking day!" / "They're too high!" / "Hold still, apples!" / "Apple pie for everyone!"); orchard backdrop in all four panels (two mirrored); bear point/happy + shrug/surprised + scared/surprised in orange beanie, fox cheer/grin, think/worried, akimbo/proud, Uni tada/smug, Mackenzie sit/love; tree and bucket props
 - Critter: none printed, no room (Sea Otter, openverse:7929ddec-abcb-4706-aaa6-c75b17c379f2, not shown)
+
+## 2026-10-17 (Weekend Edition)
+- Headline: "Squeeze Me! A Juice Machine Does the Squeezing" [local] (assigned by Jacob, his photo)
+- News: none printed, no room (written but unprinted: Tech Corner: What Is Bioprinting? [tech] (Science News Explores); Sherlock Holmes Was Based on a Real Doctor [history] (Smithsonian Magazine, Oct. 16, 2026))
+- Extras: This Week in History, U.S. takes ownership of Alaska Oct. 18, 1867; Fun Fact, a group of flamingos is a flamboyance
+- Headline photo: Shapiro family (juice machine, assigned)
+- Lions: host Green Bay Oct 25, 4:25 pm on FOX; sports: no confirmed scores, left blank
+- Comic: moon gag ("Low gravity! I can jump so high!" / "Careful, Artic!" / "Wheee! I'm touching the stars!" / "How do I get down?" "Same way. Slowly."); moon backdrop in all four panels (two mirrored); fox cheer/grin, run/laugh in blue beanie, tada/surprised, facepalm/worried; bear stand/happy, point/worried, akimbo/smug; Uni wave/grin; stars props
+- Critter: none (Saturday)
