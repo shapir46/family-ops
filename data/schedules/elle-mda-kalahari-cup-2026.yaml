@@ -2,7 +2,8 @@
 # The tournament and its four games come from the PlayMetrics feed (Kalahari Cup, Sports Force Parks, Sandusky, OH);
 # they match the schedule Jacob sent: Sat 9:00 am vs Pittsburgh Independence U9G (PAW), Sat 11:00 am vs DCFC South
 # Oakland U9 Girls Gold, Sun 10:00 am away vs Ann Arbor 2017/18 Girls Red, Sun 1:00 pm vs TBD. This file holds only
-# what the feed lacks: Friday's all-day visit to Cedar Point. `source_label` ties it to the MDA box's tournament list.
+# what the feed lacks: Friday's all-day visit to Cedar Point, part of the MDA Kalahari Cup trip (confirmed by Jacob,
+# 2026-10-19). `source_label` ties it to the MDA box's tournament list.
 name: MDA Kalahari Cup trip
 source_label: MDA tournament trip
 kids: [Elle]
