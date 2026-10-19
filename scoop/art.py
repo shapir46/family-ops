@@ -1520,11 +1520,95 @@ def scoop_icon(px=56, flip=False):
             f'role="img" aria-label="ice cream cone">{g}</svg>')
 
 
+# ---------------------------------------------------------------- headline icons (Jacob, 2026-10-19)
+# When the headline story has no real photo, the page shows one of these original topic icons in a badge under the
+# subhead. They are symbols for the topic, never a picture of the event itself.
+_ORANGE, _RED, _BLUE, _GREEN, _BROWN, _GOLD, _CREAM = '#e8823a', '#d8343c', '#7fb7e6', '#5bb36a', '#8a5636', '#f5b82e', '#f3dcb2'
+HEAD_ICONS = {
+    'rocket': lambda: (pth('M16,28 Q20,39 24,28 Z', '#f5a623', 1.1) + pth('M14,21 L8,30 L14,28 Z', _RED) + pth('M26,21 L32,30 L26,28 Z', _RED)
+                       + pth('M20,3 C27,10 28,18 26,28 H14 C12,18 13,10 20,3 Z', '#fff') + circ(20, 15, 3.4, _BLUE, 1.2)),
+    'pumpkin': lambda: (rct(18.5, 7, 3, 7, '#5b7f3a', rx=1) + ell(20, 24, 14, 11, _ORANGE)
+                        + pth('M20,13 Q13,24 20,35 M20,13 Q27,24 20,35', 'none', 1.1)),
+    'ghost': lambda: (pth('M10,35 V18 A10,10 0 0 1 30,18 V35 L26.5,32 L23,35 L20,32 L17,35 L13.5,32 Z', '#fff')
+                      + circ(16.5, 20, 1.9, INK, 0) + circ(23.5, 20, 1.9, INK, 0) + ell(20, 26.5, 1.8, 2.4, INK, 0)),
+    'football': lambda: grp(ell(20, 20, 15, 9, '#8a4b2a') + pth('M14,20 H26', 'none', 1.3, '#fff')
+                            + ''.join(pth(f'M{x},18 V22', 'none', 1.1, '#fff') for x in (16, 18.7, 21.3, 24)), 'rotate(-30 20 20)'),
+    'basketball': lambda: (circ(20, 20, 14, _ORANGE) + pth('M6,20 H34 M20,6 V34', 'none', 1.1)
+                           + pth('M10,10 Q19,20 10,30 M30,10 Q21,20 30,30', 'none', 1.1)),
+    'soccer': lambda: (circ(20, 20, 14, '#fff') + pth('M20,14 L25.7,18.1 L23.5,24.9 H16.5 L14.3,18.1 Z', INK, 0)
+                       + pth('M20,14 V6 M25.7,18.1 L33,15.6 M23.5,24.9 L28,31.3 M16.5,24.9 L12,31.3 M14.3,18.1 L7,15.6', 'none', 1.1)),
+    'book': lambda: (pth('M20,11 Q13,7 4,9 V31 Q13,29 20,33 Z', '#fff') + pth('M20,11 Q27,7 36,9 V31 Q27,29 20,33 Z', '#fff')
+                     + pth('M8,15 Q12,14 17,16 M8,20 Q12,19 17,21 M8,25 Q12,24 17,26 M23,16 Q28,14 32,15 M23,21 Q28,19 32,20 M23,26 Q28,24 32,25',
+                           'none', .9, '#8a9099')),
+    'palette': lambda: (pth('M20,5 C31,5 36,13 35,20 C34,27 27,25 25,28 C23,31 27,35 21,35 C11,35 5,28 5,20 C5,11 12,5 20,5 Z', _CREAM)
+                        + circ(13, 17, 2.8, _RED) + circ(19.5, 11.5, 2.8, _GOLD) + circ(27, 14, 2.8, '#3b7fc4') + circ(12, 25.5, 2.8, _GREEN)),
+    'music': lambda: (pth('M15,29 V10 L31,6 V25', 'none', 2.2) + pth('M15,14 L31,10', 'none', 2.2)
+                      + ell(12, 29, 3.8, 3, INK, 0) + ell(28, 25, 3.8, 3, INK, 0)),
+    'paw': lambda: (ell(20, 27, 8, 6.5, _BROWN) + circ(10.5, 18, 3.2, _BROWN) + circ(16.5, 11.5, 3.2, _BROWN)
+                    + circ(23.5, 11.5, 3.2, _BROWN) + circ(29.5, 18, 3.2, _BROWN)),
+    'leaf': lambda: (pth('M20,4 C30,10 33,21 20,33 C7,21 10,10 20,4 Z', '#e0782f') + pth('M20,8 V38', 'none', 1.3)
+                     + pth('M20,16 L14,12 M20,16 L26,12 M20,23 L12,18 M20,23 L28,18', 'none', .9)),
+    'globe': lambda: (circ(20, 20, 14, _BLUE) + pth('M11,12 Q17,9 19,15 Q16,21 11,19 Z', _GREEN, 1)
+                      + pth('M22,22 Q29,19 31,24 Q28,31 23,29 Z', _GREEN, 1) + ell(20, 20, 6.5, 14, 'none', .9) + pth('M6,20 H34', 'none', .9)),
+    'trophy': lambda: (pth('M12,10 H8 Q8,18 14,19 M28,10 H32 Q32,18 26,19', 'none', 1.5) + pth('M12,7 H28 V14 A8,8 0 0 1 12,14 Z', _GOLD)
+                       + rct(18, 22, 4, 6, _GOLD) + rct(12, 28, 16, 5, '#b9813b', rx=1)),
+    'school': lambda: (pth('M20,8 V2 L26,4 L20,6', _RED, 1) + pth('M5,35 V18 L20,8 L35,18 V35 Z', '#e9d397')
+                       + rct(17, 25, 6, 10, _BROWN) + rct(8.5, 21, 5.5, 5.5, _BLUE, 1.1) + rct(26, 21, 5.5, 5.5, _BLUE, 1.1)),
+    'apple': lambda: (pth('M20,13 Q20,8 22,5', 'none', 1.5) + pth('M21,9 Q27,3 31,8 Q26,13 21,9 Z', _GREEN, 1)
+                      + pth('M20,13 C14,8 6,12 7,21 C8,30 14,35 20,32 C26,35 32,30 33,21 C34,12 26,8 20,13 Z', _RED)),
+    'ship': lambda: (pth('M20,5 V25', 'none', 1.4) + pth('M20,7 V23 H9 Z', '#fff') + pth('M21,10 V23 H30 Z', '#fff')
+                     + pth('M4,26 H36 L31,34 H9 Z', _BROWN) + pth('M3,37 q4,-2 8,0 t8,0 t8,0 t8,0 t8,0', 'none', 1.2, '#3b7fc4')),
+    'heart': lambda: pth('M20,34 C8,26 4,19 6,13 C8,7 16,6 20,12 C24,6 32,7 34,13 C36,19 32,26 20,34 Z', _RED),
+    'star': lambda: star(20, 21, 15, _GOLD, 1.4),
+}
+_ICON_WORDS = {
+    'rocket': 'rocket rockets space spacex nasa mars moon astronaut astronauts planet planets satellite launch starship orbit',
+    'pumpkin': 'pumpkin pumpkins halloween harvest jack-o-lantern',
+    'ghost': 'ghost ghosts boo spooky haunted',
+    'football': 'football nfl lions touchdown quarterback',
+    'basketball': 'basketball pistons hoop hoops dunk',
+    'soccer': 'soccer goalie',
+    'book': 'book books library libraries read reading author story stories',
+    'palette': 'art artist artists paint painting museum mural drawing artwork',
+    'music': 'music song songs concert band sing singing orchestra',
+    'paw': 'dog dogs cat cats pet pets zoo animal animals puppy kitten bear bears fox panda wolf chimp chimps',
+    'leaf': 'leaf leaves tree trees forest park parks nature garden fall autumn trail trails',
+    'globe': 'world country countries earth globe ocean oceans',
+    'trophy': 'win wins won champion champions record records award prize contest',
+    'school': 'school schools teacher teachers class classroom student students',
+    'apple': 'food foods eat fruit fruits cook cooking recipe lunch juice orange oranges apple apples',
+    'ship': 'ship ships shipwreck shipwrecks boat boats sail sailing sailors divers',
+    'heart': 'kind kindness help helping friend friends share sharing',
+}
+_ICON_INDEX = {w: k for k, ws in _ICON_WORDS.items() for w in ws.split()}
+# Common words that only hint at a topic count half, so a specific word ("shipwreck", "dogs") wins.
+_ICON_LOOSE = set('world country earth read reading story stories win wins won record records share sharing help helping '
+                  'kind friend friends class fall park parks eat food orange'.split())
+
+
+def head_icon_for(head: str, sub: str = '', story: str = '') -> str:
+    """The best-matching icon name for a headline story by its words (headline counts most); 'star' if none match."""
+    score = {}
+    for text, weight in ((head, 3), (sub, 2), (story, 1)):
+        for w in re.findall(r"[a-z][a-z-]*", re.sub(r'<[^>]+>', ' ', text.lower())):
+            k = _ICON_INDEX.get(w)
+            if k:
+                score[k] = score.get(k, 0) + weight * (.5 if w in _ICON_LOOSE else 1)
+    return max(score, key=lambda k: (score[k], -list(HEAD_ICONS).index(k))) if score else 'star'
+
+
+def head_icon(name: str, px: int = 54) -> str:
+    """Inline SVG for a headline icon (40x40 viewBox); falls back to 'star' for an unknown name."""
+    g = HEAD_ICONS.get(name, HEAD_ICONS['star'])()
+    return (f'<svg class="hicon" viewBox="0 0 40 40" width="{px}" height="{px}" xmlns="http://www.w3.org/2000/svg" '
+            f'role="img" aria-label="{name}">{g}</svg>')
+
+
 # ---------------------------------------------------------------- library listing and model sheet
 def library():
     return {'cast': {k: c.name for k, c in CAST.items()}, 'poses': list(POSES), 'faces': list(FACES), 'gear': GEAR,
             'held': HELD, 'props': PROPS, 'scenes': SCENES,
-            'painted scenes': {k: f"{v['season']}: {v['subject']}" for k, v in PAINTED.items()}, 'weather icons': WX_ICONS}
+            'painted scenes': {k: f"{v['season']}: {v['subject']}" for k, v in PAINTED.items()}, 'weather icons': WX_ICONS, 'headline icons': list(HEAD_ICONS)}
 
 
 def character(C, pose='stand', face='happy', gear=None, hold=None, paint=True):

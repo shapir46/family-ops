@@ -38,6 +38,14 @@ if d.get('head_photo') and d['head_photo'].get('img'):
     from PIL import Image; import io
     im=Image.open(d['head_photo']['img']).convert('RGB'); im.thumbnail((900,500)); bio=io.BytesIO(); im.save(bio,'JPEG',quality=85); hp_b64=base64.b64encode(bio.getvalue()).decode()
 head_photo_html=(f"<div style='border:1px solid #161410;line-height:0'><img src='data:image/jpeg;base64,{hp_b64}' style='width:100%;height:auto;max-height:{int(d["head_photo"].get("h", 190))}px;object-fit:cover'></div>") if hp_b64 else ''
+# No real photo: an original topic icon in a badge under the subhead, so the lead always has a visual (Jacob, 2026-10-19).
+# edition.json `head_icon` names one (art.py HEAD_ICONS); otherwise art.py picks it from the headline's words.
+if not hp_b64 and d.get('head'):
+    _hi = d.get('head_icon') or art.head_icon_for(d['head'], d.get('sub', ''), ' '.join(d.get('story') or []))
+    if _hi not in art.HEAD_ICONS:
+        print(f"HEAD ICON WARNING: unknown head_icon '{_hi}' (known: {', '.join(art.HEAD_ICONS)}); using star", file=sys.stderr)
+    print(f"HEAD ICON: {_hi}", file=sys.stderr)
+    head_photo_html = f"<div class='head-icon'><span></span><div class='hi-badge'>{art.head_icon(_hi)}</div><span></span></div>"
 li=lambda xs:"".join(f"<li>{x}</li>" for x in xs)
 def story(h,t,*_): return f"<h3>{h}</h3><p>{t}</p>"   # no source line on the page; sources go in the footer (Jacob, 2026-10-12)
 
@@ -323,6 +331,9 @@ p{{margin-bottom:3px;text-align:justify;hyphens:auto}}
 .nt-row{{display:flex;justify-content:space-between;gap:3px}} .nt-row span:last-child{{font-family:PF,serif;font-size:8.6pt}} .nt-win{{font-weight:700}}
 .nfl-hl{{margin:3px 0 0}} .mnf{{border-top:1px solid #161410;margin-top:4px;padding-top:3px}} .mnf .gm-when{{color:#161410}}
 .mnf-game{{font-family:PF,serif;font-weight:700;font-size:10pt;line-height:1.15}}
+/* Headline icon badge when there is no photo (Jacob, 2026-10-19) */
+.head-icon{{display:flex;align-items:center;gap:8px;margin:3px 0 4px}} .head-icon span{{flex:1;border-top:1px solid #161410;border-bottom:1px solid #161410;height:3px}}
+.hi-badge{{width:66px;height:66px;border-radius:50%;border:1.5px solid #161410;background:#fbf7ec;display:flex;align-items:center;justify-content:center;box-shadow:inset 0 0 0 3px #fff,inset 0 0 0 4px #c9b88a}}
 .sport{{background:#dcebd6}} .sport .ff li{{border-bottom-color:#8fae86}} .plain{{background:#fff}}
 .gm-when{{display:block;font-family:PF,serif;font-weight:700;font-size:6.9pt;text-transform:uppercase;letter-spacing:.8px;color:#2f5d2a}}
 .gm-match{{display:block;font-family:PF,serif;font-weight:700;font-size:9.4pt;line-height:1.15}}
