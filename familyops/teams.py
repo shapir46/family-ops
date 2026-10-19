@@ -7,6 +7,9 @@ Each box shows only the LAST game (score, or "Final score coming soon.") and the
 the kid's goals/points come from data/results/<kid>-<team>-*.yaml, which Jacob supplies; Spartans scores are also read
 from the MCE league results page (familyops/mce.py), and Jacob's file wins. A box is shown only when there was a game
 since the last paper or the next game/tournament is within 3 days. A zero stat is never printed.
+Tournament week (Jacob, 2026-10-19): when a tournament starts within the next 7 days, the box lists every day of it,
+each game with its time, field, arrival and uniform, plus the trip's other days (data/schedules files with the team's
+`trip_source` label, e.g. a Cedar Point day), until the tournament ends.
 Spartans (Jacob, 2026-10-19): the box appears ONLY in the first paper after MCE posts the last game's score and recap
 (usually by Thursday), with the recap under the final score and the next game. Before that, and after that paper, no box.
 """
@@ -23,6 +26,7 @@ from . import ROOT
 from .model import Event, fmt_time
 
 LOOKAHEAD_DAYS = 3
+TOURNAMENT_WEEK_DAYS = 7   # a tournament starting this soon gets its full day-by-day schedule in the box
 LOOKBACK_DAYS = 28   # how far back collect looks for each kid's last game
 
 
@@ -41,11 +45,12 @@ class Team:
     stat_many: str      # "{n} goals"
     arrive_uniform: bool = False   # details read "arrive 7:30 am, black-black-black"
     recap_only: bool = False       # shown only in the first paper after the league posts the score and recap
+    trip_source: str = ""          # data/schedules label of a tournament trip's extra days (e.g. a Cedar Point visit)
 
 
 MDA = Team(key="mda", title="MDA Kicks &amp; Giggles", name="MDA", kid="Elle", source="PlayMetrics",
            game_prefix="Soccer game vs ", results_glob="elle-mda-*.yaml", score_key="mda", stat_key="elle_goals",
-           stat_one="a goal", stat_many="{n} goals", arrive_uniform=True)
+           stat_one="a goal", stat_many="{n} goals", arrive_uniform=True, trip_source="MDA tournament trip")
 SPARTANS = Team(key="spartans", title="Spartans Hoop Scoop", name="Spartans", kid="Ari", source="MCE league schedule",
                 game_prefix="Basketball game vs ", results_glob="ari-spartans-*.yaml", score_key="spartans",
                 stat_key="ari_points", stat_one="1 point", stat_many="{n} points", recap_only=True)
@@ -137,9 +142,10 @@ def _card(when: str, match: str, where: str = "", extra: str = "", recap: str = 
 def _extra(team: Team, e: Event) -> str:
     if not e.details:
         return ""
-    if team.arrive_uniform:               # "arrive 7:30 am, black-black-black"
+    if team.arrive_uniform:               # "arrive 7:30 am, black-black-black" ("arrive 8:30 am edt, tbd" at tournaments)
         arrive, _, uniform = e.details.partition(", ")
-        return arrive[:1].upper() + arrive[1:] + (f" · Uniform: {uniform}" if uniform else "")
+        arrive = arrive.replace(" edt", "").replace(" est", "")
+        return arrive[:1].upper() + arrive[1:] + (f" · Uniform: {uniform}" if uniform and uniform.lower() != "tbd" else "")
     return e.details
 
 
@@ -191,6 +197,7 @@ def section(team: Team, today: date, events: list[Event], past_events: list[Even
         span = _day(first) if first == last_day else f"{_day(first)}–{_day(last_day)}"
         nxt.append((first, "", _card(f"Tournament · {span}", _clean(title), place(evs[0].location))))
     nxt.sort(key=lambda x: (x[0], x[1]))
+    week = _tournament_week(team, today, events, tourneys)
     recent = {d.isoformat() for d in recent_days(today)}
     horizon = (today + timedelta(days=LOOKAHEAD_DAYS)).isoformat()
     r_last = res.get(last.date) if last else None
@@ -199,7 +206,7 @@ def section(team: Team, today: date, events: list[Event], past_events: list[Even
         recap = (r_last or {}).get("recap", "") if r_last and team.score_key in r_last else ""
         if not recap or _recap_printed(team, last.date, today):
             return None
-    elif not ((last and last.date in recent) or (nxt and nxt[0][0] <= horizon)):
+    elif not ((last and last.date in recent) or (nxt and nxt[0][0] <= horizon) or week):
         return None
     items = []
     if last:
@@ -217,6 +224,31 @@ def section(team: Team, today: date, events: list[Event], past_events: list[Even
             fresh = (today - date.fromisoformat(last.date)).days <= RESULT_WAIT_DAYS
             items.append(_card(f"Last game · {_day(last.date)}", f"{team.name} vs {opp}", place(last.location),
                                "Final score coming soon." if fresh else ""))
-    if nxt:
+    if week:
+        items += week
+    elif nxt:
         items.append(nxt[0][2])
     return {"title": team.title, "items": items}
+
+
+def _tournament_week(team: Team, today: date, events: list[Event], tourneys: dict[str, list[Event]]) -> list[str]:
+    """Tournament card + one card per remaining game or trip day, when a tournament starts within the next 7 days
+    (or is under way); [] otherwise."""
+    t = today.isoformat()
+    soon = (today + timedelta(days=TOURNAMENT_WEEK_DAYS - 1)).isoformat()
+    for title, evs in sorted(tourneys.items(), key=lambda kv: kv[1][0].date):
+        first, last_day = evs[0].date, evs[-1].end_date or evs[-1].date
+        if not (first <= soon and last_day >= t):
+            continue
+        span = _day(first) if first == last_day else f"{_day(first)}–{_day(last_day)}"
+        cards = [_card(f"Tournament · {span}", _clean(title), place(evs[0].location))]
+        days = [e for e in events if t <= e.date <= last_day and first <= e.date and
+                (_is_game(team, e) or (team.trip_source and team.trip_source in e.sources and team.kid in e.kids))]
+        for e in sorted(days, key=lambda e: (e.date, e.start or "")):
+            when = ("Today" if e.date == t else _day(e.date)) + (f" · {fmt_time(e.start)}" if e.start else " · All day")
+            if _is_game(team, e):
+                cards.append(_card(when, _matchup(team, e), place(e.location), _extra(team, e)))
+            else:
+                cards.append(_card(when, _clean(e.title).replace(" (all day)", ""), place(e.location)))
+        return cards
+    return []

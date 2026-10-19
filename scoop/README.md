@@ -114,6 +114,7 @@ One-page Letter PDF newspaper. Files (in the family-ops repo): `scoop/` holds bu
   - arrival time and uniform.
   Tournaments read "TOURNAMENT · FRI OCT 23–SUN OCT 25 / Kalahari Cup / Sandusky, OH".
 - Monday's paper also reports Saturday's game (Saturday's paper prints before Saturday games, and there is no Sunday paper).
+- **Tournament week** (Jacob, 2026-10-19): when a tournament starts within the next 7 days, the box lists the whole tournament, every paper until it ends: the tournament card, then each remaining day in order, each game as a card with its time, field, arrival time and uniform, plus the trip's other days (e.g. "Fri Oct 23 · All day / Cedar Point visit"). `familyops/teams.py` does this by itself. The games come from PlayMetrics; trip days come from a `data/schedules/` file labeled `MDA tournament trip` (e.g. `elle-mda-kalahari-cup-2026.yaml`, via `/family-update`).
 - Elle's games still appear in the family schedule as usual. This box adds the details and results.
 
 ## SPARTANS HOOP SCOOP (Jacob, Oct 10, 2026)

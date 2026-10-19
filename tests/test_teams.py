@@ -204,3 +204,25 @@ def test_mce_abbreviated_heading_division_list_and_recap():
 def test_mce_short_recap_cuts_at_a_sentence():
     assert mce.short_recap("One two three. Four five six. Seven.", max_words=6) == "One two three. Four five six."
     assert mce.short_recap("A very long first sentence here.", max_words=2) == "A very long first sentence here."
+
+
+def test_tournament_week_lists_every_day(monkeypatch):
+    no_results(monkeypatch)
+    pm = lambda d, **k: Event(date=d, kids=["Elle"], sources=["PlayMetrics"], **k)
+    loc = "Sports Force Parks 09B, 3115 Cleveland Road West, Sandusky, OH, USA"
+    events = [pm(d, title="Kalahari Cup", kind="event", location="Sandusky, OH, USA") for d in ("2026-10-23", "2026-10-24", "2026-10-25")]
+    events += [pm("2026-10-24", start="09:00", title="Soccer game vs Pittsburgh Independence U9G (PAW)", kind="game",
+                  location=loc, details="arrive 8:30 am edt, gray/black/white"),
+               pm("2026-10-25", start="13:00", title="Soccer game vs TBD", kind="game", location=loc, details="arrive 12:30 pm edt, tbd"),
+               Event(date="2026-10-23", title="Cedar Point visit (all day)", kids=["Elle"], sources=["MDA tournament trip"],
+                     location="Cedar Point, Sandusky, OH"),
+               Event(date="2026-10-23", title="Cedar Point visit (all day)", kids=["Leo"], sources=["MDA tournament trip"])]
+    s = teams.section(MDA, date(2026, 10, 19), events, [])     # Monday: tournament starts Friday
+    assert s["items"] == [
+        _card("Tournament · Fri Oct 23–Sun Oct 25", "Kalahari Cup", "Sandusky, OH"),
+        _card("Fri Oct 23 · All day", "Cedar Point visit", "Cedar Point, Sandusky"),
+        _card("Sat Oct 24 · 9:00 am", "MDA vs Pittsburgh Independence U9G (PAW)", "Sports Force Parks 09B, Sandusky",
+              "Arrive 8:30 am · Uniform: gray/black/white"),
+        _card("Sun Oct 25 · 1:00 pm", "MDA vs TBD", "Sports Force Parks 09B, Sandusky", "Arrive 12:30 pm")]
+    # More than a week out: only the usual single tournament card (and no box without a game in the next 3 days).
+    assert teams.section(MDA, date(2026, 10, 16), events, []) is None
