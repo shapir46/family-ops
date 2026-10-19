@@ -4,10 +4,10 @@
 set -e
 cd "$(dirname "$0")/.."
 PY=.venv/bin/python
-if [ -x "$PY" ] && "$PY" -c "import pdfplumber, yaml, dateutil, requests, playwright, pytest" 2>/dev/null; then
+if [ -x "$PY" ] && "$PY" -c "import pdfplumber, yaml, dateutil, requests, playwright, pytest, pyphen" 2>/dev/null; then
   exit 0
 fi
 python3 -m venv .venv
 .venv/bin/pip install -q --disable-pip-version-check -r requirements.txt
-"$PY" -c "import pdfplumber, yaml, dateutil, requests, playwright, pytest"
+"$PY" -c "import pdfplumber, yaml, dateutil, requests, playwright, pytest, pyphen"
 echo "family-ops: Python environment ready (.venv)" >&2
