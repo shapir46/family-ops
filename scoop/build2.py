@@ -127,9 +127,27 @@ def sec_featured():
     return (f"<div class='featured'><div class='fa-frame'><img src='data:image/jpeg;base64,{base64.b64encode(bio.getvalue()).decode()}'></div>"
             f"<div class='fa-card'><div class='fa-kicker'>Featured Artwork</div><div class='fa-title'>{a['title']}</div>"
             f"<div class='fa-by'>by {a['artist']}</div>{note}</div></div>")
-SECTIONS = {'featured': sec_featured, 'schedule': sec_schedule, 'week': sec_week, 'school_notes': sec_school_notes, 'left_story': sec_left_story,
+# Monday NFL page: Sunday's final scores as scoreboard tiles, a few highlights, and the Monday Night Football
+# preview (Jacob, 2026-10-19; README: Monday NFL page). edition.json `nfl_sunday`; Mondays in the NFL season only.
+def sec_nfl():
+    n = d.get('nfl_sunday')
+    if not n: return ''
+    def tile(a, sa, b, sb):
+        row = lambda t, x, win: f"<div class='nt-row{' nt-win' if win else ''}'><span>{t}</span><span>{x}</span></div>"
+        return f"<div class='nt'>{row(a, sa, sa > sb)}{row(b, sb, sb > sa)}</div>"
+    parts = []
+    if n.get('scores'):
+        parts.append("<h3 style='margin:0 0 2px'>" + n.get('title', 'NFL Sunday') + "</h3><div class='nfl-grid'>"
+                     + ''.join(tile(*g) for g in n['scores']) + "</div>")
+    if n.get('highlights'):
+        parts.append("<ul class='small nfl-hl'>" + li(n['highlights']) + "</ul>")
+    for m in n.get('mnf') or []:
+        parts.append(f"<div class='mnf'><div class='gm-when'>Monday Night Football · {m['when']}</div>"
+                     f"<div class='mnf-game'>{m['game']}</div><p class='small' style='margin:0'>{m['text']}</p></div>")
+    return f"<div class='box2 plain nfl'>{''.join(parts)}</div>" if parts else ''
+SECTIONS = {'nfl': sec_nfl, 'featured': sec_featured, 'schedule': sec_schedule, 'week': sec_week, 'school_notes': sec_school_notes, 'left_story': sec_left_story,
             'lead': sec_lead, 'news1': sec_news1, 'word': sec_word, 'joke': sec_joke, 'sports': sec_sports, 'ari_fantasy': sec_ari_fantasy, 'mda': sec_mda, 'spartans': sec_spartans, 'news0': sec_news0}
-BOXED = {'week', 'word', 'joke', 'ari_fantasy', 'mda', 'spartans', 'featured'}
+BOXED = {'week', 'word', 'joke', 'ari_fantasy', 'mda', 'spartans', 'featured', 'nfl'}
 
 # Layout: flexible column count, widths and placement (README: readability first). Default = the approved 3-column page.
 DEFAULT_LAYOUT = {'columns': [
@@ -141,6 +159,13 @@ for c in layout['columns']:
     for name in c['sections']:
         if name not in SECTIONS and not name.startswith('extra:') and name != 'extras':
             raise SystemExit(f"layout: unknown section '{name}' (known: {', '.join(SECTIONS)})")
+# The Monday NFL page is never dropped: if the layout doesn't place it, it goes right above the Sports Page.
+if d.get('nfl_sunday') and 'nfl' not in [n for c in layout['columns'] for n in c['sections']]:
+    layout = json.loads(json.dumps(layout))
+    for c in layout['columns']:
+        if 'sports' in c['sections']: c['sections'].insert(c['sections'].index('sports'), 'nfl'); break
+    else:
+        layout['columns'][-1]['sections'].append('nfl')
 # A due featured artwork is never dropped: if the layout doesn't place it, it goes right under the headline story.
 if d.get('featured_art') and 'featured' not in [n for c in layout['columns'] for n in c['sections']]:
     layout = json.loads(json.dumps(layout))
@@ -253,6 +278,12 @@ p{{margin-bottom:3px;text-align:justify;hyphens:auto}}
 .banner span+span::before{{content:"  ·  ";font-weight:400}}
 .ff li{{padding:2px 0;border-bottom:1px dotted #b9ad8c}} .ff li:last-child{{border-bottom:0}}
 /* Kids' team boxes have their own shade; Detroit sports and Ari's fantasy box have none (Jacob, 2026-10-10) */
+/* Monday NFL page (Jacob, 2026-10-19): scoreboard tiles, winner bold */
+.nfl{{padding:3px 3px}} .nfl-grid{{display:grid;grid-template-columns:repeat(auto-fill,minmax(76px,1fr));gap:2px}}
+.nt{{border:1px solid #161410;padding:1px 3px;font-size:7.1pt;line-height:1.25}}
+.nt-row{{display:flex;justify-content:space-between;gap:3px}} .nt-row span:last-child{{font-family:PF,serif;font-size:8.6pt}} .nt-win{{font-weight:700}}
+.nfl-hl{{margin:3px 0 0}} .mnf{{border-top:1px solid #161410;margin-top:4px;padding-top:3px}} .mnf .gm-when{{color:#161410}}
+.mnf-game{{font-family:PF,serif;font-weight:700;font-size:10pt;line-height:1.15}}
 .sport{{background:#dcebd6}} .sport .ff li{{border-bottom-color:#8fae86}} .plain{{background:#fff}}
 .gm-when{{display:block;font-family:PF,serif;font-weight:700;font-size:6.9pt;text-transform:uppercase;letter-spacing:.8px;color:#2f5d2a}}
 .gm-match{{display:block;font-family:PF,serif;font-weight:700;font-size:9.4pt;line-height:1.15}}
