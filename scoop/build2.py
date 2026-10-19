@@ -1,5 +1,6 @@
 import base64, glob, json, re, sys
 import art
+import crossword
 import os
 G=os.environ.get("FONTDIR","./fonts")
 def f(p): return base64.b64encode(open(glob.glob(p)[0],'rb').read()).decode()
@@ -145,9 +146,15 @@ def sec_nfl():
         parts.append(f"<div class='mnf'><div class='gm-when'>Monday Night Football · {m['when']}</div>"
                      f"<div class='mnf-game'>{m['game']}</div><p class='small' style='margin:0'>{m['text']}</p></div>")
     return f"<div class='box2 plain nfl'>{''.join(parts)}</div>" if parts else ''
-SECTIONS = {'nfl': sec_nfl, 'featured': sec_featured, 'schedule': sec_schedule, 'week': sec_week, 'school_notes': sec_school_notes, 'left_story': sec_left_story,
+# Daily Crossword: 4-5 answers about the day's paper; crossword.py lays out and checks the grid (Jacob, 2026-10-19).
+def sec_crossword():
+    if not d.get('crossword'): return ''
+    box, warn = crossword.html_box(d['crossword'])
+    if warn: print(warn, file=sys.stderr)
+    return box
+SECTIONS = {'crossword': sec_crossword, 'nfl': sec_nfl, 'featured': sec_featured, 'schedule': sec_schedule, 'week': sec_week, 'school_notes': sec_school_notes, 'left_story': sec_left_story,
             'lead': sec_lead, 'news1': sec_news1, 'word': sec_word, 'joke': sec_joke, 'sports': sec_sports, 'ari_fantasy': sec_ari_fantasy, 'mda': sec_mda, 'spartans': sec_spartans, 'news0': sec_news0}
-BOXED = {'week', 'word', 'joke', 'ari_fantasy', 'mda', 'spartans', 'featured', 'nfl'}
+BOXED = {'week', 'word', 'joke', 'ari_fantasy', 'mda', 'spartans', 'featured', 'nfl', 'crossword'}
 
 # Layout: flexible column count, widths and placement (README: readability first). Default = the approved 3-column page.
 DEFAULT_LAYOUT = {'columns': [
@@ -159,6 +166,13 @@ for c in layout['columns']:
     for name in c['sections']:
         if name not in SECTIONS and not name.startswith('extra:') and name != 'extras':
             raise SystemExit(f"layout: unknown section '{name}' (known: {', '.join(SECTIONS)})")
+# The crossword is never dropped: if the layout doesn't place it, it goes right under the joke.
+if d.get('crossword') and 'crossword' not in [n for c in layout['columns'] for n in c['sections']]:
+    layout = json.loads(json.dumps(layout))
+    for c in layout['columns']:
+        if 'joke' in c['sections']: c['sections'].insert(c['sections'].index('joke') + 1, 'crossword'); break
+    else:
+        layout['columns'][-1]['sections'].append('crossword')
 # The Monday NFL page is never dropped: if the layout doesn't place it, it goes right above the Sports Page.
 if d.get('nfl_sunday') and 'nfl' not in [n for c in layout['columns'] for n in c['sections']]:
     layout = json.loads(json.dumps(layout))
@@ -278,6 +292,11 @@ p{{margin-bottom:3px;text-align:justify;hyphens:auto}}
 .banner span+span::before{{content:"  ·  ";font-weight:400}}
 .ff li{{padding:2px 0;border-bottom:1px dotted #b9ad8c}} .ff li:last-child{{border-bottom:0}}
 /* Kids' team boxes have their own shade; Detroit sports and Ari's fantasy box have none (Jacob, 2026-10-10) */
+/* Daily Crossword (Jacob, 2026-10-19): grid beside the clues; answers upside down at the bottom */
+.xw{{background:#fff}} .xw-body{{display:flex;flex-wrap:wrap;gap:8px;align-items:flex-start}} .xw-grid{{flex:0 1 auto;max-width:100%;height:auto}}
+.xw-clues{{flex:1 1 120px;font-size:7.6pt;line-height:1.28}} .xw-h{{font-family:PF,serif;font-weight:700;font-size:7.4pt;text-transform:uppercase;letter-spacing:.8px;margin-top:1px}}
+.xw-list{{list-style:none;margin:0 0 2px}} .xw-list b{{font-family:PF,serif}}
+.xw-key{{transform:rotate(180deg);font-size:6.2pt;color:#555;text-align:center;margin-top:3px}}
 /* Monday NFL page (Jacob, 2026-10-19): scoreboard tiles, winner bold */
 .nfl{{padding:3px 3px}} .nfl-grid{{display:grid;grid-template-columns:repeat(auto-fill,minmax(76px,1fr));gap:2px}}
 .nt{{border:1px solid #161410;padding:1px 3px;font-size:7.1pt;line-height:1.25}}
