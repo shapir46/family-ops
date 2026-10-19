@@ -1,6 +1,7 @@
 import base64, glob, json, re, sys
 import art
 import crossword
+import sudoku
 import os
 G=os.environ.get("FONTDIR","./fonts")
 def f(p): return base64.b64encode(open(glob.glob(p)[0],'rb').read()).decode()
@@ -146,15 +147,33 @@ def sec_nfl():
         parts.append(f"<div class='mnf'><div class='gm-when'>Monday Night Football · {m['when']}</div>"
                      f"<div class='mnf-game'>{m['game']}</div><p class='small' style='margin:0'>{m['text']}</p></div>")
     return f"<div class='box2 plain nfl'>{''.join(parts)}</div>" if parts else ''
-# Daily Crossword: 4-5 answers about the day's paper; crossword.py lays out and checks the grid (Jacob, 2026-10-19).
-def sec_crossword():
-    if not d.get('crossword'): return ''
+# Daily puzzle (Jacob, 2026-10-19): the crossword (4-5 answers about the day's paper, laid out and checked by
+# crossword.py) on Mon/Wed/Fri, and a 4x4 sudoku made from the date by sudoku.py on Tue/Thu/Sat (Weekend Edition).
+# How-to-play instructions print with the sudoku for its first two weeks.
+SUDOKU_DAYS = {1, 3, 5}              # Tue, Thu, Sat
+SUDOKU_HOW_TO_UNTIL = '2026-11-02'   # first sudoku 2026-10-20, instructions for two weeks
+def puzzle_kind():
+    days = edition_days()
+    if not days: return 'crossword'
+    import datetime as _dt
+    return 'sudoku' if _dt.date.fromisoformat(days[0]).weekday() in SUDOKU_DAYS else 'crossword'
+_puzzle_done = []
+def sec_puzzle():
+    if _puzzle_done: return ''          # placed once, whichever name the layout uses
+    _puzzle_done.append(1)
+    if puzzle_kind() == 'sudoku':
+        day = edition_days()[0]
+        print(f"PUZZLE: sudoku{' with how-to' if day <= SUDOKU_HOW_TO_UNTIL else ''}", file=sys.stderr)
+        return sudoku.html_box(day, how_to=day <= SUDOKU_HOW_TO_UNTIL)
+    if not d.get('crossword'):
+        print("CROSSWORD WARNING: today is a crossword day but edition.json has no 'crossword'", file=sys.stderr)
+        return ''
     box, warn = crossword.html_box(d['crossword'])
-    if warn: print(warn, file=sys.stderr)
+    print(warn or "PUZZLE: crossword", file=sys.stderr)
     return box
-SECTIONS = {'crossword': sec_crossword, 'nfl': sec_nfl, 'featured': sec_featured, 'schedule': sec_schedule, 'week': sec_week, 'school_notes': sec_school_notes, 'left_story': sec_left_story,
+SECTIONS = {'puzzle': sec_puzzle, 'crossword': sec_puzzle, 'sudoku': sec_puzzle, 'nfl': sec_nfl, 'featured': sec_featured, 'schedule': sec_schedule, 'week': sec_week, 'school_notes': sec_school_notes, 'left_story': sec_left_story,
             'lead': sec_lead, 'news1': sec_news1, 'word': sec_word, 'joke': sec_joke, 'sports': sec_sports, 'ari_fantasy': sec_ari_fantasy, 'mda': sec_mda, 'spartans': sec_spartans, 'news0': sec_news0}
-BOXED = {'week', 'word', 'joke', 'ari_fantasy', 'mda', 'spartans', 'featured', 'nfl', 'crossword'}
+BOXED = {'week', 'word', 'joke', 'ari_fantasy', 'mda', 'spartans', 'featured', 'nfl', 'puzzle', 'crossword', 'sudoku'}
 
 # Layout: flexible column count, widths and placement (README: readability first). Default = the approved 3-column page.
 DEFAULT_LAYOUT = {'columns': [
@@ -166,13 +185,13 @@ for c in layout['columns']:
     for name in c['sections']:
         if name not in SECTIONS and not name.startswith('extra:') and name != 'extras':
             raise SystemExit(f"layout: unknown section '{name}' (known: {', '.join(SECTIONS)})")
-# The crossword is never dropped: if the layout doesn't place it, it goes right under the joke.
-if d.get('crossword') and 'crossword' not in [n for c in layout['columns'] for n in c['sections']]:
+# The day's puzzle is never dropped: if the layout doesn't place it, it goes right under the joke.
+if not {'puzzle', 'crossword', 'sudoku'} & {n for c in layout['columns'] for n in c['sections']}:
     layout = json.loads(json.dumps(layout))
     for c in layout['columns']:
-        if 'joke' in c['sections']: c['sections'].insert(c['sections'].index('joke') + 1, 'crossword'); break
+        if 'joke' in c['sections']: c['sections'].insert(c['sections'].index('joke') + 1, 'puzzle'); break
     else:
-        layout['columns'][-1]['sections'].append('crossword')
+        layout['columns'][-1]['sections'].append('puzzle')
 # The Monday NFL page is never dropped: if the layout doesn't place it, it goes right above the Sports Page.
 if d.get('nfl_sunday') and 'nfl' not in [n for c in layout['columns'] for n in c['sections']]:
     layout = json.loads(json.dumps(layout))
@@ -296,6 +315,7 @@ p{{margin-bottom:3px;text-align:justify;hyphens:auto}}
 .xw{{background:#fff}} .xw-body{{display:flex;flex-wrap:wrap;gap:8px;align-items:flex-start}} .xw-grid{{flex:0 1 auto;max-width:100%;height:auto}}
 .xw-clues{{flex:1 1 120px;font-size:7.6pt;line-height:1.28}} .xw-h{{font-family:PF,serif;font-weight:700;font-size:7.4pt;text-transform:uppercase;letter-spacing:.8px;margin-top:1px}}
 .xw-list{{list-style:none;margin:0 0 2px}} .xw-list b{{font-family:PF,serif}}
+.sd-grid{{flex:0 0 auto}} .sd-how{{flex:1 1 120px;font-size:7.6pt;line-height:1.3;margin:0;text-align:left}}
 .xw-key{{transform:rotate(180deg);font-size:6.2pt;color:#555;text-align:center;margin-top:3px}}
 /* Monday NFL page (Jacob, 2026-10-19): scoreboard tiles, winner bold */
 .nfl{{padding:3px 3px}} .nfl-grid{{display:grid;grid-template-columns:repeat(auto-fill,minmax(76px,1fr));gap:2px}}
