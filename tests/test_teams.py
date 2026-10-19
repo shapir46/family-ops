@@ -1,3 +1,4 @@
+import json
 from datetime import date
 
 from familyops import ROOT, mce, playmetrics, schedules, teams
@@ -72,48 +73,86 @@ def test_place_formats():
     assert teams.place("Berkshire Middle School, 21707 W 14 Mile Rd, Beverly Hills") == BERKSHIRE
 
 
-# --- Spartans ------------------------------------------------------------------------------------
+# --- Spartans: shown only in the first paper after MCE posts the score and recap (Jacob, 2026-10-19) ---
 
-POSTED = {"2026-10-10": {"spartans": 24, "opp": 18, "opponent": "Tigers", "ari_points": 6, "source": "MCE league results"}}
+RECAP = "The Spartans & friends rallied in the fourth."
+POSTED = {"2026-10-10": {"spartans": 24, "opp": 18, "opponent": "Tigers", "ari_points": 6, "source": "MCE league results",
+                         "recap": RECAP}}
+NO_RECAP = {"2026-10-10": {k: v for k, v in POSTED["2026-10-10"].items() if k != "recap"}}
 
 
-def test_spartans_last_and_next(monkeypatch):
+def fresh(monkeypatch, printed=False):
     no_results(monkeypatch)
-    today = date(2026, 10, 15)  # Thu: last = Sat Oct 10 vs Tigers (score posted online), next = Sat Oct 17 vs Hoosiers
+    monkeypatch.setattr(teams, "_recap_printed", lambda t, d, today: printed)
+
+
+def test_spartans_shows_final_recap_and_next(monkeypatch):
+    fresh(monkeypatch)
+    today = date(2026, 10, 15)  # Thu: Sat Oct 10 vs Tigers, score and recap posted; next = Sat Oct 17 vs Hoosiers
     s = teams.section(SPARTANS, today, bb(today, date(2026, 10, 25)), bb(date(2026, 9, 17), date(2026, 10, 14)), POSTED)
     assert s == {"title": "Spartans Hoop Scoop", "items": [
-        _card("Final · Sat Oct 10", "<b>Spartans 24</b>, Tigers 18", BERKSHIRE, "<b>Ari scored 6 points!</b>"),
+        _card("Final · Sat Oct 10", "<b>Spartans 24</b>, Tigers 18", BERKSHIRE, "<b>Ari scored 6 points!</b>", RECAP),
         _card("Sat Oct 17 · 9:55 am", "Spartans vs Hoosiers", BERKSHIRE)]}
+    assert "Spartans &amp; friends" in s["items"][0]
+
+
+def test_spartans_shown_even_when_next_game_is_far(monkeypatch):
+    fresh(monkeypatch)
+    far = [e for e in bb(date(2026, 10, 16), date(2026, 10, 30)) if e.date > "2026-10-20"]
+    s = teams.section(SPARTANS, date(2026, 10, 16), far, bb(date(2026, 9, 18), date(2026, 10, 15)), POSTED)
+    assert "gm-recap" in s["items"][0]
+
+
+def test_spartans_hidden_until_the_recap_is_posted(monkeypatch):
+    fresh(monkeypatch)
+    today = date(2026, 10, 12)  # Mon after the game, next game in 5 days: no score yet, no "coming soon" box
+    args = (SPARTANS, today, bb(today, date(2026, 10, 22)), bb(date(2026, 9, 14), date(2026, 10, 11)))
+    assert teams.section(*args, {}) is None
+    assert teams.section(*args, NO_RECAP) is None   # a score without its recap is not enough
+    assert teams.section(SPARTANS, date(2026, 10, 16), bb(date(2026, 10, 16), date(2026, 10, 26)),
+                         bb(date(2026, 9, 18), date(2026, 10, 15)), NO_RECAP) is None   # next game within 3 days: still hidden
+
+
+def test_spartans_hidden_after_the_recap_was_printed(monkeypatch):
+    fresh(monkeypatch, printed=True)
+    today = date(2026, 10, 16)
+    assert teams.section(SPARTANS, today, bb(today, date(2026, 10, 26)), bb(date(2026, 9, 18), date(2026, 10, 15)), POSTED) is None
+
+
+def test_recap_printed_reads_earlier_papers(monkeypatch, tmp_path):
+    (tmp_path / "state").mkdir()
+    monkeypatch.setattr(teams, "ROOT", tmp_path)
+    card = _card("Final · Sat Oct 10", "<b>Spartans 24</b>, Tigers 18", BERKSHIRE, "", RECAP)
+    box = lambda items: json.dumps({"spartans": {"title": "Spartans Hoop Scoop", "items": items}})
+    (tmp_path / "state/2026-10-11.json").write_text(box([card]))                    # Sunday: no paper, doesn't count
+    (tmp_path / "state/2026-10-15.json").write_text(box([_card("Final · Sat Oct 10", "x", BERKSHIRE)]))   # no recap
+    assert not teams._recap_printed(SPARTANS, "2026-10-10", date(2026, 10, 16))
+    (tmp_path / "state/2026-10-16.json").write_text(box([card]))                    # Friday's paper printed it
+    assert not teams._recap_printed(SPARTANS, "2026-10-10", date(2026, 10, 16))     # today's own state doesn't count
+    assert teams._recap_printed(SPARTANS, "2026-10-10", date(2026, 10, 17))
 
 
 def test_jacobs_result_wins_over_posted(monkeypatch):
+    fresh(monkeypatch)
     monkeypatch.setattr(teams, "results", lambda t: {"2026-10-10": {"spartans": 24, "opp": 18, "ari_points": 8}})
-    today = date(2026, 10, 12)
-    s = teams.section(SPARTANS, today, bb(today, date(2026, 10, 22)), bb(date(2026, 9, 14), date(2026, 10, 11)), POSTED)
-    assert "Ari scored 8 points!" in s["items"][0]
-
-
-def test_spartans_monday_without_score(monkeypatch):
-    no_results(monkeypatch)
-    today = date(2026, 10, 12)
-    s = teams.section(SPARTANS, today, bb(today, date(2026, 10, 22)), bb(date(2026, 9, 14), date(2026, 10, 11)), {})
-    assert s["items"][0] == _card("Last game · Sat Oct 10", "Spartans vs Tigers", BERKSHIRE, "Final score coming soon.")
-
-
-def test_spartans_hidden_midweek(monkeypatch):
-    no_results(monkeypatch)
-    today = date(2026, 10, 13)  # Tue: no game Mon, next game Sat (4 days out)
-    assert teams.section(SPARTANS, today, bb(today, date(2026, 10, 23)), bb(date(2026, 9, 15), date(2026, 10, 12)), POSTED) is None
+    today = date(2026, 10, 15)
+    s = teams.section(SPARTANS, today, bb(today, date(2026, 10, 25)), bb(date(2026, 9, 17), date(2026, 10, 14)), POSTED)
+    assert "Ari scored 8 points!" in s["items"][0] and "gm-recap" in s["items"][0]
 
 
 def test_spartans_playoffs_and_tournament(monkeypatch):
-    no_results(monkeypatch)
+    fresh(monkeypatch)
+    def posted_for(past):
+        last = max(e.date for e in past if teams._is_game(SPARTANS, e) and teams._opponent(SPARTANS, e))
+        return {last: {"spartans": 30, "opp": 20, "recap": "Recap."}}
     today = date(2026, 11, 12)
-    s = teams.section(SPARTANS, today, bb(today, date(2026, 11, 22)), bb(date(2026, 10, 15), date(2026, 11, 11)))
+    past = bb(date(2026, 10, 15), date(2026, 11, 11))
+    s = teams.section(SPARTANS, today, bb(today, date(2026, 11, 22)), past, posted_for(past))
     assert s["items"][1] == _card("Fri Nov 13", "Spartans · Playoffs (if qualified)", BERKSHIRE,
                                   "Evening playoff games and first-place practices; Ari's division likely plays Saturday. Times TBD.")
-    s = teams.section(SPARTANS, date(2026, 12, 26), bb(date(2026, 12, 26), date(2027, 1, 5)), bb(date(2026, 11, 28), date(2026, 12, 25)))
-    assert s["items"] == [_card("Tournament · Mon Dec 28–Wed Dec 30", "Holiday HOOPMANIA tournament (save the date)", "Location TBD")]
+    past = bb(date(2026, 10, 15), date(2026, 12, 25))   # reaches back to the last game, whose recap is posted
+    s = teams.section(SPARTANS, date(2026, 12, 26), bb(date(2026, 12, 26), date(2027, 1, 5)), past, posted_for(past))
+    assert s["items"][1] == _card("Tournament · Mon Dec 28–Wed Dec 30", "Holiday HOOPMANIA tournament (save the date)", "Location TBD")
 
 
 # --- MCE results page ----------------------------------------------------------------------------
@@ -165,22 +204,3 @@ def test_mce_abbreviated_heading_division_list_and_recap():
 def test_mce_short_recap_cuts_at_a_sentence():
     assert mce.short_recap("One two three. Four five six. Seven.", max_words=6) == "One two three. Four five six."
     assert mce.short_recap("A very long first sentence here.", max_words=2) == "A very long first sentence here."
-
-
-def test_spartans_friday_prints_the_recap(monkeypatch):
-    no_results(monkeypatch)
-    posted = {"2026-10-10": {**POSTED["2026-10-10"], "recap": "Spartans & friends won."}}
-    past = bb(date(2026, 9, 18), date(2026, 10, 15))
-    fri = teams.section(SPARTANS, date(2026, 10, 16), bb(date(2026, 10, 16), date(2026, 10, 26)), past, posted)
-    assert fri["items"][0] == _card("Final · Sat Oct 10", "<b>Spartans 24</b>, Tigers 18", BERKSHIRE,
-                                    "<b>Ari scored 6 points!</b>", "Spartans & friends won.")
-    assert "Spartans &amp; friends won." in fri["items"][0]
-    # Not on other days.
-    thu = teams.section(SPARTANS, date(2026, 10, 15), bb(date(2026, 10, 15), date(2026, 10, 25)), past, posted)
-    assert "gm-recap" not in thu["items"][0]
-    # Friday with the next game more than 3 days away (bye week): the box still appears for the recap.
-    far = [e for e in bb(date(2026, 10, 16), date(2026, 10, 30)) if e.date > "2026-10-20"]
-    assert "gm-recap" in teams.section(SPARTANS, date(2026, 10, 16), far, past, posted)["items"][0]
-    # No recap posted: Friday falls back to the normal rules.
-    assert "gm-recap" not in teams.section(SPARTANS, date(2026, 10, 16), bb(date(2026, 10, 16), date(2026, 10, 26)), past,
-                                           POSTED)["items"][0]

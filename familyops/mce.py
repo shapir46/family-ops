@@ -9,7 +9,7 @@ list of them, e.g. ["College", "Boys League"]) and its
 date AND both team names match a game on Ari's schedule. Two matches the same day without a way to tell them apart are
 skipped.
 Ari's points are read from the recap only when it names him in full ("Ari Shapiro ... six points"). The recap itself
-is returned too: Friday's paper prints it under the final score (Jacob, 2026-10-15).
+is returned too: the paper prints it under the final score, once, in the first paper after it is posted (Jacob, 2026-10-19).
 Unconfirmed = silent: anything that doesn't parse is skipped, never guessed.
 """
 from __future__ import annotations
@@ -27,7 +27,7 @@ _MONTH = "|".join(m[:3] + "(?:" + m[3:] + ")?" for m in MONTHS).replace("SEP(?:"
 HEADING = re.compile(r"^(?P<league>[A-Z][A-Z0-9 &'/.-]*?)\s*:\s*(?:(?:[A-Z]+DAY|MON|TUES?|WED|THUR?S?|FRI|SAT|SUN)\.?,?\s+)?"
                      r"(?P<month>" + _MONTH + r")\.?\s+(?P<day>\d{1,2})(?:ST|ND|RD|TH)?\s*:?\s*$")
 GAME = re.compile(r"^(?P<a>[A-Za-z][\w .'&/-]*?)\s+(?P<sa>\d{1,3})\s*,\s*(?P<b>[A-Za-z][\w .'&/-]*?)\s+(?P<sb>\d{1,3})\s*:?\s*$")
-RECAP_WORDS = 90   # Friday's recap is cut at a sentence end to stay under this
+RECAP_WORDS = 90   # the printed recap is cut at a sentence end to stay under this
 
 WORDS = {w: i for i, w in enumerate("zero one two three four five six seven eight nine ten eleven twelve thirteen "
                                      "fourteen fifteen sixteen seventeen eighteen nineteen twenty".split())}

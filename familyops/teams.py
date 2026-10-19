@@ -7,12 +7,13 @@ Each box shows only the LAST game (score, or "Final score coming soon.") and the
 the kid's goals/points come from data/results/<kid>-<team>-*.yaml, which Jacob supplies; Spartans scores are also read
 from the MCE league results page (familyops/mce.py), and Jacob's file wins. A box is shown only when there was a game
 since the last paper or the next game/tournament is within 3 days. A zero stat is never printed.
-Fridays: the Spartans box also prints the league's recap under the last game's final score, and appears whenever that
-game was in the past week (MCE posts scores and recaps by Thursday; Jacob, 2026-10-15).
+Spartans (Jacob, 2026-10-19): the box appears ONLY in the first paper after MCE posts the last game's score and recap
+(usually by Thursday), with the recap under the final score and the next game. Before that, and after that paper, no box.
 """
 from __future__ import annotations
 
 import html
+import json
 from dataclasses import dataclass
 from datetime import date, timedelta
 
@@ -22,7 +23,6 @@ from . import ROOT
 from .model import Event, fmt_time
 
 LOOKAHEAD_DAYS = 3
-RECAP_WEEKDAY = 4     # Friday: the paper prints the posted recap of the past week's game
 LOOKBACK_DAYS = 28   # how far back collect looks for each kid's last game
 
 
@@ -40,6 +40,7 @@ class Team:
     stat_one: str       # "a goal"
     stat_many: str      # "{n} goals"
     arrive_uniform: bool = False   # details read "arrive 7:30 am, black-black-black"
+    recap_only: bool = False       # shown only in the first paper after the league posts the score and recap
 
 
 MDA = Team(key="mda", title="MDA Kicks &amp; Giggles", name="MDA", kid="Elle", source="PlayMetrics",
@@ -47,7 +48,7 @@ MDA = Team(key="mda", title="MDA Kicks &amp; Giggles", name="MDA", kid="Elle", s
            stat_one="a goal", stat_many="{n} goals", arrive_uniform=True)
 SPARTANS = Team(key="spartans", title="Spartans Hoop Scoop", name="Spartans", kid="Ari", source="MCE league schedule",
                 game_prefix="Basketball game vs ", results_glob="ari-spartans-*.yaml", score_key="spartans",
-                stat_key="ari_points", stat_one="1 point", stat_many="{n} points")
+                stat_key="ari_points", stat_one="1 point", stat_many="{n} points", recap_only=True)
 TEAMS = [MDA, SPARTANS]
 
 
@@ -142,6 +143,20 @@ def _extra(team: Team, e: Event) -> str:
     return e.details
 
 
+def _recap_printed(team: Team, game_date: str, today: date) -> bool:
+    """True when an earlier paper (state/<day>.json after the game, before today; Sundays have no paper) already
+    printed this game's recap."""
+    final = f"Final · {_day(game_date)}"
+    for p in sorted((ROOT / "state").glob("*.json")):
+        d = p.stem
+        if not (game_date < d < today.isoformat()) or date.fromisoformat(d).weekday() == 6:
+            continue
+        box = (json.loads(p.read_text()) or {}).get(team.key) or {}
+        if any(final in i and "gm-recap" in i for i in box.get("items") or []):
+            return True
+    return False
+
+
 RESULT_WAIT_DAYS = 8   # after this, a game with no posted score stops saying "coming soon"
 
 
@@ -149,7 +164,8 @@ def section(team: Team, today: date, events: list[Event], past_events: list[Even
             posted: dict[str, dict] | None = None) -> dict | None:
     """{'title', 'items'} ready for edition.json, or None when the box should not appear.
     Exactly two cards at most (Jacob, 2026-10-10): the LAST game and the NEXT game or tournament.
-    The box appears only when a game was played since the last paper or the next one is within 3 days.
+    The box appears only when a game was played since the last paper or the next one is within 3 days; a
+    `recap_only` team's box appears only in the first paper after its last game's score and recap are posted.
     `posted`: scores found online (MCE results page); Jacob's data/results file wins over them."""
     res = {**(posted or {})}
     for d, r in results(team).items():
@@ -177,10 +193,13 @@ def section(team: Team, today: date, events: list[Event], past_events: list[Even
     nxt.sort(key=lambda x: (x[0], x[1]))
     recent = {d.isoformat() for d in recent_days(today)}
     horizon = (today + timedelta(days=LOOKAHEAD_DAYS)).isoformat()
-    friday = today.weekday() == RECAP_WEEKDAY and last and (today - date.fromisoformat(last.date)).days <= 7
     r_last = res.get(last.date) if last else None
-    recap = (r_last or {}).get("recap", "") if friday and r_last and team.score_key in r_last else ""
-    if not ((last and last.date in recent) or (nxt and nxt[0][0] <= horizon) or recap):
+    recap = ""
+    if team.recap_only:
+        recap = (r_last or {}).get("recap", "") if r_last and team.score_key in r_last else ""
+        if not recap or _recap_printed(team, last.date, today):
+            return None
+    elif not ((last and last.date in recent) or (nxt and nxt[0][0] <= horizon)):
         return None
     items = []
     if last:
