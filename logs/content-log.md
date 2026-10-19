@@ -92,3 +92,12 @@ Read before building; append after printing. Riddles/jokes/words are in riddle-l
 - Lions: host Green Bay Oct 25, 4:25 pm on FOX; sports: no confirmed scores, left blank
 - Comic: moon gag ("Low gravity! I can jump so high!" / "Careful, Artic!" / "Wheee! I'm touching the stars!" / "How do I get down?" "Same way. Slowly."); moon backdrop in all four panels (two mirrored); fox cheer/grin, run/laugh in blue beanie, tada/surprised, facepalm/worried; bear stand/happy, point/worried, akimbo/smug; Uni wave/grin; stars props
 - Critter: none (Saturday)
+
+## 2026-10-19
+- Headline: "A Thousand Glowing Pumpkins Light Up Greenfield Village" [local] (The Henry Ford, "Hallowe'en in Greenfield Village Returns for its 46th Bewitching Season," Sept. 2026)
+- News: Why Small Dogs May Live Longer [animals] (Smithsonian Magazine, Oct. 16, 2026; Science study of 894 pet dogs)
+- Extras: This Week in History, Cornwallis surrenders at Yorktown Oct. 19, 1781; Fun Fact, wombat droppings are cubes; Quote, Dr. Seuss "The more that you read..."
+- Headline photo: no photo
+- Lions: beat Arizona 45–21 Oct 11, bye, host Green Bay Oct 25 4:25 pm FOX; sports: no confirmed scores, left blank
+- Comic: costume gag ("Guess my costume!" / "Hmm... an arctic fox?" / "Nope! I'm a ghost!" "You look the same!" / "I'm scary inside." "Great pumpkin, though!"); porch backdrop panels 1-2 (panel 2 mirrored), leafpark backdrop panels 3-4 (panel 4 mirrored); fox tada/grin, akimbo/smug, cheer/laugh, shrug/wink; bear stand/happy, think/happy, shrug/surprised, hold/proud + pumpkin
+- Critter: none (Monday)
