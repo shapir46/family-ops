@@ -101,3 +101,13 @@ Read before building; append after printing. Riddles/jokes/words are in riddle-l
 - Lions: beat Arizona 45–21 Oct 11, bye, host Green Bay Oct 25 4:25 pm FOX; sports: no confirmed scores, left blank
 - Comic: costume gag ("Guess my costume!" / "Hmm... an arctic fox?" / "Nope! I'm a ghost!" "You look the same!" / "I'm scary inside." "Great pumpkin, though!"); porch backdrop panels 1-2 (panel 2 mirrored), leafpark backdrop panels 3-4 (panel 4 mirrored); fox tada/grin, akimbo/smug, cheer/laugh, shrug/wink; bear stand/happy, think/happy, shrug/surprised, hold/proud + pumpkin
 - Critter: none (Monday)
+
+## 2026-10-20
+- Headline: "A Piece of a Rocket Company for Every Kid?" [world] (assigned by Jacob; Fox Business and CNN via Yahoo Finance, Oct. 19, 2026; SpaceX share promise)
+- News: Boo at the Nature Center on Belle Isle, Oct 24-25 [local] (LittleGuide Detroit); not printed, no room: Wildlife Photographer of the Year 2026 [arts] (Discover Wildlife, Gulf News)
+- Extras: none printed, no room (written but unprinted: This Week in History, Sydney Opera House opened Oct. 20, 1973; Fun Fact, a banana is a berry; Try This Tonight, sound walk)
+- Headline photo: no photo (rocket icon)
+- Lions: bye week, host Green Bay Oct 25 4:25 pm FOX; sports: no confirmed scores, left blank
+- Puzzle: sudoku
+- Comic: magic-hat gag ("Behold! A rabbit from my hat!" / "Um, Artic? Your hat is empty." / "It hopped away!" / "It is in your cape!"); stage backdrop in all four panels (panels 2 and 4 mirrored); fox tada/smug, akimbo/proud, shrug/worried, facepalm/surprised all in purple cape + red bow tie; bear think/surprised, point/laugh; Mackenzie sit/happy
+- Critter: none printed, no room (Hedgehog, openverse:161c5c9b-5032-49d5-911e-3f7bf69c7f0f, not shown)
