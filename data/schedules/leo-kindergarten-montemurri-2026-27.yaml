@@ -1,0 +1,11 @@
+# Leo's kindergarten class (Ms. Montemurri, Quarton room 109): dated class events from her weekly newsletters.
+# Field trip: "10/22: Field Trip to Bowers School Farm @ 12:15-2:15" (Montemurri newsletters of Oct 9 and Oct 16, 2026;
+# Quarton Weekly Bulletin 10.16.26 also lists "Thursday October 22, Kindergarten Field Trip to Bowers Farm").
+# Saved at Jacob's request, 2026-10-21, after earlier digests misdated it Wed Oct 21.
+name: Kindergarten class events (Ms. Montemurri)
+source_label: Montemurri newsletter
+kids: [Leo]
+location: Bowers School Farm
+events:
+  - {date: 2026-10-22, start: "12:15", end: "14:15", kind: event, title: "Kindergarten field trip to Bowers School Farm",
+     details: "Wear the yellow class shirt and clothes and shoes that can get dirty. One chaperone per child, $14 each, paid at the farm; children without a parent chaperone are paired with a buddy."}
