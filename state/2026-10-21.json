@@ -1,0 +1,628 @@
+{
+ "date": "2026-10-21",
+ "generated_at": "2026-10-21T10:29:43+00:00",
+ "window": {
+  "start": "2026-10-21",
+  "end": "2026-10-31"
+ },
+ "kids": {
+  "Ari": {
+   "color": "#2563EB",
+   "initial": "A"
+  },
+  "Elle": {
+   "color": "#DB2777",
+   "initial": "E"
+  },
+  "Leo": {
+   "color": "#16A34A",
+   "initial": "L"
+  },
+  "Lila": {
+   "color": "#9333EA",
+   "initial": "Li"
+  }
+ },
+ "events": [
+  {
+   "date": "2026-10-21",
+   "title": "Goalie Training",
+   "kids": [
+    "Elle"
+   ],
+   "start": "16:45",
+   "end": "18:00",
+   "end_date": null,
+   "location": "Pembroke Park, Buckingham Avenue, Birmingham, MI, USA",
+   "kind": "event",
+   "details": null,
+   "sources": [
+    "PlayMetrics"
+   ],
+   "status": null,
+   "id": "2026-10-21|16:45|goalie training"
+  },
+  {
+   "date": "2026-10-22",
+   "title": "Kindergarten field trip to Bowers School Farm",
+   "kids": [
+    "Leo"
+   ],
+   "start": "12:15",
+   "end": "14:15",
+   "end_date": null,
+   "location": "Bowers School Farm",
+   "kind": "event",
+   "details": "Wear the yellow class shirt and clothes and shoes that can get dirty. One chaperone per child, $14 each, paid at the farm; children without a parent chaperone are paired with a buddy.",
+   "sources": [
+    "Montemurri newsletter"
+   ],
+   "status": null,
+   "id": "2026-10-22|12:15|kindergarten field trip to bowers school"
+  },
+  {
+   "date": "2026-10-22",
+   "title": "Soccer practice",
+   "kids": [
+    "Elle"
+   ],
+   "start": "17:40",
+   "end": "18:55",
+   "end_date": null,
+   "location": "Pembroke Park 7v7, Birmingham, MI, USA",
+   "kind": "practice",
+   "details": null,
+   "sources": [
+    "PlayMetrics"
+   ],
+   "status": null,
+   "id": "2026-10-22|17:40|soccer practice"
+  },
+  {
+   "date": "2026-10-23",
+   "title": "Cedar Point visit (all day)",
+   "kids": [
+    "Elle"
+   ],
+   "start": null,
+   "end": null,
+   "end_date": null,
+   "location": "Cedar Point, Sandusky, OH",
+   "kind": "event",
+   "details": "Kalahari Cup trip, before Saturday's games.",
+   "sources": [
+    "MDA tournament trip"
+   ],
+   "status": null,
+   "id": "2026-10-23|allday|cedar point visit all day"
+  },
+  {
+   "date": "2026-10-23",
+   "title": "Kalahari Cup",
+   "kids": [
+    "Elle"
+   ],
+   "start": null,
+   "end": null,
+   "end_date": null,
+   "location": "Sandusky, OH, USA",
+   "kind": "event",
+   "details": null,
+   "sources": [
+    "PlayMetrics"
+   ],
+   "status": null,
+   "id": "2026-10-23|allday|kalahari cup"
+  },
+  {
+   "date": "2026-10-23",
+   "title": "Team Welcome Dinner",
+   "kids": [
+    "Elle"
+   ],
+   "start": "18:30",
+   "end": "20:30",
+   "end_date": null,
+   "location": "Kalahari Resorts & Conventions - Sandusky, Kalahari Drive, Sandusky, OH, USA",
+   "kind": "event",
+   "details": null,
+   "sources": [
+    "PlayMetrics"
+   ],
+   "status": null,
+   "id": "2026-10-23|18:30|team welcome dinner"
+  },
+  {
+   "date": "2026-10-24",
+   "title": "Kalahari Cup",
+   "kids": [
+    "Elle"
+   ],
+   "start": null,
+   "end": null,
+   "end_date": null,
+   "location": "Sandusky, OH, USA",
+   "kind": "event",
+   "details": null,
+   "sources": [
+    "PlayMetrics"
+   ],
+   "status": null,
+   "id": "2026-10-24|allday|kalahari cup"
+  },
+  {
+   "date": "2026-10-24",
+   "title": "Soccer game vs Pittsburgh Independence U9G (PAW)",
+   "kids": [
+    "Elle"
+   ],
+   "start": "09:00",
+   "end": "10:00",
+   "end_date": null,
+   "location": "Sports Force Parks 09B, 3115 Cleveland Road West, Sandusky, OH, USA",
+   "kind": "game",
+   "details": "arrive 8:30 am edt, gray/black/white",
+   "sources": [
+    "PlayMetrics"
+   ],
+   "status": null,
+   "id": "2026-10-24|09:00|soccer game vs pittsburgh independence u"
+  },
+  {
+   "date": "2026-10-24",
+   "title": "Soccer game vs DCFC South Oakland U9 Girls Gold",
+   "kids": [
+    "Elle"
+   ],
+   "start": "11:00",
+   "end": "12:00",
+   "end_date": null,
+   "location": "Sports Force Parks 09B, 3115 Cleveland Road West, Sandusky, OH, USA",
+   "kind": "game",
+   "details": "arrive 10:30 am edt, gray/black/white",
+   "sources": [
+    "PlayMetrics"
+   ],
+   "status": null,
+   "id": "2026-10-24|11:00|soccer game vs dcfc south oakland u9 gir"
+  },
+  {
+   "date": "2026-10-24",
+   "title": "Basketball game vs Duke",
+   "kids": [
+    "Ari"
+   ],
+   "start": "12:00",
+   "end": null,
+   "end_date": null,
+   "location": "Berkshire Middle School, 21707 W 14 Mile Rd, Beverly Hills",
+   "kind": "game",
+   "details": null,
+   "sources": [
+    "MCE league schedule"
+   ],
+   "status": null,
+   "id": "2026-10-24|12:00|basketball game vs duke"
+  },
+  {
+   "date": "2026-10-24",
+   "title": "Kalahari Water Park",
+   "kids": [
+    "Elle"
+   ],
+   "start": "12:30",
+   "end": "21:00",
+   "end_date": null,
+   "location": "Kalahari Resorts & Conventions - Sandusky, Kalahari Drive, Sandusky, OH, USA",
+   "kind": "event",
+   "details": null,
+   "sources": [
+    "PlayMetrics"
+   ],
+   "status": null,
+   "id": "2026-10-24|12:30|kalahari water park"
+  },
+  {
+   "date": "2026-10-24",
+   "title": "Soccer game vs Colorado Rapids",
+   "kids": [
+    "Leo"
+   ],
+   "start": "14:00",
+   "end": "15:00",
+   "end_date": null,
+   "location": "Birmingham Covington School, 1525 Covington Rd, Bloomfield Hills",
+   "kind": "game",
+   "details": "Field 5. Week 7; Sounders home.",
+   "sources": [
+    "BBSC schedule"
+   ],
+   "status": null,
+   "id": "2026-10-24|14:00|soccer game vs colorado rapids"
+  },
+  {
+   "date": "2026-10-24",
+   "title": "Team Dinner",
+   "kids": [
+    "Elle"
+   ],
+   "start": "18:30",
+   "end": "20:30",
+   "end_date": null,
+   "location": "Kalahari Resorts & Conventions - Sandusky, Kalahari Drive, Sandusky, OH, USA",
+   "kind": "event",
+   "details": null,
+   "sources": [
+    "PlayMetrics"
+   ],
+   "status": null,
+   "id": "2026-10-24|18:30|team dinner"
+  },
+  {
+   "date": "2026-10-25",
+   "title": "Kalahari Cup",
+   "kids": [
+    "Elle"
+   ],
+   "start": null,
+   "end": null,
+   "end_date": null,
+   "location": "Sandusky, OH, USA",
+   "kind": "event",
+   "details": null,
+   "sources": [
+    "PlayMetrics"
+   ],
+   "status": null,
+   "id": "2026-10-25|allday|kalahari cup"
+  },
+  {
+   "date": "2026-10-25",
+   "title": "Soccer game vs Ann Arbor 2017/18 Girls Red",
+   "kids": [
+    "Elle"
+   ],
+   "start": "10:00",
+   "end": "11:00",
+   "end_date": null,
+   "location": "Sports Force Parks 07A, 3115 Cleveland Road West, Sandusky, OH, USA",
+   "kind": "game",
+   "details": "arrive 9:30 am edt, black/black/black",
+   "sources": [
+    "PlayMetrics"
+   ],
+   "status": null,
+   "id": "2026-10-25|10:00|soccer game vs ann arbor 2017 18 girls r"
+  },
+  {
+   "date": "2026-10-25",
+   "title": "Soccer game vs TBD",
+   "kids": [
+    "Elle"
+   ],
+   "start": "13:00",
+   "end": "14:00",
+   "end_date": null,
+   "location": "Sports Force Parks 02, 3115 Cleveland Road West, Sandusky, OH, USA",
+   "kind": "game",
+   "details": "arrive 12:30 pm edt, tbd",
+   "sources": [
+    "PlayMetrics"
+   ],
+   "status": null,
+   "id": "2026-10-25|13:00|soccer game vs tbd"
+  },
+  {
+   "date": "2026-10-27",
+   "title": "Soccer practice",
+   "kids": [
+    "Elle"
+   ],
+   "start": "18:00",
+   "end": "19:15",
+   "end_date": null,
+   "location": "UWM Sports Complex Field 1, 867 S Blvd E, Pontiac, MI 48341, USA",
+   "kind": "practice",
+   "details": null,
+   "sources": [
+    "PlayMetrics"
+   ],
+   "status": null,
+   "id": "2026-10-27|18:00|soccer practice"
+  },
+  {
+   "date": "2026-10-28",
+   "title": "Goalie Training",
+   "kids": [
+    "Elle"
+   ],
+   "start": "16:45",
+   "end": "18:00",
+   "end_date": null,
+   "location": "Pembroke Park, Buckingham Avenue, Birmingham, MI, USA",
+   "kind": "event",
+   "details": null,
+   "sources": [
+    "PlayMetrics"
+   ],
+   "status": null,
+   "id": "2026-10-28|16:45|goalie training"
+  },
+  {
+   "date": "2026-10-28",
+   "title": "Trunk or Treat & Small Sided Tourney ð",
+   "kids": [
+    "Elle"
+   ],
+   "start": "18:00",
+   "end": "19:15",
+   "end_date": null,
+   "location": "Pembroke Park, Buckingham Avenue, Birmingham, MI, USA",
+   "kind": "event",
+   "details": null,
+   "sources": [
+    "PlayMetrics"
+   ],
+   "status": null,
+   "id": "2026-10-28|18:00|trunk or treat small sided tourney"
+  },
+  {
+   "date": "2026-10-30",
+   "title": "All schools half day (AM).",
+   "kids": [
+    "Ari",
+    "Elle",
+    "Leo"
+   ],
+   "start": null,
+   "end": null,
+   "end_date": null,
+   "location": null,
+   "kind": "school_status",
+   "details": null,
+   "sources": [
+    "BPS district calendar"
+   ],
+   "status": "half_day",
+   "id": "2026-10-30|allday|all schools half day am"
+  },
+  {
+   "date": "2026-10-31",
+   "title": "Basketball game vs Grizzlies",
+   "kids": [
+    "Ari"
+   ],
+   "start": "12:15",
+   "end": null,
+   "end_date": null,
+   "location": "Berkshire Middle School, 21707 W 14 Mile Rd, Beverly Hills",
+   "kind": "game",
+   "details": null,
+   "sources": [
+    "MCE league schedule"
+   ],
+   "status": null,
+   "id": "2026-10-31|12:15|basketball game vs grizzlies"
+  },
+  {
+   "date": "2026-10-31",
+   "title": "Soccer game vs Austin FC",
+   "kids": [
+    "Leo"
+   ],
+   "start": "14:00",
+   "end": "15:00",
+   "end_date": null,
+   "location": "Birmingham Covington School, 1525 Covington Rd, Bloomfield Hills",
+   "kind": "game",
+   "details": "Field 6. Week 8, last game of the season; Sounders home.",
+   "sources": [
+    "BBSC schedule"
+   ],
+   "status": null,
+   "id": "2026-10-31|14:00|soccer game vs austin fc"
+  }
+ ],
+ "actions": [],
+ "fyi": [],
+ "conflicts": [
+  {
+   "date": "2026-10-24",
+   "kids": [
+    "Elle"
+   ],
+   "a": "Kalahari Water Park",
+   "b": "Team Dinner",
+   "a_time": "12:30",
+   "b_time": "18:30"
+  }
+ ],
+ "lunch": {
+  "line": "Smart Slice Cheese Pizza or Smart Slice Pepperoni Pizza",
+  "entree": "Smart Slice Cheese Pizza or Smart Slice Pepperoni Pizza",
+  "theme": null,
+  "problems": []
+ },
+ "weather": {
+  "hi": 66,
+  "today": "Patchy Fog then Sunny",
+  "today_detail": "Patchy fog before 9am. Sunny, with a high near 66. East northeast wind around 2 mph.",
+  "tonight_low": 45,
+  "tonight": "Mostly Clear",
+  "icon": "fog",
+  "forecast": [
+   {
+    "date": "2026-10-22",
+    "day": "Thu",
+    "hi": 67,
+    "lo": 42,
+    "short": "Sunny",
+    "icon": "sun"
+   },
+   {
+    "date": "2026-10-23",
+    "day": "Fri",
+    "hi": 63,
+    "lo": 41,
+    "short": "Sunny",
+    "icon": "sun"
+   },
+   {
+    "date": "2026-10-24",
+    "day": "Sat",
+    "hi": 64,
+    "lo": 45,
+    "short": "Sunny",
+    "icon": "sun"
+   },
+   {
+    "date": "2026-10-25",
+    "day": "Sun",
+    "hi": 68,
+    "lo": 48,
+    "short": "Mostly Sunny",
+    "icon": "partly"
+   }
+  ],
+  "source": "National Weather Service",
+  "updated": "2026-10-21T08:24:28+00:00"
+ },
+ "mda": {
+  "title": "MDA Kicks &amp; Giggles",
+  "items": [
+   "<span class='gm-when'>Last game · Sun Oct 18</span><span class='gm-match'>MDA vs Romeo FC Fury</span><span class='gm-loc'>Simpson Park Field 6 7v7, Bruce Township</span><span class='gm-extra'>Final score coming soon.</span>",
+   "<span class='gm-when'>Tournament · Fri Oct 23–Sun Oct 25</span><span class='gm-match'>Kalahari Cup</span><span class='gm-loc'>Sandusky, OH</span>",
+   "<span class='gm-when'>Fri Oct 23 · All day</span><span class='gm-match'>Cedar Point visit</span><span class='gm-loc'>Cedar Point, Sandusky</span>",
+   "<span class='gm-when'>Sat Oct 24 · 9:00 am</span><span class='gm-match'>MDA vs Pittsburgh Independence U9G (PAW)</span><span class='gm-loc'>Sports Force Parks 09B, Sandusky</span><span class='gm-extra'>Arrive 8:30 am · Uniform: gray/black/white</span>",
+   "<span class='gm-when'>Sat Oct 24 · 11:00 am</span><span class='gm-match'>MDA vs DCFC South Oakland U9 Girls Gold</span><span class='gm-loc'>Sports Force Parks 09B, Sandusky</span><span class='gm-extra'>Arrive 10:30 am · Uniform: gray/black/white</span>",
+   "<span class='gm-when'>Sun Oct 25 · 10:00 am</span><span class='gm-match'>MDA vs Ann Arbor 2017/18 Girls Red</span><span class='gm-loc'>Sports Force Parks 07A, Sandusky</span><span class='gm-extra'>Arrive 9:30 am · Uniform: black/black/black</span>",
+   "<span class='gm-when'>Sun Oct 25 · 1:00 pm</span><span class='gm-match'>MDA vs TBD</span><span class='gm-loc'>Sports Force Parks 02, Sandusky</span><span class='gm-extra'>Arrive 12:30 pm</span>"
+  ]
+ },
+ "spartans": null,
+ "fantasy": {
+  "league": "Quarton 5th Grade DAWGS",
+  "team": "LamARI SHAPson",
+  "record": "6-0",
+  "rank": 1,
+  "teams": 10,
+  "week": 7,
+  "points_for": 916.5,
+  "active": true,
+  "latest_period": 7,
+  "this_week": {
+   "week": 7,
+   "opponent": "BEAR DOWN",
+   "score": 0.0,
+   "opp_score": 0.0,
+   "winner": "UNDECIDED",
+   "proj": 130.6,
+   "opp_proj": 113.0,
+   "top": null,
+   "opp_top": null
+  },
+  "last_week": {
+   "week": 6,
+   "opponent": "Hard Knox",
+   "score": 105.2,
+   "opp_score": 101.4,
+   "winner": "HOME",
+   "proj": null,
+   "opp_proj": null,
+   "top": {
+    "name": "Chuba Hubbard",
+    "pos": "RB",
+    "pts": 19.1
+   },
+   "opp_top": {
+    "name": "Jaxon Smith-Njigba",
+    "pos": "WR",
+    "pts": 25.4
+   },
+   "result": "W"
+  }
+ },
+ "ari_fantasy": null,
+ "almanac": [
+  {
+   "date": "2026-10-21",
+   "holidays": [],
+   "shabbat": null
+  },
+  {
+   "date": "2026-10-22",
+   "holidays": [],
+   "shabbat": null
+  }
+ ],
+ "announcements": null,
+ "due": [
+  {
+   "source": "league_schedules",
+   "who": "claude",
+   "what": "Re-check data/schedules/* against league sites and emails (MCE basketball, Snaptivities)",
+   "why": "never checked"
+  },
+  {
+   "source": "sunday_school",
+   "who": "jacob",
+   "what": "Temple Israel Sunday School calendar -> data/calendars/temple-israel-YYYY-YY.yaml (Jacob to supply; Temple Beth El dropped 2026-10-10)",
+   "why": "not supplied yet"
+  }
+ ],
+ "delivery": {
+  "email": null,
+  "dashboard": null,
+  "print": null,
+  "filed": null
+ },
+ "meta": {
+  "sources": {
+   "playmetrics_feed": {
+    "ok": true,
+    "count": null
+   },
+   "playmetrics": {
+    "ok": true,
+    "count": 15
+   },
+   "playmetrics_past": {
+    "ok": true,
+    "count": 17
+   },
+   "schedules": {
+    "ok": true,
+    "count": 6
+   },
+   "schedules_past": {
+    "ok": true,
+    "count": 6
+   },
+   "mce_results": {
+    "ok": true,
+    "count": null
+   },
+   "district_calendar": {
+    "ok": true,
+    "count": 1
+   },
+   "lunch": {
+    "ok": true,
+    "count": null
+   },
+   "weather": {
+    "ok": true,
+    "count": null
+   },
+   "fantasy": {
+    "ok": true,
+    "count": null
+   },
+   "almanac": {
+    "ok": true,
+    "count": 2
+   }
+  },
+  "warnings": []
+ }
+}

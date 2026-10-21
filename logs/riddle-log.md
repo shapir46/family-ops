@@ -15,3 +15,4 @@
 2026-10-17 | What do you call a bear with no teeth? A gummy bear! | harvest
 2026-10-19 | What kind of music do mummies listen to? Wrap! | glimmer
 2026-10-20 | What do you call a pig that does karate? A pork chop! | generous
+2026-10-21 | Why do pumpkins sit on people's porches? They have no hands to knock on the door! | colossal

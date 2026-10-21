@@ -111,3 +111,13 @@ Read before building; append after printing. Riddles/jokes/words are in riddle-l
 - Puzzle: sudoku
 - Comic: magic-hat gag ("Behold! A rabbit from my hat!" / "Um, Artic? Your hat is empty." / "It hopped away!" / "It is in your cape!"); stage backdrop in all four panels (panels 2 and 4 mirrored); fox tada/smug, akimbo/proud, shrug/worried, facepalm/surprised all in purple cape + red bow tie; bear think/surprised, point/laugh; Mackenzie sit/happy
 - Critter: none printed, no room (Hedgehog, openverse:161c5c9b-5032-49d5-911e-3f7bf69c7f0f, not shown)
+
+## 2026-10-21
+- Headline: "A Pumpkin Heavier Than a Small Car Breaks the World Record" [world] (Smithsonian Magazine, Oct. 20, 2026; Guinness World Records via WPRI 12 / AP, Oct. 14, 2026; Ron Wallace's 3,156-lb pumpkin)
+- News: Free Halloween Fun at Michigan Central, Oct 31 [local] (LittleGuide Detroit); Tech Corner: What Are Hydrogels? [tech] (Science News Explores, Oct. 20, 2026); not printed, no room: A Super-Nose Dog Wins a Big Award [animals] (Smithsonian Magazine; IFAW, Sgiath the Labrador)
+- Extras: none printed, no room (written but unprinted: This Week in History, Guggenheim Museum opens Oct. 21, 1959; Fun Fact, a pumpkin is about 90 percent water)
+- Headline photo: no photo (pumpkin icon; openverse:500a22d4-b420-4531-b408-8442d3b15be5 reviewed, not used)
+- Lions: next game Sun Oct 25 vs Green Bay 4:25 pm FOX; sports: Pistons 121, Celtics 113 only (NHL scores conflicted between sources, left blank); Seaholm/Groves left off, no room
+- Puzzle: crossword PUMPKIN, COLOSSAL, PISTONS, PIZZA
+- Comic: corn-maze gag ("The exit is on the left." / "We passed that hay bale 3 times!" / "Mackenzie, do you know the way?" / "She smelled a cookie!"); cornmaze backdrop in all four panels (panels 2 and 4 mirrored); bear point/worried, shrug/sad, akimbo/laugh all in orange beanie; fox think/smug, shrug/worried, point/surprised; Mackenzie sit/love, run/happy; cookie prop
+- Critter: none (Wednesday)
