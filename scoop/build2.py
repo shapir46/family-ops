@@ -278,6 +278,19 @@ strip_grid = '1.6fr 1fr' if has_lunch else '1fr'
 lunch_title = d.get('lunch_title', "Today's School Lunch")
 lunch_html = (f"<div class='box'><h2>{lunch_title} · Quarton</h2><div class='lunch'>{d['lunch']}</div></div>") if has_lunch else ''
 banner_html = (f"<div class='banner'>{''.join(f'<span>{b}</span>' for b in d['banner'])}</div>") if d.get('banner') else ''
+# Special announcement band (Jacob, 2026-10-21): a kid's field trip today, copied from state.announcements as
+# edition.json `announce`. Full width under the masthead, in the kid's color (data/family.yaml via state).
+def announce_html():
+    trips = [a for a in d.get('announce') or [] if a.get('kind') == 'field_trip']
+    if not trips: return ''
+    color = (trips[0].get('colors') or ['#161410'])[0]
+    lines = ''.join(
+        "<div class='an-line'>" + ''.join(f"<span class='an-kid' style='background:{c}'>{k}</span>" for k, c in zip(t['kids'], t.get('colors') or []))
+        + f" {t['title']} · <b>{t['when']}</b>" + (f"<div class='an-tip'>{t['tip']}</div>" if t.get('tip') else '') + "</div>"
+        for t in trips)
+    return (f"<div class='announce' style='--kid:{color}'>{art.head_icon('bus', 46)}<div class='an-body'><div class='an-kicker'>Special Announcement</div>"
+            f"<div class='an-head'>Field Trip Day!</div>{lines}</div>{art.head_icon('bus', 46).replace('<svg ', '<svg style="transform:scaleX(-1)" ', 1)}</div>")
+banner_html += announce_html()
 html=f"""<!doctype html><html lang="en"><head><meta charset="utf-8"><title>The Fairfax Daily Scoop — {d['date']}</title><style>
 @font-face{{font-family:Frak;src:url(data:font/woff2;base64,{frak}) format('woff2');font-weight:700}}
 @font-face{{font-family:PF;src:url(data:font/woff2;base64,{pf4}) format('woff2');font-weight:400}}
@@ -349,6 +362,12 @@ p{{margin-bottom:3px;text-align:justify;hyphens:auto}}
 /* Headline icon badge when there is no photo (Jacob, 2026-10-19) */
 .hi-float{{float:right;margin:1px 0 2px 6px}}
 .hi-badge{{width:58px;height:58px;border-radius:50%;border:1.5px solid #161410;background:#fbf7ec;display:flex;align-items:center;justify-content:center;box-shadow:inset 0 0 0 3px #fff,inset 0 0 0 4px #c9b88a}}
+/* Field trip announcement band (Jacob, 2026-10-21) */
+.announce{{display:flex;align-items:center;gap:12px;margin:3px 0 2px;padding:4px 10px;border:2px solid var(--kid);border-left-width:7px;border-right-width:7px;background:#fffbea}}
+.an-body{{flex:1;text-align:center}} .an-kicker{{font-family:PF,serif;font-weight:700;font-size:7.2pt;letter-spacing:1.6px;text-transform:uppercase;color:var(--kid)}}
+.an-head{{font-family:PF,serif;font-weight:700;font-size:17pt;line-height:1.05}} .an-line{{font-size:9pt;margin-top:1px}}
+.an-kid{{display:inline-block;color:#fff;font-family:PF,serif;font-weight:700;font-size:8pt;padding:0 5px;border-radius:7px;margin-right:2px}}
+.an-tip{{font-style:italic;font-size:8pt;color:#444}}
 .sport{{background:#dcebd6}} .sport .ff li{{border-bottom-color:#8fae86}} .plain{{background:#fff}}
 .gm-when{{display:block;font-family:PF,serif;font-weight:700;font-size:6.9pt;text-transform:uppercase;letter-spacing:.8px;color:#2f5d2a}}
 .gm-match{{display:block;font-family:PF,serif;font-weight:700;font-size:9.4pt;line-height:1.15}}

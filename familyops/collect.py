@@ -7,7 +7,7 @@ from datetime import date, datetime, timedelta, timezone
 
 import yaml
 
-from . import ROOT, almanac, calendars, family, fantasy, lunch, mce, playmetrics, schedules, teams, weather
+from . import ROOT, almanac, announce, calendars, family, fantasy, lunch, mce, playmetrics, schedules, teams, weather
 from .model import Event, conflicts, merge
 
 STATE_DIR = ROOT / "state"
@@ -111,6 +111,7 @@ def collect(today: date) -> dict:
         "fantasy": ff,    # Ari's ESPN league summary, or None (not configured / failed: print nothing)
         "ari_fantasy": fantasy.box(ff, today),   # the newspaper's 'Ari's Fantasy Team' box, or None (hide)
         "almanac": alm,   # [today, tomorrow]: holidays, and Shabbat sunset on Fridays
+        "announcements": announce.for_day(today.isoformat(), events),   # today's field trips -> the paper's special announcement band, or None
         "due": due(today),
         "delivery": {"email": None, "dashboard": None, "print": None, "filed": None},
         "meta": meta,

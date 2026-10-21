@@ -1559,6 +1559,9 @@ HEAD_ICONS = {
     'ship': lambda: (pth('M20,5 V25', 'none', 1.4) + pth('M20,7 V23 H9 Z', '#fff') + pth('M21,10 V23 H30 Z', '#fff')
                      + pth('M4,26 H36 L31,34 H9 Z', _BROWN) + pth('M3,37 q4,-2 8,0 t8,0 t8,0 t8,0 t8,0', 'none', 1.2, '#3b7fc4')),
     'heart': lambda: pth('M20,34 C8,26 4,19 6,13 C8,7 16,6 20,12 C24,6 32,7 34,13 C36,19 32,26 20,34 Z', _RED),
+    'bus': lambda: (rct(3, 9, 34, 21, _GOLD, rx=3.5) + ''.join(rct(x, 12.5, 6, 6.5, _BLUE, 1.1) for x in (6.5, 14, 21.5))
+                    + rct(29.5, 12.5, 5, 10, _BLUE, 1.1) + pth('M3,24 H29', 'none', 1.1) + rct(34.5, 25, 2.5, 2.5, '#fff', .9)
+                    + circ(10.5, 30.5, 3.6, '#4a4a4a', 1.3) + circ(29, 30.5, 3.6, '#4a4a4a', 1.3) + circ(10.5, 30.5, 1.2, '#ddd', 0) + circ(29, 30.5, 1.2, '#ddd', 0)),
     'star': lambda: star(20, 21, 15, _GOLD, 1.4),
 }
 _ICON_WORDS = {
@@ -1579,6 +1582,7 @@ _ICON_WORDS = {
     'apple': 'food foods eat fruit fruits cook cooking recipe lunch juice orange oranges apple apples',
     'ship': 'ship ships shipwreck shipwrecks boat boats sail sailing sailors divers',
     'heart': 'kind kindness help helping friend friends share sharing',
+    'bus': 'bus buses trip trips',
 }
 _ICON_INDEX = {w: k for k, ws in _ICON_WORDS.items() for w in ws.split()}
 # Common words that only hint at a topic count half, so a specific word ("shipwreck", "dogs") wins.
