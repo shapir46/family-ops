@@ -121,3 +121,13 @@ Read before building; append after printing. Riddles/jokes/words are in riddle-l
 - Puzzle: crossword PUMPKIN, COLOSSAL, PISTONS, PIZZA
 - Comic: corn-maze gag ("The exit is on the left." / "We passed that hay bale 3 times!" / "Mackenzie, do you know the way?" / "She smelled a cookie!"); cornmaze backdrop in all four panels (panels 2 and 4 mirrored); bear point/worried, shrug/sad, akimbo/laugh all in orange beanie; fox think/smug, shrug/worried, point/surprised; Mackenzie sit/love, run/happy; cookie prop
 - Critter: none (Wednesday)
+
+## 2026-10-22
+- Headline: "Pie the Principal! Quarton Kids Could Win a Splat" [local] (Quarton PTA / Friends of Quarton email, Oct. 20, 2026; $10,000 goal by Nov. 14)
+- News: none printed, no room (written but unprinted: A Snake That Cartwheels Away From Danger [animals] (Smithsonian Magazine, Natural History Museum London); A Roman Coffin Hid a Medieval Secret in London [history] (Westminster Abbey, Smithsonian Magazine, Oct. 21, 2026))
+- Extras: Fun Fact, a snail can sleep for years
+- Headline photo: no photo (school icon)
+- Lions: 3–2, host Green Bay Sun Oct 25 4:25 pm FOX (not printed beyond the schedule); sports: none confirmed in two sources, left blank; Seaholm/Groves (MaxPreps only) left off, no room
+- Puzzle: sudoku
+- Comic: library whisper gag ("Library rule: whisper!" / "I only have a loud whisper." / "WHISPER!" / "Only Mackenzie is quiet."); library backdrop in all four panels (panels 2 and 4 mirrored); fox point/smug, akimbo/proud, facepalm/laugh all in dark glasses; bear hold/happy + book, shrug/worried, tada/surprised; Mackenzie run/happy, sit/love
+- Critter: none (Thursday)
