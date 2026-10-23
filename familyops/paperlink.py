@@ -12,7 +12,7 @@ import hmac
 import os
 from datetime import date
 
-RELAY = "https://print.jacobshapiro.net/paper/{d}?sig={sig}"
+RELAY = "https://print.shapbox.com/paper/{d}?sig={sig}"
 GITHUB = "https://github.com/shapir46/family-ops/blob/main/editions/{d}.pdf"
 
 

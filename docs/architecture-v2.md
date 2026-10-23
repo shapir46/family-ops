@@ -4,7 +4,7 @@ Status: proposal, 2026-10-10. Nothing here is built yet. v1 (the verbatim port) 
 
 ## Decisions (Jacob, 2026-10-10)
 - **Printer is color.** The newspaper uses the kid color chips and colored timeline blocks fully, but every child also carries an initial so nothing depends on color alone.
-- **The dashboard is served from the Mac mini** (the machine behind print.jacobshapiro.net), not from a claude.ai artifact.
+- **The dashboard is served from the Mac mini** (the machine behind print.shapbox.com), not from a claude.ai artifact.
   - The daily run POSTs the day's state to it, the same way it posts to the print relay.
   - Done checkmarks are stored on the Mac mini, and the next run reads them back.
   - Access goes behind a login Jacob controls (e.g. Cloudflare Access with Jacob's and Rebekah's emails). The family device gets its own credential.

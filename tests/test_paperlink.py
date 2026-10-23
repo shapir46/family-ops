@@ -7,7 +7,7 @@ def test_signed_link_is_deterministic_and_hides_key():
     d = date(2026, 10, 12)
     a = paperlink.link(d, key="k" * 64)
     assert a == paperlink.link(d, key="k" * 64)
-    assert a.startswith("https://print.jacobshapiro.net/paper/2026-10-12?sig=") and len(a.split("sig=")[1]) == 32
+    assert a.startswith("https://print.shapbox.com/paper/2026-10-12?sig=") and len(a.split("sig=")[1]) == 32
     assert "k" * 8 not in a
     assert paperlink.link(date(2026, 10, 13), key="k" * 64) != a
 

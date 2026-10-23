@@ -23,7 +23,7 @@ Status (2026-10-10): Phases 0 and 1 are done (repo built, files exported and ver
 | Lunch | Monthly BPS PDF | Hard-coded URL per month that Jacob edits by hand each month |
 | 5 | Email to Jacob and Rebekah | `outlook_send_mail`; Artifact as fallback |
 | 6 | Tag and move mail to Processed, purge expired mail | `outlook_batch_modify_labels`, `outlook_batch_delete_messages` |
-| 7 | Build and print the Fairfax Daily Scoop | Project files, NWS, sports sites, maxpreps, **curl to print.jacobshapiro.net** with `RELAY_TOKEN` |
+| 7 | Build and print the Fairfax Daily Scoop | Project files, NWS, sports sites, maxpreps, **curl to print.shapbox.com** with `RELAY_TOKEN` |
 
 **State that lives OUTSIDE the prompt. This is where things get lost.**
 1. **Cowork project files (Projects tool, `claude/fairfax-scoop/`):** build2.py, art.py, hedcut.py, render.py, setup.sh, edition.json, README.md, riddle-log.md, plus a **content log** ("Fairfax Daily Scoop — content log (never repeat anything below)").
@@ -59,14 +59,14 @@ family-ops/
 **Secrets go in environment variables, never in the repo:** `RELAY_TOKEN` and `PLAYMETRICS_ICS_URL`. Rotate the relay token after cutover, since it has been sitting in a prompt.
 
 **Network:** the Default environment is on *trusted* access. In my test, curl to every host this task needs was blocked except npm:
-- print.jacobshapiro.net (required, because printing uses curl)
+- print.shapbox.com (required, because printing uses curl)
 - forecast.weather.gov
 - calendar.playmetrics.com
 - resources.finalsite.net
 - www.birmingham.k12.mi.us
 - maxpreps.com, cbssports.com, nfl.com, nhl.com
 
-WebFetch may reach some of these anyway, but printing will fail until print.jacobshapiro.net is allowed. Change it under the environment's **Edit → Network access → Allowed domains** (https://code.claude.com/docs/en/cloud-environments#network-access). The alternative is a separate "family" environment with those domains allowed.
+WebFetch may reach some of these anyway, but printing will fail until print.shapbox.com is allowed. Change it under the environment's **Edit → Network access → Allowed domains** (https://code.claude.com/docs/en/cloud-environments#network-access). The alternative is a separate "family" environment with those domains allowed.
 
 **Connector:** attach **only Microsoft_365** to the new routine. A smaller tool list means less to go wrong.
 
