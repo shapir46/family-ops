@@ -131,3 +131,13 @@ Read before building; append after printing. Riddles/jokes/words are in riddle-l
 - Puzzle: sudoku
 - Comic: library whisper gag ("Library rule: whisper!" / "I only have a loud whisper." / "WHISPER!" / "Only Mackenzie is quiet."); library backdrop in all four panels (panels 2 and 4 mirrored); fox point/smug, akimbo/proud, facepalm/laugh all in dark glasses; bear hold/happy + book, shrug/worried, tada/surprised; Mackenzie run/happy, sit/love
 - Critter: none (Thursday)
+
+## 2026-10-23
+- Headline: "A "Wonderland of Rocks" Is America's Newest Park" [nature] (Smithsonian Magazine, Oct. 22, 2026; Chiricahua National Park, Arizona)
+- News: none printed, no room (written but unprinted: Free Skeleton Scavenger Hunt at Indian Springs Metropark, Oct 23 [local] (LittleGuide Detroit))
+- Extras: none printed, no room (written but unprinted: This Week in History, United Nations begins Oct. 24, 1945; Fun Fact, honey almost never spoils; Try This Weekend, leaf hunt)
+- Headline photo: no photo (leaf icon)
+- Lions: 3–2, host Green Bay Sun Oct 25 4:25 pm FOX; sports: Thursday scores, Red Wings and Seaholm/Groves not confirmed in two sources, left blank
+- Puzzle: crossword TOWERING, TACO, ARIZONA, PANDA
+- Comic: leaf-pile gag ("One perfect leaf pile!" / "Cannonball!" / "Mackenzie, not you too!" / "Now we rake it again!"); leafpark backdrop in all four panels (panels 2 and 4 mirrored); bear hold/proud + rake + red scarf, stand/worried, facepalm/surprised, sit/sad + rake; fox point/surprised, run/laugh, shrug/smug in orange beanie; Mackenzie run/happy; leafpile props
+- Critter: Baby Red Panda (Jar0d, CC BY-SA 2.0, Wikimedia Commons: Cub_Red_Panda_almost_falling_of.jpg; Openverse timed out)
