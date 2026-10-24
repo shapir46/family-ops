@@ -141,3 +141,13 @@ Read before building; append after printing. Riddles/jokes/words are in riddle-l
 - Puzzle: crossword TOWERING, TACO, ARIZONA, PANDA
 - Comic: leaf-pile gag ("One perfect leaf pile!" / "Cannonball!" / "Mackenzie, not you too!" / "Now we rake it again!"); leafpark backdrop in all four panels (panels 2 and 4 mirrored); bear hold/proud + rake + red scarf, stand/worried, facepalm/surprised, sit/sad + rake; fox point/surprised, run/laugh, shrug/smug in orange beanie; Mackenzie run/happy; leafpile props
 - Critter: Baby Red Panda (Jar0d, CC BY-SA 2.0, Wikimedia Commons: Cub_Red_Panda_almost_falling_of.jpg; Openverse timed out)
+
+## 2026-10-24 (Weekend Edition)
+- Headline: "A Rare Viking Coin Becomes a National Treasure" [history] (Smithsonian Magazine, Oct. 23, 2026; Norwegian Viking Age hoard, King Olaf II coin)
+- News: Free Community Days at the Detroit Children's Museum [local] (LittleGuide Detroit); Tech Corner: Folding Paper, Building the Future [tech] (Science News Explores, origami-inspired science explainer); not printed, no room: Frank Lloyd Wright's Only Planetarium Shines Again [arts] (Smithsonian Magazine, Oct. 23, 2026)
+- Extras: This Week in History, United Nations begins Oct. 24, 1945; Fun Fact, honey almost never spoils; Heads Up, Oct 30 half day; not printed: Try This Weekend, leaf hunt
+- Headline photo: no photo (star icon)
+- Lions: not printed (no room; Lions vs. Packers Sun 4:25 pm is in the schedule); sports: Friday NHL scores seen in one source only, left blank; Seaholm/Groves left off
+- Puzzle: sudoku
+- Comic: Candy King gag ("Behold, the Candy King!" / "Where is your candy?" / "Mackenzie ate the whole bag!" / "Long live the Queen!"); mainstreet backdrop in all four panels (panels 2 and 4 mirrored); fox tada/proud, stand/smug, facepalm/sad all in crown + purple cape; bear stand/happy, shrug/worried, point/laugh; Mackenzie sit/love, run/happy
+- Critter: none (Saturday)
