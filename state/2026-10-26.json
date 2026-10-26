@@ -1,0 +1,409 @@
+{
+ "date": "2026-10-26",
+ "generated_at": "2026-10-26T10:29:07+00:00",
+ "window": {
+  "start": "2026-10-26",
+  "end": "2026-11-05"
+ },
+ "kids": {
+  "Ari": {
+   "color": "#2563EB",
+   "initial": "A"
+  },
+  "Elle": {
+   "color": "#DB2777",
+   "initial": "E"
+  },
+  "Leo": {
+   "color": "#16A34A",
+   "initial": "L"
+  },
+  "Lila": {
+   "color": "#9333EA",
+   "initial": "Li"
+  }
+ },
+ "events": [
+  {
+   "date": "2026-10-27",
+   "title": "Soccer practice",
+   "kids": [
+    "Elle"
+   ],
+   "start": "18:00",
+   "end": "19:15",
+   "end_date": null,
+   "location": "UWM Sports Complex Field 1, 867 S Blvd E, Pontiac, MI 48341, USA",
+   "kind": "practice",
+   "details": null,
+   "sources": [
+    "PlayMetrics"
+   ],
+   "status": null,
+   "id": "2026-10-27|18:00|soccer practice"
+  },
+  {
+   "date": "2026-10-28",
+   "title": "Goalie Training",
+   "kids": [
+    "Elle"
+   ],
+   "start": "16:45",
+   "end": "18:00",
+   "end_date": null,
+   "location": "Pembroke Park, Buckingham Avenue, Birmingham, MI, USA",
+   "kind": "event",
+   "details": null,
+   "sources": [
+    "PlayMetrics"
+   ],
+   "status": null,
+   "id": "2026-10-28|16:45|goalie training"
+  },
+  {
+   "date": "2026-10-28",
+   "title": "Trunk or Treat & Small Sided Tourney ð",
+   "kids": [
+    "Elle"
+   ],
+   "start": "17:45",
+   "end": "18:45",
+   "end_date": null,
+   "location": "Pembroke Park, Buckingham Avenue, Birmingham, MI, USA",
+   "kind": "event",
+   "details": null,
+   "sources": [
+    "PlayMetrics"
+   ],
+   "status": null,
+   "id": "2026-10-28|17:45|trunk or treat small sided tourney"
+  },
+  {
+   "date": "2026-10-30",
+   "title": "All schools half day (AM).",
+   "kids": [
+    "Ari",
+    "Elle",
+    "Leo"
+   ],
+   "start": null,
+   "end": null,
+   "end_date": null,
+   "location": null,
+   "kind": "school_status",
+   "details": null,
+   "sources": [
+    "BPS district calendar"
+   ],
+   "status": "half_day",
+   "id": "2026-10-30|allday|all schools half day am"
+  },
+  {
+   "date": "2026-10-31",
+   "title": "Basketball game vs Grizzlies",
+   "kids": [
+    "Ari"
+   ],
+   "start": "12:15",
+   "end": null,
+   "end_date": null,
+   "location": "Berkshire Middle School, 21707 W 14 Mile Rd, Beverly Hills",
+   "kind": "game",
+   "details": null,
+   "sources": [
+    "MCE league schedule"
+   ],
+   "status": null,
+   "id": "2026-10-31|12:15|basketball game vs grizzlies"
+  },
+  {
+   "date": "2026-10-31",
+   "title": "Soccer game vs Austin FC",
+   "kids": [
+    "Leo"
+   ],
+   "start": "14:00",
+   "end": "15:00",
+   "end_date": null,
+   "location": "Birmingham Covington School, 1525 Covington Rd, Bloomfield Hills",
+   "kind": "game",
+   "details": "Field 6. Week 8, last game of the season; Sounders home.",
+   "sources": [
+    "BBSC schedule"
+   ],
+   "status": null,
+   "id": "2026-10-31|14:00|soccer game vs austin fc"
+  },
+  {
+   "date": "2026-11-02",
+   "title": "Soccer practice",
+   "kids": [
+    "Elle"
+   ],
+   "start": "17:00",
+   "end": "18:15",
+   "end_date": null,
+   "location": "UWM Sports Complex Field 1, 867 S Blvd E, Pontiac, MI 48341, USA",
+   "kind": "practice",
+   "details": null,
+   "sources": [
+    "PlayMetrics"
+   ],
+   "status": null,
+   "id": "2026-11-02|17:00|soccer practice"
+  },
+  {
+   "date": "2026-11-03",
+   "title": "No school district-wide.",
+   "kids": [
+    "Ari",
+    "Elle",
+    "Leo",
+    "Lila"
+   ],
+   "start": null,
+   "end": null,
+   "end_date": null,
+   "location": null,
+   "kind": "school_status",
+   "details": null,
+   "sources": [
+    "BPS district calendar"
+   ],
+   "status": "no_school",
+   "id": "2026-11-03|allday|no school district wide"
+  },
+  {
+   "date": "2026-11-05",
+   "title": "Soccer practice",
+   "kids": [
+    "Elle"
+   ],
+   "start": "18:15",
+   "end": "19:30",
+   "end_date": null,
+   "location": "Pinnacle Performance Center small field, 312 Park St, Troy, MI 48083, USA",
+   "kind": "practice",
+   "details": null,
+   "sources": [
+    "PlayMetrics"
+   ],
+   "status": null,
+   "id": "2026-11-05|18:15|soccer practice"
+  }
+ ],
+ "actions": [],
+ "fyi": [],
+ "conflicts": [
+  {
+   "date": "2026-10-28",
+   "kids": [
+    "Elle"
+   ],
+   "a": "Goalie Training",
+   "b": "Trunk or Treat & Small Sided Tourney ð",
+   "a_time": "16:45",
+   "b_time": "17:45"
+  }
+ ],
+ "lunch": {
+  "line": "Whole Grain Cinnamon French Toast, Syrup, & a Low-Fat “Raspberry Rainbow” Yogurt With Baked Hashbrown Patty",
+  "entree": "Whole Grain Cinnamon French Toast, Syrup, & a Low-Fat “Raspberry Rainbow” Yogurt With Baked Hashbrown Patty",
+  "theme": "BrunchforLunch",
+  "problems": []
+ },
+ "weather": {
+  "hi": 66,
+  "today": "Patchy Fog then Partly Sunny",
+  "today_detail": "Patchy fog before 10am. Partly sunny. High near 66, with temperatures falling to around 64 in the afternoon. North wind 2 to 8 mph.",
+  "tonight_low": 42,
+  "tonight": "Mostly Cloudy",
+  "icon": "fog",
+  "forecast": [
+   {
+    "date": "2026-10-27",
+    "day": "Tue",
+    "hi": 61,
+    "lo": 46,
+    "short": "Partly Sunny",
+    "icon": "partly"
+   },
+   {
+    "date": "2026-10-28",
+    "day": "Wed",
+    "hi": 70,
+    "lo": 51,
+    "short": "Partly Sunny",
+    "icon": "partly"
+   },
+   {
+    "date": "2026-10-29",
+    "day": "Thu",
+    "hi": 74,
+    "lo": 54,
+    "short": "Mostly Sunny",
+    "icon": "partly"
+   },
+   {
+    "date": "2026-10-30",
+    "day": "Fri",
+    "hi": 69,
+    "lo": 49,
+    "short": "Partly Sunny",
+    "icon": "partly"
+   }
+  ],
+  "source": "National Weather Service",
+  "updated": "2026-10-26T08:24:18+00:00"
+ },
+ "mda": {
+  "title": "MDA Kicks &amp; Giggles",
+  "items": [
+   "<span class='gm-when'>Last game · Sun Oct 25</span><span class='gm-match'>MDA vs TBD</span><span class='gm-loc'>Sports Force Parks 02, Sandusky</span><span class='gm-extra'>Final score coming soon.</span>"
+  ]
+ },
+ "spartans": null,
+ "fantasy": {
+  "league": "Quarton 5th Grade DAWGS",
+  "team": "LamARI SHAPson",
+  "record": "6-0",
+  "rank": 1,
+  "teams": 10,
+  "week": 7,
+  "points_for": 916.5,
+  "active": true,
+  "latest_period": 7,
+  "this_week": {
+   "week": 7,
+   "opponent": "BEAR DOWN",
+   "score": 127.4,
+   "opp_score": 85.2,
+   "winner": "UNDECIDED",
+   "proj": 127.4,
+   "opp_proj": 89.6,
+   "top": {
+    "name": "Trey McBride",
+    "pos": "TE",
+    "pts": 27.1
+   },
+   "opp_top": {
+    "name": "Christian McCaffrey",
+    "pos": "RB",
+    "pts": 22.0
+   }
+  },
+  "last_week": {
+   "week": 6,
+   "opponent": "Hard Knox",
+   "score": 105.2,
+   "opp_score": 101.4,
+   "winner": "HOME",
+   "proj": null,
+   "opp_proj": null,
+   "top": {
+    "name": "Chuba Hubbard",
+    "pos": "RB",
+    "pts": 19.1
+   },
+   "opp_top": {
+    "name": "Jaxon Smith-Njigba",
+    "pos": "WR",
+    "pts": 25.4
+   },
+   "result": "W"
+  }
+ },
+ "ari_fantasy": {
+  "title": "Ari&#8217;s Fantasy Team: LamARI SHAPson",
+  "items": [
+   "6–0, 1st of 10",
+   "<b>Week 7</b> vs BEAR DOWN",
+   "Score: <b>127.4–85.2</b>, leading",
+   "Projected: 127.4–89.6",
+   "Ari&#8217;s top player: <b>Trey McBride</b>, TE, 27.1 pts",
+   "Their top player: <b>Christian McCaffrey</b>, RB, 22.0 pts"
+  ]
+ },
+ "almanac": [
+  {
+   "date": "2026-10-26",
+   "holidays": [],
+   "shabbat": null
+  },
+  {
+   "date": "2026-10-27",
+   "holidays": [],
+   "shabbat": null
+  }
+ ],
+ "announcements": null,
+ "due": [
+  {
+   "source": "league_schedules",
+   "who": "claude",
+   "what": "Re-check data/schedules/* against league sites and emails (MCE basketball, Snaptivities)",
+   "why": "never checked"
+  },
+  {
+   "source": "sunday_school",
+   "who": "jacob",
+   "what": "Temple Israel Sunday School calendar -> data/calendars/temple-israel-YYYY-YY.yaml (Jacob to supply; Temple Beth El dropped 2026-10-10)",
+   "why": "not supplied yet"
+  }
+ ],
+ "delivery": {
+  "email": null,
+  "dashboard": null,
+  "print": null,
+  "filed": null
+ },
+ "meta": {
+  "sources": {
+   "playmetrics_feed": {
+    "ok": true,
+    "count": null
+   },
+   "playmetrics": {
+    "ok": true,
+    "count": 5
+   },
+   "playmetrics_past": {
+    "ok": true,
+    "count": 26
+   },
+   "schedules": {
+    "ok": true,
+    "count": 2
+   },
+   "schedules_past": {
+    "ok": true,
+    "count": 9
+   },
+   "mce_results": {
+    "ok": true,
+    "count": null
+   },
+   "district_calendar": {
+    "ok": true,
+    "count": 2
+   },
+   "lunch": {
+    "ok": true,
+    "count": null
+   },
+   "weather": {
+    "ok": true,
+    "count": null
+   },
+   "fantasy": {
+    "ok": true,
+    "count": null
+   },
+   "almanac": {
+    "ok": true,
+    "count": 2
+   }
+  },
+  "warnings": []
+ }
+}

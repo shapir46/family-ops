@@ -151,3 +151,15 @@ Read before building; append after printing. Riddles/jokes/words are in riddle-l
 - Puzzle: sudoku
 - Comic: Candy King gag ("Behold, the Candy King!" / "Where is your candy?" / "Mackenzie ate the whole bag!" / "Long live the Queen!"); mainstreet backdrop in all four panels (panels 2 and 4 mirrored); fox tada/proud, stand/smug, facepalm/sad all in crown + purple cape; bear stand/happy, shrug/worried, point/laugh; Mackenzie sit/love, run/happy
 - Critter: none (Saturday)
+
+## 2026-10-26
+- Headline: "Bright Green Eggs! Adelaide Zoo's Cassowaries Surprise Keepers" [animals] (Smithsonian Magazine, Oct. 23, 2026; Adelaide Zoo's first southern cassowary eggs in 34 years, Martina and Jeffrey)
+- News: Treats, Strolls and Pumpkin Rolls Around Metro Detroit [local] (LittleGuide Detroit, week of Oct. 26-Nov. 1); not printed, no room: Did Van Gogh Paint This Exact Sky? [arts] (Smithsonian Magazine, Oct. 23, 2026; Hyades/Saint-Rémy sky, July 22, 1889); Mystery Shape Turns Out to Be Trees [world] (Smithsonian Magazine, Oct. 22, 2026; Nikumaroro, Purdue team)
+- Extras: none printed, no room
+- Word: camouflage
+- NFL Sunday box: 12 Week 7 finals (CBS Sports + Fox Sports); highlights Lions 20, Packers 17 [Lions 4-2]; MNF Cowboys at Eagles (ABC, no kickoff time confirmed). Fantasy top performers list left out (no source with PPR stats)
+- Headline photo: no photo (paw icon)
+- Lions: beat Green Bay 20-17 Oct 25 (4-2), next Sun Nov 1 vs. Minnesota Vikings (Ford Field); sports: yday/tonight/Seaholm-Groves left blank, unconfirmed
+- Puzzle: crossword CASSOWARY, LIONS, TOAST, EGGS
+- Comic: ice-cream gag ("Best ice cream ever!" / "Ow! Brain freeze!" / "Eat it slower, Artic." / "Mackenzie! My cone!"); party backdrop in all four panels (panels 2 and 4 mirrored); fox hold/happy + icecream, facepalm/worried + icecream, shrug/sad, akimbo/surprised; bear stand/smug, point/surprised, think/worried; Mackenzie sit/love + icecream
+- Critter: none (Monday)
