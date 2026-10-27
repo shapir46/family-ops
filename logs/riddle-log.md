@@ -20,3 +20,4 @@
 2026-10-23 | What did the tree say to autumn? Leaf me alone! | towering
 2026-10-24 | What do you call a Viking who loves to bake? A cookie raider! | hoard
 2026-10-26 | Why did the football team go to the bank? To get their quarterback! | camouflage
+2026-10-27 | What do you call a dog that does magic tricks? A Labracadabrador! | wager

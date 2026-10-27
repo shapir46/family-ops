@@ -163,3 +163,14 @@ Read before building; append after printing. Riddles/jokes/words are in riddle-l
 - Puzzle: crossword CASSOWARY, LIONS, TOAST, EGGS
 - Comic: ice-cream gag ("Best ice cream ever!" / "Ow! Brain freeze!" / "Eat it slower, Artic." / "Mackenzie! My cone!"); party backdrop in all four panels (panels 2 and 4 mirrored); fox hold/happy + icecream, facepalm/worried + icecream, shrug/sad, akimbo/surprised; bear stand/smug, point/surprised, think/worried; Mackenzie sit/love + icecream
 - Critter: none (Monday)
+
+## 2026-10-27
+- Headline: "Two Museums Bet Their Monets on the World Series" [arts] (Smithsonian Magazine, Oct. 26, 2026; Milwaukee Art Museum and Museum of Fine Arts, St. Petersburg, Monet loan wager)
+- News: Halloween weekend fun around Metro Detroit [local] (LittleGuide Detroit, Oct. 29-31 events); not printed, no room: Something Fun to Do This Week [local] (LittleGuide Detroit)
+- Extras: This Week in History, Statue of Liberty dedicated Oct. 28, 1886; Fun Fact, sea otters hold hands while they sleep
+- Word: wager
+- Headline photo: no photo (palette icon)
+- Lions: not printed; sports (yday/tonight/Seaholm-Groves) left blank, unconfirmed in two sources; fantasy top performers left out
+- Puzzle: sudoku
+- Comic: apple-orchard gag ("I can carry all the apples!" / "That is a LOT of apples." / "Whoa! Wobbly!" / "Mackenzie ate them all."); orchard backdrop in all four panels (panels 2 and 4 mirrored); fox point/grin, akimbo/smug, scared/worried, facepalm/sad in green cap; bear stand/happy, shrug/worried; Mackenzie run/happy, sit/love; bucket prop
+- Critter: none (Wikimedia and Openverse unavailable, rate-limited/timeout)
