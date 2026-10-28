@@ -174,3 +174,14 @@ Read before building; append after printing. Riddles/jokes/words are in riddle-l
 - Puzzle: sudoku
 - Comic: apple-orchard gag ("I can carry all the apples!" / "That is a LOT of apples." / "Whoa! Wobbly!" / "Mackenzie ate them all."); orchard backdrop in all four panels (panels 2 and 4 mirrored); fox point/grin, akimbo/smug, scared/worried, facepalm/sad in green cap; bear stand/happy, shrug/worried; Mackenzie run/happy, sit/love; bucket prop
 - Critter: none (Wikimedia and Openverse unavailable, rate-limited/timeout)
+
+## 2026-10-28
+- Headline: "Divers Raise a Mystery Cauldron From an English River" [history] (Smithsonian Magazine, Oct. 27, 2026; River Wear near Sunderland, Gary Bankhead, Durham University)
+- News: Halloween Fun Around Metro Detroit This Weekend [local] (LittleGuide Detroit, Oct. 29-31 events); Tech Corner: Computers That Listen to the Wild [tech] (Science News Explores, Oct. 15, 2026; bioacoustics, lions, cao-vit gibbons)
+- Extras: Fun Fact, cows have best friends; This Week in History, Mount Rushmore completed Oct. 31, 1941
+- Word: relic
+- Headline photo: no photo (ship icon)
+- Lions: beat Green Bay 20-17 (4-2), next Sun Nov 1 vs. Minnesota Vikings (Ford Field, 1:00 pm); sports: yday/tonight/Seaholm-Groves left blank, unconfirmed
+- Puzzle: crossword CAULDRON, RELIC, ROAR, PIZZA, LIONS
+- Comic: brick-cake gag ("I baked a cake for Bob!" / "It looks like a brick!" / "Artic... it IS a brick." / "I'll bake you a real one!"); bakery backdrop in all four panels (panels 2 and 4 mirrored); fox stand/happy, akimbo/proud, shrug/worried in white cap; bob wave/happy, tada/surprised, think/worried, scared/worried; uni tada/laugh; cake prop
+- Critter: none (Wednesday)
