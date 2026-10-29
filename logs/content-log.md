@@ -185,3 +185,14 @@ Read before building; append after printing. Riddles/jokes/words are in riddle-l
 - Puzzle: crossword CAULDRON, RELIC, ROAR, PIZZA, LIONS
 - Comic: brick-cake gag ("I baked a cake for Bob!" / "It looks like a brick!" / "Artic... it IS a brick." / "I'll bake you a real one!"); bakery backdrop in all four panels (panels 2 and 4 mirrored); fox stand/happy, akimbo/proud, shrug/worried in white cap; bob wave/happy, tada/surprised, think/worried, scared/worried; uni tada/laugh; cake prop
 - Critter: none (Wednesday)
+
+## 2026-10-29
+- Headline: "Fingerprints Hint That Women and Kids Helped Build China's Clay Army" [history] (Smithsonian Magazine, Oct. 28, 2026; Xiaoxi Li, Journal of Cultural Heritage, 79 prints from 36 warriors)
+- News: Where to Take Kids on Election Day [local] (LittleGuide Detroit, Nov. 3 list); Brewers Win the World Series [world] (CBS Sports, MLB.com); Wildlife Photos Break a Record [animals] (Smithsonian Magazine, European Wildlife Photographer of the Year)
+- Extras: Fun Fact, a group of owls is a parliament; Halloween Long Ago, first jack-o'-lanterns carved from turnips
+- Word: artisan
+- Headline photo: no photo (star icon)
+- Lions: 4-2, next Sun Nov 1 vs. Minnesota (1:00 pm, FOX); sports: yesterday's NHL (4 games), Pistons-Hornets and World Series Game 5 confirmed in two sources; tonight and Seaholm/Groves left blank, unconfirmed
+- Puzzle: sudoku
+- Comic: Halloween-bucket gag ("I'm Super Artic!" / "I left it at home!" / "A pumpkin bucket!" / "It had my pie in it."); porch backdrop in all four panels (panels 2 and 4 mirrored); fox tada/proud, shrug/worried, point/happy, cheer/laugh all in red cape; bear stand/happy, think/smug + pumpkin, hold/surprised + pumpkin, shrug/sad
+- Critter: none (Thursday)

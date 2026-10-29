@@ -1,0 +1,389 @@
+{
+ "date": "2026-10-29",
+ "generated_at": "2026-10-29T10:28:50+00:00",
+ "window": {
+  "start": "2026-10-29",
+  "end": "2026-11-08"
+ },
+ "kids": {
+  "Ari": {
+   "color": "#2563EB",
+   "initial": "A"
+  },
+  "Elle": {
+   "color": "#DB2777",
+   "initial": "E"
+  },
+  "Leo": {
+   "color": "#16A34A",
+   "initial": "L"
+  },
+  "Lila": {
+   "color": "#9333EA",
+   "initial": "Li"
+  }
+ },
+ "events": [
+  {
+   "date": "2026-10-30",
+   "title": "All schools half day (AM).",
+   "kids": [
+    "Ari",
+    "Elle",
+    "Leo"
+   ],
+   "start": null,
+   "end": null,
+   "end_date": null,
+   "location": null,
+   "kind": "school_status",
+   "details": null,
+   "sources": [
+    "BPS district calendar"
+   ],
+   "status": "half_day",
+   "id": "2026-10-30|allday|all schools half day am"
+  },
+  {
+   "date": "2026-10-31",
+   "title": "Basketball game vs Grizzlies",
+   "kids": [
+    "Ari"
+   ],
+   "start": "12:15",
+   "end": null,
+   "end_date": null,
+   "location": "Berkshire Middle School, 21707 W 14 Mile Rd, Beverly Hills",
+   "kind": "game",
+   "details": null,
+   "sources": [
+    "MCE league schedule"
+   ],
+   "status": null,
+   "id": "2026-10-31|12:15|basketball game vs grizzlies"
+  },
+  {
+   "date": "2026-10-31",
+   "title": "Soccer game vs Austin FC",
+   "kids": [
+    "Leo"
+   ],
+   "start": "14:00",
+   "end": "15:00",
+   "end_date": null,
+   "location": "Birmingham Covington School, 1525 Covington Rd, Bloomfield Hills",
+   "kind": "game",
+   "details": "Field 6. Week 8, last game of the season; Sounders home.",
+   "sources": [
+    "BBSC schedule"
+   ],
+   "status": null,
+   "id": "2026-10-31|14:00|soccer game vs austin fc"
+  },
+  {
+   "date": "2026-11-02",
+   "title": "Soccer practice",
+   "kids": [
+    "Elle"
+   ],
+   "start": "17:00",
+   "end": "18:15",
+   "end_date": null,
+   "location": "UWM Sports Complex Field 1, 867 S Blvd E, Pontiac, MI 48341, USA",
+   "kind": "practice",
+   "details": null,
+   "sources": [
+    "PlayMetrics"
+   ],
+   "status": null,
+   "id": "2026-11-02|17:00|soccer practice"
+  },
+  {
+   "date": "2026-11-03",
+   "title": "No school district-wide.",
+   "kids": [
+    "Ari",
+    "Elle",
+    "Leo",
+    "Lila"
+   ],
+   "start": null,
+   "end": null,
+   "end_date": null,
+   "location": null,
+   "kind": "school_status",
+   "details": null,
+   "sources": [
+    "BPS district calendar"
+   ],
+   "status": "no_school",
+   "id": "2026-11-03|allday|no school district wide"
+  },
+  {
+   "date": "2026-11-05",
+   "title": "Soccer practice",
+   "kids": [
+    "Elle"
+   ],
+   "start": "18:15",
+   "end": "19:30",
+   "end_date": null,
+   "location": "Pinnacle Performance Center small field, 312 Park St, Troy, MI 48083, USA",
+   "kind": "practice",
+   "details": null,
+   "sources": [
+    "PlayMetrics"
+   ],
+   "status": null,
+   "id": "2026-11-05|18:15|soccer practice"
+  },
+  {
+   "date": "2026-11-06",
+   "title": "Soccer game vs U9G-White",
+   "kids": [
+    "Elle"
+   ],
+   "start": "19:15",
+   "end": "20:15",
+   "end_date": null,
+   "location": "Total Soccer Royal Oak Mini Field, Total Soccer Royal Oak, Lexington Boulevard, Royal Oak, MI, USA",
+   "kind": "game",
+   "details": "arrive 7:00 pm, white-black-white",
+   "sources": [
+    "PlayMetrics"
+   ],
+   "status": null,
+   "id": "2026-11-06|19:15|soccer game vs u9g white"
+  },
+  {
+   "date": "2026-11-07",
+   "title": "Basketball practice (Spartans & Tigers)",
+   "kids": [
+    "Ari"
+   ],
+   "start": "12:20",
+   "end": null,
+   "end_date": null,
+   "location": "Berkshire Middle School, 21707 W 14 Mile Rd, Beverly Hills",
+   "kind": "practice",
+   "details": null,
+   "sources": [
+    "MCE league schedule"
+   ],
+   "status": null,
+   "id": "2026-11-07|12:20|basketball practice spartans tigers"
+  },
+  {
+   "date": "2026-11-07",
+   "title": "Basketball game vs Tigers",
+   "kids": [
+    "Ari"
+   ],
+   "start": "12:50",
+   "end": null,
+   "end_date": null,
+   "location": "Berkshire Middle School, 21707 W 14 Mile Rd, Beverly Hills",
+   "kind": "game",
+   "details": "Last day of the regular season.",
+   "sources": [
+    "MCE league schedule"
+   ],
+   "status": null,
+   "id": "2026-11-07|12:50|basketball game vs tigers"
+  }
+ ],
+ "actions": [],
+ "fyi": [],
+ "conflicts": [
+  {
+   "date": "2026-11-07",
+   "kids": [
+    "Ari"
+   ],
+   "a": "Basketball practice (Spartans & Tigers)",
+   "b": "Basketball game vs Tigers",
+   "a_time": "12:20",
+   "b_time": "12:50"
+  }
+ ],
+ "lunch": {
+  "line": "Crispy Chicken Sandwich with Fresh Roasted Brussel Sprouts",
+  "entree": "Crispy Chicken Sandwich with Fresh Roasted Brussel Sprouts",
+  "theme": null,
+  "problems": []
+ },
+ "weather": {
+  "hi": 73,
+  "today": "Partly Sunny then Chance Light Rain",
+  "today_detail": "A chance of rain between 2pm and 4pm, then a chance of rain and a slight chance of thunderstorms between 4pm and 5pm, then a slight chance of thunderstorms and a slight chance of rain. Partly sunny. High near 73, with temperatures falling to around 68 in the afternoon. Southwest wind 7 to 13 mph, with gusts as high as 25 mph. Chance of precipitation is 40%. New rainfall amounts less than a tenth of an inch possible.",
+  "tonight_low": 42,
+  "tonight": "Mostly Clear",
+  "icon": "rain",
+  "forecast": [
+   {
+    "date": "2026-10-30",
+    "day": "Fri",
+    "hi": 61,
+    "lo": 41,
+    "short": "Sunny",
+    "icon": "sun"
+   },
+   {
+    "date": "2026-10-31",
+    "day": "Sat",
+    "hi": 62,
+    "lo": 46,
+    "short": "Mostly Cloudy",
+    "icon": "cloud"
+   },
+   {
+    "date": "2026-11-01",
+    "day": "Sun",
+    "hi": 66,
+    "lo": 48,
+    "short": "Mostly Cloudy",
+    "icon": "cloud"
+   },
+   {
+    "date": "2026-11-02",
+    "day": "Mon",
+    "hi": 67,
+    "lo": 51,
+    "short": "Partly Sunny",
+    "icon": "partly"
+   }
+  ],
+  "source": "National Weather Service",
+  "updated": "2026-10-29T08:24:22+00:00"
+ },
+ "mda": null,
+ "spartans": null,
+ "fantasy": {
+  "league": "Quarton 5th Grade DAWGS",
+  "team": "LamARI SHAPson",
+  "record": "7-0",
+  "rank": 1,
+  "teams": 10,
+  "week": 8,
+  "points_for": 1043.9,
+  "active": true,
+  "latest_period": 8,
+  "this_week": {
+   "week": 8,
+   "opponent": "Ben there Won that",
+   "score": 0.0,
+   "opp_score": 0.0,
+   "winner": "UNDECIDED",
+   "proj": 92.6,
+   "opp_proj": 135.2,
+   "top": null,
+   "opp_top": null
+  },
+  "last_week": {
+   "week": 7,
+   "opponent": "BEAR DOWN",
+   "score": 127.4,
+   "opp_score": 79.2,
+   "winner": "AWAY",
+   "proj": null,
+   "opp_proj": null,
+   "top": {
+    "name": "Trey McBride",
+    "pos": "TE",
+    "pts": 27.1
+   },
+   "opp_top": {
+    "name": "Christian McCaffrey",
+    "pos": "RB",
+    "pts": 22.0
+   },
+   "result": "W"
+  }
+ },
+ "ari_fantasy": null,
+ "almanac": [
+  {
+   "date": "2026-10-29",
+   "holidays": [],
+   "shabbat": null
+  },
+  {
+   "date": "2026-10-30",
+   "holidays": [],
+   "shabbat": {
+    "sunset": "6:28 pm",
+    "source": "Hebcal"
+   }
+  }
+ ],
+ "announcements": null,
+ "due": [
+  {
+   "source": "league_schedules",
+   "who": "claude",
+   "what": "Re-check data/schedules/* against league sites and emails (MCE basketball, Snaptivities)",
+   "why": "never checked"
+  },
+  {
+   "source": "sunday_school",
+   "who": "jacob",
+   "what": "Temple Israel Sunday School calendar -> data/calendars/temple-israel-YYYY-YY.yaml (Jacob to supply; Temple Beth El dropped 2026-10-10)",
+   "why": "not supplied yet"
+  }
+ ],
+ "delivery": {
+  "email": null,
+  "dashboard": null,
+  "print": null,
+  "filed": null
+ },
+ "meta": {
+  "sources": {
+   "playmetrics_feed": {
+    "ok": true,
+    "count": null
+   },
+   "playmetrics": {
+    "ok": true,
+    "count": 3
+   },
+   "playmetrics_past": {
+    "ok": true,
+    "count": 27
+   },
+   "schedules": {
+    "ok": true,
+    "count": 4
+   },
+   "schedules_past": {
+    "ok": true,
+    "count": 9
+   },
+   "mce_results": {
+    "ok": true,
+    "count": null
+   },
+   "district_calendar": {
+    "ok": true,
+    "count": 2
+   },
+   "lunch": {
+    "ok": true,
+    "count": null
+   },
+   "weather": {
+    "ok": true,
+    "count": null
+   },
+   "fantasy": {
+    "ok": true,
+    "count": null
+   },
+   "almanac": {
+    "ok": true,
+    "count": 2
+   }
+  },
+  "warnings": []
+ }
+}

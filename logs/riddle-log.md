@@ -22,3 +22,4 @@
 2026-10-26 | Why did the football team go to the bank? To get their quarterback! | camouflage
 2026-10-27 | What do you call a dog that does magic tricks? A Labracadabrador! | wager
 2026-10-28 | Why did the soccer ball quit the team? It was tired of being kicked around! | relic
+2026-10-29 | What is a ghost's favorite dessert? Boo-berry pie! | artisan
