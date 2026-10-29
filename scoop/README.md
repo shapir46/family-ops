@@ -34,8 +34,8 @@ One-page Letter PDF newspaper. Files (in the family-ops repo): `scoop/` holds bu
   - build2.py swaps it in as the headline story on its date by itself (a Sunday date runs Saturday) and prints `ASSIGNED STORY: <headline>`. Each runs once; it counts as that edition's local article when it is local.
   - On that day, don't research a headline: use the time for the news items, and an already-found headline story can become a news item. Log it as "Headline: <headline> [topic] (assigned by Jacob)". In `foot`, credit the entry's `foot_news` outlets when it has them (a news story Jacob asked for, e.g. 2026-10-20), else "Shapiro family"; build2.py adds any photo credit. When the assigned story isn't local, one of the news items is still the local article.
   - Write it only from what Jacob says, what the photo shows, or, for a news story, facts confirmed in two outlets (named in `head_src`); never add details that weren't given, visible or confirmed.
-- **Daily puzzle: crossword and sudoku take turns** (Jacob, 2026-10-19). **Monday, Wednesday and Friday:** the Daily Crossword below. **Tuesday, Thursday and the Saturday Weekend Edition:** a 4×4 Daily Sudoku.
-  - **The sudoku is made by `sudoku.py` from the edition's date**, by itself; the daily run writes nothing for it and leaves `crossword` out that day. Every puzzle has exactly one answer, with 7 numbers filled in. The answer prints upside down at the bottom.
+- **Daily puzzle: crossword and sudoku take turns** (Jacob, 2026-10-19). **Monday, Wednesday and Friday:** the Daily Crossword below. **Tuesday, Thursday and the Saturday Weekend Edition:** a Daily Sudoku, **5×5 from Oct 31, 2026** (Jacob, 2026-10-29; `SUDOKU_5X5_FROM` in build2.py; 4×4 before that). The 5×5 has no square boxes: five thick-outlined, lightly tinted shapes of five squares, new each day; every row, column and shape holds 1–5. 10 numbers are filled in.
+  - **The sudoku is made by `sudoku.py` from the edition's date**, by itself; the daily run writes nothing for it and leaves `crossword` out that day. Every puzzle has exactly one answer (7 numbers filled in on the 4×4, 10 on the 5×5). The answer prints upside down at the bottom.
   - **How-to-play instructions** print beside the grid for the first two weeks (Oct 20 – Nov 2, 2026, `SUDOKU_HOW_TO_UNTIL` in build2.py), then the box shows the grid only.
   - Section `puzzle` in `layout` (`crossword` and `sudoku` work too): it holds whichever puzzle the day has. If the layout leaves it out, build2.py puts it under the joke. build2.py prints `PUZZLE: crossword` or `PUZZLE: sudoku`. Log "Puzzle: sudoku" or the crossword answers in content-log.md.
 - **Daily Crossword** (Mondays, Wednesdays and Fridays): a small crossword about that day's paper (`crossword`).
@@ -161,7 +161,7 @@ One-page Letter PDF newspaper. Files (in the family-ops repo): `scoop/` holds bu
 
 ## PUBLISHING SCHEDULE (Jacob, Oct 10, 2026) — overrides anything below that conflicts
 - **Monday–Friday:** the regular daily edition.
-- **Saturday:** a **Weekend Edition** that covers Saturday AND Sunday. Set `edition` to "Weekend Edition" and `date` to "Saturday & Sunday, October 17–18, 2026".
+- **Saturday:** a **Weekend Edition** that covers Saturday AND Sunday. Set `edition` to "Weekend Edition" and `date` to "Saturday & Sunday, October 17–18, 2026" (across a month end: "Saturday & Sunday, October 31–November 1, 2026"; build2.py reads both, and the puzzle, featured art and assigned stories depend on it).
   - `sched_title` = "This Weekend"; `sched` lists both days, each item led by its day and time ("<b>Sat 9:30 am</b> — ...").
   - `week_title` = "Next Week"; `week` = Mon–Fri highlights (half days, no-school days, games).
   - Weather: `wx` = Saturday, `wx2` = Saturday night + Sunday; `forecast` = the 4 days from Sunday.

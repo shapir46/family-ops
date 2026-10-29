@@ -13,11 +13,17 @@ lb7=f(f"{G}/fontsource-libre-baskerville*/package/files/libre-baskerville-latin-
 d=json.load(open('edition.json'))
 _MONTHS = ['january', 'february', 'march', 'april', 'may', 'june', 'july', 'august', 'september', 'october', 'november', 'december']
 def edition_days():
-    """ISO dates this edition covers, from `date` ("Thursday, October 15, 2026" or "Saturday & Sunday, October 17–18, 2026")."""
-    m = re.search(r'([A-Za-z]+) (\d{1,2})(?:\s*[–-]\s*(\d{1,2}))?, (\d{4})', d.get('date', ''))
+    """ISO dates this edition covers, from `date`: "Thursday, October 15, 2026", "Saturday & Sunday, October 17–18, 2026",
+    or across a month or year end, "Saturday & Sunday, October 31–November 1, 2026"."""
+    import datetime as _dt
+    m = re.search(r'([A-Za-z]+) (\d{1,2})(?:\s*[–-]\s*(?:([A-Za-z]+) )?(\d{1,2}))?, (\d{4})', d.get('date', ''))
     if not m or m.group(1).lower() not in _MONTHS: return []
-    mo, a, b, y = _MONTHS.index(m.group(1).lower()) + 1, int(m.group(2)), int(m.group(3) or m.group(2)), int(m.group(4))
-    return [f"{y}-{mo:02d}-{day:02d}" for day in range(a, b + 1)]
+    mo1, d1, y = _MONTHS.index(m.group(1).lower()) + 1, int(m.group(2)), int(m.group(5))
+    mo2 = _MONTHS.index(m.group(3).lower()) + 1 if m.group(3) and m.group(3).lower() in _MONTHS else mo1
+    d2 = int(m.group(4) or d1)
+    end = _dt.date(y, mo2, d2)
+    start = _dt.date(y - 1 if mo1 > mo2 else y, mo1, d1)
+    return [(start + _dt.timedelta(days=i)).isoformat() for i in range((end - start).days + 1)]
 _KIT = os.path.dirname(os.path.abspath(__file__))
 # Assigned stories: a one-time headline story Jacob asks for, written ahead with his own photo, in assigned/queue.json.
 # The entry whose date falls in this edition replaces the headline story (README: Assigned stories, Jacob 2026-10-15).
@@ -175,6 +181,7 @@ def sec_nfl():
 # How-to-play instructions print with the sudoku for its first two weeks.
 SUDOKU_DAYS = {1, 3, 5}              # Tue, Thu, Sat
 SUDOKU_HOW_TO_UNTIL = '2026-11-02'   # first sudoku 2026-10-20, instructions for two weeks
+SUDOKU_5X5_FROM = '2026-10-31'       # 5x5 with shaped regions from here on (Jacob, 2026-10-29); 4x4 before
 def puzzle_kind():
     days = edition_days()
     if not days: return 'crossword'
@@ -186,8 +193,9 @@ def sec_puzzle():
     _puzzle_done.append(1)
     if puzzle_kind() == 'sudoku':
         day = edition_days()[0]
-        print(f"PUZZLE: sudoku{' with how-to' if day <= SUDOKU_HOW_TO_UNTIL else ''}", file=sys.stderr)
-        return sudoku.html_box(day, how_to=day <= SUDOKU_HOW_TO_UNTIL)
+        size = 5 if day >= SUDOKU_5X5_FROM else 4
+        print(f"PUZZLE: sudoku {size}x{size}{' with how-to' if day <= SUDOKU_HOW_TO_UNTIL else ''}", file=sys.stderr)
+        return sudoku.html_box(day, how_to=day <= SUDOKU_HOW_TO_UNTIL, size=size)
     if not d.get('crossword'):
         print("CROSSWORD WARNING: today is a crossword day but edition.json has no 'crossword'", file=sys.stderr)
         return ''

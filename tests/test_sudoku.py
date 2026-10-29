@@ -26,3 +26,18 @@ def test_same_date_same_puzzle_and_how_to_switch():
     assert sudoku.make("2026-10-20") == sudoku.make("2026-10-20") != sudoku.make("2026-10-22")
     assert "How to play" in sudoku.html_box("2026-10-20", how_to=True)
     assert "How to play" not in sudoku.html_box("2026-11-03", how_to=False)
+
+
+def test_5x5_shapes_have_one_answer():
+    for day in range(1, 120):
+        puz, sol, reg = sudoku.make5(f"2026-y-{day}")
+        assert sum(v > 0 for r in puz for v in r) == sudoku.GIVENS5
+        assert sudoku._count5([r[:] for r in puz], reg) == 1
+        for k in range(5):
+            cells = [(r, c) for r in range(5) for c in range(5) if reg[r][c] == k]
+            assert len(cells) == 5 and sorted(sol[r][c] for r, c in cells) == [1, 2, 3, 4, 5]
+            assert len({r for r, _ in cells}) > 1 and len({c for _, c in cells}) > 1     # never a plain row or column
+        assert all(sorted(row) == [1, 2, 3, 4, 5] for row in sol)
+        assert all(sorted(sol[r][c] for r in range(5)) == [1, 2, 3, 4, 5] for c in range(5))
+    box = sudoku.html_box("2026-10-31", how_to=True, size=5)
+    assert "1, 2, 3, 4 or 5" in box and box.count("<rect") >= 26
