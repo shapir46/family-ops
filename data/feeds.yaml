@@ -1,0 +1,21 @@
+# Public ICS calendar feeds Jacob supplies. ./fo collect (familyops/feeds.py) reads every feed on each run, keeps
+# the today..today+10 window and attributes every kept event to `kids`. A feed's events are named `<prefix>: <what>`
+# ("Swim: Quacktackular Meet") and its practices, matched by `practice`, become "<prefix> practice".
+# `group` / `other_groups`: a club-wide feed drops items that name another group but not the kid's own.
+# A summary's "@Place" becomes the location, and a trailing " - note" becomes the details.
+feeds:
+  # Ari's swim team: his group's practice calendar, and the club's meets & team events (Jacob, 2026-10-30).
+  # Jacob sent both as webcal:// links; they are public Google calendars, read over https.
+  # Order matters: when both list the same time, the first feed's title wins, so a team event ("Halloween Costume
+  # Contest & Relays Practice") is not hidden under a plain "Swim practice".
+  - name: Swim · Meets & Team Events   # X-WR-CALNAME "Meets & Team Events", club-wide
+    kids: [Ari]
+    url: https://calendar.google.com/calendar/ical/p3q85c459167m0a0f8to8fb598%40group.calendar.google.com/public/basic.ics
+    prefix: Swim
+    group: Red
+    other_groups: [White, Blue, National, Junior, Senior]
+  - name: Swim · Red Group             # X-WR-CALNAME "Red Group"
+    kids: [Ari]
+    url: https://calendar.google.com/calendar/ical/rctfddnmtbmhagl595jpo726t4%40group.calendar.google.com/public/basic.ics
+    prefix: Swim
+    practice: '^Red( \d( & \d)?)?( Dryland \+ Pool)?$'   # "Red", "Red 1", "Red 1 & 2", "Red 1 Dryland + Pool"

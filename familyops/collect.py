@@ -7,7 +7,7 @@ from datetime import date, datetime, timedelta, timezone
 
 import yaml
 
-from . import ROOT, almanac, announce, calendars, family, fantasy, lunch, mce, playmetrics, schedules, teams, weather
+from . import ROOT, almanac, announce, calendars, family, fantasy, feeds, lunch, mce, playmetrics, schedules, teams, weather
 from .model import Event, conflicts, merge
 
 STATE_DIR = ROOT / "state"
@@ -77,6 +77,7 @@ def collect(today: date) -> dict:
     back = today - timedelta(days=teams.LOOKBACK_DAYS)   # the team boxes show each kid's last game
     pm_past = run("playmetrics_past", lambda: playmetrics.events(back, today - timedelta(days=1), pm_text)) if pm_text else []
     groups.append(run("schedules", lambda: schedules.events(today, end)))
+    groups.append(run("feeds", lambda: feeds.events(today, end)))        # data/feeds.yaml (Ari's swim calendars)
     sched_past = run("schedules_past", lambda: schedules.events(back, today - timedelta(days=1)))
     mce_scores = run("mce_results", lambda: mce.results_for(teams.SPARTANS, today))
     groups.append(run("district_calendar", lambda: calendars.bps_events(today, end)))

@@ -5,6 +5,7 @@ sources:
   outlook_mail:       {cadence: daily,   fetch: claude,  max_age_days: 1,   what: "Outlook Family-Digest folder (new) + Processed (carried forward)"}
   outlook_calendars:  {cadence: daily,   fetch: claude,  max_age_days: 1,   what: "Default, Family, Ari, Elle, Lila, Leo calendars, today..today+10"}
   playmetrics:        {cadence: daily,   fetch: script,  max_age_days: 1,   what: "Elle soccer ICS (env PLAYMETRICS_ICS_URL)"}
+  feeds:              {cadence: daily,   fetch: script,  max_age_days: 1,   what: "Public ICS feeds in data/feeds.yaml (Ari's swim: Red Group practices, Meets & Team Events)"}
   almanac:            {cadence: yearly,  fetch: script,  max_age_days: 366, what: "Holidays (US rules + Hebcal Jewish holidays, cached per year) and Friday Shabbat sunset (Hebcal, NOAA fallback)"}
   fantasy:            {cadence: daily,   fetch: script,  max_age_days: 1,   what: "Ari's ESPN fantasy league (data/family.yaml fantasy:; private leagues need env ESPN_S2 + ESPN_SWID)"}
   mce_results:        {cadence: daily,   fetch: script,  max_age_days: 1,   what: "MCE league results page (Ari's Spartans scores + his points from recaps); URL in data/schedules/ari-mce-basketball-*.yaml"}
