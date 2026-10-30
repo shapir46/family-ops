@@ -1,0 +1,142 @@
+{
+ "month": "November",
+ "days": {
+  "3": {
+   "weekday": "Tuesday",
+   "entree": null,
+   "half_day": false,
+   "no_school": true,
+   "theme": null
+  },
+  "4": {
+   "weekday": "Wednesday",
+   "entree": "Smart Slice Cheese Pizza or Smart Slice Pepperoni Pizza",
+   "half_day": false,
+   "no_school": false,
+   "theme": null
+  },
+  "5": {
+   "weekday": "Thursday",
+   "entree": "Whole Grain Baked Chicken Nuggets with Roasted Cinnamon Carrots",
+   "half_day": false,
+   "no_school": false,
+   "theme": null
+  },
+  "6": {
+   "weekday": "Friday",
+   "entree": "Grilled Cheese Sandwich with Steamed Corn",
+   "half_day": false,
+   "no_school": false,
+   "theme": null
+  },
+  "9": {
+   "weekday": "Monday",
+   "entree": "Whole Grain Funfetti Pancakes, Syrup, & Turkey Sausage Link with Baked Tater Tots",
+   "half_day": false,
+   "no_school": false,
+   "theme": "BrunchforLunch"
+  },
+  "10": {
+   "weekday": "Tuesday",
+   "entree": "Teriyaki Beef Dippers with Steamed Broccoli",
+   "half_day": false,
+   "no_school": false,
+   "theme": null
+  },
+  "11": {
+   "weekday": "Wednesday",
+   "entree": null,
+   "half_day": true,
+   "no_school": false,
+   "theme": null
+  },
+  "12": {
+   "weekday": "Thursday",
+   "entree": null,
+   "half_day": true,
+   "no_school": false,
+   "theme": null
+  },
+  "13": {
+   "weekday": "Friday",
+   "entree": "Crispito Day!! Chicken and Cheese Whole Grain Crispitos With Refried Beans & Cheese Cookie Day!",
+   "half_day": false,
+   "no_school": false,
+   "theme": null
+  },
+  "16": {
+   "weekday": "Monday",
+   "entree": "Whole Grain Emoji Waffles and Cheddar Cheese Omelet With Baked Tater Tots",
+   "half_day": false,
+   "no_school": false,
+   "theme": "BrunchforLunch"
+  },
+  "17": {
+   "weekday": "Tuesday",
+   "entree": "Flame-broiled Cheeseburger or Morningstar Veggie Burger with Romaine & Tomato Slices with Steamed Carrots",
+   "half_day": false,
+   "no_school": false,
+   "theme": null
+  },
+  "18": {
+   "weekday": "Wednesday",
+   "entree": "Smart Slice Cheese Pizza or Smart Slice Pepperoni Pizza",
+   "half_day": false,
+   "no_school": false,
+   "theme": null
+  },
+  "19": {
+   "weekday": "Thursday",
+   "entree": "Oven Baked Cheese Stuffed Breadsticks Served With Steamed Broccoli",
+   "half_day": false,
+   "no_school": false,
+   "theme": null
+  },
+  "20": {
+   "weekday": "Friday",
+   "entree": "Soft Shell Tacos, Ground Beef or Beans, Cheddar Cheese, Romaine, and Tomatoes with Steamed Corn",
+   "half_day": false,
+   "no_school": false,
+   "theme": "FiestaFriday"
+  },
+  "23": {
+   "weekday": "Monday",
+   "entree": "Whole Grain Cinnamon French Toast & Low- Fat \u201cRaspberry Rainbow\u201d Yogurt With Hashbrown Patty",
+   "half_day": false,
+   "no_school": false,
+   "theme": "BrunchforLunch"
+  },
+  "24": {
+   "weekday": "Tuesday",
+   "entree": "All Beef Frank Hot Dog on Whole Grain Bun With Baked Beans",
+   "half_day": false,
+   "no_school": false,
+   "theme": null
+  },
+  "25": {
+   "weekday": "Wednesday",
+   "entree": null,
+   "half_day": false,
+   "no_school": true,
+   "theme": null
+  },
+  "26": {
+   "weekday": "Thursday",
+   "entree": null,
+   "half_day": false,
+   "no_school": false,
+   "theme": null
+  },
+  "27": {
+   "weekday": "Friday",
+   "entree": null,
+   "half_day": false,
+   "no_school": true,
+   "theme": null
+  }
+ },
+ "url": "https://resources.finalsite.net/images/v1792685786/birminghamk12mius/opraneradeekecqy06n4/EleNOVWedsMenu2026.pdf",
+ "year": 2026,
+ "month_num": 11,
+ "problems": []
+}
