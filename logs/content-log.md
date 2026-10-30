@@ -196,3 +196,14 @@ Read before building; append after printing. Riddles/jokes/words are in riddle-l
 - Puzzle: sudoku
 - Comic: Halloween-bucket gag ("I'm Super Artic!" / "I left it at home!" / "A pumpkin bucket!" / "It had my pie in it."); porch backdrop in all four panels (panels 2 and 4 mirrored); fox tada/proud, shrug/worried, point/happy, cheer/laugh all in red cape; bear stand/happy, think/smug + pumpkin, hold/surprised + pumpkin, shrug/sad
 - Critter: none (Thursday)
+
+## 2026-10-30
+- Headline: "Winnie-the-Pooh Turns 100!" [arts] (Smithsonian Magazine, Oct. 29, 2026; original toys in New York, fans ask for a visit to Britain)
+- News: Divers Save a Kangaroo Far From Shore [animals] (Good News Network, Oct. 28, 2026); Free Museum Days Around Metro Detroit [local] (LittleGuide Detroit, November list); Color-Changing Glass Returns After 1,600 Years [history] (Good News Network, Oct. 29, 2026)
+- Extras: none
+- Word: silhouette
+- Headline photo: no photo (book icon)
+- Lions: 4-2, host Vikings (6-0) Sun Nov 1 1:00 pm, FOX; sports: yday, tonight and Seaholm/Groves left blank, unconfirmed in a second source
+- Puzzle: crossword KANGAROO, GLASS, POOH, LIONS
+- Comic: costume gag ("Mackenzie, where is your costume?" / "I am dressed as a dog!" / "That is just you." / "Best costume. Free cookies!"); mainstreet backdrop in panels 1-2 (panel 2 mirrored), stage backdrop in panels 3-4 (panel 4 mirrored); bear point/surprised, stand/worried, facepalm/smug, shrug/laugh; Mackenzie sit/happy, run/grin, sit/proud, dance/love + cookie
+- Critter: none (Openverse timed out)
