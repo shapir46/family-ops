@@ -207,3 +207,14 @@ Read before building; append after printing. Riddles/jokes/words are in riddle-l
 - Puzzle: crossword KANGAROO, GLASS, POOH, LIONS
 - Comic: costume gag ("Mackenzie, where is your costume?" / "I am dressed as a dog!" / "That is just you." / "Best costume. Free cookies!"); mainstreet backdrop in panels 1-2 (panel 2 mirrored), stage backdrop in panels 3-4 (panel 4 mirrored); bear point/surprised, stand/worried, facepalm/smug, shrug/laugh; Mackenzie sit/happy, run/grin, sit/proud, dance/love + cookie
 - Critter: none (Openverse timed out)
+
+## 2026-10-31 (Weekend Edition, Oct 31–Nov 1)
+- Headline: "A 2,800-Year-Old Flute Plays Its Part in Troy's Story" [history] (Smithsonian Magazine, Oct. 30, 2026; bone flute, first instrument found at Troy)
+- News: Marvin's Marvelous Mechanical Museum Reopens [local] (LittleGuide Detroit, WXYZ); Tech Corner: Five Ways AI Thinks Differently [tech] (Science News Explores, Oct. 29, 2026); A School Named for the Custodian Who Cared [people] (Good News Network, WFAA, Marilyn Hampton, Aubrey TX)
+- Extras: Clocks Fall Back (DST ends Nov. 1)
+- Word: ancient
+- Headline photo: no photo (music icon)
+- Lions: 4-2, host Vikings (6-0) Sun Nov 1 1:00 pm, FOX (CBS Sports, Outlook calendar); sports: Friday scores, Detroit teams and Seaholm/Groves left blank, unconfirmed
+- Puzzle: sudoku 5x5
+- Comic: clocks-fall-back gag ("Clocks fall back! One extra hour!" / "Hmm... a pizza party?" / "Zzz... five more minutes." / "Best hour ever."); bedroom backdrop in panels 1-2 (panel 2 mirrored), cornmaze backdrop in panels 3-4 (panel 4 mirrored); fox tada/happy, think/smug, point/worried; bear stand/surprised, hold/love + pizza, sit/sleepy + red beanie, shrug/wink; Mackenzie dance/love
+- Critter: none (Saturday)
