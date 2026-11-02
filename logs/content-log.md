@@ -218,3 +218,14 @@ Read before building; append after printing. Riddles/jokes/words are in riddle-l
 - Puzzle: sudoku 5x5
 - Comic: clocks-fall-back gag ("Clocks fall back! One extra hour!" / "Hmm... a pizza party?" / "Zzz... five more minutes." / "Best hour ever."); bedroom backdrop in panels 1-2 (panel 2 mirrored), cornmaze backdrop in panels 3-4 (panel 4 mirrored); fox tada/happy, think/smug, point/worried; bear stand/surprised, hold/love + pizza, sit/sleepy + red beanie, shrug/wink; Mackenzie dance/love
 - Critter: none (Saturday)
+
+## 2026-11-02
+- Headline: "An Island Turns Off Its Lights to Save Baby Seabirds" [animals] (Good News Network, Nov. 1, 2026; Corvo, Azores, Cory's shearwater fledglings)
+- News: Detroit Zoo Lights Up for the Holidays [local] (LittleGuide Detroit, Nov. 1, 2026; Wild Lights); Guatemala Cooks Up the World's Biggest Salad [world] (UPI, Oct. 29, 2026; fiambre); Gymnast Balances on His Knuckles for a Record [people] (Guinness World Records, Oct. 27, 2026; Madden Shelley)
+- Extras: none printed (Gulliver's Travels 300 and Tutankhamun Nov. 4, 1922 were drafted but did not fit; unused)
+- Word: fledgling
+- Headline photo: no photo (paw icon)
+- Lions: omitted; sports (NFL Sunday, MNF, yesterday, tonight, Seaholm/Groves) left blank, unconfirmed in two sources
+- Puzzle: crossword ISLAND, SALAD, LIGHTS, FLEDGLING, WAFFLES
+- Comic: lights-off gag ("Lights off for the baby birds!" / "Good idea. Where is my snack?" / "My horn glows. I can help!" / "Not too bright, Uni!"); bedroom backdrop in panels 1-2 (panel 2 mirrored), cabin backdrop in panels 3-4 (panel 4 mirrored); fox point/happy, facepalm/laugh; bear stand/sleepy, shrug/worried in blue beanie, hold/love + cookie; Mackenzie run/grin; Uni tada/proud
+- Critter: none (Monday)
