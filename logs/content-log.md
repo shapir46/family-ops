@@ -229,3 +229,14 @@ Read before building; append after printing. Riddles/jokes/words are in riddle-l
 - Puzzle: crossword ISLAND, SALAD, LIGHTS, FLEDGLING, WAFFLES
 - Comic: lights-off gag ("Lights off for the baby birds!" / "Good idea. Where is my snack?" / "My horn glows. I can help!" / "Not too bright, Uni!"); bedroom backdrop in panels 1-2 (panel 2 mirrored), cabin backdrop in panels 3-4 (panel 4 mirrored); fox point/happy, facepalm/laugh; bear stand/sleepy, shrug/worried in blue beanie, hold/love + cookie; Mackenzie run/grin; Uni tada/proud
 - Critter: none (Monday)
+
+## 2026-11-03
+- Headline: "Detroit's Big Thanksgiving Parade Turns 100!" [local] (Michigan.gov, DBusiness, ClickOnDetroit; 100th America's Thanksgiving Parade, Nov. 26, 2026, Dan Gilbert Grand Marshal)
+- News: Spiders May Sleep and Dream Like Us [science] (Smithsonian Magazine, Nov. 2, 2026; jumping spider REM-like sleep); A Dog Left Its Paw Print in a Brick 4,000 Years Ago [history] (Smithsonian Magazine, Greek Reporter, Oct. 26-27, 2026; Tavsanli Hoyuk, Turkey); not printed, no room: Bangka Slow Loris Survival [animals] (Smithsonian Magazine, Nov. 2, 2026)
+- Extras: none printed, no room (drafted, unused: This Week in History, Chevrolet founded in Detroit Nov. 3, 1911; Fun Fact, butterflies taste with their feet)
+- Word: forage
+- Headline photo: no photo (star icon)
+- Lions: omitted; sports (yesterday, tonight, Seaholm/Groves, fantasy top performers) left blank, unconfirmed in two sources
+- Puzzle: sudoku 5x5
+- Comic: leaf-pile gag ("No school today!" / "Let's build a giant leaf pile!" / "Cannonball!" / "The pile is snoring!"); playground backdrop in panels 1 and 4 (panel 4 mirrored), leafpark backdrop in panels 2-3 (panel 2 mirrored); fox cheer/happy, hold/smug + rake, point/surprised; bear stand/surprised, run/laugh; bob wave/grin; Mackenzie dance/grin, sit/happy; leafpile prop
+- Critter: Capybara (Bernard DUPONT / Flickr, CC BY-SA 2.0) openverse:91347199-da16-4de2-ab29-acfde65c11be
