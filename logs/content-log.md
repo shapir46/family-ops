@@ -240,3 +240,14 @@ Read before building; append after printing. Riddles/jokes/words are in riddle-l
 - Puzzle: sudoku 5x5
 - Comic: leaf-pile gag ("No school today!" / "Let's build a giant leaf pile!" / "Cannonball!" / "The pile is snoring!"); playground backdrop in panels 1 and 4 (panel 4 mirrored), leafpark backdrop in panels 2-3 (panel 2 mirrored); fox cheer/happy, hold/smug + rake, point/surprised; bear stand/surprised, run/laugh; bob wave/grin; Mackenzie dance/grin, sit/happy; leafpile prop
 - Critter: Capybara (Bernard DUPONT / Flickr, CC BY-SA 2.0) openverse:91347199-da16-4de2-ab29-acfde65c11be
+
+## 2026-11-04
+- Headline: "A Week of Free Fun Awaits Metro Detroit Kids" [local] (LittleGuide Detroit, Nov. 2-4, 2026; Troy Historic Village story time, Just Between Friends sale, Gardner White Twinkle Town Nov. 10)
+- News: Beavers Are Coming Back to Loch Ness [animals] (Good News Network, Nov. 3, 2026); Tech Corner: A Shirt Sleeve That Is Also a Touchscreen [tech] (Popular Science, 2026; National University of Singapore); Dachshunds Get Their Own Art Show in Germany [arts] (Smithsonian Magazine, Nov. 3, 2026; Bremen)
+- Extras: none printed, no room (drafted, unused: This Week in History, Sesame Street first aired Nov. 10, 1969; Fun Fact, sharks are older than trees)
+- Word: gallop
+- Headline photo: no photo (book icon)
+- Lions: 19-15 over Minnesota (5-2); next Sun Nov 8 at Miami. Sports: NHL Nov 3 scores printed (CBS + Fox); NBA no games; tonight and Seaholm/Groves blank, unconfirmed
+- Puzzle: crossword BEAVER, GALLOP, PIZZA, SLEEVE, SANTA
+- Comic: dachshund art-show gag ("A dachshund art show!" / "Mack would make a great model." / "I baked a long sausage-dog loaf!" / "Gallop! There goes the loaf!"); museum backdrop in panels 1-2 (panel 2 mirrored), bakery backdrop in panels 3-4 (panel 4 mirrored); fox point/surprised; bear stand/happy blue scarf, think/smug blue scarf, facepalm/laugh blue scarf; Mackenzie sit/grin, run/grin; bob tada/proud; uni point/surprised
+- Critter: none (Wednesday)
