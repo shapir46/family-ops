@@ -180,7 +180,7 @@ def sec_nfl():
 # crossword.py) on Mon/Wed/Fri, and a 4x4 sudoku made from the date by sudoku.py on Tue/Thu/Sat (Weekend Edition).
 # How-to-play instructions print with the sudoku for its first two weeks.
 SUDOKU_DAYS = {1, 3, 5}              # Tue, Thu, Sat
-SUDOKU_HOW_TO_UNTIL = '2026-11-02'   # first sudoku 2026-10-20, instructions for two weeks
+SUDOKU_HOW_TO_UNTIL = '2026-11-12'   # first sudoku 2026-10-20; instructions kept through Nov 12 for the new 5x5 (Jacob, 2026-11-04)
 SUDOKU_5X5_FROM = '2026-10-31'       # 5x5 with shaped regions from here on (Jacob, 2026-10-29); 4x4 before
 def puzzle_kind():
     days = edition_days()
