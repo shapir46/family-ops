@@ -251,3 +251,15 @@ Read before building; append after printing. Riddles/jokes/words are in riddle-l
 - Puzzle: crossword BEAVER, GALLOP, PIZZA, SLEEVE, SANTA
 - Comic: dachshund art-show gag ("A dachshund art show!" / "Mack would make a great model." / "I baked a long sausage-dog loaf!" / "Gallop! There goes the loaf!"); museum backdrop in panels 1-2 (panel 2 mirrored), bakery backdrop in panels 3-4 (panel 4 mirrored); fox point/surprised; bear stand/happy blue scarf, think/smug blue scarf, facepalm/laugh blue scarf; Mackenzie sit/grin, run/grin; bob tada/proud; uni point/surprised
 - Critter: none (Wednesday)
+
+## 2026-11-05
+- Headline: "The World's Tallest Day of the Dead Skeleton Rises in Mexico City" [arts] (Smithsonian Magazine, Nov. 3, 2026; 109-foot La Catrina, about 70,000 marigolds)
+- News: Save Big at the Kids' Sale [local] (LittleGuide Detroit; Just Between Friends Oakland County, Nov. 5-8); not printed, no room: Toys Inspired This Moon Rover [science] (Science News Explores, Nov. 2, 2026); Students Run a Real Auto Shop [people] (Good News Network, Nov. 4, 2026)
+- Extras: none printed, no room (drafted, unused: Fun Fact, marigolds are edible flowers; Fun Fact, Fibonacci pattern in flowers and pine cones)
+- Featured art: Untitled by Ari, Grade 5
+- Word: towering
+- Headline photo: no photo (palette icon)
+- Lions: omitted for space; sports (yesterday, tonight, Seaholm/Groves) left blank, unconfirmed
+- Puzzle: sudoku 5x5
+- Comic: tallest-skeleton gag ("A 109-foot skeleton made of flowers!" / "I can build taller!" / "My tower: 12 bricks!" / "Tallest... until Mack!"); stage backdrop in panels 1-2 (panel 2 mirrored), market backdrop in panels 3-4 (panel 4 mirrored); fox point/surprised, facepalm/laugh; bear stand/happy, think/smug red scarf, hold/proud + flower; bob wave/grin, tada/proud; Mackenzie run/grin
+- Critter: none (Thursday)
