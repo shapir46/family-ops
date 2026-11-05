@@ -1,0 +1,19 @@
+# Ari's swim meet: Atlantis 2026 Fall Quack-Tack-Ular, Nov 7-8, 2026, Seaholm High School (Jacob, 2026-11-05).
+# Source: the meet information packet (gomotionapp.com, Atlantis Swimming/BBA, sanction MI2627117), sent by Jacob.
+# Only the events for Ari's age are listed: boys' 12 & Under prelims (morning) and their finals (evening, top 16 in
+# each of the 10 & Under and 11-12 groups). 12 & under swimmers may enter up to 3 individual events per day; the
+# packet does not say which ones Ari is entered in (the heat sheet will). Times are the packet's; finals start
+# "not before" the time given. The club's "Meets & Team Events" calendar lists the same meet as an all-day item on Nov 7.
+name: Atlantis Fall Quack-Tack-Ular swim meet
+source_label: Quack-Tack-Ular meet packet
+kids: [Ari]
+location: Seaholm High School, 2436 W Lincoln St, Birmingham
+events:
+  - {date: 2026-11-07, start: "08:00", kind: event, title: "Swim meet: Quack-Tack-Ular, 12 & Under prelims",
+     details: "Warm-up 8:00 am, events start 9:00 am; check in outside the locker rooms by 8:15 am (it closes 15 minutes after warm-ups start). Boys 12 & Under events: #2 100 Fly, #4 50 Back, #8 200 Free, #12 50 Free, #14 100 Breast. Spectator doors open 7:30 am; admission $5."}
+  - {date: 2026-11-07, start: "17:30", kind: event, title: "Swim meet: Quack-Tack-Ular, 12 & Under finals (if he qualifies)",
+     details: "Top 16 in each age group (10 & Under, 11-12) swim finals. Warm-up not before 4:30 pm, events not before 5:30 pm. Scratch within 30 minutes of prelim results if not swimming finals."}
+  - {date: 2026-11-08, start: "08:00", kind: event, title: "Swim meet: Quack-Tack-Ular, 12 & Under prelims",
+     details: "Warm-up 8:00 am, events start 9:00 am; check in by 8:15 am. Boys 12 & Under events: #30 50 Fly, #32 100 Back, #36 200 IM, #40 100 Free, #42 50 Breast. Admission $5."}
+  - {date: 2026-11-08, start: "17:30", kind: event, title: "Swim meet: Quack-Tack-Ular, 12 & Under finals (if he qualifies)",
+     details: "Top 16 in each age group (10 & Under, 11-12) swim finals. Warm-up not before 4:30 pm, events not before 5:30 pm."}
