@@ -334,11 +334,11 @@ p{{margin-bottom:3px;text-align:justify;hyphens:auto}}
 .featured{{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;align-items:center;margin-top:5px;padding:6px;border:1px solid #161410;background:#fbf7ec}}
 .fa-frame{{flex:0 0 auto;padding:5px;background:#c9a34a;border:1px solid #161410;box-shadow:inset 0 0 0 2px #e9d397}}
 .fa-frame img{{display:block;height:196px;width:auto;border:3px solid #fff;outline:1px solid #8a6d28}}
-.fa-card{{flex:1 1 150px;text-align:center}}
+.fa-card{{flex:1 1 130px;text-align:center}}
 .fa-kicker{{font-family:PF,serif;font-weight:700;font-size:8.4pt;text-transform:uppercase;letter-spacing:1.4px;border-top:1px solid #161410;border-bottom:1px solid #161410;padding:1px 0;margin-bottom:6px}}
 .fa-title{{font-family:PF,serif;font-style:italic;font-weight:700;font-size:16pt;line-height:1.1}}
 .fa-by{{font-family:PF,serif;font-size:10pt;margin:3px 0 6px}}
-.fa-note{{font-size:7.8pt;line-height:1.3;margin:0}}
+.fa-note{{font-size:7.8pt;line-height:1.3;margin:0;text-align:center}}
 .headline{{font-family:PF,serif;font-weight:700;font-size:20pt;line-height:1.02;text-align:center;margin:2px 0 2px}}
 .sub{{font-style:italic;text-align:center;font-size:8.6pt;margin-bottom:4px}}
 .cols2{{column-count:2;column-gap:9px;column-rule:1px solid #bbb;font-size:8.2pt}}
