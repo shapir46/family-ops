@@ -263,3 +263,14 @@ Read before building; append after printing. Riddles/jokes/words are in riddle-l
 - Puzzle: sudoku 5x5
 - Comic: tallest-skeleton gag ("A 109-foot skeleton made of flowers!" / "I can build taller!" / "My tower: 12 bricks!" / "Tallest... until Mack!"); stage backdrop in panels 1-2 (panel 2 mirrored), market backdrop in panels 3-4 (panel 4 mirrored); fox point/surprised, facepalm/laugh; bear stand/happy, think/smug red scarf, hold/proud + flower; bob wave/grin, tada/proud; Mackenzie run/grin
 - Critter: none (Thursday)
+
+## 2026-11-06
+- Headline: "A Moonless Sky for the Taurid Meteor Shower" [science] (EarthSky, Star Walk; new moon Nov. 9, 2026, Northern Taurids peak about Nov. 12)
+- News: Two Musicals Come to Birmingham This Month [local] (Quarton Weekly Bulletin, BPS; Derby Musical Theater "SpongeBob: Youth Edition" Nov. 6-8, Groves Performing Arts "Frozen"); not printed, no room: Seabird Colony Bounces Back [animals] (Good News Network, BirdGuides; Alderney gannets +11% since 2023)
+- Extras: none
+- Word: orbit
+- Headline photo: no photo (rocket icon)
+- Lions: 19-15 over Minnesota (5-2); next Sun Nov 8 at Miami, 1:00 pm CBS. Sports: Thursday Night Football Jaguars 33, Ravens 10 (CBS + NFL.com); NHL/NBA Nov 5 scores single-source, left out; tonight and Seaholm/Groves blank
+- Puzzle: crossword QUOKKA, METEOR, JAGUARS, ORBIT
+- Comic: cardboard-rocket gag ("I built a moon rocket!" / "It is a cardboard box." / "Mackenzie got here first!" / "She took my box!"); playground backdrop in panels 1-2 (panel 2 mirrored), moon backdrop in panels 3-4 (panel 4 mirrored); fox point/happy blue cap, akimbo/proud blue cap, facepalm/laugh; bear stand/surprised, shrug/worried, cheer/laugh; uni wave/grin; Mackenzie sit/grin
+- Critter: Quokka (Mark Gillow / Flickr, CC BY 2.0) openverse:03a92854-f39e-4293-a8c4-3442a688beb8

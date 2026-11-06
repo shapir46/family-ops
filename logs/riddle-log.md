@@ -29,3 +29,4 @@
 2026-11-03 | Why was the spider so good at computers? She was an expert at making websites! | forage
 2026-11-04 | What did the beaver say to the tree? It was nice gnawing you! | gallop
 2026-11-05 | Why did the skeleton stay out of the snowball fight? He had no body to throw it with! | towering
+2026-11-06 | How does the Moon cut his hair? Eclipse it! | orbit
