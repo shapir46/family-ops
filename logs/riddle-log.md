@@ -30,3 +30,4 @@
 2026-11-04 | What did the beaver say to the tree? It was nice gnawing you! | gallop
 2026-11-05 | Why did the skeleton stay out of the snowball fight? He had no body to throw it with! | towering
 2026-11-06 | How does the Moon cut his hair? Eclipse it! | orbit
+2026-11-07 | What do you call a dinosaur that never gives up? A try-try-try-ceratops! | scurry

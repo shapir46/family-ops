@@ -274,3 +274,14 @@ Read before building; append after printing. Riddles/jokes/words are in riddle-l
 - Puzzle: crossword QUOKKA, METEOR, JAGUARS, ORBIT
 - Comic: cardboard-rocket gag ("I built a moon rocket!" / "It is a cardboard box." / "Mackenzie got here first!" / "She took my box!"); playground backdrop in panels 1-2 (panel 2 mirrored), moon backdrop in panels 3-4 (panel 4 mirrored); fox point/happy blue cap, akimbo/proud blue cap, facepalm/laugh; bear stand/surprised, shrug/worried, cheer/laugh; uni wave/grin; Mackenzie sit/grin
 - Critter: Quokka (Mark Gillow / Flickr, CC BY 2.0) openverse:03a92854-f39e-4293-a8c4-3442a688beb8
+
+## 2026-11-07 (Weekend Edition, Nov 7-8)
+- Headline: "Elmo and Clifford Come to Town on Sunday" [local] (313 Presents/Fox Theatre, LittleGuide Detroit; Sesame Street Live at the Fox Nov. 8, Clifford musical at the Berman Center)
+- News: Tech Corner: Static Electricity Is Still a Mystery [tech] (Science News Explores, Nov. 5, 2026); not printed, no room: Seabirds Get Jet Lag Too [animals] (Smithsonian Magazine, Nov. 4, 2026); A Whole Football Field Gets Covered in Groceries [people] (Good News Network, Nov. 1, 2026)
+- Extras: Fun Fact, a day on Venus is longer than its year; not printed: This Week in History, Nellie Bly set out around the world Nov. 14, 1889
+- Word: scurry
+- Headline photo: no photo (music icon)
+- Lions: 19-15 over Minnesota (5-2); next Sun Nov 8 at Miami, 1:00 pm CBS. Sports: Friday NHL (3) and NBA (4 of 9) scores printed (CBS + Hockey-Reference/Fox); Red Wings Sat 9:00 pm at Colorado; Seaholm/Groves blank, single-source
+- Puzzle: sudoku 5x5
+- Comic: static-balloon gag ("I rubbed this balloon on my fur!" / "Static electricity!" / "Hold still, Mack!" / "Now she is a cotton ball!"); party backdrop in panels 1-2 (panel 2 mirrored), bedroom backdrop in panels 3-4 (panel 4 mirrored); fox hold/happy + balloon, point/smug, facepalm/laugh; bear stand/surprised, think/smug, run/laugh; Mackenzie sit/surprised, dance/happy
+- Critter: none (Saturday)
