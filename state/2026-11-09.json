@@ -1,0 +1,630 @@
+{
+ "date": "2026-11-09",
+ "generated_at": "2026-11-09T11:28:38+00:00",
+ "window": {
+  "start": "2026-11-09",
+  "end": "2026-11-19"
+ },
+ "kids": {
+  "Ari": {
+   "color": "#2563EB",
+   "initial": "A"
+  },
+  "Elle": {
+   "color": "#DB2777",
+   "initial": "E"
+  },
+  "Leo": {
+   "color": "#16A34A",
+   "initial": "L"
+  },
+  "Lila": {
+   "color": "#9333EA",
+   "initial": "Li"
+  }
+ },
+ "events": [
+  {
+   "date": "2026-11-09",
+   "title": "Soccer practice",
+   "kids": [
+    "Elle"
+   ],
+   "start": "17:00",
+   "end": "18:15",
+   "end_date": null,
+   "location": "UWM Sports Complex Field 1, 867 S Blvd E, Pontiac, MI 48341, USA",
+   "kind": "practice",
+   "details": null,
+   "sources": [
+    "PlayMetrics"
+   ],
+   "status": null,
+   "id": "2026-11-09|17:00|soccer practice"
+  },
+  {
+   "date": "2026-11-09",
+   "title": "Swim practice",
+   "kids": [
+    "Ari"
+   ],
+   "start": "18:45",
+   "end": "20:00",
+   "end_date": null,
+   "location": "BHHS",
+   "kind": "practice",
+   "details": null,
+   "sources": [
+    "Swim · Red Group"
+   ],
+   "status": null,
+   "id": "2026-11-09|18:45|swim practice"
+  },
+  {
+   "date": "2026-11-10",
+   "title": "Swim practice",
+   "kids": [
+    "Ari"
+   ],
+   "start": "18:45",
+   "end": "20:00",
+   "end_date": null,
+   "location": "BHHS",
+   "kind": "practice",
+   "details": null,
+   "sources": [
+    "Swim · Red Group"
+   ],
+   "status": null,
+   "id": "2026-11-10|18:45|swim practice"
+  },
+  {
+   "date": "2026-11-11",
+   "title": "JK-8 attend AM only. Elementary and middle school conferences 1-7 PM.",
+   "kids": [
+    "Ari",
+    "Elle",
+    "Leo"
+   ],
+   "start": null,
+   "end": null,
+   "end_date": null,
+   "location": null,
+   "kind": "school_status",
+   "details": null,
+   "sources": [
+    "BPS district calendar"
+   ],
+   "status": "half_day",
+   "id": "2026-11-11|allday|jk 8 attend am only elementary and middl"
+  },
+  {
+   "date": "2026-11-11",
+   "title": "Swim practice",
+   "kids": [
+    "Ari"
+   ],
+   "start": "18:45",
+   "end": "20:00",
+   "end_date": null,
+   "location": "BHHS",
+   "kind": "practice",
+   "details": null,
+   "sources": [
+    "Swim · Red Group"
+   ],
+   "status": null,
+   "id": "2026-11-11|18:45|swim practice"
+  },
+  {
+   "date": "2026-11-12",
+   "title": "Elementary attends AM only. Elementary conferences 1-7 PM; middle school conferences 4-7 PM.",
+   "kids": [
+    "Ari",
+    "Elle",
+    "Leo"
+   ],
+   "start": null,
+   "end": null,
+   "end_date": null,
+   "location": null,
+   "kind": "school_status",
+   "details": null,
+   "sources": [
+    "BPS district calendar"
+   ],
+   "status": "half_day",
+   "id": "2026-11-12|allday|elementary attends am only elementary co"
+  },
+  {
+   "date": "2026-11-12",
+   "title": "Soccer practice",
+   "kids": [
+    "Elle"
+   ],
+   "start": "17:00",
+   "end": "18:15",
+   "end_date": null,
+   "location": "UWM Sports Complex Field 1, 867 S Blvd E, Pontiac, MI 48341, USA",
+   "kind": "practice",
+   "details": null,
+   "sources": [
+    "PlayMetrics"
+   ],
+   "status": null,
+   "id": "2026-11-12|17:00|soccer practice"
+  },
+  {
+   "date": "2026-11-12",
+   "title": "Swim practice",
+   "kids": [
+    "Ari"
+   ],
+   "start": "18:45",
+   "end": "20:00",
+   "end_date": null,
+   "location": "BHHS",
+   "kind": "practice",
+   "details": null,
+   "sources": [
+    "Swim · Red Group"
+   ],
+   "status": null,
+   "id": "2026-11-12|18:45|swim practice"
+  },
+  {
+   "date": "2026-11-13",
+   "title": "Basketball playoffs (if qualified)",
+   "kids": [
+    "Ari"
+   ],
+   "start": null,
+   "end": null,
+   "end_date": null,
+   "location": "Berkshire Middle School, 21707 W 14 Mile Rd, Beverly Hills",
+   "kind": "game",
+   "details": "Evening playoff games and first-place practices; Ari's division likely plays Saturday. Times TBD.",
+   "sources": [
+    "MCE league schedule"
+   ],
+   "status": null,
+   "id": "2026-11-13|allday|basketball playoffs if qualified"
+  },
+  {
+   "date": "2026-11-13",
+   "title": "Swim practice",
+   "kids": [
+    "Ari"
+   ],
+   "start": "18:45",
+   "end": "20:00",
+   "end_date": null,
+   "location": "BHHS",
+   "kind": "practice",
+   "details": null,
+   "sources": [
+    "Swim · Red Group"
+   ],
+   "status": null,
+   "id": "2026-11-13|18:45|swim practice"
+  },
+  {
+   "date": "2026-11-13",
+   "title": "Soccer game vs Nationals Oakland U9 Red",
+   "kids": [
+    "Elle"
+   ],
+   "start": "19:15",
+   "end": "20:15",
+   "end_date": null,
+   "location": "Total Soccer Royal Oak Mini Field, Total Soccer Royal Oak, Lexington Boulevard, Royal Oak, MI, USA",
+   "kind": "game",
+   "details": "arrive 7:00 pm, white-black-white",
+   "sources": [
+    "PlayMetrics"
+   ],
+   "status": null,
+   "id": "2026-11-13|19:15|soccer game vs nationals oakland u9 red"
+  },
+  {
+   "date": "2026-11-14",
+   "title": "Swim: Practices TBD",
+   "kids": [
+    "Ari"
+   ],
+   "start": null,
+   "end": null,
+   "end_date": null,
+   "location": null,
+   "kind": "event",
+   "details": null,
+   "sources": [
+    "Swim · Meets & Team Events"
+   ],
+   "status": null,
+   "id": "2026-11-14|allday|swim practices tbd"
+  },
+  {
+   "date": "2026-11-14",
+   "title": "Basketball playoffs (if qualified)",
+   "kids": [
+    "Ari"
+   ],
+   "start": "09:00",
+   "end": "17:00",
+   "end_date": null,
+   "location": "Berkshire Middle School, 21707 W 14 Mile Rd, Beverly Hills",
+   "kind": "game",
+   "details": "Times TBD.",
+   "sources": [
+    "MCE league schedule"
+   ],
+   "status": null,
+   "id": "2026-11-14|09:00|basketball playoffs if qualified"
+  },
+  {
+   "date": "2026-11-15",
+   "title": "Swim practice",
+   "kids": [
+    "Ari"
+   ],
+   "start": "15:00",
+   "end": "16:15",
+   "end_date": null,
+   "location": "Cranbrook",
+   "kind": "practice",
+   "details": null,
+   "sources": [
+    "Swim · Red Group"
+   ],
+   "status": null,
+   "id": "2026-11-15|15:00|swim practice"
+  },
+  {
+   "date": "2026-11-16",
+   "title": "MCE Winter League registration opens",
+   "kids": [
+    "Ari"
+   ],
+   "start": null,
+   "end": null,
+   "end_date": null,
+   "location": "Berkshire Middle School, 21707 W 14 Mile Rd, Beverly Hills",
+   "kind": "deadline",
+   "details": "motorcityevolution.com",
+   "sources": [
+    "MCE league schedule"
+   ],
+   "status": null,
+   "id": "2026-11-16|allday|mce winter league registration opens"
+  },
+  {
+   "date": "2026-11-16",
+   "title": "Soccer practice",
+   "kids": [
+    "Elle"
+   ],
+   "start": "17:00",
+   "end": "18:15",
+   "end_date": null,
+   "location": "UWM Sports Complex Field 1, 867 S Blvd E, Pontiac, MI 48341, USA",
+   "kind": "practice",
+   "details": null,
+   "sources": [
+    "PlayMetrics"
+   ],
+   "status": null,
+   "id": "2026-11-16|17:00|soccer practice"
+  },
+  {
+   "date": "2026-11-16",
+   "title": "Swim practice",
+   "kids": [
+    "Ari"
+   ],
+   "start": "18:45",
+   "end": "20:00",
+   "end_date": null,
+   "location": "BHHS",
+   "kind": "practice",
+   "details": null,
+   "sources": [
+    "Swim · Red Group"
+   ],
+   "status": null,
+   "id": "2026-11-16|18:45|swim practice"
+  },
+  {
+   "date": "2026-11-17",
+   "title": "Swim practice",
+   "kids": [
+    "Ari"
+   ],
+   "start": "18:45",
+   "end": "20:00",
+   "end_date": null,
+   "location": "BHHS",
+   "kind": "practice",
+   "details": null,
+   "sources": [
+    "Swim · Red Group"
+   ],
+   "status": null,
+   "id": "2026-11-17|18:45|swim practice"
+  },
+  {
+   "date": "2026-11-18",
+   "title": "Swim practice",
+   "kids": [
+    "Ari"
+   ],
+   "start": "18:45",
+   "end": "20:00",
+   "end_date": null,
+   "location": "BHHS",
+   "kind": "practice",
+   "details": null,
+   "sources": [
+    "Swim · Red Group"
+   ],
+   "status": null,
+   "id": "2026-11-18|18:45|swim practice"
+  },
+  {
+   "date": "2026-11-19",
+   "title": "Swim: Deadline to Register for Candy Cane Classic Meet (12/19-12/20)",
+   "kids": [
+    "Ari"
+   ],
+   "start": null,
+   "end": null,
+   "end_date": null,
+   "location": null,
+   "kind": "event",
+   "details": null,
+   "sources": [
+    "Swim · Meets & Team Events"
+   ],
+   "status": null,
+   "id": "2026-11-19|allday|swim deadline to register for candy cane"
+  },
+  {
+   "date": "2026-11-19",
+   "title": "Soccer practice",
+   "kids": [
+    "Elle"
+   ],
+   "start": "18:15",
+   "end": "19:30",
+   "end_date": null,
+   "location": "Pinnacle Performance Center small field, 312 Park St, Troy, MI 48083, USA",
+   "kind": "practice",
+   "details": null,
+   "sources": [
+    "PlayMetrics"
+   ],
+   "status": null,
+   "id": "2026-11-19|18:15|soccer practice"
+  },
+  {
+   "date": "2026-11-19",
+   "title": "Swim practice",
+   "kids": [
+    "Ari"
+   ],
+   "start": "18:45",
+   "end": "20:00",
+   "end_date": null,
+   "location": "BHHS",
+   "kind": "practice",
+   "details": null,
+   "sources": [
+    "Swim · Red Group"
+   ],
+   "status": null,
+   "id": "2026-11-19|18:45|swim practice"
+  }
+ ],
+ "actions": [],
+ "fyi": [],
+ "conflicts": [],
+ "lunch": {
+  "line": "Whole Grain Funfetti Pancakes, Syrup, & Turkey Sausage Link with Baked Tater Tots",
+  "entree": "Whole Grain Funfetti Pancakes, Syrup, & Turkey Sausage Link with Baked Tater Tots",
+  "theme": "BrunchforLunch",
+  "problems": []
+ },
+ "weather": {
+  "hi": 56,
+  "today": "Mostly Sunny",
+  "today_detail": "Mostly sunny. High near 56, with temperatures falling to around 51 in the afternoon. West northwest wind 5 to 9 mph.",
+  "tonight_low": 42,
+  "tonight": "Mostly Cloudy",
+  "icon": "partly",
+  "forecast": [
+   {
+    "date": "2026-11-10",
+    "day": "Tue",
+    "hi": 61,
+    "lo": 36,
+    "short": "Sunny",
+    "icon": "sun"
+   },
+   {
+    "date": "2026-11-11",
+    "day": "Wed",
+    "hi": 56,
+    "lo": 38,
+    "short": "Mostly Cloudy",
+    "icon": "cloud"
+   },
+   {
+    "date": "2026-11-12",
+    "day": "Thu",
+    "hi": 48,
+    "lo": 32,
+    "short": "Chance Light Rain",
+    "icon": "rain"
+   },
+   {
+    "date": "2026-11-13",
+    "day": "Fri",
+    "hi": 44,
+    "lo": 30,
+    "short": "Chance Light Rain",
+    "icon": "rain"
+   }
+  ],
+  "source": "National Weather Service",
+  "updated": "2026-11-09T08:49:14+00:00"
+ },
+ "mda": null,
+ "spartans": null,
+ "fantasy": {
+  "league": "Quarton 5th Grade DAWGS",
+  "team": "LamARI SHAPson",
+  "record": "8-0",
+  "rank": 1,
+  "teams": 10,
+  "week": 9,
+  "points_for": 1211.7,
+  "active": true,
+  "latest_period": 9,
+  "this_week": {
+   "week": 9,
+   "opponent": "StricklyBiz",
+   "score": 161.3,
+   "opp_score": 128.5,
+   "winner": "UNDECIDED",
+   "proj": 165.3,
+   "opp_proj": 148.4,
+   "top": {
+    "name": "Christian Watson",
+    "pos": "WR",
+    "pts": 30.1
+   },
+   "opp_top": {
+    "name": "Matthew Golden",
+    "pos": "WR",
+    "pts": 32.4
+   }
+  },
+  "last_week": {
+   "week": 8,
+   "opponent": "Ben there Won that",
+   "score": 167.8,
+   "opp_score": 150.2,
+   "winner": "HOME",
+   "proj": null,
+   "opp_proj": null,
+   "top": {
+    "name": "Joe Burrow",
+    "pos": "QB",
+    "pts": 39.5
+   },
+   "opp_top": {
+    "name": "Tee Higgins",
+    "pos": "WR",
+    "pts": 37.5
+   },
+   "result": "W"
+  }
+ },
+ "ari_fantasy": {
+  "title": "Ari&#8217;s Fantasy Team: LamARI SHAPson",
+  "items": [
+   "8–0, 1st of 10",
+   "<b>Week 9</b> vs StricklyBiz",
+   "Score: <b>161.3–128.5</b>, leading",
+   "Projected: 165.3–148.4",
+   "Ari&#8217;s top player: <b>Christian Watson</b>, WR, 30.1 pts",
+   "Their top player: <b>Matthew Golden</b>, WR, 32.4 pts"
+  ]
+ },
+ "almanac": [
+  {
+   "date": "2026-11-09",
+   "holidays": [],
+   "shabbat": null
+  },
+  {
+   "date": "2026-11-10",
+   "holidays": [],
+   "shabbat": null
+  }
+ ],
+ "announcements": null,
+ "due": [
+  {
+   "source": "league_schedules",
+   "who": "claude",
+   "what": "Re-check data/schedules/* against league sites and emails (MCE basketball, Snaptivities)",
+   "why": "never checked"
+  },
+  {
+   "source": "sunday_school",
+   "who": "jacob",
+   "what": "Temple Israel Sunday School calendar -> data/calendars/temple-israel-YYYY-YY.yaml (Jacob to supply; Temple Beth El dropped 2026-10-10)",
+   "why": "not supplied yet"
+  }
+ ],
+ "delivery": {
+  "email": null,
+  "dashboard": null,
+  "print": null,
+  "filed": null
+ },
+ "meta": {
+  "sources": {
+   "playmetrics_feed": {
+    "ok": true,
+    "count": null
+   },
+   "playmetrics": {
+    "ok": true,
+    "count": 5
+   },
+   "playmetrics_past": {
+    "ok": true,
+    "count": 24
+   },
+   "schedules": {
+    "ok": true,
+    "count": 3
+   },
+   "feeds": {
+    "ok": true,
+    "count": 12
+   },
+   "schedules_past": {
+    "ok": true,
+    "count": 14
+   },
+   "mce_results": {
+    "ok": true,
+    "count": null
+   },
+   "district_calendar": {
+    "ok": true,
+    "count": 2
+   },
+   "lunch": {
+    "ok": true,
+    "count": null
+   },
+   "weather": {
+    "ok": true,
+    "count": null
+   },
+   "fantasy": {
+    "ok": true,
+    "count": null
+   },
+   "almanac": {
+    "ok": true,
+    "count": 2
+   }
+  },
+  "warnings": []
+ }
+}
