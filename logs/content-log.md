@@ -285,3 +285,15 @@ Read before building; append after printing. Riddles/jokes/words are in riddle-l
 - Puzzle: sudoku 5x5
 - Comic: static-balloon gag ("I rubbed this balloon on my fur!" / "Static electricity!" / "Hold still, Mack!" / "Now she is a cotton ball!"); party backdrop in panels 1-2 (panel 2 mirrored), bedroom backdrop in panels 3-4 (panel 4 mirrored); fox hold/happy + balloon, point/smug, facepalm/laugh; bear stand/surprised, think/smug, run/laugh; Mackenzie sit/surprised, dance/happy
 - Critter: none (Saturday)
+
+## 2026-11-09
+- Headline: "Holiday Lights Return to Meadow Brook Hall" [local] (Meadow Brook Hall, meadowbrookhall.org; Holiday Walk Nov. 27-Dec. 30, Santa Saturdays, Family Nights)
+- News: Dogs Sniff Out Sneaky Plants [animals] (Good News Network, Nov. 8, 2026); Around the World in 72 Days [history] (Nellie Bly, set out Nov. 14, 1889); Why We Honor Veterans on Nov. 11 [holidays] (U.S. Department of Veterans Affairs)
+- Extras: none
+- Featured art: The Leaf Theif by Leo, Kindergarten
+- Word: gratitude
+- Headline photo: no photo (star icon)
+- Lions/NFL page/sports: left out; NFL Week 10 scores could not be confirmed in a second source (CBS vs NFL.com conflicted); tonight and Seaholm/Groves blank
+- Puzzle: crossword PANCAKES, GRATITUDE, VETERANS, DOGS
+- Comic: missing-cookie gag ("Fresh cookies for us!" / "Where did one go?" / "Not me, I am a brick!" / "Crumbs on Mack's nose!"); bakery backdrop in panels 1, 2 (mirrored) and 4 (mirrored), library backdrop in panel 3; bear hold/love/white cap + cookie, stand/happy; fox point/worried, facepalm/laugh; uni shrug/wink; bob tada/proud green bowtie; Mackenzie sit/sleepy, dance/happy
+- Critter: none (Monday)
