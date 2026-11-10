@@ -1,0 +1,415 @@
+{
+ "date": "2026-11-10",
+ "generated_at": "2026-11-10T11:28:27+00:00",
+ "window": {
+  "start": "2026-11-10",
+  "end": "2026-11-20"
+ },
+ "kids": {
+  "Ari": {
+   "color": "#2563EB",
+   "initial": "A"
+  },
+  "Elle": {
+   "color": "#DB2777",
+   "initial": "E"
+  },
+  "Leo": {
+   "color": "#16A34A",
+   "initial": "L"
+  },
+  "Lila": {
+   "color": "#9333EA",
+   "initial": "Li"
+  }
+ },
+ "events": [
+  {
+   "date": "2026-11-11",
+   "title": "JK-8 attend AM only. Elementary and middle school conferences 1-7 PM.",
+   "kids": [
+    "Ari",
+    "Elle",
+    "Leo"
+   ],
+   "start": null,
+   "end": null,
+   "end_date": null,
+   "location": null,
+   "kind": "school_status",
+   "details": null,
+   "sources": [
+    "BPS district calendar"
+   ],
+   "status": "half_day",
+   "id": "2026-11-11|allday|jk 8 attend am only elementary and middl"
+  },
+  {
+   "date": "2026-11-12",
+   "title": "Elementary attends AM only. Elementary conferences 1-7 PM; middle school conferences 4-7 PM.",
+   "kids": [
+    "Ari",
+    "Elle",
+    "Leo"
+   ],
+   "start": null,
+   "end": null,
+   "end_date": null,
+   "location": null,
+   "kind": "school_status",
+   "details": null,
+   "sources": [
+    "BPS district calendar"
+   ],
+   "status": "half_day",
+   "id": "2026-11-12|allday|elementary attends am only elementary co"
+  },
+  {
+   "date": "2026-11-12",
+   "title": "Soccer practice",
+   "kids": [
+    "Elle"
+   ],
+   "start": "17:00",
+   "end": "18:15",
+   "end_date": null,
+   "location": "UWM Sports Complex Field 1, 867 S Blvd E, Pontiac, MI 48341, USA",
+   "kind": "practice",
+   "details": null,
+   "sources": [
+    "PlayMetrics"
+   ],
+   "status": null,
+   "id": "2026-11-12|17:00|soccer practice"
+  },
+  {
+   "date": "2026-11-13",
+   "title": "Basketball playoffs (if qualified)",
+   "kids": [
+    "Ari"
+   ],
+   "start": null,
+   "end": null,
+   "end_date": null,
+   "location": "Berkshire Middle School, 21707 W 14 Mile Rd, Beverly Hills",
+   "kind": "game",
+   "details": "Evening playoff games and first-place practices; Ari's division likely plays Saturday. Times TBD.",
+   "sources": [
+    "MCE league schedule"
+   ],
+   "status": null,
+   "id": "2026-11-13|allday|basketball playoffs if qualified"
+  },
+  {
+   "date": "2026-11-13",
+   "title": "Soccer game vs Nationals Oakland U9 Red",
+   "kids": [
+    "Elle"
+   ],
+   "start": "19:15",
+   "end": "20:15",
+   "end_date": null,
+   "location": "Total Soccer Royal Oak Mini Field, Total Soccer Royal Oak, Lexington Boulevard, Royal Oak, MI, USA",
+   "kind": "game",
+   "details": "arrive 7:00 pm, white-black-white",
+   "sources": [
+    "PlayMetrics"
+   ],
+   "status": null,
+   "id": "2026-11-13|19:15|soccer game vs nationals oakland u9 red"
+  },
+  {
+   "date": "2026-11-14",
+   "title": "Basketball playoffs (if qualified)",
+   "kids": [
+    "Ari"
+   ],
+   "start": "09:00",
+   "end": "17:00",
+   "end_date": null,
+   "location": "Berkshire Middle School, 21707 W 14 Mile Rd, Beverly Hills",
+   "kind": "game",
+   "details": "Times TBD.",
+   "sources": [
+    "MCE league schedule"
+   ],
+   "status": null,
+   "id": "2026-11-14|09:00|basketball playoffs if qualified"
+  },
+  {
+   "date": "2026-11-16",
+   "title": "MCE Winter League registration opens",
+   "kids": [
+    "Ari"
+   ],
+   "start": null,
+   "end": null,
+   "end_date": null,
+   "location": "Berkshire Middle School, 21707 W 14 Mile Rd, Beverly Hills",
+   "kind": "deadline",
+   "details": "motorcityevolution.com",
+   "sources": [
+    "MCE league schedule"
+   ],
+   "status": null,
+   "id": "2026-11-16|allday|mce winter league registration opens"
+  },
+  {
+   "date": "2026-11-16",
+   "title": "Soccer practice",
+   "kids": [
+    "Elle"
+   ],
+   "start": "17:00",
+   "end": "18:15",
+   "end_date": null,
+   "location": "UWM Sports Complex Field 1, 867 S Blvd E, Pontiac, MI 48341, USA",
+   "kind": "practice",
+   "details": null,
+   "sources": [
+    "PlayMetrics"
+   ],
+   "status": null,
+   "id": "2026-11-16|17:00|soccer practice"
+  },
+  {
+   "date": "2026-11-19",
+   "title": "Soccer practice",
+   "kids": [
+    "Elle"
+   ],
+   "start": "18:15",
+   "end": "19:30",
+   "end_date": null,
+   "location": "Pinnacle Performance Center small field, 312 Park St, Troy, MI 48083, USA",
+   "kind": "practice",
+   "details": null,
+   "sources": [
+    "PlayMetrics"
+   ],
+   "status": null,
+   "id": "2026-11-19|18:15|soccer practice"
+  },
+  {
+   "date": "2026-11-20",
+   "title": "Soccer game vs ROFC Hedgehogs",
+   "kids": [
+    "Elle"
+   ],
+   "start": "19:15",
+   "end": "20:15",
+   "end_date": null,
+   "location": "Total Soccer Royal Oak Mini Field, Total Soccer Royal Oak, Lexington Boulevard, Royal Oak, MI, USA",
+   "kind": "game",
+   "details": "arrive 7:00 pm, black-black-black",
+   "sources": [
+    "PlayMetrics"
+   ],
+   "status": null,
+   "id": "2026-11-20|19:15|soccer game vs rofc hedgehogs"
+  }
+ ],
+ "actions": [],
+ "fyi": [],
+ "conflicts": [],
+ "lunch": {
+  "line": "Teriyaki Beef Dippers with Steamed Broccoli",
+  "entree": "Teriyaki Beef Dippers with Steamed Broccoli",
+  "theme": null,
+  "problems": []
+ },
+ "weather": {
+  "hi": 61,
+  "today": "Sunny",
+  "today_detail": "Sunny. High near 61, with temperatures falling to around 55 in the afternoon. West wind around 9 mph.",
+  "tonight_low": 38,
+  "tonight": "Partly Cloudy",
+  "icon": "sun",
+  "forecast": [
+   {
+    "date": "2026-11-11",
+    "day": "Wed",
+    "hi": 53,
+    "lo": 39,
+    "short": "Mostly Cloudy",
+    "icon": "rain"
+   },
+   {
+    "date": "2026-11-12",
+    "day": "Thu",
+    "hi": 46,
+    "lo": 31,
+    "short": "Light Rain Likely",
+    "icon": "rain"
+   },
+   {
+    "date": "2026-11-13",
+    "day": "Fri",
+    "hi": 42,
+    "lo": 28,
+    "short": "Chance Rain And Snow",
+    "icon": "snow"
+   },
+   {
+    "date": "2026-11-14",
+    "day": "Sat",
+    "hi": 44,
+    "lo": 29,
+    "short": "Mostly Sunny",
+    "icon": "partly"
+   }
+  ],
+  "source": "National Weather Service",
+  "updated": "2026-11-10T09:35:25+00:00"
+ },
+ "mda": {
+  "title": "MDA Kicks &amp; Giggles",
+  "items": [
+   "<span class='gm-when'>Last game · Fri Nov 6</span><span class='gm-match'>MDA vs U9G-White</span><span class='gm-loc'>Total Soccer Royal Oak Mini Field, Royal Oak</span><span class='gm-extra'>Final score coming soon.</span>",
+   "<span class='gm-when'>Fri Nov 13 · 7:15 pm</span><span class='gm-match'>MDA vs Nationals Oakland U9 Red</span><span class='gm-loc'>Total Soccer Royal Oak Mini Field, Royal Oak</span><span class='gm-extra'>Arrive 7:00 pm · Uniform: white-black-white</span>"
+  ]
+ },
+ "spartans": null,
+ "fantasy": {
+  "league": "Quarton 5th Grade DAWGS",
+  "team": "LamARI SHAPson",
+  "record": "9-0",
+  "rank": 1,
+  "teams": 10,
+  "week": 10,
+  "points_for": 1379.0,
+  "active": true,
+  "latest_period": 10,
+  "this_week": {
+   "week": 10,
+   "opponent": "Matty Ice",
+   "score": 0.0,
+   "opp_score": 0.0,
+   "winner": "UNDECIDED",
+   "proj": 123.2,
+   "opp_proj": 73.8,
+   "top": null,
+   "opp_top": null
+  },
+  "last_week": {
+   "week": 9,
+   "opponent": "StricklyBiz",
+   "score": 167.3,
+   "opp_score": 141.4,
+   "winner": "AWAY",
+   "proj": null,
+   "opp_proj": null,
+   "top": {
+    "name": "Christian Watson",
+    "pos": "WR",
+    "pts": 30.1
+   },
+   "opp_top": {
+    "name": "Matthew Golden",
+    "pos": "WR",
+    "pts": 32.4
+   },
+   "result": "W"
+  }
+ },
+ "ari_fantasy": {
+  "title": "Ari&#8217;s Fantasy Team: LamARI SHAPson",
+  "items": [
+   "9–0, 1st of 10",
+   "<b>Week 9</b> vs StricklyBiz",
+   "Final: <b>W 167.3–141.4</b>",
+   "Ari&#8217;s top player: <b>Christian Watson</b>, WR, 30.1 pts",
+   "Their top player: <b>Matthew Golden</b>, WR, 32.4 pts"
+  ]
+ },
+ "almanac": [
+  {
+   "date": "2026-11-10",
+   "holidays": [],
+   "shabbat": null
+  },
+  {
+   "date": "2026-11-11",
+   "holidays": [
+    "Veterans Day"
+   ],
+   "shabbat": null
+  }
+ ],
+ "announcements": null,
+ "due": [
+  {
+   "source": "league_schedules",
+   "who": "claude",
+   "what": "Re-check data/schedules/* against league sites and emails (MCE basketball, Snaptivities)",
+   "why": "never checked"
+  },
+  {
+   "source": "sunday_school",
+   "who": "jacob",
+   "what": "Temple Israel Sunday School calendar -> data/calendars/temple-israel-YYYY-YY.yaml (Jacob to supply; Temple Beth El dropped 2026-10-10)",
+   "why": "not supplied yet"
+  }
+ ],
+ "delivery": {
+  "email": null,
+  "dashboard": null,
+  "print": null,
+  "filed": null
+ },
+ "meta": {
+  "sources": {
+   "playmetrics_feed": {
+    "ok": true,
+    "count": null
+   },
+   "playmetrics": {
+    "ok": true,
+    "count": 5
+   },
+   "playmetrics_past": {
+    "ok": true,
+    "count": 25
+   },
+   "schedules": {
+    "ok": true,
+    "count": 3
+   },
+   "feeds": {
+    "ok": false,
+    "error": "HTTPError: 429 Client Error: Too Many Requests for url: https://calendar.google.com/calendar/ical/rctfddnmtbmhagl595jpo726t4%40group.calendar.google.com/public/basic.ics"
+   },
+   "schedules_past": {
+    "ok": true,
+    "count": 14
+   },
+   "mce_results": {
+    "ok": true,
+    "count": null
+   },
+   "district_calendar": {
+    "ok": true,
+    "count": 2
+   },
+   "lunch": {
+    "ok": true,
+    "count": null
+   },
+   "weather": {
+    "ok": true,
+    "count": null
+   },
+   "fantasy": {
+    "ok": true,
+    "count": null
+   },
+   "almanac": {
+    "ok": true,
+    "count": 2
+   }
+  },
+  "warnings": [
+   "feeds failed: 429 Client Error: Too Many Requests for url: https://calendar.google.com/calendar/ical/rctfddnmtbmhagl595jpo726t4%40group.calendar.google.com/public/basic.ics"
+  ]
+ }
+}

@@ -297,3 +297,14 @@ Read before building; append after printing. Riddles/jokes/words are in riddle-l
 - Puzzle: crossword PANCAKES, GRATITUDE, VETERANS, DOGS
 - Comic: missing-cookie gag ("Fresh cookies for us!" / "Where did one go?" / "Not me, I am a brick!" / "Crumbs on Mack's nose!"); bakery backdrop in panels 1, 2 (mirrored) and 4 (mirrored), library backdrop in panel 3; bear hold/love/white cap + cookie, stand/happy; fox point/worried, facepalm/laugh; uni shrug/wink; bob tada/proud green bowtie; Mackenzie sit/sleepy, dance/happy
 - Critter: none (Monday)
+
+## 2026-11-10
+- Headline: "Wild Lights Returns to the Detroit Zoo on Nov. 21" [local] (Detroit Zoo detroitzoo.org; Thrillzing Wild Lights 2026 guide; Nov. 21-Jan. 3, Royal Oak)
+- News: Free Costumes for Kids [people] (Good Good Good, Oct. 31, 2026); Sesame Street Turns 57 Today [history] (Sesame Workshop; premiere Nov. 10, 1969)
+- Extras: Fun Fact, a snow leopard can leap about 50 feet
+- Word: marvel
+- Headline photo: no photo (star icon)
+- Lions/yesterday's scores/tonight/Seaholm-Groves: left out; not confirmed in two sources
+- Puzzle: sudoku 5x5
+- Comic: cocoa-mustache gag ("Brr! It is cold out!" / "Cocoa weather!" / "One cocoa for me." / "Where did my cocoa go?" / "Mackenzie! A cocoa mustache!"); cabin backdrop in panels 1 and 4 (panel 4 mirrored), fireplace backdrop in panels 2 and 3 (panel 3 mirrored); fox wave/happy red beanie, point/surprised, facepalm/laugh; bear stand/happy blue scarf, hold/love + cocoa; Mackenzie sit/sleepy, sit/smug, dance/happy
+- Critter: Snow Leopard Kitten (Eric Kilby / Flickr, CC BY-SA 2.0) openverse:e0bf1e94-9dfe-44e9-b9bb-51efa3ac989d
