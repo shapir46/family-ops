@@ -308,3 +308,15 @@ Read before building; append after printing. Riddles/jokes/words are in riddle-l
 - Puzzle: sudoku 5x5
 - Comic: cocoa-mustache gag ("Brr! It is cold out!" / "Cocoa weather!" / "One cocoa for me." / "Where did my cocoa go?" / "Mackenzie! A cocoa mustache!"); cabin backdrop in panels 1 and 4 (panel 4 mirrored), fireplace backdrop in panels 2 and 3 (panel 3 mirrored); fox wave/happy red beanie, point/surprised, facepalm/laugh; bear stand/happy blue scarf, hold/love + cocoa; Mackenzie sit/sleepy, sit/smug, dance/happy
 - Critter: Snow Leopard Kitten (Eric Kilby / Flickr, CC BY-SA 2.0) openverse:e0bf1e94-9dfe-44e9-b9bb-51efa3ac989d
+
+## 2026-11-11
+- Headline: "Desert Bursts Into Flowers" [nature] (NPR via Michigan Public, Nov. 8, 2026; Good News Network, Nov. 10, 2026; Atacama Desert super bloom after El Niño rains)
+- News: Birmingham Lights Its Big Tree Dec. 4 [local] (Birmingham Shopping District, LittleGuide Detroit; Shain Park tree lighting Dec. 4, Winter Markt); Tech Corner: A Teen Drives a Robot Under the Sea [tech] (Science News Explores, Nov. 10, 2026; ROV kelp-forest project); not printed, no room: T. rex Footprints Show a Dino on the Move [animals] (Science News Explores, Nov. 10, 2026)
+- Extras: Fun Fact, seals and sea lions hear well in air and underwater (Science News Explores, Nov. 9, 2026); not printed: This Week in History, Lunokhod 1 landed on the Moon Nov. 17, 1970
+- Banner: Veterans Day
+- Word: dormant
+- Headline photo: no photo (leaf icon; Openverse returned 504 errors)
+- Lions: beat Miami 19-9 (6-2); next Sun Nov 15 vs New England in Munich, 9:30 am FOX. Sports: Tuesday NHL (3) and NBA scores (Red Wings lost 3-2 at St. Louis) confirmed CBS + NHL.com/Basketball-Reference; no Detroit games tonight; Seaholm/Groves left out (single source)
+- Puzzle: crossword DESERT, DORMANT, ROBOT, KELP, TREE
+- Comic: ice-skating gag ("The rink is open!" / "I'm a pro skater!" / "Which way is STOP?!" / "Just glide like me!" / "New plan: pro sitter."); rink backdrop in all panels (panels 2 and 4 mirrored); bear wave/happy red earmuffs, stand/surprised; fox akimbo/smug blue beanie, run/worried + WHOOSH sfx, sit/sad + snowpile; uni dance/grin; Mackenzie sit/laugh
+- Critter: none (Wednesday)
