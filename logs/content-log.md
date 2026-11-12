@@ -320,3 +320,14 @@ Read before building; append after printing. Riddles/jokes/words are in riddle-l
 - Puzzle: crossword DESERT, DORMANT, ROBOT, KELP, TREE
 - Comic: ice-skating gag ("The rink is open!" / "I'm a pro skater!" / "Which way is STOP?!" / "Just glide like me!" / "New plan: pro sitter."); rink backdrop in all panels (panels 2 and 4 mirrored); bear wave/happy red earmuffs, stand/surprised; fox akimbo/smug blue beanie, run/worried + WHOOSH sfx, sit/sad + snowpile; uni dance/grin; Mackenzie sit/laugh
 - Critter: none (Wednesday)
+
+## 2026-11-12
+- Headline: "Glow Tubing Returns to Bowers Farm" [local] (LittleGuide Detroit, Nov. 8, 2026; Winter Park at Bowers Farm, Bloomfield Hills, opens Dec. 18, glow tubing, Bunny Slide)
+- News: none printed, no room (half-day schedule and sudoku with how-to); not printed: Hidden Art Found in Cave [history] (Good News Network, Nov. 11, 2026; 280 carvings in Cova de la Font Major, Spain); Voyager 1 Nears a Light-Day [science] (NASA Science, Nov. 5, 2026; EarthSky, Nov. 10, 2026); Baby Walrus Finds a Home [animals] (Smithsonian Magazine, Nov. 10, 2026; Annautaq at SeaWorld Orlando)
+- Extras: none; not printed: This Week in History, Steamboat Willie opened Nov. 18, 1928 (Mickey Mouse's birthday); Fun Fact, Lake Superior is 1,332 feet deep; Quote, Louisa May Alcott "I'm not afraid of storms"
+- Word: drizzle
+- Headline photo: no photo (star icon; an Openverse sledding-hill photo was found but not used, it did not show the event)
+- Lions: beat Miami 19-9 (6-2); next Sun Nov 15 vs New England in Munich, 9:30 am FOX. Sports: Wednesday NHL (6) and NBA (3 of 10) scores confirmed NHL.com + CBS Sports / CBS Sports + Basketball-Reference; tonight Red Wings at Florida 7:30, Pistons at Washington 7:00, TNF Commanders at Giants 8:15; Seaholm/Groves left out (seasons ended Oct. 30)
+- Puzzle: sudoku 5x5
+- Comic: umbrella gag ("I brought my umbrella!" / "Is it big enough for two?" / "Why am I the wet one?" / "Mack, no! Not the shake!"); mainstreet backdrop in panels 1-2 (panel 2 mirrored), drawn rain scene in panels 3-4 (panel 4 mirrored); fox hold/proud green scarf + umbrella, shrug/worried, sit/sad, scared/surprised; bear stand/worried, point/happy, hold/smug + umbrella; Mackenzie dance/happy; puddle prop, SHAKE! sfx
+- Critter: none (Thursday)
