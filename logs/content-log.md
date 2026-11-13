@@ -331,3 +331,15 @@ Read before building; append after printing. Riddles/jokes/words are in riddle-l
 - Puzzle: sudoku 5x5
 - Comic: umbrella gag ("I brought my umbrella!" / "Is it big enough for two?" / "Why am I the wet one?" / "Mack, no! Not the shake!"); mainstreet backdrop in panels 1-2 (panel 2 mirrored), drawn rain scene in panels 3-4 (panel 4 mirrored); fox hold/proud green scarf + umbrella, shrug/worried, sit/sad, scared/surprised; bear stand/worried, point/happy, hold/smug + umbrella; Mackenzie dance/happy; puddle prop, SHAKE! sfx
 - Critter: none (Thursday)
+
+## 2026-11-13
+- Headline: "A Brand-New Play Garden Opens in Madison Heights" [local] (LittleGuide Detroit, Nov. 4, 2026; Oakland County Parks; Red Oaks Park play garden, grand opening Oct. 30)
+- News: none printed, no room (Friday team boxes and crossword); not printed: A 440-Year-Old Lock Clicks Open [history] (Smithsonian Magazine, Nov. 12, 2026; Ann Francis wreck lock, code ANCE); A Birthday Party at 100 [people] (Good News Network, Nov. 12, 2026; Gretchen Sollo's store party)
+- Extras: none; not printed: This Week in History, Holland Tunnel opened Nov. 13, 1927
+- Banner: Shabbat Shalom, sunset 5:12 pm
+- Word: explore
+- Headline photo: no photo (leaf icon; Openverse 504s, playground photos reviewed not used)
+- Lions: beat Miami 19-9 (6-2); next Sun Nov 15 vs New England in Munich, 9:30 am FOX. Sports: Thursday scores (TNF Commanders 24, Giants 21; Panthers 5, Red Wings 4; Pistons 144, Wizards 140 2OT) confirmed CBS Sports + Fox Sports; no Red Wings/Pistons game tonight; fantasy top performers left out, no room; Seaholm/Groves left out (seasons ended)
+- Puzzle: crossword PIKA, GARDEN, LIONS, SLIDE, EXPLORE
+- Comic: Friday-the-13th lucky-leaf gag ("Friday the 13th... Is it bad luck?" / "Not for me! I found a lucky leaf!" / "Mack! My lucky leaf!" / "Now I have 1,000 lucky leaves!"); orchard backdrop in panels 1, 2 (mirrored) and 4, cornmaze backdrop in panel 3; fox think/worried purple earmuffs; bear stand/happy orange beanie, hold/proud + leaf, scared/surprised, facepalm/laugh; uni cheer/grin; Mackenzie run/grin + leaf with ZOOM! sfx, sit/love in leafpile
+- Critter: American Pika (Great Sand Dunes National Park and Preserve / Flickr, public domain) openverse:0fbd9794-4749-4e89-93c9-eca8248ab808
