@@ -343,3 +343,14 @@ Read before building; append after printing. Riddles/jokes/words are in riddle-l
 - Puzzle: crossword PIKA, GARDEN, LIONS, SLIDE, EXPLORE
 - Comic: Friday-the-13th lucky-leaf gag ("Friday the 13th... Is it bad luck?" / "Not for me! I found a lucky leaf!" / "Mack! My lucky leaf!" / "Now I have 1,000 lucky leaves!"); orchard backdrop in panels 1, 2 (mirrored) and 4, cornmaze backdrop in panel 3; fox think/worried purple earmuffs; bear stand/happy orange beanie, hold/proud + leaf, scared/surprised, facepalm/laugh; uni cheer/grin; Mackenzie run/grin + leaf with ZOOM! sfx, sit/love in leafpile
 - Critter: American Pika (Great Sand Dunes National Park and Preserve / Flickr, public domain) openverse:0fbd9794-4749-4e89-93c9-eca8248ab808
+
+## 2026-11-14 (Weekend Edition, Nov 14-15)
+- Headline: "The Circus Flips Into Detroit This Weekend" [local] (313 Presents; Michigan Public, Nov. 12, 2026; Ringling Bros. at Little Caesars Arena Nov. 13-15)
+- News: Tech Corner: A Robot Frog Swims on Light [tech] (Popular Science, Nov. 13, 2026; Aarhus University light-powered soft robot frog); not printed, no room: Rescuers Warm Up Chilly Sea Turtles [animals] (Science News Explores, Nov. 12, 2026); A Lost Painting Comes Out of the Closet [arts] (Good News Network, Nov. 12, 2026; Georgia O'Keeffe 1930 painting)
+- Extras: none printed; not printed: This Week in History, Apollo 12 struck by lightning Nov. 14, 1969; Fun Fact, sea turtles can't pull into their shells; Quote, Georgia O'Keeffe on color and shapes
+- Word: acrobat
+- Headline photo: no photo (star icon; Openverse 504s)
+- Lions: beat Miami 19-9 (6-2); Sun Nov 15 vs New England in Munich, 9:30 am FOX (NFL.com + CBS). Sports: Friday scores (Rangers 5, Canucks 1; Predators 3, Golden Knights 2 SO; Heat 133, Cavaliers 121) confirmed CBS + Hockey-Reference/Basketball-Reference; weekend: Red Wings Sat at Tampa Bay 7:00, Pistons Sat at Miami 8:00; Seaholm/Groves left out (seasons ended)
+- Puzzle: sudoku 5x5
+- Comic: breakfast-football gag ("Lions game at 9:30 AM!" / "Football at breakfast?" + "They play in Germany!" / "Then I need a breakfast cookie!" / "Touchdown, Mackenzie!"); fireplace backdrop in panels 1-2 (panel 2 mirrored), bakery backdrop in panels 3-4 (panel 4 mirrored); fox cheer/grin blue cap, point/happy blue cap; bear sit/sleepy, think/surprised, hold/grin + cookie red bowtie, facepalm/laugh red bowtie; Mackenzie sit/love, tada/proud + cookie
+- Critter: none (Saturday)
