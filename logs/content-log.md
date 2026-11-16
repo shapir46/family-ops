@@ -354,3 +354,14 @@ Read before building; append after printing. Riddles/jokes/words are in riddle-l
 - Puzzle: sudoku 5x5
 - Comic: breakfast-football gag ("Lions game at 9:30 AM!" / "Football at breakfast?" + "They play in Germany!" / "Then I need a breakfast cookie!" / "Touchdown, Mackenzie!"); fireplace backdrop in panels 1-2 (panel 2 mirrored), bakery backdrop in panels 3-4 (panel 4 mirrored); fox cheer/grin blue cap, point/happy blue cap; bear sit/sleepy, think/surprised, hold/grin + cookie red bowtie, facepalm/laugh red bowtie; Mackenzie sit/love, tada/proud + cookie
 - Critter: none (Saturday)
+
+## 2026-11-16
+- Headline: "How Octopuses Squeeze Through Tiny Holes" [animals] (Smithsonian Magazine, Nov. 10, 2026; Journal of Experimental Biology study, common and Mayan octopuses)
+- News: Detroit's Big Tree Lights Up Friday [local] (LittleGuide Detroit, Nov. 15, 2026; Detroit Tree Lighting Nov. 20, Campus Martius); not printed, no room: A Famous Old Ship Becomes a Home for Fish [world] (AP, Nov. 11, 2026; SS United States reef); A Couple Scrubs Grimy Street Signs Clean [people] (Good News Network, Nov. 14, 2026)
+- Extras: Fun Fact, hummingbirds are the only birds that can fly backward; not printed: This Week in History, first free hot-air balloon flight Nov. 21, 1783; Quote, Einstein "Imagination is more important than knowledge"
+- Word: flexible
+- Headline photo: Mimic Octopus, PacificKlaus / Flickr, CC BY-NC 2.0 openverse:ff728d42-8d17-4748-ae05-d167b4fbade3
+- NFL page: Week 10 scores (12 Sunday games) confirmed CBS Sports + Fox Sports; highlight Lions 35, Patriots 10 in Munich; MNF Chargers (0-8) at Ravens (4-5) 8:15 ESPN. Lions report: 7-2, next Sun Nov 22 vs Tampa Bay at Ford Field, FOX (kickoff time single-source, left out). Sunday NHL/NBA scores and fantasy top performers left out, no room; no Red Wings/Pistons game tonight; Seaholm/Groves left out (seasons ended)
+- Puzzle: crossword OCTOPUS, FLEXIBLE, HOLES, BEAK
+- Comic: brunch-for-lunch gag ("Lunch today is Brunch for Lunch!" / "Breakfast... at LUNCH time?" / "My waffle is smiling at me!" / "So I smiled back... then ate it!"); playground backdrop in panels 1-2 (panel 2 mirrored), drawn kitchen scene in panels 3-4 (panel 4 mirrored); fox point/happy blue scarf, facepalm/laugh blue scarf; bear stand/surprised, think/worried, hold/surprised + mug, tada/wink; uni cheer/grin pink bow; Mackenzie sit/love; CHOMP! sfx
+- Critter: none (Monday)
