@@ -365,3 +365,14 @@ Read before building; append after printing. Riddles/jokes/words are in riddle-l
 - Puzzle: crossword OCTOPUS, FLEXIBLE, HOLES, BEAK
 - Comic: brunch-for-lunch gag ("Lunch today is Brunch for Lunch!" / "Breakfast... at LUNCH time?" / "My waffle is smiling at me!" / "So I smiled back... then ate it!"); playground backdrop in panels 1-2 (panel 2 mirrored), drawn kitchen scene in panels 3-4 (panel 4 mirrored); fox point/happy blue scarf, facepalm/laugh blue scarf; bear stand/surprised, think/worried, hold/surprised + mug, tada/wink; uni cheer/grin pink bow; Mackenzie sit/love; CHOMP! sfx
 - Critter: none (Monday)
+
+## 2026-11-17
+- Headline: "Turkey & T. rex Week at Cranbrook" [local] (LittleGuide Detroit, Nov. 15, 2026; Cranbrook Institute of Science Discovery Days page; Nov. 25-29, 11 am-3 pm, closed Thanksgiving)
+- News: none printed, no room (Tuesday critter, fantasy box, sudoku); not printed: Is There a Sixth Dwarf Planet? [science] (Smithsonian Magazine, Nov. 12, 2026; 2026 ED138, Rubin Observatory); A Farmer's Attic Hid "Miracle Wheat" [food] (Good News Network, Nov. 16, 2026; Claudio Grossi, Parma)
+- Extras: none printed; not printed: This Week in History, standard time zones Nov. 18, 1883; Fun Fact, wild turkeys fly up to about 55 mph; Quote, Aesop on kindness
+- Word: feast
+- Headline photo: no photo printed (star icon; Openverse photo of the Cranbrook Institute of Science building, ajay_suresh / Flickr CC BY 2.0, openverse:321db02f-d805-4d08-b6ff-ad5fc4230b00, downloaded but dropped for space)
+- Sports: Monday scores (Chargers 23, Ravens 20; Rangers 3, Canadiens 1; Magic 115, Celtics 105) confirmed NFL.com/NHL.com + CBS Sports / CBS + Basketball-Reference. Lions report: 7-2, next Sun Nov 22 vs Tampa Bay at Ford Field, 1:00 pm FOX (CBS + DetroitLions.com). Tonight: Pistons at San Antonio 8:00 pm; Red Wings no game. MNF fantasy top performers (Henry, Hampton, Herbert) confirmed but left out, no room; Seaholm/Groves left out (seasons ended)
+- Puzzle: sudoku 5x5
+- Comic: Thanksgiving thankful gag ("Thanksgiving is next week!" / "What are you thankful for?" / "I'm thankful for my friends!" / "And for good books!" / "Mackenzie, what are YOU thankful for?" / "WOOF!" / "That means cookies!"); sledhill backdrop in panels 1-2 (panel 2 mirrored), party backdrop in panels 3-4 (panel 4 mirrored); bear wave/happy red scarf + sled prop, point/surprised red scarf; uni stand/grin purple earmuffs, cheer/love purple earmuffs; fox hold/proud green beanie + book, facepalm/laugh green beanie; Mackenzie sit/smug, tada/grin + cookie
+- Critter: Koala and Joey (Mark Gillow / Flickr, CC BY 2.0) openverse:2eb1a53a-3fcd-49ec-9207-79a952b92039
