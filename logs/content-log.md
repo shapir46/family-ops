@@ -376,3 +376,14 @@ Read before building; append after printing. Riddles/jokes/words are in riddle-l
 - Puzzle: sudoku 5x5
 - Comic: Thanksgiving thankful gag ("Thanksgiving is next week!" / "What are you thankful for?" / "I'm thankful for my friends!" / "And for good books!" / "Mackenzie, what are YOU thankful for?" / "WOOF!" / "That means cookies!"); sledhill backdrop in panels 1-2 (panel 2 mirrored), party backdrop in panels 3-4 (panel 4 mirrored); bear wave/happy red scarf + sled prop, point/surprised red scarf; uni stand/grin purple earmuffs, cheer/love purple earmuffs; fox hold/proud green beanie + book, facepalm/laugh green beanie; Mackenzie sit/smug, tada/grin + cookie
 - Critter: Koala and Joey (Mark Gillow / Flickr, CC BY 2.0) openverse:2eb1a53a-3fcd-49ec-9207-79a952b92039
+
+## 2026-11-18
+- Headline: "Baby Sea Turtles Hatch on a California Beach" [animals] (Smithsonian Magazine, Nov. 16, 2026; West Coast's first natural sea turtle nests, olive ridleys, Seal Beach and Huntington Beach, Aquarium of the Pacific)
+- News: A Giant New Indoor Playground Opens Friday [local] (LittleGuide Detroit, Nov. 2026; Just Play Family Fun Center, Livonia, Nov. 20); Tech Corner: Moon Dust Bricks That Snap Together [tech] (Popular Science, Nov. 10, 2026; University of Arkansas 3D-printed moon-dust bricks); not printed, no room: A Town in Kansas Gets a Big Thank-You [people] (Good News Network, Nov. 17, 2026; Algeria thanks Lawrence, Kansas)
+- Extras: none printed; not printed: This Week in History, Edison announces the phonograph Nov. 21, 1877; Fun Fact, ripe cranberries bounce; Quote, Maya Angelou "Try to be a rainbow in someone's cloud"
+- Word: cozy
+- Headline photo: loggerhead sea turtle hatchling, USFWS Headquarters / Flickr, public domain openverse:c515872d-a1f5-4f07-af46-6a84c8a3ebc6
+- Sports: Tuesday scores (Pistons 105, Spurs 93) confirmed CBS Sports + theScore; Kings 3, Bruins 0 and other NHL finals confirmed NHL API + CBS but left out, no room. Lions report: 7-2 after 35-10 win over New England; next Sun Nov 22 vs Tampa Bay, Ford Field, 1:00 pm FOX (DetroitLions.com + CBS). Tonight: Red Wings vs Boston 7:30 pm; Pistons at New Orleans 8:00 pm (NHL API/NBA.com + CBS); Seaholm/Groves left out (seasons ended)
+- Puzzle: crossword TURTLE, BRICKS, COZY, PISTONS
+- Comic: foggy-morning hide-and-seek gag ("Foggy morning, Uni!" / "Where is Big Bear?" / "I can't see him anywhere!" / "I'm right HERE!" / "Eek! You blend in!" / "Mack sniffed me out! Cookie for you!"); leafpark backdrop in panels 1-2 (panel 2 mirrored, cloud prop), drawn autumn scene in panels 3-4 (panel 4 mirrored); fox wave/happy green earmuffs, think/worried green earmuffs, scared/surprised green earmuffs; uni stand/surprised; Mackenzie sit/happy, dance/proud; bear akimbo/grin glasses, hold/love glasses + cookie
+- Critter: none (Wednesday)
