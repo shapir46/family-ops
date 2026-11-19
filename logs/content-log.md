@@ -387,3 +387,14 @@ Read before building; append after printing. Riddles/jokes/words are in riddle-l
 - Puzzle: crossword TURTLE, BRICKS, COZY, PISTONS
 - Comic: foggy-morning hide-and-seek gag ("Foggy morning, Uni!" / "Where is Big Bear?" / "I can't see him anywhere!" / "I'm right HERE!" / "Eek! You blend in!" / "Mack sniffed me out! Cookie for you!"); leafpark backdrop in panels 1-2 (panel 2 mirrored, cloud prop), drawn autumn scene in panels 3-4 (panel 4 mirrored); fox wave/happy green earmuffs, think/worried green earmuffs, scared/surprised green earmuffs; uni stand/surprised; Mackenzie sit/happy, dance/proud; bear akimbo/grin glasses, hold/love glasses + cookie
 - Critter: none (Wednesday)
+
+## 2026-11-19
+- Headline: "Santa Takes a Stroll Through Birmingham" [local] (LittleGuide Detroit, "5 Reasons To Visit Downtown Birmingham For The Holidays (2026)," Nov. 18, 2026 + Birmingham Shopping District Santa Walk page; Santa Walk Sat Nov 28 9:30-10:30, Santa House in Shain Park, free carriage rides, Hazel's hot chocolate)
+- News: A Painting Race Against the Clock [world] (UPI, Nov. 19, 2026; Guinness World Records Day, David Garibaldi paints Statue of Liberty in 43.5 seconds, 249 jump-rope skips); Blue Whales Make a Big Comeback [animals] (Good News Network, Nov. 18, 2026; Antarctic blue whales ~418 in 1973 to ~4,018, Zoe Rand, Univ. of Washington); not printed, no room: A Telescope Maps 900 Million Galaxies [science] (Smithsonian Magazine, Nov. 18, 2026; Euclid data release Nov. 12)
+- Extras: none printed; not printed: This Week in History, Darwin publishes On the Origin of Species Nov. 24, 1859; Fun Fact, a group of turkeys is a rafter and only males gobble; Quote, Roald Dahl "watch with glittering eyes" (The Minpins)
+- Word: aroma
+- Headline photo: no photo (star icon; Openverse carriage and Christmas-market photos rejected for logos, signage and recognizable people)
+- Sports: Wednesday scores (Bruins 4, Red Wings 1; Pistons 122, Pelicans 109; Canadiens 3, Devils 2; Hawks 117, Thunder 112) confirmed NHL API/CBS Sports/Fox Sports. Lions report: 7-2 after 35-10 win over New England; next Sun Nov 22 vs Tampa Bay, Ford Field, 1:00 pm FOX (NFL.com + CBS). Tonight: no Detroit games (Red Wings, Pistons off; NHL API + CBS); Seaholm/Groves left out (seasons ended)
+- Puzzle: sudoku 5x5
+- Comic: Thanksgiving pie-shopping gag ("Where are you off to?" / "Pie shopping for Thanksgiving!" / "Apple, pumpkin or cherry?" / "Why not all three?" / "Ta-da! One GIANT pie-cake!" / "Mack ate the top layer!"); mainstreet backdrop in panels 1-2 (panel 2 mirrored), fireplace backdrop in panels 3-4 (panel 4 mirrored); fox wave/happy red beanie, facepalm/laugh red beanie; bear run/grin blue cap, think/worried blue cap, tada/proud blue cap + table and cake props; uni shrug/smug purple bow; Mackenzie dance/love; SLURP! sfx
+- Critter: none (Thursday)
