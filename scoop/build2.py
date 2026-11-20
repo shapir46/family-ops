@@ -69,9 +69,20 @@ def hyph(h):
 def story(h,t,*_): return f"<h3>{h}</h3><p>{hyph(t)}</p>"   # no source line on the page; sources go in the footer (Jacob, 2026-10-12)
 
 # ---- Sections: each returns HTML ('' = omit). The layout below places them. ----
+def sched_item(x):
+    """A schedule line, or [line, detail] with what to wear, bring or know on a second line (Jacob, 2026-11-20)."""
+    if isinstance(x, (list, tuple)):
+        return x[0] + ''.join(f"<span class='sched-note'>{n}</span>" for n in x[1:] if n)
+    return x
 def sec_schedule():
-    return (f"<h2>{d.get('sched_title', 'The Family Schedule')}</h2><ul class='sched small'>{li(d.get('sched', []))}</ul>"
+    return (f"<h2>{d.get('sched_title', 'The Family Schedule')}</h2><ul class='sched small'>{li(sched_item(x) for x in d.get('sched', []))}</ul>"
             ) if d.get('sched') else ''
+# Homework & Due Soon (Jacob, 2026-11-20): each kid's schoolwork due in the next few days, [kid, what, when].
+def sec_homework():
+    hw = d.get('homework') or []
+    if not hw: return ''
+    rows = ''.join(f"<li><b>{k}</b> · {w}" + (f" <span class='hw-due'>{when}</span>" if when else '') + "</li>" for k, w, when in hw)
+    return f"<div class='box2 hw'><h2 style='border:0;margin:0'>{d.get('homework_title', 'Homework &amp; Due Soon')}</h2><ul class='small'>{rows}</ul></div>"
 def sec_week():
     return (f"<div class='box2'><h2 style='border:0;margin:0'>{d.get('week_title', 'Coming Up')}</h2><ul class='small'>{li(d['week'])}</ul></div>") if d.get('week') else ''
 def sec_school_notes():
@@ -202,9 +213,9 @@ def sec_puzzle():
     box, warn = crossword.html_box(d['crossword'])
     print(warn or "PUZZLE: crossword", file=sys.stderr)
     return box
-SECTIONS = {'puzzle': sec_puzzle, 'crossword': sec_puzzle, 'sudoku': sec_puzzle, 'nfl': sec_nfl, 'featured': sec_featured, 'schedule': sec_schedule, 'week': sec_week, 'school_notes': sec_school_notes, 'left_story': sec_left_story,
+SECTIONS = {'homework': sec_homework, 'puzzle': sec_puzzle, 'crossword': sec_puzzle, 'sudoku': sec_puzzle, 'nfl': sec_nfl, 'featured': sec_featured, 'schedule': sec_schedule, 'week': sec_week, 'school_notes': sec_school_notes, 'left_story': sec_left_story,
             'lead': sec_lead, 'news1': sec_news1, 'word': sec_word, 'joke': sec_joke, 'sports': sec_sports, 'ari_fantasy': sec_ari_fantasy, 'mda': sec_mda, 'spartans': sec_spartans, 'news0': sec_news0}
-BOXED = {'week', 'word', 'joke', 'ari_fantasy', 'mda', 'spartans', 'featured', 'nfl', 'puzzle', 'crossword', 'sudoku'}
+BOXED = {'homework', 'week', 'word', 'joke', 'ari_fantasy', 'mda', 'spartans', 'featured', 'nfl', 'puzzle', 'crossword', 'sudoku'}
 
 # Layout: flexible column count, widths and placement (README: readability first). Default = the approved 3-column page.
 DEFAULT_LAYOUT = {'columns': [
@@ -216,6 +227,13 @@ for c in layout['columns']:
     for name in c['sections']:
         if name not in SECTIONS and not name.startswith('extra:') and name != 'extras':
             raise SystemExit(f"layout: unknown section '{name}' (known: {', '.join(SECTIONS)})")
+# Homework is never dropped: if the layout doesn't place it, it goes right under the family schedule.
+if d.get('homework') and 'homework' not in [n for c in layout['columns'] for n in c['sections']]:
+    layout = json.loads(json.dumps(layout))
+    for c in layout['columns']:
+        if 'schedule' in c['sections']: c['sections'].insert(c['sections'].index('schedule') + 1, 'homework'); break
+    else:
+        layout['columns'][0]['sections'].insert(0, 'homework')
 # The day's puzzle is never dropped: if the layout doesn't place it, it goes right under the joke.
 if not {'puzzle', 'crossword', 'sudoku'} & {n for c in layout['columns'] for n in c['sections']}:
     layout = json.loads(json.dumps(layout))
@@ -325,6 +343,8 @@ h3{{font-family:PF,serif;font-weight:700;font-size:10.8pt;line-height:1.12;margi
 .body{{flex:1;display:grid;grid-template-columns:{grid};min-height:0}}
 .col{{padding:3px 6px;overflow:hidden;min-height:0}} .col+.col{{border-left:1px solid #161410}}
 ul{{list-style:none}} .sched li{{padding:3px 0;border-bottom:1px dotted #8a8478}}
+.sched-note{{display:block;font-style:italic;font-size:7.3pt;color:#3a3a3a;margin-top:1px}} .sched-note::before{{content:'\\2192\\00a0'}}
+.hw li{{padding:1px 0}} .hw-due{{font-style:italic;color:#7a2e1f;white-space:nowrap}}
 .cap{{font-style:italic;font-size:6.9pt;color:#555;margin-bottom:2px}}
 p{{margin-bottom:3px;text-align:justify;hyphens:auto}}
 .small{{font-size:7.7pt;line-height:1.26}}
