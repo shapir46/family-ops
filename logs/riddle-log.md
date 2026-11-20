@@ -41,3 +41,4 @@
 2026-11-17 | Why did the turkey cross the road? To prove he wasn't chicken! | feast
 2026-11-18 | Why did the math book look so sad? It had too many problems! | cozy
 2026-11-19 | Why did the cranberry turn red? Because it saw the turkey dressing! | aroma
+2026-11-20 | What do penguins wear on their heads? Ice caps! | balmy

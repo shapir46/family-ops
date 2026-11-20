@@ -398,3 +398,14 @@ Read before building; append after printing. Riddles/jokes/words are in riddle-l
 - Puzzle: sudoku 5x5
 - Comic: Thanksgiving pie-shopping gag ("Where are you off to?" / "Pie shopping for Thanksgiving!" / "Apple, pumpkin or cherry?" / "Why not all three?" / "Ta-da! One GIANT pie-cake!" / "Mack ate the top layer!"); mainstreet backdrop in panels 1-2 (panel 2 mirrored), fireplace backdrop in panels 3-4 (panel 4 mirrored); fox wave/happy red beanie, facepalm/laugh red beanie; bear run/grin blue cap, think/worried blue cap, tada/proud blue cap + table and cake props; uni shrug/smug purple bow; Mackenzie dance/love; SLURP! sfx
 - Critter: none (Thursday)
+
+## 2026-11-20
+- Headline: "Royal Oak Lights Up Tonight!" [local] (Royal Oak Holidays, royaloakholidays.com Grand Opening and Ice Skating pages + LittleGuide Detroit, "40+ Holiday Events For Metro Detroit Families This Weekend (November 19 – 22)," Nov. 15, 2026; Lighting of the Park Nov 20, 4-9 pm, Centennial Commons, tree lit 7:00, Santa 7:15, The Rink at Royal Oak opens Nov 20 through Feb 16)
+- News: none printed, no room (Friday critter, fantasy box, MDA box, crossword); not printed: A Rare Baby Rhino Is Born [animals] (Smithsonian Magazine, Nov. 19, 2026; greater one-horned rhino calf, Chester Zoo, mother Asha); Kids Invent a Pollution-Gobbling Drone [people] (Innovation Origins, Nov. 10, 2026; 2026 Young Inventor Award, EcoBotDrone, NutriTrackPro); A Drone That Lands Like a Bird [science] (Science News Explores, Nov. 18, 2026; Delft perching drone)
+- Extras: none
+- Word: balmy
+- Headline photo: no photo (star icon)
+- Sports: Thursday score Texans 26, Colts 3 (TNF) confirmed CBS Sports + NFL.com + Fox Sports; Knicks 102, Timberwolves 99 and Sabres 6, Capitals 3 confirmed CBS + Fox/NHL API but left out, no room. Lions report: 7-2 after 35-10 win over New England; next Sun Nov 22 vs Tampa Bay, Ford Field, 1:00 pm FOX (NFL.com + CBS). Tonight: Pistons host Toronto, NBA Cup (CBS + Fox; 7:30 pm single-source, time left out); no NHL games. TNF fantasy top performers (Stroud, Collins, Boutte) confirmed CBS + Fox but left out, no room; Seaholm/Groves left out (seasons ended)
+- Puzzle: crossword TACOS, SKATE, BALMY, PENGUIN
+- Comic: warm-November beach-day gag ("It's 64 degrees... in NOVEMBER!" / "Beach day! Last one in is a soggy waffle!" / "The lake didn't get the memo! BRRR!" + SPLASH! sfx / "I'll wait for June."); garden backdrop in panels 1 and 4 (panel 4 mirrored), lake backdrop in panels 2-3 (panel 3 mirrored); fox point/surprised blue scarf, facepalm/laugh blue scarf; bear stand/happy, tada/grin shades + icecream, scared/surprised shades, sit/sleepy red beanie; Mackenzie run/laugh
+- Critter: African Penguin & Chick (Claire Timm Photography / Flickr, CC BY-NC-SA 2.0) openverse:14ee175c-fb1e-4272-bc7a-58d9850cddc5
