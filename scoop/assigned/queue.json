@@ -49,5 +49,24 @@
     "topic": "world",
     "foot_news": "Fox Business, CNN",
     "added": "Jacob, 2026-10-19"
+  },
+  {
+    "date": "2026-11-23",
+    "head": "Cheers for the Safety Patrol!",
+    "sub": "Ari and his fellow fifth-grade safeties got a hot cocoa party for keeping Quarton's Bears safe",
+    "story": [
+      "Quarton's fifth-grade Safety Patrol helps keep their schoolmates safe, and on Friday morning it was their turn to be thanked. Ari and the rest of the fifth-grade safeties celebrated with a hot cocoa party.",
+      "Family volunteers set up a cocoa bar with whipped cream, mini marshmallows, chocolate chips and candy canes. Lots of safeties wore their black fifth grade t-shirts, and a big sign said it all: \"Thank You to our 5th Grade Safety Patrol! for being Leaders and keeping our Bears Safe!\"",
+      "Mrs. Ghareeb summed it up in a note to families: \"Hot Chocolate = Successful Celebration, we all LOVED it!\" Thank you, safeties, for looking out for every Quarton Bear!"
+    ],
+    "head_src": "Mrs. Ghareeb's \"Safety Celebration!\" email and photos (Nov 20, 2026); Quarton bulletin",
+    "photo": {
+      "img": "assigned/2026-11-23-safety-patrol-cocoa.jpg",
+      "credit": "Mrs. Ghareeb",
+      "h": 230
+    },
+    "topic": "local",
+    "foot_news": "Quarton Elementary",
+    "added": "Jacob, 2026-11-21"
   }
 ]
