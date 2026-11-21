@@ -409,3 +409,15 @@ Read before building; append after printing. Riddles/jokes/words are in riddle-l
 - Puzzle: crossword TACOS, SKATE, BALMY, PENGUIN
 - Comic: warm-November beach-day gag ("It's 64 degrees... in NOVEMBER!" / "Beach day! Last one in is a soggy waffle!" / "The lake didn't get the memo! BRRR!" + SPLASH! sfx / "I'll wait for June."); garden backdrop in panels 1 and 4 (panel 4 mirrored), lake backdrop in panels 2-3 (panel 3 mirrored); fox point/surprised blue scarf, facepalm/laugh blue scarf; bear stand/happy, tada/grin shades + icecream, scared/surprised shades, sit/sleepy red beanie; Mackenzie run/laugh
 - Critter: African Penguin & Chick (Claire Timm Photography / Flickr, CC BY-NC-SA 2.0) openverse:14ee175c-fb1e-4272-bc7a-58d9850cddc5
+
+## 2026-11-21 (Weekend Edition, Nov 21-22)
+- Headline: "A Rare Baby Rhino Is Born" [animals] (Smithsonian Magazine, Nov. 19, 2026 + ITV News, Nov. 18, 2026; greater one-horned rhino calf born Oct. 11 at Chester Zoo, mother Asha, father Beni)
+- News: Winter Wizards Light Up the Woods [local] (Glenlore Trails aurora page + Michigan Public, Nov. 19, 2026; Aurora: Winter Wizards, Commerce Township, face painting Nov. 21 5-7 pm); Tech Corner: A Drone That Perches Like a Bird [tech] (Science News Explores, Nov. 18, 2026; Delft perching drone, Anton Bredenbeck)
+- Extras: none
+- Word: wobbly
+- Headline photo: greater one-horned rhino mother and calf (San Diego Zoo Safari Park, not the Chester calf), gruntzooki / Flickr, CC BY-SA 2.0 openverse:f0c5ec21-c6d6-46fd-a4ba-3a7cd13f8235
+- Sports: Friday score Raptors 105, Pistons 102 (NBA Cup) confirmed ESPN API + CBS Sports; Lakers 106, Kings 104 and Nuggets 133, Rockets 124 confirmed but left out, no room; no NHL or NFL Friday. Lions report: 7-2, five straight; Sun Nov 22 vs Tampa Bay (3-6), Ford Field, 1:00 pm FOX (ESPN API + CBS). Weekend: Red Wings vs Islanders Sat 7:00 (NHL API + ESPN); Pistons at Atlanta Sun 3:30 (ESPN + State Farm Arena); Ari's basketball and tennis listed; Seaholm/Groves left out (seasons ended)
+- Homework: Ari math Unit 2 test Mon; Ari social studies research packet and diorama due Tue
+- Puzzle: sudoku 5x5
+- Comic: Bucs-are-pirates treasure gag ("Lions play the Bucs tomorrow!" / "What's a Buc?" / "A buccaneer. A pirate!" "Arrr!" / "Meanwhile..." DIG! DIG! "Mack, what are you doing?" / "Pirate treasure! The game ball!"); playground backdrop in panels 1-2 (panel 2 mirrored), drawn backyard scene in panels 3-4 (panel 4 mirrored) with hole prop; fox cheer/grin blue cap + blue flag, think/worried blue cap; uni think/surprised, dance/laugh purple bow; bear point/smug green bowtie, cheer/laugh green bowtie; Mackenzie run/grin, tada/proud + ball
+- Critter: none (Saturday)
