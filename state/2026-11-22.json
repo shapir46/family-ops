@@ -1,0 +1,497 @@
+{
+ "date": "2026-11-22",
+ "generated_at": "2026-11-22T11:28:30+00:00",
+ "window": {
+  "start": "2026-11-22",
+  "end": "2026-12-02"
+ },
+ "kids": {
+  "Ari": {
+   "color": "#2563EB",
+   "initial": "A"
+  },
+  "Elle": {
+   "color": "#DB2777",
+   "initial": "E"
+  },
+  "Leo": {
+   "color": "#16A34A",
+   "initial": "L"
+  },
+  "Lila": {
+   "color": "#9333EA",
+   "initial": "Li"
+  }
+ },
+ "events": [
+  {
+   "date": "2026-11-22",
+   "title": "Swim practice",
+   "kids": [
+    "Ari"
+   ],
+   "start": "15:00",
+   "end": "16:15",
+   "end_date": null,
+   "location": "Cranbrook",
+   "kind": "practice",
+   "details": null,
+   "sources": [
+    "Swim · Red Group"
+   ],
+   "status": null,
+   "id": "2026-11-22|15:00|swim practice"
+  },
+  {
+   "date": "2026-11-23",
+   "title": "Swim: *Notice Different Pools!",
+   "kids": [
+    "Ari"
+   ],
+   "start": null,
+   "end": null,
+   "end_date": null,
+   "location": null,
+   "kind": "event",
+   "details": null,
+   "sources": [
+    "Swim · Meets & Team Events"
+   ],
+   "status": null,
+   "id": "2026-11-23|allday|swim notice different pools"
+  },
+  {
+   "date": "2026-11-23",
+   "title": "Swim practice",
+   "kids": [
+    "Ari"
+   ],
+   "start": "19:15",
+   "end": "20:30",
+   "end_date": null,
+   "location": "NHMS",
+   "kind": "practice",
+   "details": null,
+   "sources": [
+    "Swim · Red Group"
+   ],
+   "status": null,
+   "id": "2026-11-23|19:15|swim practice"
+  },
+  {
+   "date": "2026-11-24",
+   "title": "Swim practice",
+   "kids": [
+    "Ari"
+   ],
+   "start": "18:45",
+   "end": "20:00",
+   "end_date": null,
+   "location": "BHHS",
+   "kind": "practice",
+   "details": null,
+   "sources": [
+    "Swim · Red Group"
+   ],
+   "status": null,
+   "id": "2026-11-24|18:45|swim practice"
+  },
+  {
+   "date": "2026-11-25",
+   "title": "No school district-wide.",
+   "kids": [
+    "Ari",
+    "Elle",
+    "Leo",
+    "Lila"
+   ],
+   "start": null,
+   "end": null,
+   "end_date": null,
+   "location": null,
+   "kind": "school_status",
+   "details": null,
+   "sources": [
+    "BPS district calendar"
+   ],
+   "status": "no_school",
+   "id": "2026-11-25|allday|no school district wide"
+  },
+  {
+   "date": "2026-11-25",
+   "title": "No swim practice (all groups)",
+   "kids": [
+    "Ari"
+   ],
+   "start": null,
+   "end": null,
+   "end_date": null,
+   "location": null,
+   "kind": "event",
+   "details": null,
+   "sources": [
+    "Swim · Meets & Team Events"
+   ],
+   "status": null,
+   "id": "2026-11-25|allday|no swim practice all groups"
+  },
+  {
+   "date": "2026-11-26",
+   "title": "No swim practice (all groups)",
+   "kids": [
+    "Ari"
+   ],
+   "start": null,
+   "end": null,
+   "end_date": null,
+   "location": null,
+   "kind": "event",
+   "details": null,
+   "sources": [
+    "Swim · Meets & Team Events"
+   ],
+   "status": null,
+   "id": "2026-11-26|allday|no swim practice all groups"
+  },
+  {
+   "date": "2026-11-26",
+   "title": "Thanksgiving Recess.",
+   "kids": [
+    "Ari",
+    "Elle",
+    "Leo",
+    "Lila"
+   ],
+   "start": null,
+   "end": null,
+   "end_date": null,
+   "location": null,
+   "kind": "school_status",
+   "details": null,
+   "sources": [
+    "BPS district calendar"
+   ],
+   "status": "recess",
+   "id": "2026-11-26|allday|thanksgiving recess"
+  },
+  {
+   "date": "2026-11-27",
+   "title": "Thanksgiving Recess.",
+   "kids": [
+    "Ari",
+    "Elle",
+    "Leo",
+    "Lila"
+   ],
+   "start": null,
+   "end": null,
+   "end_date": null,
+   "location": null,
+   "kind": "school_status",
+   "details": null,
+   "sources": [
+    "BPS district calendar"
+   ],
+   "status": "recess",
+   "id": "2026-11-27|allday|thanksgiving recess"
+  },
+  {
+   "date": "2026-11-27",
+   "title": "Swim practice",
+   "kids": [
+    "Ari"
+   ],
+   "start": "13:15",
+   "end": "14:30",
+   "end_date": null,
+   "location": "Cranbrook",
+   "kind": "practice",
+   "details": null,
+   "sources": [
+    "Swim · Red Group"
+   ],
+   "status": null,
+   "id": "2026-11-27|13:15|swim practice"
+  },
+  {
+   "date": "2026-11-28",
+   "title": "Swim practice",
+   "kids": [
+    "Ari"
+   ],
+   "start": "13:15",
+   "end": "14:30",
+   "end_date": null,
+   "location": "Cranbrook",
+   "kind": "practice",
+   "details": null,
+   "sources": [
+    "Swim · Red Group"
+   ],
+   "status": null,
+   "id": "2026-11-28|13:15|swim practice"
+  },
+  {
+   "date": "2026-11-29",
+   "title": "Swim practice",
+   "kids": [
+    "Ari"
+   ],
+   "start": "15:00",
+   "end": "16:15",
+   "end_date": null,
+   "location": "Cranbrook",
+   "kind": "practice",
+   "details": null,
+   "sources": [
+    "Swim · Red Group"
+   ],
+   "status": null,
+   "id": "2026-11-29|15:00|swim practice"
+  },
+  {
+   "date": "2026-11-30",
+   "title": "Swim: *Notice Different Pools!",
+   "kids": [
+    "Ari"
+   ],
+   "start": null,
+   "end": null,
+   "end_date": null,
+   "location": null,
+   "kind": "event",
+   "details": null,
+   "sources": [
+    "Swim · Meets & Team Events"
+   ],
+   "status": null,
+   "id": "2026-11-30|allday|swim notice different pools"
+  },
+  {
+   "date": "2026-11-30",
+   "title": "Soccer practice",
+   "kids": [
+    "Elle"
+   ],
+   "start": "17:00",
+   "end": "18:15",
+   "end_date": null,
+   "location": "UWM Sports Complex Field 1, 867 S Blvd E, Pontiac, MI 48341, USA",
+   "kind": "practice",
+   "details": null,
+   "sources": [
+    "PlayMetrics"
+   ],
+   "status": null,
+   "id": "2026-11-30|17:00|soccer practice"
+  },
+  {
+   "date": "2026-11-30",
+   "title": "Swim practice",
+   "kids": [
+    "Ari"
+   ],
+   "start": "19:15",
+   "end": "20:30",
+   "end_date": null,
+   "location": "NHMS",
+   "kind": "practice",
+   "details": null,
+   "sources": [
+    "Swim · Red Group"
+   ],
+   "status": null,
+   "id": "2026-11-30|19:15|swim practice"
+  }
+ ],
+ "actions": [],
+ "fyi": [],
+ "conflicts": [],
+ "lunch": {
+  "line": "No school today.",
+  "entree": null
+ },
+ "weather": {
+  "hi": 63,
+  "today": "Mostly Sunny",
+  "today_detail": "Mostly sunny. High near 63, with temperatures falling to around 61 in the afternoon. South southwest wind 5 to 9 mph.",
+  "tonight_low": 36,
+  "tonight": "Light Rain Likely then Mostly Cloudy",
+  "icon": "partly",
+  "forecast": [
+   {
+    "date": "2026-11-23",
+    "day": "Mon",
+    "hi": 44,
+    "lo": 26,
+    "short": "Sunny",
+    "icon": "sun"
+   },
+   {
+    "date": "2026-11-24",
+    "day": "Tue",
+    "hi": 39,
+    "lo": 25,
+    "short": "Sunny",
+    "icon": "sun"
+   },
+   {
+    "date": "2026-11-25",
+    "day": "Wed",
+    "hi": 42,
+    "lo": 32,
+    "short": "Mostly Cloudy",
+    "icon": "cloud"
+   },
+   {
+    "date": "2026-11-26",
+    "day": "Thu",
+    "hi": 44,
+    "lo": 33,
+    "short": "Chance Light Rain",
+    "icon": "rain"
+   }
+  ],
+  "source": "National Weather Service",
+  "updated": "2026-11-22T08:24:19+00:00"
+ },
+ "mda": null,
+ "spartans": null,
+ "fantasy": {
+  "league": "Quarton 5th Grade DAWGS",
+  "team": "LamARI SHAPson",
+  "record": "10-0",
+  "rank": 1,
+  "teams": 10,
+  "week": 11,
+  "points_for": 1547.6,
+  "active": true,
+  "latest_period": 11,
+  "this_week": {
+   "week": 11,
+   "opponent": "Hill mary",
+   "score": 6.0,
+   "opp_score": 3.2,
+   "winner": "UNDECIDED",
+   "proj": 133.9,
+   "opp_proj": 92.4,
+   "top": {
+    "name": "Ka'imi Fairbairn",
+    "pos": "K",
+    "pts": 6.0
+   },
+   "opp_top": {
+    "name": "Tyler Warren",
+    "pos": "TE",
+    "pts": 3.2
+   }
+  },
+  "last_week": {
+   "week": 10,
+   "opponent": "Matty Ice",
+   "score": 168.6,
+   "opp_score": 95.2,
+   "winner": "AWAY",
+   "proj": null,
+   "opp_proj": null,
+   "top": {
+    "name": "Jahmyr Gibbs",
+    "pos": "RB",
+    "pts": 44.2
+   },
+   "opp_top": {
+    "name": "Chase Brown",
+    "pos": "RB",
+    "pts": 28.3
+   },
+   "result": "W"
+  }
+ },
+ "ari_fantasy": null,
+ "almanac": [
+  {
+   "date": "2026-11-22",
+   "holidays": [],
+   "shabbat": null
+  },
+  {
+   "date": "2026-11-23",
+   "holidays": [],
+   "shabbat": null
+  }
+ ],
+ "announcements": null,
+ "due": [
+  {
+   "source": "league_schedules",
+   "who": "claude",
+   "what": "Re-check data/schedules/* against league sites and emails (MCE basketball, Snaptivities)",
+   "why": "never checked"
+  },
+  {
+   "source": "sunday_school",
+   "who": "jacob",
+   "what": "Temple Israel Sunday School calendar -> data/calendars/temple-israel-YYYY-YY.yaml (Jacob to supply; Temple Beth El dropped 2026-10-10)",
+   "why": "not supplied yet"
+  }
+ ],
+ "delivery": {
+  "email": null,
+  "dashboard": null,
+  "print": null,
+  "filed": null
+ },
+ "meta": {
+  "sources": {
+   "playmetrics_feed": {
+    "ok": true,
+    "count": null
+   },
+   "playmetrics": {
+    "ok": true,
+    "count": 1
+   },
+   "playmetrics_past": {
+    "ok": true,
+    "count": 15
+   },
+   "schedules": {
+    "ok": true,
+    "count": 0
+   },
+   "feeds": {
+    "ok": true,
+    "count": 11
+   },
+   "schedules_past": {
+    "ok": true,
+    "count": 12
+   },
+   "mce_results": {
+    "ok": true,
+    "count": null
+   },
+   "district_calendar": {
+    "ok": true,
+    "count": 3
+   },
+   "lunch": {
+    "ok": true,
+    "count": null
+   },
+   "weather": {
+    "ok": true,
+    "count": null
+   },
+   "fantasy": {
+    "ok": true,
+    "count": null
+   },
+   "almanac": {
+    "ok": true,
+    "count": 2
+   }
+  },
+  "warnings": []
+ }
+}
