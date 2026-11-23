@@ -68,5 +68,24 @@
     "topic": "local",
     "foot_news": "Quarton Elementary",
     "added": "Jacob, 2026-11-21"
+  },
+  {
+    "date": "2026-11-25",
+    "head": "Champions! Ari's Spartans Win the Title",
+    "sub": "The Motor City Evolution Spartans are College Division champions",
+    "story": [
+      "Ari's basketball team, the Motor City Evolution Spartans, are champions! The Spartans won the College Division Championship on Saturday, then lined up for a team photo with a giant golden basketball trophy that says \"League Champions,\" trophies held high and a big green-and-white Spartans flag.",
+      "Getting there took grit. In the semifinal on Nov. 14, the Spartans held off the Knicks 30–28 in what the league called a tough and physical game, winning \"in dramatic fashion\" to earn their spot in the championship.",
+      "The league hasn't posted its recap of the championship game yet. When it does, the Scoop will share the final score. Congratulations, Ari and the Spartans!"
+    ],
+    "head_src": "Jacob (team photo, championship win); Motor City Evolution league results page (Nov 17 post: semifinal Spartans 30, Knicks 28)",
+    "photo": {
+      "img": "assigned/2026-11-25-spartans-champions.jpg",
+      "credit": "the Shapiro family",
+      "h": 240
+    },
+    "topic": "local",
+    "foot_news": "Motor City Evolution",
+    "added": "Jacob, 2026-11-23"
   }
 ]
