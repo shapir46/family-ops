@@ -1,10 +1,10 @@
 # Family plans for Thanksgiving, Thu Nov 26, 2026 (Jacob, 2026-11-23), for "Coming Up" in the paper and the digest.
 # Lions game time and TV from NFL.com / CBS Sports / chicagobears.com schedule pages (Bears at Lions, Ford Field,
-# 1:00 pm ET, CBS); Jacob did not say whether the family is going or watching.
+# 1:00 pm ET, CBS). The family is going to the game (Jacob, 2026-11-23).
 name: Thanksgiving 2026
 source_label: Family plans
 kids: [Ari, Elle, Leo, Lila]
 events:
   - {date: 2026-11-26, kind: event, title: "Fairfax St Turkey Trot", details: "Thanksgiving morning; start time TBD."}
-  - {date: 2026-11-26, start: "13:00", kind: event, title: "Lions vs. Bears, Thanksgiving game", location: "Ford Field, Detroit", details: "Kickoff 1:00 pm on CBS."}
+  - {date: 2026-11-26, start: "13:00", kind: event, title: "Lions vs. Bears at Ford Field (we're going!)", location: "Ford Field, Detroit", details: "Thanksgiving game; kickoff 1:00 pm (on CBS for anyone at home)."}
   - {date: 2026-11-26, kind: event, title: "Thanksgiving dinner at Mimi & Ando's", details: "Time not set yet."}
