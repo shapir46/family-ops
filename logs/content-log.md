@@ -421,3 +421,15 @@ Read before building; append after printing. Riddles/jokes/words are in riddle-l
 - Puzzle: sudoku 5x5
 - Comic: Bucs-are-pirates treasure gag ("Lions play the Bucs tomorrow!" / "What's a Buc?" / "A buccaneer. A pirate!" "Arrr!" / "Meanwhile..." DIG! DIG! "Mack, what are you doing?" / "Pirate treasure! The game ball!"); playground backdrop in panels 1-2 (panel 2 mirrored), drawn backyard scene in panels 3-4 (panel 4 mirrored) with hole prop; fox cheer/grin blue cap + blue flag, think/worried blue cap; uni think/surprised, dance/laugh purple bow; bear point/smug green bowtie, cheer/laugh green bowtie; Mackenzie run/grin, tada/proud + ball
 - Critter: none (Saturday)
+
+## 2026-11-23
+- Headline: "Cheers for the Safety Patrol!" [local] (assigned by Jacob; Mrs. Ghareeb's "Safety Celebration!" email and photos, Nov 20, 2026; Quarton bulletin)
+- News: none printed, no room (Monday NFL page, fantasy box, crossword, assigned photo); not printed: A Rubber Band Ball as Heavy as an Elephant [world] (Guinness World Records, Nov. 2026; Claude Moore of Detroit, 11,578 lbs, weighed at Belle Isle); Meet Rook, a Baby Who Rolls Into a Ball [animals] (OPB, Nov. 18, 2026; Oregon Zoo three-banded armadillo); A Museum Full of Santabears [history] (Detroit Historical Museum exhibitions page; Santabear: A Hudson's Holiday Icon)
+- Extras: none
+- Word: patrol
+- Headline photo: Mrs. Ghareeb's class photo (assigned)
+- NFL page: Week 11 scores (11 Sunday games) confirmed ESPN API + Fox Sports + NFL.com; highlights Lions 31, Bucs 21 (Goff two TD passes, Gibbs two TD runs) and Cowboys 51, Titans 30; MNF Bengals at Commanders 8:15 ESPN (NFL.com + ESPN). Lions report: next Thanksgiving vs. Bears, Ford Field, 1:00 pm (ESPN API + Outlook calendar). Sunday Hawks 107, Pistons 97 confirmed ESPN + Fox but left out, no room; no Detroit games tonight; fantasy top performers left out, no room; Seaholm/Groves left out (seasons ended)
+- Homework: Ari region packet + diorama due Tue (Unit 2 math test today in schedule)
+- Puzzle: crossword PATROL, SAFETY, COCOA, BIRTHDAY
+- Comic: armadillo-ball gag ("A baby armadillo can roll into a ball!" / "A whole ball?" / "Easy! Watch me roll up!" / "Five minutes later..." "I'm more of a square." / "Mack is the real ball expert!" + Zzz sfx); library backdrop in panels 1-2 (panel 2 mirrored), bedroom backdrop in panels 3-4 (panel 4 mirrored); fox hold/surprised glasses + book, facepalm/laugh glasses; bear think/surprised red earmuffs, tada/proud red earmuffs, sit/sad red earmuffs; uni stand/worried gold crown, point/grin gold crown; Mackenzie sit/sleepy
+- Critter: none (Monday)

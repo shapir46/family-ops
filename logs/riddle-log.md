@@ -43,3 +43,4 @@
 2026-11-19 | Why did the cranberry turn red? Because it saw the turkey dressing! | aroma
 2026-11-20 | What do penguins wear on their heads? Ice caps! | balmy
 2026-11-21 | Why couldn't the pirate play cards? Because he was standing on the deck! | wobbly
+2026-11-23 | What do you call a turkey the day after Thanksgiving? Lucky! | patrol
