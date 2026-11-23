@@ -166,7 +166,9 @@ def sec_featured():
     from PIL import Image; import io
     im = Image.open(a['img']).convert('RGB'); im.thumbnail((700, 900)); bio = io.BytesIO(); im.save(bio, 'JPEG', quality=86)
     note = f"<p class='fa-note'>{a['note']}</p>" if a.get('note') else ''
-    return (f"<div class='featured'><div class='fa-frame'><img src='data:image/jpeg;base64,{base64.b64encode(bio.getvalue()).decode()}'></div>"
+    # `h` (queue entry): a bigger picture than the usual 196 px when Jacob asks (2026-11-23); the card then sits below it
+    size = f" style='height:{int(a['h'])}px;max-width:100%'" if a.get('h') else ''
+    return (f"<div class='featured'><div class='fa-frame'><img{size} src='data:image/jpeg;base64,{base64.b64encode(bio.getvalue()).decode()}'></div>"
             f"<div class='fa-card'><div class='fa-kicker'>Featured Artwork</div><div class='fa-title'>{a['title']}</div>"
             f"<div class='fa-by'>by {a['artist']}</div>{note}</div></div>")
 # Monday NFL page: Sunday's final scores as scoreboard tiles, a few highlights, and the Monday Night Football
@@ -354,7 +356,7 @@ p{{margin-bottom:3px;text-align:justify;hyphens:auto}}
 .featured{{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;align-items:center;margin-top:5px;padding:6px;border:1px solid #161410;background:#fbf7ec}}
 .fa-frame{{flex:0 0 auto;padding:5px;background:#c9a34a;border:1px solid #161410;box-shadow:inset 0 0 0 2px #e9d397}}
 .fa-frame img{{display:block;height:196px;width:auto;border:3px solid #fff;outline:1px solid #8a6d28}}
-.fa-card{{flex:1 1 130px;text-align:center}}
+.fa-card{{flex:1 1 95px;text-align:center}}
 .fa-kicker{{font-family:PF,serif;font-weight:700;font-size:8.4pt;text-transform:uppercase;letter-spacing:1.4px;border-top:1px solid #161410;border-bottom:1px solid #161410;padding:1px 0;margin-bottom:6px}}
 .fa-title{{font-family:PF,serif;font-style:italic;font-weight:700;font-size:16pt;line-height:1.1}}
 .fa-by{{font-family:PF,serif;font-size:10pt;margin:3px 0 6px}}
