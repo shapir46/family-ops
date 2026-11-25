@@ -433,3 +433,15 @@ Read before building; append after printing. Riddles/jokes/words are in riddle-l
 - Puzzle: crossword PATROL, SAFETY, COCOA, BIRTHDAY
 - Comic: armadillo-ball gag ("A baby armadillo can roll into a ball!" / "A whole ball?" / "Easy! Watch me roll up!" / "Five minutes later..." "I'm more of a square." / "Mack is the real ball expert!" + Zzz sfx); library backdrop in panels 1-2 (panel 2 mirrored), bedroom backdrop in panels 3-4 (panel 4 mirrored); fox hold/surprised glasses + book, facepalm/laugh glasses; bear think/surprised red earmuffs, tada/proud red earmuffs, sit/sad red earmuffs; uni stand/worried gold crown, point/grin gold crown; Mackenzie sit/sleepy
 - Critter: none (Monday)
+
+## 2026-11-25
+- Headline: "Champions! Ari's Spartans Win the Title" [local] (assigned by Jacob; team photo, MCE results page Nov 17 semifinal post); assigned photo printed at 168 px (cropped from 240) so the Tech Corner and Word of the Day fit
+- News: A Kid's Dream School Rolls Down Woodward [local] (WXYZ Detroit, Nov. 19, 2026; America's Thanksgiving Parade 100th, Skillman Foundation float contest winner Alianna McZick, "A Place Where Everyone Belongs," 28 floats); Tech Corner: Googly-Eyed Robots Gobble Up Trash [tech] (Popular Science, Nov. 23, 2026; Shinjuku Station trash-collecting robot trial); not printed, no room: Kids Help Pick a Big Book Prize [books] (Smithsonian Magazine, Nov. 24, 2026; first Children's Booker Prize shortlist, kid judges, winner Feb. 2, 2027)
+- Extras: none
+- Word: stamina
+- Headline photo: the Shapiro family (assigned)
+- Sports: Tuesday scores Pistons 104, Magic 86 and Celtics 131, Wizards 116 confirmed ESPN API + CBS Sports (Mavericks 120, Nuggets 101 and Golden Knights 5, Oilers 3 confirmed but left out, no room). Lions report: 8-2 after 31-21 win over Tampa Bay; next Thanksgiving vs. Bears (8-2), Ford Field, 1:00 pm CBS (NFL.com + ESPN API). Tonight: Red Wings host Vancouver 7:30 (NHL API + ESPN API); Pistons off. Seaholm/Groves left out (no winter results posted)
+- Homework: none (Thanksgiving break)
+- Puzzle: crossword CHAMPIONS, PARADE, STAMINA, ROBOTS, LIONS
+- Comic: Turkey Trot gag ("Turkey Trot tomorrow!" / "Turkeys can TROT?" / "No, silly! WE run it!" + ZOOM! sfx / "Later..." "Building my stamina!" / "That's cookie stamina!" + Zzz sfx); leafpark backdrop in panels 1-2 (panel 2 mirrored), bakery backdrop in panels 3-4 (panel 4 mirrored); fox wave/grin orange beanie, shrug/laugh orange beanie; bear think/surprised green scarf, hold/grin green scarf + cookie, sit/sleepy green scarf; Mackenzie run/happy; uni point/surprised purple bow, facepalm/laugh purple bow
+- Critter: none (Wednesday)
