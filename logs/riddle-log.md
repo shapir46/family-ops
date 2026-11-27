@@ -45,3 +45,4 @@
 2026-11-21 | Why couldn't the pirate play cards? Because he was standing on the deck! | wobbly
 2026-11-23 | What do you call a turkey the day after Thanksgiving? Lucky! | patrol
 2026-11-25 | Why did the pumpkin pie go to the dentist? It needed a filling! | stamina
+2026-11-27 | What's the best thing to put into a pumpkin pie? Your teeth! | twinkle

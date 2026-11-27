@@ -445,3 +445,15 @@ Read before building; append after printing. Riddles/jokes/words are in riddle-l
 - Puzzle: crossword CHAMPIONS, PARADE, STAMINA, ROBOTS, LIONS
 - Comic: Turkey Trot gag ("Turkey Trot tomorrow!" / "Turkeys can TROT?" / "No, silly! WE run it!" + ZOOM! sfx / "Later..." "Building my stamina!" / "That's cookie stamina!" + Zzz sfx); leafpark backdrop in panels 1-2 (panel 2 mirrored), bakery backdrop in panels 3-4 (panel 4 mirrored); fox wave/grin orange beanie, shrug/laugh orange beanie; bear think/surprised green scarf, hold/grin green scarf + cookie, sit/sleepy green scarf; Mackenzie run/happy; uni point/surprised purple bow, facepalm/laugh purple bow
 - Critter: none (Wednesday)
+
+## 2026-11-27
+- Headline: "Meadow Brook Lights Up!" [local] (Meadow Brook Hall, "Holidays at Meadow Brook," meadowbrookhall.org/wonderlights + LittleGuide Detroit, "Explore Winter Wonder Lights at Meadow Brook Hall During The Holidays," Nov. 22, 2026; Winter Wonder Lights opens Nov 27, Rochester, through Dec 30, last entry 8 pm, s'mores kits, bonfires; start time left out, sources differ)
+- News: none printed, no room (Friday critter, fantasy box, fantasy top performers, crossword); not printed: Thanksgiving Dinner for 2,000 [food] (Good News Network, Nov. 26, 2026; "Miss Gloria" Kennard, new car from neighbors); A Baby Sloth Joins Zoo Atlanta [animals] (WRDW News 12, Nov. 12, 2026; Hoffmann's two-toed sloth, parents Nutella and Cocoa); Bugs Named After Taylor Swift [science] (Science News Explores, Nov. 20, 2026; Swiftiephylus plant bugs)
+- Extras: none
+- Word: twinkle
+- Headline photo: no photo (star icon)
+- Sports: Thursday (Thanksgiving) scores Bears 39, Lions 35; Eagles 39, Cowboys 38; Bills 13, Chiefs 10 confirmed ESPN API + CBS Sports + NFL.com; no NBA or NHL Thursday. Lions report: 8-3, Gibbs 205 rush yds and 3 TD (ESPN AP recap + CBS); next Sun Dec 6 at Atlanta 1:00 pm CBS (ESPN API + detroitlions.com). Tonight: Red Wings at Columbus 3:00 (NHL API + ESPN API), Pistons vs. Milwaukee 7:30 (ESPN API + CBS; TV single-source, left out), Broncos at Steelers 3:00 Prime Video (NFL.com + ESPN + CBS). Fantasy top performers Gibbs 48.2, DeVonta Smith 43.0, Javonte Williams 33.3 (PPR from ESPN API box scores, matched CBS). Seaholm/Groves left out (seasons ended)
+- Homework: none (Thanksgiving break)
+- Puzzle: crossword LIGHTS, BEARS, SMORES, FOX, TWINKLE
+- Comic: too-full-to-skate gag ("Let's go skating!" / "Too... much... pie." / "Come on, Big Bear!" "I can't even wiggle!" / "Later..." SWOOSH! sfx "Wheee!" / "Wait! My pie wore off!"); party backdrop in panels 1-2 (panel 2 mirrored), rink backdrop in panels 3-4 (panel 4 mirrored); fox point/grin blue earmuffs, dance/laugh blue earmuffs; bear sit/sleepy pink party hat, facepalm/worried pink party hat, run/happy pink party hat; uni wave/happy purple scarf, cheer/grin purple scarf; Mackenzie run/grin
+- Critter: Fennec Fox (Andrew_N / Flickr, CC BY-NC 2.0) openverse:f8357756-84ea-4dd0-87e1-921fc26a49e5; fact from Smithsonian's National Zoo
