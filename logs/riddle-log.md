@@ -46,3 +46,4 @@
 2026-11-23 | What do you call a turkey the day after Thanksgiving? Lucky! | patrol
 2026-11-25 | Why did the pumpkin pie go to the dentist? It needed a filling! | stamina
 2026-11-27 | What's the best thing to put into a pumpkin pie? Your teeth! | twinkle
+2026-11-28 | What do snowmen eat for breakfast? Frosted flakes! | duet

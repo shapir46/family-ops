@@ -457,3 +457,15 @@ Read before building; append after printing. Riddles/jokes/words are in riddle-l
 - Puzzle: crossword LIGHTS, BEARS, SMORES, FOX, TWINKLE
 - Comic: too-full-to-skate gag ("Let's go skating!" / "Too... much... pie." / "Come on, Big Bear!" "I can't even wiggle!" / "Later..." SWOOSH! sfx "Wheee!" / "Wait! My pie wore off!"); party backdrop in panels 1-2 (panel 2 mirrored), rink backdrop in panels 3-4 (panel 4 mirrored); fox point/grin blue earmuffs, dance/laugh blue earmuffs; bear sit/sleepy pink party hat, facepalm/worried pink party hat, run/happy pink party hat; uni wave/happy purple scarf, cheer/grin purple scarf; Mackenzie run/grin
 - Critter: Fennec Fox (Andrew_N / Flickr, CC BY-NC 2.0) openverse:f8357756-84ea-4dd0-87e1-921fc26a49e5; fact from Smithsonian's National Zoo
+
+## 2026-11-28 (Weekend Edition, Nov 28-29)
+- Headline: "Holiday Lights Glow at the Ford House" [local] (LittleGuide Detroit, "Home for the Holidays at Ford House," Nov. 27, 2026 + "50+ Holiday Events For Metro Detroit Families This Weekend (November 27 – 29)," Nov. 22, 2026; Ford House / Grosse Pointe Times listings for the walk format and kids 2 and under free; Edsel & Eleanor Ford House, Grosse Pointe Shores, opens Nov 28, 5:30-8 pm, more nights through Dec 27, Jingle Junction, red sleigh, train display, Santa)
+- News: A Golden Baby Gibbon Says Hello [animals] (InDaily CityMag, Nov. 12, 2026; Adelaide Zoo white-cheeked gibbon, parents Viet and Remus, first in a decade); Tech Corner: A Robot Moth That Grows Its Own Sensor [tech] (New Atlas, Nov. 5, 2026; University of Tartu + IIT, pyrrole "blood" makes a UV sensor)
+- Extras: none
+- Word: duet
+- Headline photo: no photo printed (star icon; Openverse Ford House interior photo londonexpat / Flickr CC BY-SA 2.0 openverse:cce7e2df-ed70-43be-83f0-4b00c64312c9 downloaded but dropped for space; openverse:61a4dcec-f4f6-4b97-95e0-76ada9697bab downloaded and rejected, shows a car)
+- Sports: Friday scores Red Wings 2, Blue Jackets 0; Pistons 113, Bucks 98; Steelers 27, Broncos 5 (ESPN API + CBS Sports; Red Wings also NHL API). Lions report: no game this weekend, 8-3, next Sun Dec 6 at Atlanta 1:00 CBS. Weekend: Red Wings vs Nashville Sat 7:00 (ESPN API + NHL API); Pistons vs Orlando Sun 6:00 (ESPN API + CBS). Seaholm/Groves left out (seasons ended)
+- Homework: none (Thanksgiving weekend)
+- Puzzle: sudoku 5x5
+- Comic: gibbon-duet gag ("Gibbons sing a duet every morning!" / "Let's sing one too!" / "Next morning, 6 a.m..." "LA LA LAAA!" + AROO! sfx / "Maybe a QUIET duet?"); cabin backdrop in panels 1-2 (panel 2 mirrored), sledhill backdrop in panels 3-4 (panel 4 mirrored); fox hold/surprised red beanie + book; bear think/happy blue scarf, cheer/grin blue scarf, tada/laugh blue scarf; Mackenzie sit/happy, scared/surprised, sit/sleepy; uni facepalm/smug gold earmuffs
+- Critter: none (Saturday)
